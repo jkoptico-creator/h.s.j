@@ -1,0 +1,250 @@
+#!/usr/bin/env node
+'use strict';
+
+// Runtime DOM regression checks, not a browser/layout test. No network requests.
+// Run: NODE_PATH=/path/to/node_modules node scripts/test_interactions.cjs
+// The development workspace's ../testdeps/node_modules is also supported.
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const { JSDOM, VirtualConsole } = (() => {
+  try { return require('jsdom'); }
+  catch (error) {
+    if (error.code !== 'MODULE_NOT_FOUND') throw error;
+    return require(path.resolve(__dirname, '../../testdeps/node_modules/jsdom'));
+  }
+})();
+const ROOT = path.resolve(__dirname, '..');
+let assertions = 0;
+let groups = 0;
+
+function check(actual, expected, message) {
+  assertions += 1;
+  assert.deepEqual(actual, expected, message);
+}
+
+function load(filename, hash = '') {
+  const errors = [];
+  const virtualConsole = new VirtualConsole();
+  virtualConsole.on('jsdomError', error => {
+    // CSS parsing/rendering is outside the scope of these interaction checks.
+    if (error.type !== 'css-parsing') errors.push(error);
+  });
+  const dom = new JSDOM(fs.readFileSync(path.join(ROOT, filename), 'utf8'), {
+    url: `https://example.test/${encodeURIComponent(filename)}${hash}`,
+    runScripts: 'outside-only',
+    pretendToBeVisual: true,
+    virtualConsole,
+  });
+  const { window } = dom;
+  const { document } = window;
+  const scrollCalls = [];
+  window.addEventListener('error', event => errors.push(event.error || event.message));
+  // jsdom does not lay out elements or implement scrolling/media queries.
+  window.matchMedia = query => ({ matches: false, media: query });
+  window.requestAnimationFrame = callback => { callback(0); return 1; };
+  window.cancelAnimationFrame = () => {};
+  window.scrollTo = (...args) => scrollCalls.push(['window', ...args]);
+  window.HTMLElement.prototype.scrollIntoView = function () {
+    scrollCalls.push(['element', this.id]);
+  };
+  window.HTMLElement.prototype.scrollTo = function (options) {
+    this.scrollLeft = typeof options === 'object' ? options.left : options;
+  };
+  Object.defineProperty(window.HTMLElement.prototype, 'clientWidth', {
+    configurable: true,
+    get() { return 640; },
+  });
+  window.HTMLElement.prototype.getClientRects = function () {
+    return this.closest('[hidden]') ? [] : [{ width: 10, height: 10 }];
+  };
+  // These checks verify the inert flag is applied/restored. Native inert focus
+  // suppression itself must be checked in a real browser, not in jsdom.
+  for (const script of document.querySelectorAll('script')) {
+    const source = script.getAttribute('src');
+    const code = source
+      ? fs.readFileSync(path.join(ROOT, source), 'utf8')
+      : script.textContent;
+    window.eval(`${code}\n//# sourceURL=${source || filename + ':inline'}`);
+  }
+  function key(target, value, shiftKey = false) {
+    const event = new window.KeyboardEvent('keydown', {
+      key: value, shiftKey, bubbles: true, cancelable: true,
+    });
+    target.dispatchEvent(event);
+    return event;
+  }
+  function noErrors() { check(errors.map(String), [], 'no runtime exceptions'); }
+  return { dom, window, document, scrollCalls, key, noErrors };
+}
+
+async function test(name, callback) {
+  await callback();
+  groups += 1;
+  console.log(`PASS ${name}`);
+}
+
+function fixture(page, pictures = 3) {
+  const { document, window } = page;
+  const trigger = document.createElement('div');
+  trigger.className = 'g';
+  trigger.tabIndex = 0;
+  trigger.setAttribute('role', 'button');
+  trigger.dataset.g = '__interaction_fixture';
+  trigger.dataset.cap = '회귀검증 사진';
+  document.querySelector('header').appendChild(trigger);
+  window.GALLERY[trigger.dataset.g] = Array.from({ length: pictures }, (_, i) => `https://example.test/image-${i}.jpg`);
+  window.LINKS[trigger.dataset.g] = { site: 'https://example.test/official', map: 'https://example.test/map' };
+  return trigger;
+}
+
+async function main() {
+  await test('detail toggle expands/collapses and has a matching aria-controls target', () => {
+    const page = load('plan-1-sydney.html');
+    try {
+      const buttons = [...page.document.querySelectorAll('.dayx')];
+      check(buttons.length, 7, 'seven day-detail controls');
+      for (const button of buttons) {
+        const list = button.nextElementSibling;
+        check(page.document.getElementById(button.getAttribute('aria-controls')), list, 'aria-controls resolves to its list');
+        check([button.getAttribute('aria-expanded'), list.hidden], ['false', true], 'initially collapsed');
+        button.click();
+        check([button.getAttribute('aria-expanded'), list.hidden], ['true', false], 'expands');
+        button.click();
+        check([button.getAttribute('aria-expanded'), list.hidden], ['false', true], 'collapses');
+      }
+      page.noErrors();
+    } finally { page.dom.window.close(); }
+  });
+
+  await test('photo dialog opens, traps edge tab movement, restores focus and inert flags', () => {
+    const page = load('plan-1-sydney.html');
+    try {
+      const { document, key } = page;
+      const trigger = fixture(page);
+      const alreadyInert = document.createElement('div');
+      alreadyInert.inert = true;
+      document.body.appendChild(alreadyInert);
+      trigger.focus();
+      trigger.click();
+      const dialog = document.querySelector('.lb');
+      check(dialog.hidden, false, 'dialog opens');
+      check(dialog.getAttribute('role'), 'dialog', 'dialog role');
+      check(document.getElementById(dialog.getAttribute('aria-labelledby')).textContent, trigger.dataset.cap, 'dialog accessible name');
+      check(document.activeElement, dialog.querySelector('.closebtn'), 'initial focus moves to close button');
+      const background = [...document.body.children].filter(el => el !== dialog && el.tagName !== 'SCRIPT');
+      check(background.every(el => el.inert === true), true, 'all background siblings inert');
+      const first = dialog.querySelector('.fitbtn');
+      const last = dialog.querySelector('.source');
+      first.focus();
+      check(key(first, 'Tab', true).defaultPrevented, true, 'backward boundary tab intercepted');
+      check(document.activeElement, last, 'backward tab wraps to last');
+      check(key(last, 'Tab').defaultPrevented, true, 'forward boundary tab intercepted');
+      check(document.activeElement, first, 'forward tab wraps to first');
+      dialog.querySelector('.closebtn').click();
+      check(dialog.hidden, true, 'close button hides dialog');
+      check(document.activeElement, trigger, 'focus returns to opener');
+      check(background.filter(el => el !== alreadyInert).every(el => el.inert === false), true, 'inert flags restored');
+      check(alreadyInert.inert, true, 'pre-existing inert state preserved');
+      page.noErrors();
+    } finally { page.dom.window.close(); }
+  });
+
+  await test('photo keyboard opening and Escape closing work', () => {
+    const page = load('plan-1-sydney.html');
+    try {
+      const trigger = fixture(page);
+      trigger.focus();
+      check(page.key(trigger, 'Enter').defaultPrevented, true, 'Enter consumed');
+      const dialog = page.document.querySelector('.lb');
+      check(dialog.hidden, false, 'Enter opens');
+      page.key(page.document.activeElement, 'Escape');
+      check(dialog.hidden, true, 'Escape closes');
+      check(page.document.activeElement, trigger, 'Escape restores opener focus');
+      page.noErrors();
+    } finally { page.dom.window.close(); }
+  });
+
+  await test('failed gallery images update counts, preserve the current photo and reach an empty state', () => {
+    const page = load('plan-1-sydney.html');
+    try {
+      fixture(page).click();
+      const dialog = page.document.querySelector('.lb');
+      const counter = () => dialog.querySelector('.cnt').textContent;
+      check(counter(), '1 / 3', 'three initial photos');
+      dialog.querySelector('.next').click();
+      dialog.querySelector('.next').click();
+      check(counter(), '3 / 3', 'navigation reaches last image');
+      const currentSource = dialog.querySelector('.source').href;
+      dialog.querySelector('.strip img').dispatchEvent(new page.window.Event('error'));
+      check(counter(), '2 / 2', 'failure before current photo reindexes count');
+      check(dialog.querySelector('.source').href, currentSource, 'current photo preserved');
+      dialog.querySelector('.strip figure:last-child img').dispatchEvent(new page.window.Event('error'));
+      check(counter(), '1 / 1', 'failure of current photo selects remaining photo');
+      dialog.querySelector('.strip img').dispatchEvent(new page.window.Event('error'));
+      check(counter(), '0 / 0', 'all failed images removed');
+      check(dialog.querySelector('.empty').hidden, false, 'empty message shown');
+      check(dialog.querySelector('.source').hidden, true, 'source link hidden with no photo');
+      check(['.prev', '.next', '.fitbtn'].every(sel => dialog.querySelector(sel).disabled), true, 'photo controls disabled');
+      check(dialog.querySelectorAll('.links a').length, 2, 'official links remain accessible');
+      page.key(page.document.activeElement, 'Escape');
+      check(dialog.hidden, true, 'empty dialog can still close');
+      page.noErrors();
+    } finally { page.dom.window.close(); }
+  });
+
+  await test('an initially empty gallery has a usable close control', () => {
+    const page = load('plan-1-sydney.html');
+    try {
+      const trigger = fixture(page, 0);
+      trigger.click();
+      const dialog = page.document.querySelector('.lb');
+      check(dialog.querySelector('.cnt').textContent, '0 / 0', 'empty count');
+      check(dialog.querySelector('.empty').hidden, false, 'empty state visible');
+      check(page.document.activeElement, dialog.querySelector('.closebtn'), 'close control receives focus');
+      dialog.querySelector('.closebtn').click();
+      check(page.document.activeElement, trigger, 'focus restored from empty gallery');
+      page.noErrors();
+    } finally { page.dom.window.close(); }
+  });
+
+  await test('combined edition deep-link reveals plan 4 and scrolls to November 18', () => {
+    const page = load('호주여행제안.html', '#plan-4--nov-18');
+    try {
+      const { document } = page;
+      const visible = [...document.querySelectorAll('[data-screen]')].filter(el => !el.hidden);
+      check(visible.map(el => el.dataset.screen), ['plan-4'], 'only plan 4 visible');
+      check(document.documentElement.dataset.plan, 'plan-4', 'selected plan recorded');
+      const target = document.getElementById('plan-4--nov-18');
+      check(Boolean(target), true, 'day anchor exists');
+      check(target.closest('[data-screen]'), visible[0], 'day is inside visible plan');
+      check(target.closest('[hidden]'), null, 'day has no hidden ancestor');
+      check(page.scrollCalls.some(call => call[0] === 'element' && call[1] === target.id), true, 'scroll targets selected day');
+      const controls = [...document.querySelectorAll('.dayx')].map(el => el.getAttribute('aria-controls'));
+      check(new Set(controls).size, controls.length, 'combined day controls have unique target IDs');
+      page.noErrors();
+    } finally { page.dom.window.close(); }
+  });
+
+  await test('combined edition handles malformed and unknown hashes without exceptions', () => {
+    for (const initialHash of ['#%E0%A4%A', '#%ZZ', '#unknown-plan--nov-18']) {
+      const page = load('호주여행제안.html', initialHash);
+      try {
+        check([...page.document.querySelectorAll('[data-screen]')].filter(el => !el.hidden).map(el => el.dataset.screen), ['home'], `${initialHash}: safely falls back home`);
+        page.window.history.replaceState(null, '', '#plan-4--nov-18');
+        page.window.dispatchEvent(new page.window.HashChangeEvent('hashchange'));
+        check(page.document.documentElement.dataset.plan, 'plan-4', 'valid hashchange selects plan');
+        page.window.history.replaceState(null, '', '#%ZZ');
+        page.window.dispatchEvent(new page.window.HashChangeEvent('hashchange'));
+        check(page.document.documentElement.dataset.plan, 'home', 'malformed hashchange returns home');
+        page.noErrors();
+      } finally { page.dom.window.close(); }
+    }
+  });
+  console.log(`PASS ${groups} jsdom regression groups, ${assertions} assertions. Layout, scrolling and native inert enforcement are not browser-tested.`);
+}
+
+main().catch(error => {
+  console.error('FAIL jsdom interaction regression:', error.stack || error);
+  process.exitCode = 1;
+});

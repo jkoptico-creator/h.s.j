@@ -1,0 +1,11 @@
+{
+  "name": "australia-travel-proposals",
+  "private": true,
+  "scripts": {
+    "test": "node scripts/test_interactions.cjs",
+    "check": "python scripts/check_site.py && node --check assets/site.js && node --check assets/places.js"
+  },
+  "devDependencies": {
+    "jsdom": "29.1.1"
+  }
+}
