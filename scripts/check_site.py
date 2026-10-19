@@ -96,6 +96,9 @@ for path in pages:
         assert sum(amounts) == total, (path.name, 'item sum differs', amounts, total)
 
 assert OUTPUT.read_text(encoding='utf-8') == build(), 'Combined edition is stale'
+overview = (ROOT/'index.html').read_text(encoding='utf-8')
+assert '1~2회 · 섬 일정 선택에 따라' in overview, 'Plan 2 golf count must reflect the boat alternative'
+assert '안별 1~3라운드 제안' in overview, 'Overview golf range must include the one-round alternative'
 assert not any(old in data for old in OLD_LINKS), 'Obsolete URL in shared destination data'
 assert links['cleo']['site'] == 'https://cleomelbourne.com.au/'
 assert 'Catseye' in links['catseye_beach']['map']
