@@ -325,10 +325,13 @@ body.lb-open{overflow:hidden}
   .intro .text{padding-block:56px}
   .intro .photo{order:0;aspect-ratio:auto;min-height:320px;margin:0}
   .intro .photo:after{background:linear-gradient(90deg,var(--slate) 0%,rgba(0,0,0,0) 30%)}
-  .day{grid-template-columns:300px 1fr;align-items:start}
-  .mosaic{align-content:start;align-self:start;position:sticky;top:64px;background:var(--white)}
-  .mosaic .photo{aspect-ratio:4/3}
+  .day{grid-template-columns:320px 1fr;align-items:stretch}
+  /* photo column: main photo fills the card height (JS sets --ph from the text column; CSS fallback stretches), thumbs sit directly beneath */
+  .mosaic{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:auto auto;align-content:start;background:var(--white)}
+  .mosaic .photo{aspect-ratio:auto;height:var(--ph,420px);min-height:240px}
   .mosaic .thumb{aspect-ratio:1/1}
+  .mosaic.n1 .thumb{aspect-ratio:16/6}
+  .mosaic.n2 .thumb{aspect-ratio:4/3}
   .day .body{padding:22px 26px 20px}
   .hotel{grid-template-columns:1fr 1fr}
   .hotel .photo{aspect-ratio:auto;min-height:280px}
@@ -1566,6 +1569,26 @@ window.imgOk = function () {};
   document.addEventListener('keydown', function (ev) {
     if ((ev.key === 'Enter' || ev.key === ' ') && ev.target.matches('.g')) { ev.preventDefault(); open(ev.target); }
   });
+  // Desktop day cards: size the main photo so the photo column matches the text column (capped), thumbs directly beneath.
+  function fitMosaics() {
+    var wide = window.matchMedia('(min-width:900px)').matches;
+    document.querySelectorAll('.day').forEach(function (card) {
+      var mosaic = card.querySelector('.mosaic'), photo = mosaic && mosaic.querySelector('.photo'), body = card.querySelector('.body');
+      if (!photo || !body) return;
+      if (!wide) { mosaic.style.removeProperty('--ph'); return; }
+      var thumb = mosaic.querySelector('.thumb');
+      var thumbsHeight = thumb ? thumb.getBoundingClientRect().height + 3 : 0;
+      mosaic.style.setProperty('--ph', '240px'); // shrink first so the text column reports its natural height
+      var target = Math.round(body.getBoundingClientRect().height - thumbsHeight);
+      mosaic.style.setProperty('--ph', Math.max(240, Math.min(680, target)) + 'px');
+    });
+  }
+  window.fitMosaics = fitMosaics;
+  var fitTimer;
+  window.addEventListener('resize', function () { clearTimeout(fitTimer); fitTimer = setTimeout(fitMosaics, 120); });
+  window.addEventListener('load', fitMosaics);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitMosaics);
+  fitMosaics();
   document.querySelectorAll('.dayx').forEach(function (button, i) {
     var list = button.nextElementSibling;
     if (!list) return;
@@ -1573,6 +1596,7 @@ window.imgOk = function () {};
     button.onclick = function () {
       var expanded = button.getAttribute('aria-expanded') === 'true';
       button.setAttribute('aria-expanded', String(!expanded)); list.hidden = expanded;
+      fitMosaics();
     };
   });
   function show() {
@@ -1586,7 +1610,7 @@ window.imgOk = function () {};
     document.documentElement.dataset.plan = name;
     document.querySelectorAll('.topbar nav a').forEach(function (a) { a.classList.toggle('on', a.getAttribute('href') === '#' + name); });
     var target = document.getElementById(hash);
-    requestAnimationFrame(function () { if (target) target.scrollIntoView(); else window.scrollTo(0,0); });
+    requestAnimationFrame(function () { if (target) target.scrollIntoView(); else window.scrollTo(0,0); fitMosaics(); });
   }
   window.addEventListener('hashchange', show); show();
   document.querySelectorAll('[data-print]').forEach(function (button) {

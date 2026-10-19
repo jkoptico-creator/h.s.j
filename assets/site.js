@@ -152,6 +152,26 @@ window.imgOk = function () {};
   document.addEventListener('keydown', function (ev) {
     if ((ev.key === 'Enter' || ev.key === ' ') && ev.target.matches('.g')) { ev.preventDefault(); open(ev.target); }
   });
+  // Desktop day cards: size the main photo so the photo column matches the text column (capped), thumbs directly beneath.
+  function fitMosaics() {
+    var wide = window.matchMedia('(min-width:900px)').matches;
+    document.querySelectorAll('.day').forEach(function (card) {
+      var mosaic = card.querySelector('.mosaic'), photo = mosaic && mosaic.querySelector('.photo'), body = card.querySelector('.body');
+      if (!photo || !body) return;
+      if (!wide) { mosaic.style.removeProperty('--ph'); return; }
+      var thumb = mosaic.querySelector('.thumb');
+      var thumbsHeight = thumb ? thumb.getBoundingClientRect().height + 3 : 0;
+      mosaic.style.setProperty('--ph', '240px'); // shrink first so the text column reports its natural height
+      var target = Math.round(body.getBoundingClientRect().height - thumbsHeight);
+      mosaic.style.setProperty('--ph', Math.max(240, Math.min(680, target)) + 'px');
+    });
+  }
+  window.fitMosaics = fitMosaics;
+  var fitTimer;
+  window.addEventListener('resize', function () { clearTimeout(fitTimer); fitTimer = setTimeout(fitMosaics, 120); });
+  window.addEventListener('load', fitMosaics);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitMosaics);
+  fitMosaics();
   document.querySelectorAll('.dayx').forEach(function (button, i) {
     var list = button.nextElementSibling;
     if (!list) return;
@@ -159,6 +179,7 @@ window.imgOk = function () {};
     button.onclick = function () {
       var expanded = button.getAttribute('aria-expanded') === 'true';
       button.setAttribute('aria-expanded', String(!expanded)); list.hidden = expanded;
+      fitMosaics();
     };
   });
   function show() {
@@ -172,7 +193,7 @@ window.imgOk = function () {};
     document.documentElement.dataset.plan = name;
     document.querySelectorAll('.topbar nav a').forEach(function (a) { a.classList.toggle('on', a.getAttribute('href') === '#' + name); });
     var target = document.getElementById(hash);
-    requestAnimationFrame(function () { if (target) target.scrollIntoView(); else window.scrollTo(0,0); });
+    requestAnimationFrame(function () { if (target) target.scrollIntoView(); else window.scrollTo(0,0); fitMosaics(); });
   }
   window.addEventListener('hashchange', show); show();
   document.querySelectorAll('[data-print]').forEach(function (button) {

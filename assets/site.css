@@ -315,10 +315,13 @@ body.lb-open{overflow:hidden}
   .intro .text{padding-block:56px}
   .intro .photo{order:0;aspect-ratio:auto;min-height:320px;margin:0}
   .intro .photo:after{background:linear-gradient(90deg,var(--slate) 0%,rgba(0,0,0,0) 30%)}
-  .day{grid-template-columns:300px 1fr;align-items:start}
-  .mosaic{align-content:start;align-self:start;position:sticky;top:64px;background:var(--white)}
-  .mosaic .photo{aspect-ratio:4/3}
+  .day{grid-template-columns:320px 1fr;align-items:stretch}
+  /* photo column: main photo fills the card height (JS sets --ph from the text column; CSS fallback stretches), thumbs sit directly beneath */
+  .mosaic{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:auto auto;align-content:start;background:var(--white)}
+  .mosaic .photo{aspect-ratio:auto;height:var(--ph,420px);min-height:240px}
   .mosaic .thumb{aspect-ratio:1/1}
+  .mosaic.n1 .thumb{aspect-ratio:16/6}
+  .mosaic.n2 .thumb{aspect-ratio:4/3}
   .day .body{padding:22px 26px 20px}
   .hotel{grid-template-columns:1fr 1fr}
   .hotel .photo{aspect-ratio:auto;min-height:280px}
