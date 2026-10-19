@@ -8,7 +8,7 @@ import re
 from build_combined import build, OUTPUT
 
 ROOT = Path(__file__).resolve().parents[1]
-EXPECTED_TOTALS = [24530, 28390, 24728, 33672, 35948]
+EXPECTED_TOTALS = [24530, 28390, 24728, 33672, 36328]
 EXPECTED_DAYS = [7, 7, 7, 11, 11]
 OLD_LINKS = ['margaretrestaurant.com.au', 'www.honto.com.au',
              'experiencegoldcoast.com/blog/locals-guide-10-places-to-shop',

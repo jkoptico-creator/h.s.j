@@ -190,5 +190,7 @@ window.imgOk = function () {};
       window.print();
     };
   });
-  window.addEventListener('afterprint', function () { document.body.classList.remove('print-all'); });
+  var notes = document.querySelectorAll('details.planning-note');
+  window.addEventListener('beforeprint', function () { notes.forEach(function (d) { d.dataset.wasOpen = d.open ? '1' : ''; d.open = true; }); });
+  window.addEventListener('afterprint', function () { document.body.classList.remove('print-all'); notes.forEach(function (d) { d.open = d.dataset.wasOpen === '1'; }); });
 })();

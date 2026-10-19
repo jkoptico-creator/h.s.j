@@ -21,7 +21,7 @@ def build():
     blocks = []
     names = {p.name: ('home' if i == 0 else 'plan-' + str(i)) for i, p in enumerate(SOURCES)}
     nav = '<div class="topbar"><div class="in"><div class="brand">호주 여행 제안 · 통합본</div><nav aria-label="여행안 선택">'
-    labels = ['개요', '1 시드니', '2 시드니·해밀턴', '3 해밀턴·골드코스트', '4 골드코스트·해밀턴', '5 멜버른·해밀턴']
+    labels = ['개요', '1 시드니', '2 시드니·해밀턴', '3 해밀턴·골드코스트', '4 골드코스트·해밀턴·브리즈번', '5 멜버른·해밀턴·브리즈번']
     nav += ''.join(f'<a href="#{names[p.name]}">{label}</a>' for p, label in zip(SOURCES, labels)) + '</nav></div></div>'
     for page, source in zip(pages, SOURCES):
         name = names[source.name]
