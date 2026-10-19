@@ -15,7 +15,7 @@ def build():
     pages = [p.read_text(encoding='utf-8') for p in SOURCES]
     head = re.search(r'<head>(.*?)</head>', pages[0], re.S)[1]
     css = (ROOT / 'assets/site.css').read_text(encoding='utf-8')
-    head = re.sub(r'<link\b[^>]*href="assets/site.css"[^>]*>', lambda _: '<style>' + css + '</style>', head)
+    head = re.sub(r'<link\b[^>]*href="assets/site.css[^"]*"[^>]*>', lambda _: '<style>' + css + '</style>', head)
     head = re.sub(r'<title>.*?</title>', '<title>호주 여행 제안 · 다섯 가지 안 통합본</title>', head)
     head += '<noscript><style>[data-screen][hidden]{display:block!important}</style></noscript>'
     blocks = []
