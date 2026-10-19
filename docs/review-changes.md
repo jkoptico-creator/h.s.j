@@ -54,3 +54,12 @@
 - [Mews](https://howardsmithwharves.com/eat-drink/mews/), [Fountainhead](https://www.fountainheadwinehouse.com/), [Exhibition 예약](https://www.exhibitionrestaurant.com/reservations)
 
 외부 링크의 접근 차단(403)과 삭제·오류(404)는 구분했습니다. 예약 재고나 개별 날짜의 모든 운영 정보를 확인했다는 뜻은 아닙니다.
+
+## 2026-10-19 밤 · 5안 재검토 반영
+
+- 11/18 수요일: SHŌTŌ(목~월 영업) 대신 벌리 파빌리온의 The Tropic, CIEL 스파는 10~17시 안의 선택(15시), The Star는 카지노 15:30·Nineteen 바 16:00 이후로 구분, Royal Pines 이동 약 25분(카드 수정), 골프 뒤 샤워·환복·골프백 차량 보관 명시.
+- 11/19: Koala Encounter 11:00(1인 A$149부터·입장권 별도, 사진만이면 Koala Photo 10~14시), Paddock은 체크아웃 후 차로 이동, 점심은 Calile의 Hellenika, GOMA·Goodside는 11/20으로 이동, +81 17:30 세션 대안을 명시.
+- 11/17: 체크인 목표 16:30~17:00, 도착일 저녁은 해변·벌리 힐 선셋 산책으로 줄이고 오션뷰 트랙은 선택.
+- 11/15 Spa qualia 15:00(일요일 17시 마감·15% 할증·6시간 이내 변경 전액), 11/14 "토요일 한 편뿐" 표현 삭제.
+- 문구: 멜버른 2박·해밀턴 3박·골드코스트 2박·브리즈번 2박 구성 설명, 3층 Haven 풀 클럽, 캐츠아이 비치(리프뷰 호텔 앞), GOMA 위치, 조식 미포함 요금 기준. 마무리 사진을 화이트헤이븐으로 교체, 메뉴 라벨에 골드코스트 추가, Lan 링크를 포티튜드 밸리 지점으로.
+- 전 페이지: 인쇄 버튼 제거, 900px 미만에서 숫자 셀 6개 + 현재 안 이름 한 줄의 상단 메뉴, 700px 이하에서 비교표를 카드형으로 표시.

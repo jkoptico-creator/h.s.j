@@ -74,9 +74,12 @@ hr.rule{border:0;border-top:1px solid var(--line);margin:0}
 .topbar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .topbar .in{max-width:980px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:10px var(--gutr) 10px var(--gut)}
 .topbar .brand{font-family:var(--font-display);font-size:12px;letter-spacing:.08em;color:var(--mute);white-space:nowrap}
-.topbar nav{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin-left:auto;padding:2px 0}
+.topbar nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px;margin-left:auto;padding:2px 0}
 .topbar nav::-webkit-scrollbar{display:none}
-.topbar nav a{text-decoration:none;color:var(--mute);font-family:var(--font-display);font-size:12px;white-space:nowrap;padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:var(--white)}
+.topbar nav a{text-decoration:none;color:var(--mute);font-family:var(--font-display);font-size:11.5px;letter-spacing:0;white-space:nowrap;padding:6px 9px;border:1px solid var(--line);border-radius:999px;background:var(--white);display:inline-flex;align-items:baseline;gap:4px}
+.topbar nav a:first-child span{display:none}
+.topbar nav a b{font-weight:600}
+.navcur{display:none}
 .topbar nav a.on{color:var(--light);background:var(--slate);border-color:var(--slate)}
 
 /* cover */
@@ -377,9 +380,33 @@ section[id],article[id]{scroll-margin-top:110px}
 .lb .empty{color:white;text-align:center;margin:auto;padding:24px}.lb .source{color:white;font-size:13px}
 .lb button:disabled{opacity:.4}.lb .foot{gap:10px;flex-wrap:wrap}.lb .strip:empty{display:none}
 .print-controls{display:flex;gap:8px;flex-wrap:wrap;padding-block:14px}
-.comparison-wrap{overflow-x:auto}.comparison-table{width:100%;border-collapse:collapse;min-width:780px}.comparison-table th,.comparison-table td{padding:12px;border-bottom:1px solid var(--line);text-align:left}.comparison-note{margin-bottom:16px}
+.comparison-wrap{overflow-x:auto}.comparison-table{width:100%;border-collapse:collapse;min-width:780px}.comparison-table th,.comparison-table td{padding:12px;border-bottom:1px solid var(--line);text-align:left}.comparison-table th{white-space:nowrap}.comparison-note{margin-bottom:16px}
 :focus-visible{outline:3px solid var(--slate);outline-offset:4px}
-@media(max-width:600px){.topbar .in{display:block}.topbar .brand{display:block!important;margin-bottom:5px}.topbar nav{margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible}.topbar nav a{font-size:11px;padding:6px 4px;text-align:center;white-space:normal}.planning-note{margin:16px;padding:18px}section[id],article[id]{scroll-margin-top:155px}}
+@media(max-width:899px){
+  .topbar .in{display:block;padding:8px var(--gutr) 6px var(--gut)}
+  .topbar .brand{display:none}
+  .topbar nav{margin:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;overflow:visible;padding:0}
+  .topbar nav a{display:flex;align-items:center;justify-content:center;min-height:38px;padding:0 4px;border-radius:10px;font-size:14px;letter-spacing:.02em}
+  .topbar nav a b{font-weight:600}
+  .topbar nav a span{display:none}
+  .topbar nav a:first-child b{font-size:12.5px}
+  .navcur{display:block;text-align:center;font-size:12px;line-height:1.35;color:var(--mute);padding:0 var(--gutr) 8px var(--gut);font-family:var(--font-body)}
+  .planning-note{margin:16px;padding:18px}
+  section[id],article[id]{scroll-margin-top:96px}
+}
+@media(max-width:340px){.topbar nav{gap:4px}.topbar nav a{min-height:34px;font-size:13px;border-radius:8px}.topbar nav a:first-child b{font-size:11.5px}}
+/* comparison table: stacked cards on phones */
+@media(max-width:700px){
+  .comparison-table{min-width:0}
+  .comparison-table thead{display:none}
+  .comparison-table,.comparison-table tbody,.comparison-table tr,.comparison-table td,.comparison-table th{display:block}
+  .comparison-table tr{border:1px solid var(--line);border-radius:12px;background:var(--white);padding:10px 14px 6px;margin-bottom:10px}
+  .comparison-table th[scope="row"]{padding:0 0 6px;border:0;font-family:var(--font-display);font-size:16px}
+  .comparison-table td{display:grid;grid-template-columns:88px 1fr;gap:10px;padding:6px 0;border-bottom:1px solid var(--line);font-size:13.5px;line-height:1.5}
+  .comparison-table td:last-child{border-bottom:0}
+  .comparison-table td:before{content:attr(data-label);color:var(--mute);font-size:12px}
+  .comparison-table caption{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+}
 @media print{.section-nav,.print-controls,.lb{display:none!important}.print-all [data-screen][hidden]{display:block!important}.print-all [data-screen]+[data-screen]{break-before:page}.planning-note{break-inside:avoid}.image-reference{position:static;color:#222;background:white}.image-error{min-height:0}.topbar{display:none!important}}
 
 /* Booking caveats: collapsed by default under the budget table (plan pages) and the comparison (overview). */

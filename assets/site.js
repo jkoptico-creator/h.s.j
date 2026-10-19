@@ -191,7 +191,11 @@ window.imgOk = function () {};
     if (!Array.from(screens).some(function (s) { return s.dataset.screen === name; })) name = 'home';
     screens.forEach(function (s) { s.hidden = s.dataset.screen !== name; });
     document.documentElement.dataset.plan = name;
-    document.querySelectorAll('.topbar nav a').forEach(function (a) { a.classList.toggle('on', a.getAttribute('href') === '#' + name); });
+    document.querySelectorAll('.topbar nav a').forEach(function (a) {
+      var on = a.getAttribute('href') === '#' + name;
+      a.classList.toggle('on', on);
+      if (on) { var cur = document.querySelector('.navcur'); if (cur) cur.textContent = a.dataset.label || a.textContent; }
+    });
     var target = document.getElementById(hash);
     requestAnimationFrame(function () { if (target) target.scrollIntoView(); else window.scrollTo(0,0); fitMosaics(); });
   }
