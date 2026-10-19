@@ -98,6 +98,18 @@ function fixture(page, pictures = 3) {
   return trigger;
 }
 
+function photoMetadata(page, trigger) {
+  const pictures = page.window.GALLERY[trigger.dataset.g];
+  const entries = pictures.map((url, index) => [url, {
+    source_page: `https://example.test/photo-source-${index}`,
+    image_url: url,
+    alt_ko: ['하버브리지와 오페라하우스가 보이는 시드니 하버', '본다이에서 브론테로 이어지는 해안 산책로', '배런조이 등대의 사암 건물'][index],
+    ...(index !== 1 ? { credit: `사진가 ${index + 1}` } : {}),
+  }]);
+  page.window.PHOTO_SOURCES = { ...page.window.PHOTO_SOURCES, ...Object.fromEntries(entries) };
+  return entries.map(([, metadata]) => metadata);
+}
+
 async function main() {
   await test('detail toggle expands/collapses and has a matching aria-controls target', () => {
     const page = load('plan-1-sydney.html');
@@ -131,6 +143,10 @@ async function main() {
       check(dialog.hidden, false, 'dialog opens');
       check(dialog.getAttribute('role'), 'dialog', 'dialog role');
       check(document.getElementById(dialog.getAttribute('aria-labelledby')).textContent, trigger.dataset.cap, 'dialog accessible name');
+      check(document.getElementById(dialog.getAttribute('aria-describedby')).textContent, trigger.dataset.cap + ' 사진 1', 'dialog description uses the active photo caption');
+      check(dialog.querySelector('.strip img').alt, trigger.dataset.cap + ' 사진 1', 'legacy photo retains generated alternative text');
+      check(dialog.querySelector('.source').href, page.window.GALLERY[trigger.dataset.g][0], 'legacy photo source falls back to image URL');
+      check(dialog.querySelector('.source').textContent, '사진 출처', 'source link has the new label');
       check(document.activeElement, dialog.querySelector('.closebtn'), 'initial focus moves to close button');
       const background = [...document.body.children].filter(el => el !== dialog && el.tagName !== 'SCRIPT');
       check(background.every(el => el.inert === true), true, 'all background siblings inert');
@@ -165,10 +181,51 @@ async function main() {
     } finally { page.dom.window.close(); }
   });
 
+  await test('photo metadata follows next, previous, keyboard and scroll navigation', () => {
+    const page = load('plan-1-sydney.html');
+    try {
+      const trigger = fixture(page);
+      const metadata = photoMetadata(page, trigger);
+      trigger.click();
+      const dialog = page.document.querySelector('.lb');
+      const strip = dialog.querySelector('.strip');
+      function expectPhoto(index) {
+        const photo = metadata[index];
+        const image = strip.querySelectorAll('img')[index];
+        check(image.src, photo.image_url, 'gallery still loads its original image URL');
+        check(image.alt, photo.alt_ko, 'image alternative text matches its metadata');
+        check(dialog.querySelector('.cap').textContent, photo.alt_ko, 'visible caption describes the active photo');
+        check(dialog.querySelector('.source').href, photo.source_page, 'source points to the active photo source page');
+        check(dialog.querySelector('.source').getAttribute('title'), photo.credit ? '사진: ' + photo.credit : null, 'credit follows the photo and clears when absent');
+        check(page.document.getElementById(dialog.getAttribute('aria-labelledby')).textContent, trigger.dataset.cap, 'dialog name retains the opening itinerary context');
+      }
+      expectPhoto(0);
+      dialog.querySelector('.next').click();
+      expectPhoto(1);
+      page.key(dialog.querySelector('.closebtn'), 'ArrowRight');
+      expectPhoto(2);
+      dialog.querySelector('.prev').click();
+      expectPhoto(1);
+      strip.scrollLeft = 0;
+      strip.dispatchEvent(new page.window.Event('scroll'));
+      expectPhoto(0);
+      dialog.querySelector('.closebtn').click();
+      const legacyTrigger = fixture(page, 1);
+      delete page.window.PHOTO_SOURCES[page.window.GALLERY[legacyTrigger.dataset.g][0]];
+      legacyTrigger.click();
+      check(dialog.querySelector('.cap').textContent, legacyTrigger.dataset.cap + ' 사진 1', 'reopened legacy gallery falls back to its original caption');
+      check(dialog.querySelector('.source').href, page.window.GALLERY[legacyTrigger.dataset.g][0], 'reopened legacy gallery uses the image URL');
+      check(dialog.querySelector('.source').hasAttribute('title'), false, 'previous gallery credit does not leak into legacy photo');
+      page.noErrors();
+    } finally { page.dom.window.close(); }
+  });
+
   await test('failed gallery images update counts, preserve the current photo and reach an empty state', () => {
     const page = load('plan-1-sydney.html');
     try {
-      fixture(page).click();
+      const trigger = fixture(page);
+      const metadata = photoMetadata(page, trigger);
+      trigger.click();
       const dialog = page.document.querySelector('.lb');
       const counter = () => dialog.querySelector('.cnt').textContent;
       check(counter(), '1 / 3', 'three initial photos');
@@ -179,12 +236,22 @@ async function main() {
       dialog.querySelector('.strip img').dispatchEvent(new page.window.Event('error'));
       check(counter(), '2 / 2', 'failure before current photo reindexes count');
       check(dialog.querySelector('.source').href, currentSource, 'current photo preserved');
+      check(dialog.querySelector('.strip figure:last-child img').alt, metadata[2].alt_ko, 'surviving photo retains its actual alternative text');
+      check(dialog.querySelector('.cap').textContent, metadata[2].alt_ko, 'caption stays on the current photo after an earlier failure');
+      check(dialog.querySelector('.source').title, '사진: ' + metadata[2].credit, 'credit stays on the current photo after an earlier failure');
       dialog.querySelector('.strip figure:last-child img').dispatchEvent(new page.window.Event('error'));
       check(counter(), '1 / 1', 'failure of current photo selects remaining photo');
+      check(dialog.querySelector('.source').href, metadata[1].source_page, 'source switches to remaining photo after current failure');
+      check(dialog.querySelector('.strip img').alt, metadata[1].alt_ko, 'remaining photo alternative text is correct');
+      check(dialog.querySelector('.cap').textContent, metadata[1].alt_ko, 'caption switches to the remaining photo');
+      check(dialog.querySelector('.source').hasAttribute('title'), false, 'failed photo credit is cleared');
       dialog.querySelector('.strip img').dispatchEvent(new page.window.Event('error'));
       check(counter(), '0 / 0', 'all failed images removed');
       check(dialog.querySelector('.empty').hidden, false, 'empty message shown');
       check(dialog.querySelector('.source').hidden, true, 'source link hidden with no photo');
+      check(dialog.querySelector('.source').hasAttribute('href'), false, 'empty gallery does not retain the failed source URL');
+      check(dialog.querySelector('.source').hasAttribute('title'), false, 'empty gallery does not retain a photo credit');
+      check(dialog.querySelector('.cap').textContent, trigger.dataset.cap, 'empty gallery restores its opening context');
       check(['.prev', '.next', '.fitbtn'].every(sel => dialog.querySelector(sel).disabled), true, 'photo controls disabled');
       check(dialog.querySelectorAll('.links a').length, 2, 'official links remain accessible');
       page.key(page.document.activeElement, 'Escape');

@@ -49,7 +49,15 @@ window.imgOk = function () {};
     var f = strip.querySelectorAll('figure')[idx];
     var source = lb.querySelector('.source');
     source.hidden = !f;
-    if (f) source.href = f.dataset.source;
+    lb.querySelector('.cap').textContent = f ? f.querySelector('img').alt : lb.querySelector('#photo-context').textContent;
+    if (f) {
+      source.href = f.dataset.source;
+      if (f.dataset.credit) source.title = '사진: ' + f.dataset.credit;
+      else source.removeAttribute('title');
+    } else {
+      source.removeAttribute('href');
+      source.removeAttribute('title');
+    }
   }
   function go(i) {
     if (i < 0 || i >= count()) return;
@@ -74,8 +82,9 @@ window.imgOk = function () {};
     lb = document.createElement('div');
     lb.className = 'lb'; lb.hidden = true;
     lb.setAttribute('role', 'dialog'); lb.setAttribute('aria-modal', 'true');
-    lb.setAttribute('aria-labelledby', 'photo-caption');
-    lb.innerHTML = '<div class="bar"><span class="cap" id="photo-caption"></span><span><button type="button" class="fitbtn" aria-pressed="false">꽉 채우기</button><button type="button" class="closebtn" aria-label="사진 닫기">×</button></span></div><div class="strip"></div><p class="empty" role="status" hidden>사진을 불러오지 못했습니다. 아래 공식 사이트를 확인해 주세요.</p><div class="foot"><div class="ctl"><button type="button" class="prev" aria-label="이전 사진">‹</button><span class="cnt" aria-live="polite"></span><button type="button" class="next" aria-label="다음 사진">›</button></div><div class="links"></div><a class="source" target="_blank" rel="noopener">사진 원본</a></div>';
+    lb.setAttribute('aria-labelledby', 'photo-context');
+    lb.setAttribute('aria-describedby', 'photo-caption');
+    lb.innerHTML = '<span id="photo-context" hidden></span><div class="bar"><span class="cap" id="photo-caption"></span><span><button type="button" class="fitbtn" aria-pressed="false">꽉 채우기</button><button type="button" class="closebtn" aria-label="사진 닫기">×</button></span></div><div class="strip"></div><p class="empty" role="status" hidden>사진을 불러오지 못했습니다. 아래 공식 사이트를 확인해 주세요.</p><div class="foot"><div class="ctl"><button type="button" class="prev" aria-label="이전 사진">‹</button><span class="cnt" aria-live="polite"></span><button type="button" class="next" aria-label="다음 사진">›</button></div><div class="links"></div><a class="source" target="_blank" rel="noopener">사진 출처</a></div>';
     document.body.appendChild(lb); strip = lb.querySelector('.strip');
     lb.querySelector('.closebtn').onclick = close;
     lb.querySelector('.prev').onclick = function () { go(idx - 1); };
@@ -105,12 +114,14 @@ window.imgOk = function () {};
     if (!lb) build();
     opener = trigger; idx = 0;
     var key = trigger.dataset.g, caption = trigger.dataset.cap || '여행 사진';
-    lb.querySelector('.cap').textContent = caption;
+    lb.querySelector('#photo-context').textContent = caption;
     strip.replaceChildren();
     (G[key] || []).forEach(function (url, i) {
       var figure = document.createElement('figure'), im = document.createElement('img');
-      figure.dataset.source = url;
-      im.alt = caption + ' 사진 ' + (i + 1); im.loading = i < 2 ? 'eager' : 'lazy';
+      var metadata = (window.PHOTO_SOURCES || {})[url] || {};
+      figure.dataset.source = metadata.source_page || url;
+      figure.dataset.credit = metadata.credit || '';
+      im.alt = metadata.alt_ko || caption + ' 사진 ' + (i + 1); im.loading = i < 2 ? 'eager' : 'lazy';
       im.onerror = function () {
         var current = strip.querySelectorAll('figure')[idx];
         figure.remove();
