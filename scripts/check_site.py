@@ -79,6 +79,7 @@ def check_page(path):
             if parsed.fragment and target == path:
                 assert unquote(parsed.fragment) in ids, (path.name, 'missing anchor', url)
     if path.parent.name != 'review':
+        assert all('?v=' in a['src'] for tag,a in page.tags if tag == 'script' and a.get('src','').startswith('assets/')), 'Shared scripts must invalidate the previous photo cache'
         assert 'image-reference' not in ' '.join(a.get('class', '') for _, a in page.tags), path.name
         assert '사진 준비 중' not in text, (path.name, 'unfilled photo')
         assert not any('images.unsplash.com' in a.get('src','') for tag,a in page.tags if tag=='img'), path.name
