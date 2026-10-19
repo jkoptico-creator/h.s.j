@@ -278,8 +278,8 @@ hr.rule{border-top-color:var(--sage-2)}
 .lb .strip{flex:1;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;align-items:center;min-height:0}
 .lb .strip::-webkit-scrollbar{display:none}
 .lb .strip figure{margin:0;flex:0 0 100%;height:100%;scroll-snap-align:center;position:relative;overflow:hidden}
-.lb .strip img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.lb .strip figure.fit img{object-fit:contain;background:#0b0d0e}
+.lb .strip img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#0b0d0e}
+.lb .strip figure.fill img{object-fit:cover}
 .lb .bar .fitbtn{appearance:none;background:rgba(243,239,230,.12);color:#F3EFE6;border:0;border-radius:999px;width:auto;height:32px;padding:0 12px;font:500 11.5px/1 var(--font-body);letter-spacing:.02em;white-space:nowrap;cursor:pointer;flex:none}
 .lb .foot{display:grid;gap:10px;padding:10px var(--gutr) calc(14px + env(safe-area-inset-bottom,0px)) var(--gut);font-family:var(--font-display);font-size:12px;color:#CFD9CF}
 .lb .ctl{display:flex;align-items:center;justify-content:center;gap:14px}
@@ -573,11 +573,11 @@ function imgOk(){}
   var lb=null, strip=null, items=[], idx=0, cap='', key='';
   function build(){
     lb=document.createElement('div'); lb.className='lb'; lb.setAttribute('role','dialog'); lb.setAttribute('aria-modal','true');
-    lb.innerHTML='<div class="bar"><span class="cap"></span><span style="display:flex;gap:8px;align-items:center"><button type="button" class="fitbtn" aria-pressed="false">전체 보기</button><button type="button" class="closebtn" aria-label="닫기">×</button></span></div><div class="strip"></div><div class="foot"><div class="ctl"><button type="button" class="prev" aria-label="이전">‹</button><span class="cnt"></span><span class="dots"></span><button type="button" class="next" aria-label="다음">›</button></div><div class="links"></div></div>';
+    lb.innerHTML='<div class="bar"><span class="cap"></span><span style="display:flex;gap:8px;align-items:center"><button type="button" class="fitbtn" aria-pressed="false">꽉 채우기</button><button type="button" class="closebtn" aria-label="닫기">×</button></span></div><div class="strip"></div><div class="foot"><div class="ctl"><button type="button" class="prev" aria-label="이전">‹</button><span class="cnt"></span><span class="dots"></span><button type="button" class="next" aria-label="다음">›</button></div><div class="links"></div></div>';
     document.body.appendChild(lb);
     strip=lb.querySelector('.strip');
     lb.querySelector('.closebtn').onclick=close;
-    lb.querySelector('.fitbtn').onclick=function(){ var on=this.getAttribute('aria-pressed')!=='true'; this.setAttribute('aria-pressed',on?'true':'false'); this.textContent=on?'꽉 채우기':'전체 보기'; strip.querySelectorAll('figure').forEach(function(f){ f.classList.toggle('fit',on); }); };
+    lb.querySelector('.fitbtn').onclick=function(){ var on=this.getAttribute('aria-pressed')!=='true'; this.setAttribute('aria-pressed',on?'true':'false'); this.textContent=on?'전체 보기':'꽉 채우기'; strip.querySelectorAll('figure').forEach(function(f){ f.classList.toggle('fill',on); }); };
     lb.querySelector('.prev').onclick=function(){go(idx-1)};
     lb.querySelector('.next').onclick=function(){go(idx+1)};
     lb.addEventListener('click',function(ev){ if(ev.target===strip||ev.target.tagName==='FIGURE') close(); });
@@ -596,6 +596,7 @@ function imgOk(){}
     if(l.youtube) lk.push('<a href="'+l.youtube+'" target="_blank" rel="noopener">유튜브</a>');
     if(l.map) lk.push('<a href="'+l.map+'" target="_blank" rel="noopener">지도</a>');
     lb.querySelector('.links').innerHTML=lk.join('');
+    var fb=lb.querySelector('.fitbtn'); fb.setAttribute('aria-pressed','false'); fb.textContent='꽉 채우기';
     lb.hidden=false; document.body.classList.add('lb-open'); strip.scrollLeft=0; paint();
     try{ history.pushState({lb:1},''); }catch(e){}
   }
