@@ -63,7 +63,7 @@ function load(filename, hash = '') {
   for (const script of document.querySelectorAll('script')) {
     const source = script.getAttribute('src');
     const code = source
-      ? fs.readFileSync(path.join(ROOT, source), 'utf8')
+      ? fs.readFileSync(path.join(ROOT, source.split('?')[0]), 'utf8')
       : script.textContent;
     window.eval(`${code}\n//# sourceURL=${source || filename + ':inline'}`);
   }
