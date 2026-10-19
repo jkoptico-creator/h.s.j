@@ -17,6 +17,13 @@ OLD_LINKS = ['margaretrestaurant.com.au', 'www.honto.com.au',
 data = (ROOT/'assets/places.js').read_text(encoding='utf-8')
 gallery = json.loads(re.search(r'window.GALLERY=(.*?);\n', data, re.S)[1])
 links = json.loads(re.search(r'window.LINKS=(.*?);\n', data, re.S)[1])
+photo_sources = json.loads(re.search(r'window.PHOTO_SOURCES=(.*?);\n', data, re.S)[1])
+photo_manifest = json.loads((ROOT/'assets/photos/sources.json').read_text(encoding='utf-8'))
+for photo in photo_manifest:
+    assert (ROOT/photo['file']).is_file(), ('missing photo', photo['file'])
+    assert photo['width'] >= 700 and photo['height'] >= 400, ('photo too small', photo['file'])
+    assert photo_sources[photo['file']]['source_page'] == photo['source_page']
+    assert photo['file'] in gallery[photo['place_key']]
 
 
 class Page(HTMLParser):
@@ -57,6 +64,11 @@ def check_page(path):
         if 'data-g' in a:
             assert a['data-g'] in gallery, (path.name, 'unknown gallery', a['data-g'])
             assert a['data-g'] in links, (path.name, 'unknown destination', a['data-g'])
+            assert gallery[a['data-g']], (path.name, 'empty gallery', a['data-g'])
+            if '등대' in a.get('data-cap', ''):
+                assert a['data-g'] == 'barrenjoey_lighthouse', 'Lighthouse must not show The Joey restaurant'
+            if 'Gallery Walk' in a.get('data-cap', ''):
+                assert a['data-g'] == 'gallery_walk', 'Gallery Walk must not show Skywalk'
         for attribute in ['href', 'src']:
             url = a.get(attribute, '')
             if not url or url.startswith(('https:', 'http:', 'data:', 'mailto:')):
@@ -67,6 +79,9 @@ def check_page(path):
             if parsed.fragment and target == path:
                 assert unquote(parsed.fragment) in ids, (path.name, 'missing anchor', url)
     if path.parent.name != 'review':
+        assert 'image-reference' not in ' '.join(a.get('class', '') for _, a in page.tags), path.name
+        assert '사진 준비 중' not in text, (path.name, 'unfilled photo')
+        assert not any('images.unsplash.com' in a.get('src','') for tag,a in page.tags if tag=='img'), path.name
         assert '2026년 10월 19일' in text and '예약 전 확인' in text, path.name
         assert not any(old in text for old in OLD_LINKS), (path.name, 'obsolete destination URL')
     return page
@@ -103,5 +118,9 @@ assert not any(old in data for old in OLD_LINKS), 'Obsolete URL in shared destin
 assert links['cleo']['site'] == 'https://cleomelbourne.com.au/'
 assert 'Catseye' in links['catseye_beach']['map']
 assert all('/leeward/' in u.lower() for u in gallery['qualia_leeward'])
+assert not any('/windward/' in u.lower() for u in gallery['qualia'])
+assert not any('ricochet' in u.lower() for u in gallery['sunset_sail'])
+assert not any('Kiki-Kiosk' in u for u in gallery['goodside_cafe'])
+assert '"assets/photos/' not in OUTPUT.read_text(encoding='utf-8'), 'Shared single file needs absolute hosted photo URLs'
 assert not links['biz_class_a380'].get('map') and not links['biz_class_787'].get('map')
 print(f'PASS: {len(pages)} HTML pages; internal files/anchors, image metadata, destination keys, day toggles, five budget totals and combined-source parity.')
