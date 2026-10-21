@@ -74,7 +74,6 @@
       (it.sub ? '<div class="sb">' + h(it.sub) + '</div>' : '') +
       (it.addr ? '<div class="ad">' + h(it.addr) + '</div>' : '') +
       links(it) +
-      (it.cost ? '<div class="pn plan"><b>비용</b>' + h(it.cost) + '</div>' : '') +
       (it.note ? '<div class="pn plan"><b>메모</b>' + h(it.note) + '</div>' : '') +
       '</div><div class="rt">' + right + '</div></li>';
   }

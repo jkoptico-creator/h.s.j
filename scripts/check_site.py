@@ -8,7 +8,7 @@ import re
 from build_combined import build, OUTPUT
 
 ROOT = Path(__file__).resolve().parents[1]
-EXPECTED_TOTALS = [24530, 28390, 24728, 33672, 36328]
+EXPECTED_TOTALS = [24530, 30610, 24728, 33672, 36328]
 EXPECTED_DAYS = [7, 7, 7, 11, 11]
 OLD_LINKS = ['margaretrestaurant.com.au', 'www.honto.com.au',
              'experiencegoldcoast.com/blog/locals-guide-10-places-to-shop',
@@ -114,7 +114,7 @@ for path in pages:
 
 assert OUTPUT.read_text(encoding='utf-8') == build(), 'Combined edition is stale'
 # Privacy: booking references, ticket numbers and passenger names never appear in the published files.
-PRIVATE = ['EMP7UL', 'HTWIEL', '1802251115', 'JEON/', 'HAKSOO', 'HAEUN', '전학수', '임하은']
+PRIVATE = ['EMP7UL', 'HTWIEL', 'EKZGCK', '23842SH', 'BHHIR', '4545162986', '4545183925', 'YONG SAN', 'Jee Woong', 'JEEWOONG', '1802251115', 'JEON/', 'HAKSOO', 'HAEUN', '전학수', '임하은', '지웅']
 for path in [*ROOT.glob('*.html'), *ROOT.glob('assets/*.js'), *ROOT.glob('docs/*.md'), ROOT/'README.md']:
     text = path.read_text(encoding='utf-8')
     assert not any(word in text for word in PRIVATE), (path.name, 'private booking detail must not be published')
@@ -130,7 +130,9 @@ assert '발레' not in trip and 'Copland' not in trip, 'the guests do not want t
 for name in ['index.html', 'plan-2-sydney-hamilton-brisbane.html']:
     assert 'href="itinerary.html"' in (ROOT/name).read_text(encoding='utf-8'), (name, 'planner link')
 plan2 = (ROOT/'plan-2-sydney-hamilton-brisbane.html').read_text(encoding='utf-8')
-assert 'harbour_yacht' in plan2 and 'VA1283' in plan2 and 'VA1496' in plan2 and 'qualia_charter' in plan2 and '발레' not in plan2
+assert 'harbour_yacht' in plan2 and 'VA1283' in plan2 and 'VA1496' in plan2 and 'reef_view_suite' in plan2 and '발레' not in plan2
+assert 'Leeward' not in plan2 and 'Long Pavilion' not in plan2, 'qualia stay must be gone from plan 2'
+assert 'cost:' not in trip, 'costs are handled off-page'
 assert 'pickbar' in OUTPUT.read_text(encoding='utf-8') and 'itinerary.html' in OUTPUT.read_text(encoding='utf-8')
 overview = (ROOT/'index.html').read_text(encoding='utf-8')
 assert '1~2회 · 섬 일정 선택에 따라' in overview, 'Plan 2 golf count must reflect the boat alternative'
