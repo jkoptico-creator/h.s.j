@@ -386,25 +386,25 @@
     "checked_on": "2026-10-19"
   },
   {
-    "image_url": "https://www.sydneyoperahouse.com/sites/default/files/styles/16x9__1200w/public/collaborodam_assets/4135113%20TAB%20Copland%20Dance%20Episodes%20%28Peck%29%20Riley%20Lapham_Cameron%20Holmes%20Credit_Kate%20Longley%202026.jpg.webp?itok=HLNbqplX",
-    "source_page": "https://www.sydneyoperahouse.com/the-australian-ballet/2026-season/copland-dance-episodes",
-    "alt_ko": "호주 발레단 〈Copland Dance Episodes〉 — 노란 의상의 무용수를 들어 올리는 장면 (사진: Kate Longley)",
-    "verification": "시드니 오페라하우스 공식 공연 페이지의 이미지(2026년 11월 6–21일 Joan Sutherland Theatre 공연). 셸에서 원본 1200×675 내려받아 webp로 변환. 2026-10-21 확인.",
-    "file": "assets/photos/copland_ballet-1.webp",
-    "place_key": "copland_ballet",
-    "width": 1200,
-    "height": 675,
+    "image_url": "https://www.boathiresydney.com.au/img/uploads/20200528_Element-cruising.jpg",
+    "source_page": "https://www.boathiresydney.com.au/boats/element",
+    "alt_ko": "80피트 워렌 요트 엘리먼트가 시드니 하버브리지 아래를 지나는 모습",
+    "verification": "Boat Hire Sydney(중개사)의 Element 소개 페이지 사진. 셸에서 원본 1300×600 내려받아 webp로 변환. 2026-10-21 확인.",
+    "file": "assets/photos/harbour_yacht-1.webp",
+    "place_key": "harbour_yacht",
+    "width": 1300,
+    "height": 600,
     "checked_on": "2026-10-21"
   },
   {
-    "image_url": "https://www.sydneyoperahouse.com/sites/default/files/styles/16x9__1200w/public/collaborodam_assets/Copland-KateLongley-260622-272.jpg.webp?itok=htrdbOk7",
-    "source_page": "https://www.sydneyoperahouse.com/the-australian-ballet/2026-season/copland-dance-episodes",
-    "alt_ko": "호주 발레단 〈Copland Dance Episodes〉 — 무대 위 군무 장면 (사진: Kate Longley)",
-    "verification": "시드니 오페라하우스 공식 공연 페이지의 이미지(2026년 11월 6–21일 Joan Sutherland Theatre 공연). 셸에서 원본 1200×675 내려받아 webp로 변환. 2026-10-21 확인.",
-    "file": "assets/photos/copland_ballet-2.webp",
-    "place_key": "copland_ballet",
-    "width": 1200,
-    "height": 675,
+    "image_url": "https://www.boathiresydney.com.au/img/uploads/20200528_Element--Drone-Shot-2.jpg",
+    "source_page": "https://www.boathiresydney.com.au/boats/element",
+    "alt_ko": "시드니 시티 스카이라인을 배경으로 하버를 달리는 엘리먼트 요트",
+    "verification": "Boat Hire Sydney(중개사)의 Element 소개 페이지 사진. 셸에서 원본 1300×600 내려받아 webp로 변환. 2026-10-21 확인.",
+    "file": "assets/photos/harbour_yacht-2.webp",
+    "place_key": "harbour_yacht",
+    "width": 1300,
+    "height": 600,
     "checked_on": "2026-10-21"
   }
 ]

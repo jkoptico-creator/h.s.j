@@ -11,7 +11,7 @@
 window.TRIP = {
   title: '시드니 → 해밀턴 아일랜드 → 브리즈번',
   dates: '2026년 11월 15일(일) – 21일(토)',
-  updated: '2026년 10월 21일',
+  updated: '2026년 10월 21일 저녁',
   lookbook: 'plan-2-sydney-hamilton-brisbane.html',
   days: [
     {
@@ -27,10 +27,10 @@ window.TRIP = {
     },
     {
       id: 'd16', date: '2026-11-16', dow: '월', n: 1, city: '시드니', tz: 'Australia/Sydney', tzLabel: '시드니 시각 · 한국 +2시간',
-      title: '시드니 도착 · 해안 산책 · 오페라하우스와 발레',
-      intro: '아침에 내려 짐을 맡기고 바다를 걷는 날입니다. 오후에 오페라하우스 한국어 투어를 보고, 저녁에는 같은 건물에서 호주 발레단 공연과 Bennelong 식사를 이어서 합니다. 피곤하면 아침 산책을 줄이거나 빼도 됩니다.',
+      title: '시드니 도착 · 해안 산책 · 오페라하우스 · 하버 야경 요트',
+      intro: '아침에 내려 짐을 맡기고 바다를 걷는 날입니다. 오후에 오페라하우스 한국어 투어를 보고, 같은 건물의 Bennelong에서 이른 저녁을 먹은 뒤, 바로 옆 선착장에서 프라이빗 요트를 타고 해 지는 하버브리지와 오페라하우스의 불빛을 바다에서 봅니다. 피곤하면 아침 산책을 줄이거나 빼도 됩니다.',
       stay: { name: 'Capella Sydney', sub: '24 Loftus St, Sydney NSW 2000', tel: '+61 2 9071 5000', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney', nights: '1/2박' },
-      bring: ['편한 운동화', '얇은 겉옷(저녁 바람)', '선크림 · 모자', '공연 티켓(휴대폰)'],
+      bring: ['편한 운동화', '겉옷(밤 바다 바람 · 17°C 안팎)', '선크림 · 모자', '요트에서는 신발을 벗는 곳이 많습니다'],
       items: [
         { t: '08:20', type: 'plane', name: '시드니 공항 제1터미널 도착 · OZ601', sub: '입국 심사와 수하물 수령 약 60–90분 · 식품·흙 묻은 골프화는 신고 대상이니 골프화는 깨끗이', q: 'Sydney Airport International Terminal 1', st: 'ok' },
         { via: 'car', text: '공항 → 호텔 차량 약 30–45분 (우버 · 택시 또는 예약 픽업)', mode: 'driving' },
@@ -43,15 +43,16 @@ window.TRIP = {
         { t: '14:15', type: 'hotel', name: 'Capella Sydney 체크인 · 휴식', sub: '객실 준비 시간에 따라 투어 뒤 체크인으로 바뀔 수 있습니다', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney' },
         { via: 'walk', text: '오페라하우스까지 도보 약 15–20분 (서큘러키 방향)', mode: 'walking' },
         { t: '15:30', type: 'pin', name: '오페라하우스 한국어 투어 집결 · 15:45 시작', sub: '약 30분 · 집결은 하부 콘코스의 Welcome Centre · 문의 02 8188 3734', addr: 'Bennelong Point, Sydney', q: 'Sydney Opera House Welcome Centre', tel: '+61 2 8188 3734', key: 'opera_house_tour', st: 'need', note: '11/16(월) 15:45 한국어 회차 운영 여부와 잔여 좌석 확인 후 예매. 성인 A$37(온라인).', cost: 'A$37 × 2' },
-        { t: '16:30', type: 'pin', name: '휴식 · 호텔 또는 Opera Bar', sub: '호텔로 돌아가 쉬거나(도보 15분), 하부 콘코스의 Opera Bar에서 항구를 보며 쉬다가 공연장으로 갑니다', q: 'Opera Bar Sydney' },
-        { t: '18:00', type: 'show', name: 'Joan Sutherland Theatre 입장', sub: '공연 30분 전 입장 권장 · 복장은 스마트 캐주얼이면 충분합니다', q: 'Joan Sutherland Theatre, Sydney Opera House' },
-        { t: '18:30', type: 'show', name: '호주 발레단 〈Copland Dance Episodes〉', sub: '저스틴 펙 안무 · 코플랜드 음악 · 73분, 인터미션 없음 · 19:45 종료 예정 · 11월 6–21일 시드니 공연 중 월요일 회차', addr: 'Joan Sutherland Theatre, Sydney Opera House', q: 'Joan Sutherland Theatre, Sydney Opera House', site: 'https://www.sydneyoperahouse.com/the-australian-ballet/2026-season/copland-dance-episodes', key: 'copland_ballet', st: 'need', note: '공식 예매처는 sydneyoperahouse.com 과 australianballet.com.au 뿐. 일반석 A$65–371 + 예매 수수료 A$8.95/건. 좋은 자리는 Premium 또는 A Reserve 중앙. 대안: 17일(화) 19:30 회차(그 경우 BridgeClimb 생략).', cost: 'A$ 약 300–750 (2명, 좌석 등급에 따라)' },
-        { t: '20:00', type: 'dining', name: 'Bennelong 저녁 · 오페라하우스 안', sub: '공연장에서 걸어서 2–3분 · 일–목 저녁 예약 17:30–20:45 · 문의 02 9240 8000', addr: 'Sydney Opera House, Bennelong Point', q: 'Bennelong Restaurant Sydney Opera House', tel: '+61 2 9240 8000', key: 'bennelong', st: 'need', note: '2명 20:00 예약. 창가 요청. 공연 종료 19:45 기준으로 여유 15분.' },
-        { via: 'walk', text: '호텔까지 도보 약 15분 또는 택시 5분', mode: 'walking' },
-        { t: '22:00 전후', type: 'hotel', name: '호텔 복귀', sub: '내일 골프 출발 06:45 · 골프 가방 정리', q: 'Capella Sydney, 24 Loftus Street Sydney' },
+        { t: '16:30', type: 'pin', name: '휴식 · Opera Bar', sub: '하부 콘코스의 Opera Bar에서 항구를 보며 한 시간 쉬거나, 호텔로 돌아가 쉽니다(도보 15분)', q: 'Opera Bar Sydney' },
+        { t: '17:30', type: 'dining', name: 'Bennelong 저녁 · 오페라하우스 안', sub: '첫 타임 · 19:15까지 식사를 마치는 목표 · 일–목 저녁 예약 17:30–20:45 · 문의 02 9240 8000', addr: 'Sydney Opera House, Bennelong Point', q: 'Bennelong Restaurant Sydney Opera House', tel: '+61 2 9240 8000', key: 'bennelong', st: 'need', note: '2명 17:30 예약 · 19:15 출발 예정이라고 미리 알리기 · 창가 요청.' },
+        { via: 'walk', text: '서큘러키 동쪽 선착장(Eastern Pontoon)까지 도보 약 5분', mode: 'walking' },
+        { t: '19:30', type: 'boat', name: '하버 야경 프라이빗 요트 · 3시간', sub: '일몰(19:36)에 맞춰 출항해 하버브리지 아래, 오페라하우스 앞, 시티 불빛을 바다에서 봅니다 · 선장·승무원·바 포함, 두 분만 탑승 · 22:30 하선(4시간 조건이면 23:30)', addr: 'Eastern Pontoon, Circular Quay', q: 'Eastern Pontoon Circular Quay Sydney', key: 'harbour_yacht', st: 'ask', note: '골드코스트 YOT Capri(92피트 Mangusta, 3시간 A$4,275 + 케이터링)와 같은 급. 후보 ① Element 80피트 Warren Yachts — 11월 A$1,450/시간, 공식 최소 4시간(3시간은 문의), 승무원 A$400, 선착장 A$50/회, 음료 A$20/인/시간~, Elite Chefs 케이터링, Eastern Pontoon 승선 가능 → 3시간 약 A$5,300 / 4시간 약 A$6,800 (케이터링 포함 추정) ② Privacy 87피트 Warren — 11월 A$1,850/시간·최소 4시간, 웨이트 스태프 2명 A$800, 선착장 A$75/회, 승선은 King St Wharf·카지노 선착장 → 약 A$8,500~ ③ Lady Pamela 100피트 Azimut — A$1,850/시간, Eastern Pontoon 승선 가능 ④ 더 작게: MV Alfie II Sunseeker Predator 68 A$1,000/시간(12명), Aqua Bay 70피트 A$950/시간. 문의: Sydney Harbour Specialists sydneyhs.com.au · Boat Hire Sydney 0437 752 424. 저녁 출항은 보통 17:30 이후, 11월은 4시간 최소가 많아 3시간 가능 여부부터 확인.', cost: 'A$ 약 5,300–8,500 (3–4시간 · 음료·케이터링 포함 추정)' },
+        { via: 'car', text: '하선 뒤 호텔까지 택시 약 5분 또는 도보 15분', mode: 'walking' },
+        { t: '22:45 전후', type: 'hotel', name: '호텔 복귀', sub: '내일 골프 출발 06:45 · 골프 가방 정리', q: 'Capella Sydney, 24 Loftus Street Sydney' },
+        { t: '대안', type: 'boat', alt: true, name: '요트를 저녁 전으로 · 17:30–20:30 선셋 크루즈 → Bennelong 20:45', sub: '해 질 녘과 초저녁 불빛을 보고 마지막 예약 시간인 20:45에 식사 · 요트가 4시간 조건이면 선상 디너(셰프 케이터링)로 바꾸고 Bennelong은 취소', q: 'Eastern Pontoon Circular Quay Sydney', key: 'harbour_yacht', note: '야경을 길게 보려면 기본안(저녁 뒤 19:30 출항)이 낫고, 저녁을 늦게 먹고 싶으면 이 안.' },
         { t: '대안', type: 'spa', alt: true, name: '38° 배스하우스 · 본다이', sub: '아침 해안 산책과 쿠지 점심 대신 본다이에서 90분 세션과 점심을 잡는 안 · 둘 다 넣지는 않습니다', q: '38 The Bathhouse Bondi', key: 'bathhouse_bondi', note: '세션 예약제. 선택 시 산책·쿠지 예약 취소.' }
       ],
-      notes: '도착일 공항 픽업(2명 · 골프 가방 2개)을 미리 예약하면 수하물 많은 아침이 편합니다. 발레는 11/16(월) 18:30 회차가 가장 알맞고, 17일(화) 19:30은 BridgeClimb과 겹칩니다.'
+      notes: '저녁 순서: 투어 15:45 → Opera Bar → Bennelong 17:30 → 19:30 요트(일몰 19:36 출항, 야경 3시간) → 22:45 호텔. 요트가 4시간만 된다면 23:30 하선(한국 시각 21:30이라 무리 없음). 공항 픽업(골프백 2개)도 예약.'
     },
     {
       id: 'd17', date: '2026-11-17', dow: '화', n: 2, city: '시드니', tz: 'Australia/Sydney', tzLabel: '시드니 시각 · 한국 +2시간',
@@ -74,7 +75,7 @@ window.TRIP = {
         { t: '17:00', type: 'dining', name: 'Spezia 이른 저녁', sub: '이탈리안 · 화–토 저녁 17:00–21:00 · 18:00까지 식사를 마치는 목표', addr: '5 Gresham St, Sydney', q: 'Spezia, 5 Gresham Street Sydney', key: 'spezia', st: 'need', note: '17:00 오픈 첫 타임 2명 예약 · 클라임 회차가 바뀌면 시간도 같이 조정.' },
         { via: 'walk', text: 'BridgeClimb 집결지까지 도보 약 15분 (더록스)', mode: 'walking' },
         { t: '18:15 예시', type: 'pin', name: 'BridgeClimb 집결', sub: '출발 15분 전 · 운동화 · 카메라와 휴대폰은 반입 불가(보관함)', addr: '3 Cumberland St, The Rocks', q: 'BridgeClimb Sydney, 3 Cumberland Street The Rocks', tel: '+61 2 8274 7777', key: 'bridgeclimb' },
-        { t: '18:30 예시', type: 'pin', name: 'Summit Insider · 해질녘 회차', sub: '사다리가 없는 코스 · 총 약 2.5시간 · 해질녘(약 19:35) 회차는 날짜별로 시각이 다릅니다', q: 'BridgeClimb Sydney, 3 Cumberland Street The Rocks', key: 'bridgeclimb', st: 'need', note: '트와일라이트 회차 시각 확인 후 Spezia 시간 연동. 대안: 발레 19:30 회차를 이 날로 옮기면 클라임 생략.', cost: 'A$ 회차별 상이' },
+        { t: '18:30 예시', type: 'pin', name: 'Summit Insider · 해질녘 회차', sub: '사다리가 없는 코스 · 총 약 2.5시간 · 해질녘(약 19:35) 회차는 날짜별로 시각이 다릅니다', q: 'BridgeClimb Sydney, 3 Cumberland Street The Rocks', key: 'bridgeclimb', st: 'need', note: '트와일라이트 회차 시각 확인 후 Spezia 시간 연동.', cost: 'A$ 회차별 상이' },
         { via: 'walk', text: '호텔까지 도보 약 15분', mode: 'walking' },
         { t: '21:15 전후', type: 'hotel', name: '호텔 복귀', sub: '내일 07:15 출발 · 짐 정리', q: 'Capella Sydney, 24 Loftus Street Sydney' }
       ],
@@ -106,7 +107,7 @@ window.TRIP = {
     {
       id: 'd19', date: '2026-11-19', dow: '목', n: 4, city: '해밀턴 아일랜드', short: '해밀턴', tz: 'Australia/Brisbane', tzLabel: '퀸즐랜드 시각 · 한국 +1시간',
       title: '덴트섬 골프 · 선셋 크루즈 · coca chu',
-      intro: '하루에 한 가지만 크게 잡는 날입니다. 기본은 아침 페리로 건너가는 Hamilton Island Golf Club 18홀이고, 화이트헤이븐을 우선하면 골프 대신 힐인렛 투어를 고릅니다. 오후에 쉬고, 저녁 전 바다에서 해 지는 것을 봅니다.',
+      intro: '하루에 한 가지만 크게 잡는 날입니다. 기본은 아침 페리로 건너가는 Hamilton Island Golf Club 18홀이고, 화이트헤이븐을 우선하면 골프 대신 힐인렛 투어를 고릅니다. 오후에 쉬고, 원하면 저녁 전 바다에서 해 지는 것을 보는 선셋 크루즈를 넣습니다.',
       stay: { name: 'qualia · Leeward Pavilion', sub: '20 Whitsunday Blvd, Hamilton Island QLD 4803', tel: '+61 7 4948 9222', q: 'qualia, Hamilton Island', key: 'qualia_leeward', nights: '2/2박' },
       bring: ['골프복 · 골프화 · 장갑', '모자 · 선크림(자외선 매우 강함)', '모기 기피제', '크루즈용 얇은 겉옷'],
       items: [
@@ -117,19 +118,19 @@ window.TRIP = {
         { t: '13:00 전후', type: 'dining', name: '클럽하우스 점심 · 덴트 패시지 전망', sub: '라운드 후', q: 'Hamilton Island Golf Club, Dent Island', key: 'hamilton_island_golf' },
         { t: '14:30 예시', type: 'ferry', name: '페리로 해밀턴 복귀', sub: '당일 시간표 확인 · 마리나에서 리조트 차량', q: 'Hamilton Island Marina Village' },
         { t: '15:00', type: 'hotel', name: '리조트 휴식', sub: '', q: 'qualia, Hamilton Island', key: 'qualia' },
-        { t: '17:00 예시', type: 'boat', name: '선셋 크루즈 · qualia 프라이빗 모터요트', sub: '브리즈번강 요트 대신 제안 · 55피트 Palm Beach 모터요트, 선장과 호스트 동승 · 일몰 약 18:20 · 집결 시각은 예약 때 확정', q: 'qualia, Hamilton Island', site: 'https://www.qualia.com.au/experiences/boating/', key: 'qualia_charter', st: 'ask', note: 'qualia 컨시어지(guestservices@qualia.com.au · 07 4948 9222)에 11/19 선셋 프라이빗 차터 문의. 2명 기준 요금·소요 시간·날씨 취소 조건 확인. 대안: On the Edge 공용 선셋 세일(약 90분).', cost: 'A$ 문의 (프라이빗 차터)' },
+        { t: '17:00 예시', type: 'boat', opt: true, name: '선셋 크루즈 · qualia 프라이빗 모터요트 · 선택', sub: '시드니 야경 요트와 별개로 원하면 넣는 선택 일정 · 55피트 Palm Beach 모터요트, 선장과 호스트 동승 · 일몰 약 18:20 · 집결 시각은 예약 때 확정', q: 'qualia, Hamilton Island', site: 'https://www.qualia.com.au/experiences/boating/', key: 'qualia_charter', st: 'ask', note: 'qualia 컨시어지(guestservices@qualia.com.au · 07 4948 9222)에 11/19 선셋 프라이빗 차터 문의. 2명 기준 요금·소요 시간·날씨 취소 조건 확인. 대안: On the Edge 공용 선셋 세일(약 90분).', cost: 'A$ 문의 (프라이빗 차터)' },
         { t: '19:30', type: 'dining', name: 'coca chu 저녁 · 마리나 빌리지', sub: '동남아시아 요리 · 리조트 버기 약 10–15분 · 돌아올 때 컨시어지에 차량 요청', addr: 'Front St, Marina Village, Hamilton Island', q: 'coca chu Hamilton Island', key: 'coca_chu', st: 'need', note: '2명 19:30 예약 · hirestaurants@hamiltonisland.com.au' },
         { t: '대안', type: 'boat', alt: true, name: 'Explore · Hill Inlet 투어 (골프 대신)', sub: '약 4시간 · 08:00 또는 12:30 중 조수에 따라 하루 한 회차만 운영될 수 있어 날짜별 출항 확인 · 보트 이동과 전망대 걷기, 해변 시간 포함 · 오후 회차면 선셋 크루즈는 생략', q: 'Hamilton Island Marina Village', key: 'hill_inlet', note: '선택 시 골프 예약은 하지 않음. 11/19 운항 회차 확인.' },
         { t: '대안', type: 'boat', alt: true, name: 'On the Edge 선셋 세일 (공용 범선)', sub: '약 90분 · 프라이빗 차터가 어려우면 이 쪽 · 계절별 출항 시각 확인', q: 'Hamilton Island Marina Village', key: 'sunset_sail', note: '예약은 Explore Group / 해밀턴 아일랜드 투어 데스크 1300 659 133.' }
       ],
-      notes: '요트 요청에 대한 답: 브리즈번강은 20일에 예약 가능한 배가 없으므로, 바다와 섬이 있는 이곳에서 프라이빗 모터요트 선셋 크루즈로 바꿔 제안합니다. qualia 컨시어지가 직접 잡아 줍니다.'
+      notes: '야경 요트는 시드니 첫날로 확정 제안. 이곳 선셋 크루즈는 바다와 섬을 한 번 더 보고 싶을 때만 넣는 선택 일정이며 qualia 컨시어지가 잡아 줍니다.'
     },
     {
       id: 'd20', date: '2026-11-20', dow: '금', n: 5, city: '브리즈번', tz: 'Australia/Brisbane', tzLabel: '퀸즐랜드 시각 · 한국 +1시간',
       title: '해밀턴 아일랜드 → 브리즈번 · 강가의 저녁',
-      intro: '아침은 리조트에서 느긋하게 보내고 낮 비행기로 브리즈번에 옵니다. 제임스 스트리트의 The Calile에 짐을 풀고, 해질녘에는 강을 끼고 걷거나(배가 잡히면 프라이빗 크루즈) 마지막 저녁은 Exhibition입니다. 다음 날 새벽 출발이라 밤 일정은 짧게 끝냅니다.',
+      intro: '아침은 리조트에서 느긋하게 보내고 낮 비행기로 브리즈번에 옵니다. 제임스 스트리트의 The Calile에 짐을 풀고, 해질녘에는 강을 따라 스토리브리지까지 걸어 해 지는 강을 본 뒤 Exhibition에서 마지막 저녁을 먹습니다. 다음 날 새벽 출발이라 밤 일정은 짧게 끝냅니다.',
       stay: { name: 'The Calile Hotel', sub: '48 James St, Fortitude Valley QLD 4006', tel: '+61 7 3607 5888', q: 'The Calile Hotel, 48 James Street Fortitude Valley', key: 'the_calile', nights: '1박' },
-      bring: ['저녁 복장', '선셋 겉옷', '새벽 출발용 짐 정리'],
+      bring: ['저녁 복장', '걷기 편한 신발', '새벽 출발용 짐 정리'],
       items: [
         { t: '07:30', type: 'dining', name: '조식 · Long Pavilion', sub: '', q: 'Long Pavilion qualia Hamilton Island', key: 'long_pavilion' },
         { t: '08:30', type: 'walk', name: '리조트 산책 · Pebble Beach', sub: '짐 정리 전 가볍게 · 일출 산 등반은 넣지 않습니다', q: 'Pebble Beach qualia Hamilton Island', key: 'pebble_beach' },
@@ -139,16 +140,14 @@ window.TRIP = {
         { t: '12:40', type: 'plane', name: 'VA1496 해밀턴 아일랜드 → 브리즈번', sub: '1시간 35분 · 14:15 도착 · 같은 퀸즐랜드 시각 · 보잉 737-800 · 10월 25일 이후 매일 운항 스케줄 기준', key: 'reef_view', st: 'need', note: '제안 편. 비즈니스 2석. 대안 QF1593 14:35→16:10(월·금). 발권 전 항공사 사이트에서 재확인.', cost: 'A$ 2명 비즈니스 약 900–1,200' },
         { t: '14:15', type: 'plane', name: '브리즈번 공항 국내선 도착', sub: '수하물 수령 후 차량', q: 'Brisbane Airport Domestic Terminal' },
         { via: 'car', text: '호텔까지 차량 약 20–35분', mode: 'driving' },
-        { t: '15:15', type: 'hotel', name: 'The Calile 체크인 · 짧은 휴식', sub: '제임스 스트리트 한가운데', addr: '48 James St, Fortitude Valley', q: 'The Calile Hotel, 48 James Street Fortitude Valley', tel: '+61 7 3607 5888', key: 'the_calile', st: 'ok', note: '1박. 새벽 05:10 공항 차량 호텔에 요청.' },
-        { via: 'car', text: 'Howard Smith Wharves까지 차량 약 10–15분', mode: 'driving' },
-        { t: '16:00 예시', type: 'boat', name: '브리즈번강 선셋 크루즈 · 프라이빗 차터 (문의 중)', sub: '배가 확정되면 넣는 일정 · 스토리브리지 아래 Howard Smith Wharves에서 타고 내리는 안 · 약 2–3시간 · 일몰 약 18:15', addr: 'Howard Smith Wharves, 5 Boundary St', q: 'Howard Smith Wharves Brisbane', key: 'howard_smith_wharves', st: 'ask', note: '온라인 즉시 예약은 없고 문의제. 후보: ① Princess Charters “Aussie Princess” 45ft 모터크루저(최대 24명 · A$750/시간 · 최소 3시간 · 선장+승무원 · 0424 888 424) ② YOT Blue 80ft 슈퍼요트(A$1,463/시간~) ③ 중개 Prestige Harbour Cruises 02 8015 7275. 2명이면 ①이 현실적. 승선 장소·케이터링·날씨 취소 조건 확인.', cost: 'A$ 약 2,250~ (3시간 기준) + 음식·음료' },
-        { t: '대안', type: 'walk', alt: true, name: '제임스 스트리트 산책 → 리버워크 → 선셋 드링크', sub: '배가 없으면 이 쪽 · 호텔에서 New Farm 리버워크를 따라 Howard Smith Wharves까지 걷고(약 30–40분) 스토리브리지 아래에서 해 지는 강을 봅니다', q: 'Howard Smith Wharves Brisbane', key: 'howard_smith_wharves' },
+        { t: '15:15', type: 'hotel', name: 'The Calile 체크인 · 휴식', sub: '제임스 스트리트 한가운데 · 수영장에서 한 시간', addr: '48 James St, Fortitude Valley', q: 'The Calile Hotel, 48 James Street Fortitude Valley', tel: '+61 7 3607 5888', key: 'the_calile', st: 'ok', note: '1박. 새벽 05:10 공항 차량 호텔에 요청.' },
+        { t: '16:45', type: 'walk', name: '제임스 스트리트 → 뉴팜 리버워크 → Howard Smith Wharves', sub: '강을 따라 약 30–40분 걷기 · 스토리브리지 아래에서 해 지는 강(일몰 약 18:15)과 강가 바에서 한 잔', addr: 'Howard Smith Wharves, 5 Boundary St', q: 'Howard Smith Wharves Brisbane', key: 'howard_smith_wharves', note: '브리즈번강 요트는 20일 예약이 모두 차서 뺐습니다(문의 완료). 걷기 싫으면 차량 10분.' },
         { via: 'car', text: 'Exhibition까지 차량 약 10분 (시내)', mode: 'driving' },
-        { t: '19:30', type: 'dining', name: 'Exhibition 저녁 · 여행의 마지막 식사', sub: '테이스팅 메뉴 · 화–토 저녁 17:30부터 · 예약은 reservations@exhibitionrestaurant.com', addr: '109 Edward St, Brisbane', q: 'Exhibition Restaurant, 109 Edward Street Brisbane', key: 'exhibition_restaurant', st: 'need', note: '2명 19:30. 새벽 출발을 고려해 코스 길이(약 2–2.5시간) 안내 받기. 크루즈가 빠지면 18:30으로 당김.' },
+        { t: '19:00', type: 'dining', name: 'Exhibition 저녁 · 여행의 마지막 식사', sub: '테이스팅 메뉴 약 2–2.5시간 · 화–토 저녁 17:30부터 · 예약은 reservations@exhibitionrestaurant.com', addr: '109 Edward St, Brisbane', q: 'Exhibition Restaurant, 109 Edward Street Brisbane', key: 'exhibition_restaurant', st: 'need', note: '2명 19:00. 새벽 출발을 고려해 코스 길이 안내 받기.' },
         { via: 'car', text: '호텔까지 차량 약 10–15분', mode: 'driving' },
-        { t: '22:00 전후', type: 'hotel', name: '호텔 복귀 · 짐 정리', sub: '내일 05:10 출발 · 공항 차량 재확인', q: 'The Calile Hotel, 48 James Street Fortitude Valley' }
+        { t: '21:45 전후', type: 'hotel', name: '호텔 복귀 · 짐 정리', sub: '내일 05:10 출발 · 공항 차량 재확인', q: 'The Calile Hotel, 48 James Street Fortitude Valley' }
       ],
-      notes: '브리즈번강 요트는 즉시 예약 상품이 없어 프라이빗 차터 문의로 전환. 2명 기준 비용이 커서, 요트는 해밀턴 아일랜드(19일)로 옮기고 브리즈번은 리버워크·선셋 드링크로 가볍게 가는 안을 함께 제시합니다.'
+      notes: '브리즈번강 요트는 당일 예약이 꽉 차서 제외. 요트는 시드니 첫날 야경 요트로 옮겼고, 브리즈번은 걷기와 강가 선셋, Exhibition으로 가볍게.'
     },
     {
       id: 'd21', date: '2026-11-21', dow: '토', n: 6, city: '귀국', tz: 'Australia/Brisbane', tzLabel: '퀸즐랜드 시각 · 한국 +1시간',

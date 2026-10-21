@@ -75,3 +75,10 @@
 - 사진 추가: `copland_ballet`(SOH 공식 공연 사진 2장, 로컬 webp), `qualia_charter`(qualia 보트 페이지 3장).
 - Summit Insider는 공식 안내대로 총 약 2.5시간으로 수정.
 
+## 2026-10-21 저녁 · 발레 제외, 시드니 하버 야경 요트
+
+- 두 분이 발레를 좋아하지 않아 11/16 공연을 뺐습니다(사진·데이터·카드 제거). 대신 오페라하우스 투어(15:45) → Opera Bar → Bennelong 17:30 첫 타임 → 서큘러키 동쪽 선착장(Eastern Pontoon, 도보 5분)에서 19:30 프라이빗 요트 3시간(일몰 19:36 출항, 22:30 하선)으로 저녁 흐름을 다시 잡았습니다. 대안: 17:30–20:30 선셋 크루즈 뒤 Bennelong 20:45(마지막 예약 시간), 4시간 조건이면 선상 디너.
+- 기준은 골드코스트 YOT Capri(92피트 Mangusta, 3시간 A$4,275 + 케이터링 ≈ A$5,298.70). 같은 급 후보: Element 80피트 Warren(11월 A$1,450/시간·최소 4시간, 승무원 A$400, 선착장 A$50, Eastern Pontoon 승선), Privacy 87피트 Warren(11월 A$1,850/시간·최소 4시간, 스태프 2명 A$800, King St·카지노 선착장), Lady Pamela 100피트 Azimut(A$1,850/시간), 작은 쪽으로 MV Alfie II Sunseeker Predator 68(A$1,000/시간·12명), Aqua Bay 70피트(A$950/시간). 출처: Sydney Harbour Specialists, Boat Hire Sydney.
+- 브리즈번강 요트는 20일 예약이 모두 차서 제외(문의 완료). 20일은 리버워크·스토리브리지 선셋 산책 → Exhibition 19:00. 해밀턴 아일랜드 qualia 선셋 크루즈는 선택으로 낮춤.
+- 사진: `copland_ballet` 삭제, `harbour_yacht`(Element 사진 2장 로컬 webp + Privacy 2장) 추가.
+
