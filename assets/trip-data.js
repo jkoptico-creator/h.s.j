@@ -103,10 +103,9 @@ window.TRIP = {
         { via: 'buggy', text: '원트리힐까지 버기 약 5분 (언덕길)', mode: 'driving' },
         { t: '17:30', type: 'pin', name: '원트리힐 선셋 · 칵테일', sub: '섬에서 가장 유명한 일몰 전망대 · 바는 14:00–일몰, 마르가리타 밴 15:00–19:00 · 일몰 약 18:20', q: 'One Tree Hill Lookout Hamilton Island', key: 'one_tree_hill' },
         { via: 'buggy', text: '원트리힐 → 마리나 요트클럽 버기 약 10분 · 야간 운전은 천천히', mode: 'driving' },
-        { t: '19:00', type: 'dining', name: 'Bommie 저녁 · 해밀턴 아일랜드 요트클럽', sub: '셰프 햇 · 3코스 또는 디거스테이션 · 화–토 17:30–늦게 · 스마트 캐주얼 · 덴트 패시지 전망', addr: 'Hamilton Island Yacht Club, Front St', q: 'Bommie Restaurant Hamilton Island Yacht Club', key: 'bommie', st: 'need', note: '사전 예약 필수(SevenRooms) · 2명 19:00 · 창가 요청. 대안: coca chu(캣츠아이 비치, 도보).' },
+        { t: '19:00', type: 'dining', name: 'Bommie 저녁 · 해밀턴 아일랜드 요트클럽', sub: '셰프 햇 · 3코스 또는 디거스테이션 · 화–토 17:30–늦게 · 스마트 캐주얼 · 덴트 패시지 전망', addr: 'Hamilton Island Yacht Club, Front St', q: 'Bommie Restaurant Hamilton Island Yacht Club', key: 'bommie', st: 'ok', note: '2명 19:00 예약 완료(SevenRooms). 창가는 도착 시 요청.' },
         { via: 'buggy', text: '호텔까지 버기 약 10분 또는 그린 셔틀(22:45까지, 10–12분 간격)', mode: 'driving' },
-        { t: '21:30 전후', type: 'hotel', name: '호텔 복귀', sub: '내일 골프 · 06:15 조식', q: 'Reef View Hotel, Hamilton Island' },
-        { t: '대안', type: 'dining', alt: true, name: 'coca chu · 동남아시아 요리', sub: 'Bommie가 안 되면 · 캣츠아이 비치 앞, 호텔에서 도보 5–10분 · 월–토 저녁 17:00–늦게', q: 'coca chu Hamilton Island', key: 'coca_chu' }
+        { t: '21:30 전후', type: 'hotel', name: '호텔 복귀', sub: '내일 골프 · 06:15 조식', q: 'Reef View Hotel, Hamilton Island' }
       ],
       notes: 'qualia 예약이 안 되어 Reef View Hotel 스위트로 변경. 스위트에 4인승 버기가 포함되므로 별도 대여 버기는 호스트용(픽업 14:15 · 반납 20일 12:45 예약이지만 11:00 전후 반납). 섬 안 이동은 버기 + 무료 셔틀.'
     },
