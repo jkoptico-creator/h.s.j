@@ -84,25 +84,26 @@ window.TRIP = {
     {
       id: 'd18', date: '2026-11-18', dow: '수', n: 3, city: '해밀턴 아일랜드', short: '해밀턴', tz: 'Australia/Brisbane', tzLabel: '오전은 시드니 시각 · 도착 뒤 퀸즐랜드 시각(시드니 −1시간 · 한국 +1시간)',
       title: '시드니 → 해밀턴 아일랜드 · 리조트 휴식',
-      intro: '아침 비행기로 섬에 건너가 점심부터 qualia에서 보냅니다. 시드니보다 한 시간 느린 퀸즐랜드 시각으로 바뀌니 도착하면 시계를 한 시간 뒤로 돌립니다. 오후는 객실에서 쉬거나 스파를 넣고, 저녁은 Long Pavilion입니다.',
+      intro: '전날 밤 클라임을 마친 뒤라 아침은 느긋하게 보내고, 낮 비행기(버진 VA1283 12:40)로 섬에 건너갑니다. 시드니보다 한 시간 느린 퀸즐랜드 시각으로 바뀌니 도착하면 시계를 한 시간 뒤로 돌립니다. 오후 늦게 체크인해 쉬거나 스파를 넣고, 해 질 녘 바다를 본 뒤 Long Pavilion에서 저녁을 먹습니다.',
       stay: { name: 'qualia · Leeward Pavilion', sub: '20 Whitsunday Blvd, Hamilton Island QLD 4803', tel: '+61 7 4948 9222', q: 'qualia, Hamilton Island', key: 'qualia_leeward', nights: '1/2박' },
       bring: ['모기 기피제(저녁)', '샌들 · 선글라스', '수하물은 qualia 차량이 운반'],
       items: [
-        { t: '06:30', type: 'hotel', name: '조식 · 체크아웃', sub: '짐은 전날 정리 · 미니바·세탁 정산', q: 'Capella Sydney, 24 Loftus Street Sydney', tz: 'Australia/Sydney' },
-        { t: '07:15', type: 'car', name: '호텔 출발', sub: '국내선 제3터미널(콴타스)로', q: 'Capella Sydney, 24 Loftus Street Sydney', tz: 'Australia/Sydney', st: 'need', note: '공항 차량(골프백 2개) 07:15 예약.' },
-        { via: 'car', text: '시드니 국내선 T3까지 차량 약 30–45분', mode: 'driving' },
-        { t: '07:55', type: 'plane', name: '시드니 공항 제3터미널 · 콴타스 체크인', sub: '출발 90분 전 · 비즈니스 라운지 이용 가능', q: 'Sydney Airport Terminal 3 Qantas Domestic', tz: 'Australia/Sydney' },
-        { t: '09:40', type: 'plane', name: 'QF578 시드니 → 해밀턴 아일랜드', sub: '2시간 30분 · 11:10 도착(퀸즐랜드 시각) · 보잉 737-800 · 10월 25일 이후 매일 운항 스케줄 기준', key: 'reef_view', tz: 'Australia/Sydney', st: 'need', note: '제안 편. 예약 시 비즈니스 2석. 대안 VA1283 12:40→14:10(제2터미널). 운항 스케줄 출처 FlightMapper(10/25 이후) — 발권 전 항공사 사이트에서 재확인.', cost: 'A$ 2명 비즈니스 약 1,200–1,600' },
-        { t: '11:10', type: 'plane', name: '해밀턴 아일랜드 공항 도착', sub: '퀸즐랜드 시각 · 수하물 수령 후 qualia 직원 픽업', q: 'Hamilton Island Airport', st: 'chk', note: 'qualia에 항공편(QF578) 미리 통보 → 공항 픽업 자동 배정.' },
+        { t: '08:30', type: 'dining', name: '조식 · 느긋한 아침', sub: '전날 클라임 뒤 늦잠 가능 · 짐 정리', q: 'Capella Sydney, 24 Loftus Street Sydney', tz: 'Australia/Sydney' },
+        { t: '09:45', type: 'walk', opt: true, name: '왕립 식물원 · 미세스 매쿼리 체어 산책 · 선택', sub: '호텔에서 걸어서 5분 · 오페라하우스와 하버브리지가 한 장에 담기는 전망 · 40분 안팎', q: 'Mrs Macquaries Chair Sydney', key: 'mrs_macquaries', tz: 'Australia/Sydney' },
+        { t: '10:30', type: 'hotel', name: '체크아웃', sub: '미니바·세탁 정산', q: 'Capella Sydney, 24 Loftus Street Sydney', tz: 'Australia/Sydney' },
+        { t: '10:45', type: 'car', name: '호텔 출발', sub: '국내선 제2터미널(버진 오스트레일리아)로', q: 'Capella Sydney, 24 Loftus Street Sydney', tz: 'Australia/Sydney', st: 'need', note: '공항 차량(골프백 2개) 10:45 예약.' },
+        { via: 'car', text: '시드니 국내선 T2까지 차량 약 30–45분', mode: 'driving' },
+        { t: '11:25', type: 'plane', name: '시드니 공항 제2터미널 · 버진 체크인', sub: '출발 75분 전 · 비즈니스 라운지에서 가볍게 점심', q: 'Sydney Airport Terminal 2 Domestic', tz: 'Australia/Sydney' },
+        { t: '12:40', type: 'plane', name: 'VA1283 시드니 → 해밀턴 아일랜드', sub: '2시간 30분 · 14:10 도착(퀸즐랜드 시각) · 보잉 737-800 비즈니스 · 기내식 점심 · 10월 25일 이후 매일 운항 스케줄 기준', key: 'reef_view', tz: 'Australia/Sydney', st: 'need', note: '콴타스 QF578(09:40)은 비즈니스 잔여석이 없어 버진으로. 예약 시 비즈니스 2석 · 위탁 수하물(골프백 포함) 한도 확인. 발권 전 항공사 사이트에서 운항 재확인.', cost: 'A$ 2명 비즈니스 약 1,200–1,600' },
+        { t: '14:10', type: 'plane', name: '해밀턴 아일랜드 공항 도착', sub: '퀸즐랜드 시각 · 수하물 수령 후 qualia 직원 픽업', q: 'Hamilton Island Airport', st: 'chk', note: 'qualia에 항공편(VA1283 14:10 도착) 미리 통보 → 공항 픽업 자동 배정.' },
         { via: 'car', text: 'qualia 전용 차량 약 10–15분', mode: 'driving' },
-        { t: '11:45', type: 'hotel', name: 'qualia 도착 · 웰컴', sub: '객실 준비 전이면 Long Pavilion에서 음료와 함께 대기', addr: '20 Whitsunday Blvd, Hamilton Island', q: 'qualia, Hamilton Island', tel: '+61 7 4948 9222', key: 'qualia', st: 'ok', note: '2박 Leeward Pavilion. 얼리 체크인 요청.' },
-        { t: '12:30', type: 'dining', name: 'Pebble Beach 점심', sub: '리조트 안 캐주얼 다이닝 · 바다 앞', q: 'Pebble Beach qualia Hamilton Island', key: 'pebble_beach', st: 'need', note: '투숙객 예약 · 도착 후 컨시어지로.' },
-        { t: '14:30 이후', type: 'hotel', name: 'Leeward Pavilion 체크인 · 휴식', sub: '객실 준비 시각에 따라 조정', q: 'qualia, Hamilton Island', key: 'qualia_leeward' },
-        { t: '15:30 예시', type: 'spa', opt: true, name: 'Spa qualia · 커플 트리트먼트 90분 · 선택', sub: '사전 예약 · 비행이 늦어지면 생략하거나 시간을 바꿉니다 · 변경·취소 조건 확인', q: 'Spa qualia Hamilton Island', key: 'spa_qualia', st: 'need', note: '예약 변경은 6시간 전까지(이후 전액 청구 조건 있음). 항공 지연 대비 16:00 이후 권장.', cost: 'A$ 커플 90분 약 700–900' },
-        { t: '17:45', type: 'pin', name: '선셋 · Pebble Beach 또는 객실 테라스', sub: '해밀턴 아일랜드 일몰 약 18:20', q: 'Pebble Beach qualia Hamilton Island', key: 'qualia' },
-        { t: '19:00', type: 'dining', name: 'Long Pavilion 저녁', sub: '리조트 메인 다이닝 · 바다 전망', q: 'Long Pavilion qualia Hamilton Island', key: 'long_pavilion', st: 'need', note: '2명 19:00 · 창가.' }
+        { t: '14:45', type: 'hotel', name: 'qualia 도착 · 웰컴 · Leeward Pavilion 체크인', sub: '체크인 15:00 · 객실 준비 전이면 Long Pavilion에서 음료와 함께 대기', addr: '20 Whitsunday Blvd, Hamilton Island', q: 'qualia, Hamilton Island', tel: '+61 7 4948 9222', key: 'qualia_leeward', st: 'ok', note: '2박 Leeward Pavilion.' },
+        { t: '16:30 예시', type: 'spa', opt: true, name: 'Spa qualia · 커플 트리트먼트 90분 · 선택', sub: '사전 예약 · 비행이 늦어지면 생략하거나 시간을 바꿉니다 · 변경·취소 조건 확인', q: 'Spa qualia Hamilton Island', key: 'spa_qualia', st: 'need', note: '예약 변경은 6시간 전까지(이후 전액 청구 조건 있음). 도착 14:10 기준 16:30 이후가 안전.', cost: 'A$ 커플 90분 약 700–900' },
+        { t: '17:45', type: 'pin', name: '선셋 · Pebble Beach 또는 객실 테라스', sub: '해밀턴 아일랜드 일몰 약 18:20', q: 'Pebble Beach qualia Hamilton Island', key: 'pebble_beach' },
+        { t: '19:00', type: 'dining', name: 'Long Pavilion 저녁', sub: '리조트 메인 다이닝 · 바다 전망', q: 'Long Pavilion qualia Hamilton Island', key: 'long_pavilion', st: 'need', note: '2명 19:00 · 창가.' },
+        { t: '대안', type: 'plane', alt: true, name: 'QF578 09:40 → 11:10 (콴타스)', sub: '비즈니스 좌석이 풀리면 이쪽이 섬 시간을 세 시간 더 줍니다 · 그 경우 07:15 호텔 출발, Pebble Beach 점심 12:30', q: 'Sydney Airport Terminal 3 Qantas Domestic', note: '현재 비즈니스 잔여석 없음.' }
       ],
-      notes: '국내선은 QF578(09:40)이 섬 시간을 가장 많이 남깁니다. 늦잠이 필요하면 VA1283(12:40 · 제2터미널)로 바꾸고 점심은 기내·공항에서.'
+      notes: '국내선은 버진 VA1283(12:40 · T2)으로 확정 방향. 전날 밤 클라임 뒤라 늦은 출발이 오히려 편하고, 잃는 것은 섬에서의 점심 한 끼와 오후 세 시간입니다. 스파는 16:30 이후로.'
     },
     {
       id: 'd19', date: '2026-11-19', dow: '목', n: 4, city: '해밀턴 아일랜드', short: '해밀턴', tz: 'Australia/Brisbane', tzLabel: '퀸즐랜드 시각 · 한국 +1시간',
@@ -166,7 +167,7 @@ window.TRIP = {
   ],
   flights: [
     { date: '11월 15일(일)', code: 'KE5001 · 아시아나 OZ601 운항', route: '인천 T2 → 시드니 T1', time: '20:00 → 다음 날 08:20', dur: '10시간 20분', cls: '프레스티지(비즈니스)', bag: '1인 2개', st: 'ok' },
-    { date: '11월 18일(수)', code: 'QF578 콴타스', route: '시드니 T3 → 해밀턴 아일랜드', time: '09:40 → 11:10 (퀸즐랜드 시각)', dur: '2시간 30분', cls: '비즈니스 제안', bag: '위탁 수하물 확인', st: 'need', alt: '대안 VA1283 12:40 → 14:10 (T2)' },
+    { date: '11월 18일(수)', code: 'VA1283 버진 오스트레일리아', route: '시드니 T2 → 해밀턴 아일랜드', time: '12:40 → 14:10 (퀸즐랜드 시각)', dur: '2시간 30분', cls: '비즈니스 · 예약 진행', bag: '위탁 수하물(골프백) 한도 확인', st: 'need', alt: '콴타스 QF578 09:40은 비즈니스 잔여석 없음' },
     { date: '11월 20일(금)', code: 'VA1496 버진 오스트레일리아', route: '해밀턴 아일랜드 → 브리즈번 국내선', time: '12:40 → 14:15', dur: '1시간 35분', cls: '비즈니스 제안', bag: '위탁 수하물 확인', st: 'need', alt: '대안 QF1593 14:35 → 16:10' },
     { date: '11월 21일(토)', code: 'KE408 대한항공', route: '브리즈번 국제선 → 인천 T2', time: '08:40 → 18:05', dur: '10시간 25분 · 787-9', cls: '프레스티지 스위트 · 10A · 10B', bag: '1인 2개', st: 'ok' }
   ],

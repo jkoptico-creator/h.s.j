@@ -81,4 +81,4 @@
 - 기준은 골드코스트 YOT Capri(92피트 Mangusta, 3시간 A$4,275 + 케이터링 ≈ A$5,298.70). 같은 급 후보: Element 80피트 Warren(11월 A$1,450/시간·최소 4시간, 승무원 A$400, 선착장 A$50, Eastern Pontoon 승선), Privacy 87피트 Warren(11월 A$1,850/시간·최소 4시간, 스태프 2명 A$800, King St·카지노 선착장), Lady Pamela 100피트 Azimut(A$1,850/시간), 작은 쪽으로 MV Alfie II Sunseeker Predator 68(A$1,000/시간·12명), Aqua Bay 70피트(A$950/시간). 출처: Sydney Harbour Specialists, Boat Hire Sydney.
 - 브리즈번강 요트는 20일 예약이 모두 차서 제외(문의 완료). 20일은 리버워크·스토리브리지 선셋 산책 → Exhibition 19:00. 해밀턴 아일랜드 qualia 선셋 크루즈는 선택으로 낮춤.
 - 사진: `copland_ballet` 삭제, `harbour_yacht`(Element 사진 2장 로컬 webp + Privacy 2장) 추가.
-
+- 11/18 국내선: 콴타스 QF578 비즈니스 잔여석이 없어 버진 VA1283(12:40 → 14:10, T2)으로 변경. 아침을 느긋하게(선택: 식물원·미세스 매쿼리 체어 산책), 10:45 출발, 라운지·기내 점심, 14:45 qualia 체크인, 스파는 16:30 이후, Pebble Beach 점심은 제외.
