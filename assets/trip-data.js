@@ -134,8 +134,8 @@ window.TRIP = {
     },
     {
       id: 'd20', date: '2026-11-20', dow: '금', n: 5, city: '브리즈번', tz: 'Australia/Brisbane', tzLabel: '퀸즐랜드 시각 · 한국 +1시간',
-      title: '해밀턴 아일랜드 → 브리즈번 · 강가의 저녁',
-      intro: '아침은 비치프런트 조식과 캣츠아이 비치 산책으로 느긋하게 보내고 낮 비행기로 브리즈번에 옵니다. 제임스 스트리트의 The Calile에 짐을 풀고, 해질녘에는 강을 따라 스토리브리지까지 걸어 해 지는 강을 본 뒤 Exhibition에서 마지막 저녁을 먹습니다. 다음 날 새벽 출발이라 밤 일정은 짧게 끝냅니다.',
+      title: '해밀턴 아일랜드 → 브리즈번 · Exhibition · 강변 야경 산책',
+      intro: '아침은 비치프런트 조식과 캣츠아이 비치 산책으로 느긋하게 보내고 낮 비행기로 브리즈번에 옵니다. 제임스 스트리트의 The Calile에 짐을 풀고 18시에 Exhibition에서 마지막 저녁을 먹은 뒤, 원하면 불 켜진 스토리브리지 아래 강변을 걸어 Howard Smith Wharves까지 갑니다. 다음 날 새벽 출발이라 밤 일정은 22시 전에 끝냅니다.',
       stay: { name: 'The Calile Hotel', sub: '48 James St, Fortitude Valley QLD 4006', tel: '+61 7 3607 5888', q: 'The Calile Hotel, 48 James Street Fortitude Valley', key: 'the_calile', nights: '1박' },
       bring: ['저녁 복장', '걷기 편한 신발', '새벽 출발용 짐 정리'],
       items: [
@@ -149,13 +149,15 @@ window.TRIP = {
         { t: '14:15', type: 'plane', name: '브리즈번 공항 국내선 도착', sub: '수하물 수령 후 차량', q: 'Brisbane Airport Domestic Terminal' },
         { via: 'car', text: '호텔까지 차량 약 20–35분', mode: 'driving' },
         { t: '15:15', type: 'hotel', name: 'The Calile 체크인 · 휴식', sub: '제임스 스트리트 한가운데 · 수영장에서 한 시간', addr: '48 James St, Fortitude Valley', q: 'The Calile Hotel, 48 James Street Fortitude Valley', tel: '+61 7 3607 5888', key: 'the_calile', st: 'ok', note: '1박. 새벽 05:10 공항 차량 호텔에 요청.' },
-        { t: '16:45', type: 'walk', name: '제임스 스트리트 → 뉴팜 리버워크 → Howard Smith Wharves', sub: '강을 따라 약 30–40분 걷기 · 스토리브리지 아래에서 해 지는 강(일몰 약 18:15)과 강가 바에서 한 잔', addr: 'Howard Smith Wharves, 5 Boundary St', q: 'Howard Smith Wharves Brisbane', key: 'howard_smith_wharves', note: '브리즈번강 요트는 20일 예약이 모두 차서 뺐습니다(문의 완료). 걷기 싫으면 차량 10분.' },
+        { t: '16:15', type: 'shop', opt: true, name: '제임스 스트리트 산책', sub: '호텔 앞 거리의 가게와 카페 · 한 시간 안팎', q: 'James Street Fortitude Valley', key: 'james_st_brisbane' },
         { via: 'car', text: 'Exhibition까지 차량 약 10분 (시내)', mode: 'driving' },
-        { t: '19:00', type: 'dining', name: 'Exhibition 저녁 · 여행의 마지막 식사', sub: '테이스팅 메뉴 약 2–2.5시간 · 화–토 저녁 17:30부터 · 예약은 reservations@exhibitionrestaurant.com', addr: '109 Edward St, Brisbane', q: 'Exhibition Restaurant, 109 Edward Street Brisbane', key: 'exhibition_restaurant', st: 'need', note: '2명 19:00. 새벽 출발을 고려해 코스 길이 안내 받기.' },
-        { via: 'car', text: '호텔까지 차량 약 10–15분', mode: 'driving' },
-        { t: '21:45 전후', type: 'hotel', name: '호텔 복귀 · 짐 정리', sub: '내일 05:10 출발 · 공항 차량 재확인', q: 'The Calile Hotel, 48 James Street Fortitude Valley' }
+        { t: '18:00', type: 'dining', name: 'Exhibition 저녁 · 여행의 마지막 식사', sub: '테이스팅 메뉴 약 2–2.5시간 · 지하 2층(Basement 2) · 18:00 예약 완료', addr: 'Basement 2, 109 Edward St, Brisbane', q: 'Exhibition Restaurant, 109 Edward Street Brisbane', key: 'exhibition_restaurant', st: 'ok', note: '18:00 예약 완료(18시 회차만 가능). 3명.' },
+        { via: 'walk', text: 'Edward St → 이글 스트리트 피어 → 스토리브리지 아래 리버워크 → Howard Smith Wharves 도보 약 25–30분', mode: 'walking' },
+        { t: '20:45', type: 'walk', opt: true, name: '브리즈번강 야경 산책 · 리버워크와 스토리브리지', sub: '식사 뒤 강을 따라 불 켜진 스토리브리지 아래를 걸어 Howard Smith Wharves까지 · 강가 바에서 한 잔 · 피곤하면 차량으로 바로 호텔', addr: 'Howard Smith Wharves, 5 Boundary St', q: 'Howard Smith Wharves Brisbane', key: 'howard_smith_wharves', note: '브리즈번강 요트는 20일 예약이 모두 차서 뺐습니다(문의 완료).' },
+        { via: 'car', text: '호텔까지 차량 약 10분', mode: 'driving' },
+        { t: '22:00 전후', type: 'hotel', name: '호텔 복귀 · 짐 정리', sub: '내일 05:10 출발 · 공항 차량 재확인', q: 'The Calile Hotel, 48 James Street Fortitude Valley' }
       ],
-      notes: '브리즈번강 요트는 당일 예약이 꽉 차서 제외. 요트는 시드니 첫날 야경 요트로 옮겼고, 브리즈번은 걷기와 강가 선셋, Exhibition으로 가볍게.'
+      notes: 'Exhibition은 18시 회차만 있어 18:00으로 예약 완료 → 강 산책은 식사 뒤 야경 산책으로 돌림. 브리즈번강 요트는 만석이라 제외.'
     },
     {
       id: 'd21', date: '2026-11-21', dow: '토', n: 6, city: '귀국', tz: 'Australia/Brisbane', tzLabel: '퀸즐랜드 시각 · 한국 +1시간',

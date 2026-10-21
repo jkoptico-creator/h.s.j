@@ -114,7 +114,7 @@ for path in pages:
 
 assert OUTPUT.read_text(encoding='utf-8') == build(), 'Combined edition is stale'
 # Privacy: booking references, ticket numbers and passenger names never appear in the published files.
-PRIVATE = ['EMP7UL', 'HTWIEL', 'EKZGCK', '23842SH', 'BHHIR', '4545162986', '4545183925', 'YONG SAN', 'Jee Woong', 'JEEWOONG', '1802251115', 'JEON/', 'HAKSOO', 'HAEUN', '전학수', '임하은', '지웅']
+PRIVATE = ['EMP7UL', 'HTWIEL', 'EKZGCK', '23842SH', 'BHHIR', '4545162986', '4545183925', 'YONG SAN', 'Jee Woong', 'JEEWOONG', '23653866', '1802251115', 'JEON/', 'HAKSOO', 'HAEUN', '전학수', '임하은', '지웅']
 for path in [*ROOT.glob('*.html'), *ROOT.glob('assets/*.js'), *ROOT.glob('docs/*.md'), ROOT/'README.md']:
     text = path.read_text(encoding='utf-8')
     assert not any(word in text for word in PRIVATE), (path.name, 'private booking detail must not be published')

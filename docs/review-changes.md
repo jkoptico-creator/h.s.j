@@ -91,4 +91,5 @@
 - 비용: 플래너에서 비용 표기를 모두 제거(비용 정리는 별도 서류). 공개 예산표는 숙박 A$7,210(Reef View 1,830×2), 국내선 2인 비즈니스 A$4,160으로 갱신 → 두 분 합계 A$30,610.
 - 사진 추가: reef_view_suite(공식 스위트 사진 5장), bommie, catseye_pool_club, one_tree_hill, sails_hi, spa_wumurdaylin. 예약번호·결제정보·호스트 객실은 게시하지 않으며 검사 목록에 추가.
 - Bommie 11/18(수) 19:00 2명 예약 완료 반영 · coca chu 대안 행 정리.
+- Exhibition 11/20(금) 18:00 예약 완료(18시 회차만 가능) → 저녁 뒤 이글 스트리트 피어–스토리브리지–Howard Smith Wharves 야경 산책(선택)으로 흐름 변경. 예약번호는 검사 목록에 추가.
 
