@@ -8,6 +8,7 @@
 - `plan-1-*.html` ~ `plan-5-*.html`: 각 여행안의 원본
 - `assets/site.css`, `assets/site.js`: 공통 화면과 동작
 - `assets/places.js`: 장소별 사진과 공식 정보·지도
+- `itinerary.html`: 결정된 2안의 날짜별 여행 플래너(여행 중 휴대폰에서 보는 화면). 일정 데이터는 `assets/trip-data.js`, 화면은 `assets/planner.js`·`assets/planner.css`
 - `assets/photos/`: 출처를 확인해 저장한 사진과 `sources.json` 출처 목록
 - `review/`: 미검증 사진 후보 시트. 검색 제외 설정이며 접근 통제 기능은 아닙니다.
 
@@ -18,6 +19,8 @@ python scripts/build_combined.py
 python scripts/check_site.py
 node --check assets/site.js
 node --check assets/places.js
+node --check assets/trip-data.js
+node --check assets/planner.js
 ```
 
 화면 동작의 DOM 회귀검증은 `npm ci` 후 `npm test`로 실행합니다. 사진 서버 접근이나 실제 화면 크기의 시각 검증은 별도로 필요합니다.

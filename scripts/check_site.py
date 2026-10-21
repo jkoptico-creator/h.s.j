@@ -83,12 +83,13 @@ def check_page(path):
         assert 'image-reference' not in ' '.join(a.get('class', '') for _, a in page.tags), path.name
         assert '사진 준비 중' not in text, (path.name, 'unfilled photo')
         assert not any('images.unsplash.com' in a.get('src','') for tag,a in page.tags if tag=='img'), path.name
-        assert '2026년 10월 19일' in text and '예약 전 확인' in text, path.name
+        if path.name != 'itinerary.html':
+            assert '2026년 10월 19일' in text and '예약 전 확인' in text, path.name
         assert not any(old in text for old in OLD_LINKS), (path.name, 'obsolete destination URL')
     return page
 
 
-pages = [ROOT/'index.html', *sorted(ROOT.glob('plan-*.html')), OUTPUT, *sorted((ROOT/'review').glob('sheet*.html'))]
+pages = [ROOT/'index.html', *sorted(ROOT.glob('plan-*.html')), ROOT/'itinerary.html', OUTPUT, *sorted((ROOT/'review').glob('sheet*.html'))]
 for path in pages:
     page = check_page(path)
     if path.name.startswith('plan-'):
@@ -112,6 +113,24 @@ for path in pages:
         assert sum(amounts) == total, (path.name, 'item sum differs', amounts, total)
 
 assert OUTPUT.read_text(encoding='utf-8') == build(), 'Combined edition is stale'
+# Privacy: booking references, ticket numbers and passenger names never appear in the published files.
+PRIVATE = ['EMP7UL', '1802251115', 'JEON/', 'HAKSOO', 'HAEUN', '전학수', '임하은']
+for path in [*ROOT.glob('*.html'), *ROOT.glob('assets/*.js'), *ROOT.glob('docs/*.md'), ROOT/'README.md']:
+    text = path.read_text(encoding='utf-8')
+    assert not any(word in text for word in PRIVATE), (path.name, 'private booking detail must not be published')
+# Daily planner data: every photo key exists, every day present, the planner is linked from the decided pages.
+trip = (ROOT/'assets/trip-data.js').read_text(encoding='utf-8')
+assert 'window.TRIP' in trip
+for key in set(re.findall(r"key: '([a-z0-9_]+)'", trip)):
+    assert key in gallery and key in links and gallery[key], ('planner photo key', key)
+for day in ['d15', 'd16', 'd17', 'd18', 'd19', 'd20', 'd21']:
+    assert f"id: '{day}'" in trip, ('planner day missing', day)
+assert 'Copland' in trip and 'QF578' in trip and 'VA1496' in trip and 'KE408' in trip
+for name in ['index.html', 'plan-2-sydney-hamilton-brisbane.html']:
+    assert 'href="itinerary.html"' in (ROOT/name).read_text(encoding='utf-8'), (name, 'planner link')
+plan2 = (ROOT/'plan-2-sydney-hamilton-brisbane.html').read_text(encoding='utf-8')
+assert 'Copland Dance Episodes' in plan2 and 'QF578' in plan2 and 'VA1496' in plan2 and 'qualia_charter' in plan2
+assert 'pickbar' in OUTPUT.read_text(encoding='utf-8') and 'itinerary.html' in OUTPUT.read_text(encoding='utf-8')
 overview = (ROOT/'index.html').read_text(encoding='utf-8')
 assert '1~2회 · 섬 일정 선택에 따라' in overview, 'Plan 2 golf count must reflect the boat alternative'
 assert '안별 1~3라운드 제안' in overview, 'Overview golf range must include the one-round alternative'

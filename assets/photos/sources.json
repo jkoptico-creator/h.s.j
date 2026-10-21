@@ -384,5 +384,27 @@
     "width": 1400,
     "height": 875,
     "checked_on": "2026-10-19"
+  },
+  {
+    "image_url": "https://www.sydneyoperahouse.com/sites/default/files/styles/16x9__1200w/public/collaborodam_assets/4135113%20TAB%20Copland%20Dance%20Episodes%20%28Peck%29%20Riley%20Lapham_Cameron%20Holmes%20Credit_Kate%20Longley%202026.jpg.webp?itok=HLNbqplX",
+    "source_page": "https://www.sydneyoperahouse.com/the-australian-ballet/2026-season/copland-dance-episodes",
+    "alt_ko": "호주 발레단 〈Copland Dance Episodes〉 — 노란 의상의 무용수를 들어 올리는 장면 (사진: Kate Longley)",
+    "verification": "시드니 오페라하우스 공식 공연 페이지의 이미지(2026년 11월 6–21일 Joan Sutherland Theatre 공연). 셸에서 원본 1200×675 내려받아 webp로 변환. 2026-10-21 확인.",
+    "file": "assets/photos/copland_ballet-1.webp",
+    "place_key": "copland_ballet",
+    "width": 1200,
+    "height": 675,
+    "checked_on": "2026-10-21"
+  },
+  {
+    "image_url": "https://www.sydneyoperahouse.com/sites/default/files/styles/16x9__1200w/public/collaborodam_assets/Copland-KateLongley-260622-272.jpg.webp?itok=htrdbOk7",
+    "source_page": "https://www.sydneyoperahouse.com/the-australian-ballet/2026-season/copland-dance-episodes",
+    "alt_ko": "호주 발레단 〈Copland Dance Episodes〉 — 무대 위 군무 장면 (사진: Kate Longley)",
+    "verification": "시드니 오페라하우스 공식 공연 페이지의 이미지(2026년 11월 6–21일 Joan Sutherland Theatre 공연). 셸에서 원본 1200×675 내려받아 webp로 변환. 2026-10-21 확인.",
+    "file": "assets/photos/copland_ballet-2.webp",
+    "place_key": "copland_ballet",
+    "width": 1200,
+    "height": 675,
+    "checked_on": "2026-10-21"
   }
 ]

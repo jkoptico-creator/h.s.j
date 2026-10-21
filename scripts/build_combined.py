@@ -9,6 +9,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES = [ROOT / 'index.html', *sorted(ROOT.glob('plan-*.html'))]
 OUTPUT = ROOT / '호주여행제안.html'
+PLANNER_URL = 'https://jkoptico-creator.github.io/h.s.j/itinerary.html'
 
 
 def build():
@@ -26,6 +27,7 @@ def build():
              ('5', '멜버른·해밀턴·골드코스트·브리즈번', '5안 · 멜버른 → 해밀턴 아일랜드 → 골드코스트 → 브리즈번 9박')]
     nav += ''.join(f'<a href="#{names[p.name]}" data-label="{full}" aria-label="{full}"><b>{n}</b><span>{short}</span></a>' for p, (n, short, full) in zip(SOURCES, items))
     nav += '</nav></div><div class="navcur" aria-live="polite">개요 · 다섯 가지 여행안</div></div>'
+    nav += '<a class="pickbar" href="' + PLANNER_URL + '" target="_blank" rel="noopener"><span class="pk">결정</span><span class="pt">2안 · 시드니 → 해밀턴 아일랜드 → 브리즈번으로 정했습니다</span><span class="pa">날짜별 여행 플래너 →</span></a>'
     for page, source in zip(pages, SOURCES):
         name = names[source.name]
         body = re.search(r'<body\b[^>]*>(.*?)</body>', page, re.S)[1]
@@ -36,6 +38,7 @@ def build():
         body = re.sub(r'href="#([^"]+)"', lambda m: f'href="#{name}--{m[1]}"', body)
         for filename, target in names.items():
             body = body.replace('href="' + filename + '"', 'href="#' + target + '"')
+        body = body.replace('href="itinerary.html"', 'href="' + PLANNER_URL + '" target="_blank" rel="noopener"')
         hidden = '' if name == 'home' else ' hidden'
         blocks.append(f'<div data-screen="{name}" id="{name}"{hidden}>\n{body}\n</div>')
     # The downloaded single-file edition resolves its hosted photo assets online.
