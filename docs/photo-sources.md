@@ -50,3 +50,7 @@
 - **몬드리안 골드코스트 스튜디오 오션 킹 객실의 세면대와 바다 전망 발코니** — [출처 페이지](https://mondrianhotels.com/gold-coast/) · [원본 사진](https://mondrianhotels.com/wp-content/uploads/sites/34/2025/07/MondrianGoldCoast_StudioOceanKingBalcony_Image1_0ee8b5.png?w=1024) · `assets/photos/mondrian_gold_coast-2.webp`
 - **몬드리안 골드코스트 원 베드룸 스위트의 바다 전망 거실** — [출처 페이지](https://mondrianhotels.com/gold-coast/) · [원본 사진](https://mondrianhotels.com/wp-content/uploads/sites/34/2025/08/MondrianGoldCoast_1BedSuite_800x600px.png?w=800) · `assets/photos/mondrian_gold_coast-3.webp`
 - **퀄리아 Pebble Beach 레스토랑의 점심 테이블과 휘트선데이 바다 전망** — [출처 페이지](https://www.qualia.com.au/dining/lunch/) · [원본 사진](https://qualia.imgix.net/qualia/media/a-features-(2560x1440)/dine/pebble-beach/qualia-pebble-beach-restaurant-lunch-whitsundays-views.jpg?w=1400&h=875&fit=crop&crop=focalpoint&fp-y=0.486666666666667&fp-x=0.77375) · `assets/photos/pebble_beach-1.webp`
+
+## 요트 선택 페이지 (`yacht.html`, 2026-10-28)
+
+`assets/yacht/` 의 사진 51장은 Sydney Harbour Specialists 각 선박 페이지 갤러리에서 받은 실제 선박 사진입니다. 원본 페이지: https://sydneyhs.com.au/empress-boat-sydney/ (Empress 12장), https://sydneyhs.com.au/element-boat-sydney/ (Element 20장), https://sydneyhs.com.au/salt-boat-sydney/ (Salt 19장). 사람들이 물에 들어가 있는 Salt 사진 2장은 제외했습니다. 최대 1280px WebP로 줄였습니다.

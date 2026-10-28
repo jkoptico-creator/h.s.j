@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="description" content="11월 16일 시드니 하버 나이트 크루즈 요트 세 척 비교와 선상 디너, 선택 회신.">
+<title>시드니 하버 요트 선택</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+/* Layout: night-harbour header band, one column of option cards (phone first) with swipe galleries and a fold-out cost sheet, sticky reply bar once a boat is picked */
+:root{
+  --bg:#F5F6F8; --card:#FFFFFF; --ink:#14243A; --mute:#566273; --line:#D6DCE3;
+  --accent:#2C6A97; --accent-ink:#FFFFFF; --band:#14243A; --band-ink:#F5F6F8; --band-mute:#B7C4D4; --pick:#E8F0F7; --sheet:#F0F3F7;
+  --display:"Nanum Myeongjo","AppleMyungjo","Batang",serif;
+  --body:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F1724; --card:#172234; --ink:#E9EDF2; --mute:#A3AFBE; --line:#2A3850;
+  --accent:#7DB3E0; --accent-ink:#0F1724; --band:#0A111C; --band-ink:#E9EDF2; --band-mute:#9FB0C4; --pick:#1D3047; --sheet:#132033; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1724; --card:#172234; --ink:#E9EDF2; --mute:#A3AFBE; --line:#2A3850;
+  --accent:#7DB3E0; --accent-ink:#0F1724; --band:#0A111C; --band-ink:#E9EDF2; --band-mute:#9FB0C4; --pick:#1D3047; --sheet:#132033; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.65;margin:0}
+.wrap{max-width:860px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.band{background:var(--band);color:var(--band-ink)}
+header.band .wrap{padding-block:48px 40px;display:grid;gap:12px}
+.eyebrow{margin:0;font-size:13px;letter-spacing:.12em;color:var(--band-mute)}
+h1{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(34px,7vw,56px);line-height:1.15;text-wrap:balance}
+.when{margin:0;font-size:18px;font-weight:500}
+.lead{margin:0;color:var(--band-mute);max-width:60ch}
+main .wrap{padding-block:32px 160px;display:grid;gap:40px}
+h2{margin:0;font-family:var(--display);font-weight:800;font-size:26px;line-height:1.3}
+.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.step{border-top:2px solid var(--accent);padding-top:10px;display:grid;gap:2px;min-width:0}
+.step b{color:var(--accent);font-size:15px;font-variant-numeric:tabular-nums}
+.step span{font-weight:700;font-size:15px}
+.step small{color:var(--mute);font-size:13.5px;line-height:1.55}
+.same{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 28px;margin:0;padding:0;list-style:none}
+.same li::before{content:"· ";color:var(--accent)}
+.options{display:grid;gap:32px}
+.opt{background:var(--card);border:1px solid var(--line);display:grid;overflow:hidden;transition:border-color .15s, box-shadow .15s;min-width:0}
+.opt.picked{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
+.hero{position:relative}
+.hero img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;max-width:100%}
+.tag{position:absolute;left:14px;top:14px;background:var(--accent);color:var(--accent-ink);font-size:13px;font-weight:700;padding:4px 10px;letter-spacing:.04em}
+.gal{display:flex;gap:4px;overflow-x:auto;scroll-snap-type:x mandatory;padding-top:4px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.gal img{flex:0 0 auto;height:180px;width:auto;aspect-ratio:3/2;object-fit:cover;scroll-snap-align:start;display:block;max-width:none}
+.gal:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.galnote{margin:6px 22px 0;font-size:12.5px;color:var(--mute)}
+.opt-body{padding:16px 22px 24px;display:grid;gap:16px;min-width:0}
+.letter{font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--mute)}
+.opt h3{margin:0;font-family:var(--display);font-weight:800;font-size:36px;line-height:1.1}
+.model{margin:0;color:var(--mute);font-size:15px}
+.specs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:0}
+.specs div{padding:10px 0;min-width:0}
+.specs dt{font-size:12px;color:var(--mute)}
+.specs dd{margin:0;font-weight:700;font-size:16px}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 32px}
+.cols h4{margin:0 0 4px;font-size:15px}
+.cols ul,.course ul{margin:0;padding:0;list-style:none;font-size:15px}
+.cols li{padding-left:12px;text-indent:-12px}
+.cols li::before{content:"· ";color:var(--accent)}
+.cost{border:1px solid var(--line);background:var(--sheet)}
+.cost summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;min-height:48px;font-weight:700}
+.cost summary::-webkit-details-marker{display:none}
+.cost summary span:first-child::before{content:"＋";display:inline-block;width:1.4em;color:var(--accent)}
+.cost[open] summary span:first-child::before{content:"－"}
+.cost summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.ctotal{font-variant-numeric:tabular-nums;color:var(--mute);font-weight:500;font-size:15px}
+.cbody{padding:0 16px 14px;display:grid}
+.cgroup{margin:12px 0 2px;font-size:12.5px;letter-spacing:.06em;color:var(--accent);font-weight:700;display:flex;justify-content:space-between}
+.cgroup span{color:var(--mute);font-weight:500;font-variant-numeric:tabular-nums}
+.crow{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:9px 0;border-bottom:1px solid var(--line)}
+.cdesc{display:grid;min-width:0}
+.cdesc b{font-size:14.5px;font-weight:500}
+.cdesc small{font-size:12.5px;color:var(--mute);line-height:1.5}
+.camt{font-variant-numeric:tabular-nums;font-size:15px;white-space:nowrap}
+.crow.sum{border-bottom:0;padding-top:12px}
+.crow.sum b{font-weight:700}
+.crow.sum .camt{font-weight:700;font-size:17px}
+.pick{appearance:none;border:1px solid var(--accent);background:transparent;color:var(--accent);font:inherit;font-weight:700;font-size:16px;padding:14px 18px;min-height:48px;cursor:pointer;width:100%}
+.pick:hover{background:var(--pick)}
+.opt.picked .pick{background:var(--accent);color:var(--accent-ink)}
+.pick:focus-visible,.btn:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.menu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 32px}
+.course{border-top:2px solid var(--accent);padding-top:10px;min-width:0}
+.course p{margin:0 0 6px;font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--accent)}
+.chef{color:var(--mute);margin:0;max-width:62ch}
+.reply{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);box-shadow:0 -6px 24px rgba(10,17,28,.12);padding-bottom:env(safe-area-inset-bottom,0px)}
+.reply .wrap{padding-block:14px;display:grid;gap:10px}
+.reply-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.reply-top strong{font-size:16px}
+.reply label{font-size:13px;color:var(--mute)}
+textarea{width:100%;font:inherit;font-size:15px;color:var(--ink);background:var(--bg);border:1px solid var(--line);padding:10px 12px;resize:vertical;min-height:44px}
+.msg{background:var(--bg);border:1px dashed var(--line);padding:10px 12px;font-size:15px;white-space:pre-line;user-select:all}
+.btn{appearance:none;border:0;background:var(--accent);color:var(--accent-ink);font:inherit;font-weight:700;padding:12px 18px;min-height:46px;cursor:pointer}
+.status{font-size:13px;color:var(--mute);min-height:1em}
+footer .wrap{padding-block:0 180px;color:var(--mute);font-size:13px}
+.hero img,.gal img{cursor:zoom-in}
+.zoomhint{position:absolute;right:12px;bottom:12px;background:rgba(10,17,28,.6);color:#fff;font-size:12px;padding:3px 8px}
+.lb{position:fixed;inset:0;z-index:50;background:rgba(6,10,17,.94);display:grid;grid-template-rows:auto 1fr auto;padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px);color:#F5F6F8}
+.lb-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 16px}
+.lb-top span{font-size:14px;font-variant-numeric:tabular-nums}
+.lb-stage{position:relative;display:flex;align-items:center;justify-content:center;min-height:0;touch-action:pan-y}
+.lb-stage img{max-width:100%;max-height:100%;object-fit:contain;display:block;user-select:none}
+.lb-cap{margin:0;padding:10px 16px 16px;font-size:14px;color:#C9D3DF;text-align:center}
+.lb button{appearance:none;border:0;background:rgba(255,255,255,.14);color:#fff;font:inherit;font-size:22px;min-width:48px;min-height:48px;cursor:pointer}
+.lb button:focus-visible{outline:3px solid #7DB3E0;outline-offset:2px}
+.lb-prev,.lb-next{position:absolute;top:50%;transform:translateY(-50%)}
+.lb-prev{left:8px}.lb-next{right:8px}
+body.lb-open{overflow:hidden}
+@media (max-width:640px){
+  .flow{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .specs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cols,.menu,.same{grid-template-columns:1fr}
+  .gal img{height:150px}
+}
+@media (prefers-reduced-motion:reduce){.opt{transition:none}}
+</style>
+
+</head>
+<body>
+<header class="band"><div class="wrap">
+  <p class="eyebrow">호주 일정 · 시드니 첫날 저녁</p>
+  <h1>하버 나이트 크루즈</h1>
+  <p class="when">2026년 11월 16일 (월) · 18:30 – 22:30 · 4명</p>
+  <p class="lead">하버브리지와 오페라하우스 야경 아래에서 프라이빗 요트 디너. 세 척 모두 이날 예약 가능하고 셰프 디너와 샴페인이 포함됩니다. 마음에 드는 배 하나를 골라주세요.</p>
+</div></header>
+
+<main><div class="wrap">
+
+  <section style="display:grid;gap:16px">
+    <h2>저녁 흐름</h2>
+    <div class="flow">
+      <div class="step"><b>18:15</b><span>시내 선착장 탑승</span><small>Circular Quay 또는 King St Wharf. 카나페와 샴페인으로 시작.</small></div>
+      <div class="step"><b>18:30 – 19:45</b><span>하버 순항 · 일몰</span><small>하버브리지 아래, 오페라하우스 앞. 일몰 약 19:40.</small></div>
+      <div class="step"><b>19:45 – 21:45</b><span>만에 정박 · 디너</span><small>바람 없는 만에 세우고 코스 디너. 도시 야경을 정면으로.</small></div>
+      <div class="step"><b>22:30</b><span>야경 한 바퀴 후 하선</span><small>불 켜진 브리지와 오페라하우스를 다시 지나 출발 선착장으로.</small></div>
+    </div>
+    <ul class="same">
+      <li>4명 전용 프라이빗 차터, 캡틴·크루 포함</li>
+      <li>전담 서빙 스태프 1명</li>
+      <li>프렌치 셰프 Noranise의 4인 디그스테이션</li>
+      <li>샴페인 패키지 3인 + 논알콜 1인</li>
+    </ul>
+  </section>
+
+  <section class="options" aria-label="요트 선택">
+<article class="opt" id="opt-A">
+  <div class="hero"><img src="assets/yacht/empress-01.webp" alt="Empress · 후면 데크 다이닝 테이블과 오페라하우스"><span class="tag">추천</span><span class="zoomhint" aria-hidden="true">눌러서 크게 보기</span></div>
+  <div class="gal" tabindex="0" aria-label="Empress 사진 11장, 옆으로 넘겨 보기"><img src="assets/yacht/empress-02.webp" alt="Empress · 순항 중인 Empress" loading="lazy"><img src="assets/yacht/empress-03.webp" alt="Empress · 항공 사진" loading="lazy"><img src="assets/yacht/empress-04.webp" alt="Empress · 실내 살롱" loading="lazy"><img src="assets/yacht/empress-05.webp" alt="Empress · 실내 라운지" loading="lazy"><img src="assets/yacht/empress-06.webp" alt="Empress · 메인 살롱" loading="lazy"><img src="assets/yacht/empress-07.webp" alt="Empress · 플라이브리지 바" loading="lazy"><img src="assets/yacht/empress-08.webp" alt="Empress · 플라이브리지 라운지" loading="lazy"><img src="assets/yacht/empress-09.webp" alt="Empress · 뱃머리 선베드" loading="lazy"><img src="assets/yacht/empress-10.webp" alt="Empress · 위에서 본 후면 데크" loading="lazy"><img src="assets/yacht/empress-11.webp" alt="Empress · 하버 순항" loading="lazy"><img src="assets/yacht/empress-12.webp" alt="Empress · 후면 데크 항공 사진" loading="lazy"></div>
+  <p class="galnote">사진 12장 · 옆으로 넘기고, 누르면 크게 볼 수 있습니다</p>
+  <div class="opt-body">
+    <div><span class="letter">A</span><h3>Empress</h3><p class="model">77ft Gulf Craft Majesty 모터요트</p></div>
+    <dl class="specs"><div><dt>건조</dt><dd>2017년</dd></div><div><dt>길이</dt><dd>23.5m</dd></div><div><dt>정원</dt><dd>36명 → 4명</dd></div><div><dt>특징</dt><dd>가장 최신</dd></div></dl>
+    <div class="cols">
+      <div><h4>좋은 점</h4><ul><li>세 척 중 가장 새 배, 실내외 마감이 가장 깔끔</li><li>후면 데크 원목 테이블에서 오페라하우스를 보며 식사</li><li>바람이 불면 넓은 실내 살롱으로</li><li>플라이브리지 라운지에서 야경</li></ul></div>
+      <div><h4>디너와 음료</h4><ul><li>Noranise 카나페 + 4인 디그스테이션</li><li>샴페인 Moët &amp; Chandon (Veuve Clicquot로 변경 가능)</li><li>와인·맥주·스피릿 포함, 논알콜 1인</li></ul></div>
+    </div>
+    <details class="cost"><summary><span>비용 내역</span><span class="ctotal">AUD $8,492</span></summary><div class="cbody"><p class="cgroup">요트</p><div class="crow"><div class="cdesc"><b>요트 4시간 전세</b><small>77ft 전용 · 캡틴·크루·연료 포함 · $1,550 × 4시간</small></div><span class="camt">$6,200</span></div><p class="cgroup">디너 · 음료 · 서비스 <span>$2,292</span></p><div class="crow"><div class="cdesc"><b>셰프 선상 디너</b><small>Noranise 셰프 출장 · 탑승 카나페 + 디그스테이션 코스 · 4인</small></div><span class="camt">$1,500</span></div><div class="crow"><div class="cdesc"><b>럭셔리 음료 패키지 × 3인</b><small>Moët 샴페인, 화이트·로제·레드 와인 5종, 맥주, Grey Goose·Chivas 등 스피릿 · 4시간 무제한 · $120/인</small></div><span class="camt">$360</span></div><div class="crow"><div class="cdesc"><b>논알콜 패키지 × 1인</b><small>탄산음료·주스·탄산수 · 4시간 무제한</small></div><span class="camt">$32</span></div><div class="crow"><div class="cdesc"><b>전담 서버 1명</b><small>4시간 테이블 서비스</small></div><span class="camt">$300</span></div><div class="crow"><div class="cdesc"><b>시내 선착장 이용료</b><small>탑승·하선 2회</small></div><span class="camt">$100</span></div><div class="crow sum"><div class="cdesc"><b>합계 · 4명 · 4시간</b><small>요트, 셰프 디너, 음료, 서비스 모두 포함</small></div><span class="camt">$8,492</span></div></div></details>
+    <button class="pick" type="button" id="pick-A" aria-pressed="false">A · Empress로 할게요</button>
+  </div>
+</article>
+<article class="opt" id="opt-B">
+  <div class="hero"><img src="assets/yacht/element-01.webp" alt="Element · 오페라하우스 앞을 지나는 Element"><span class="zoomhint" aria-hidden="true">눌러서 크게 보기</span></div>
+  <div class="gal" tabindex="0" aria-label="Element 사진 19장, 옆으로 넘겨 보기"><img src="assets/yacht/element-02.webp" alt="Element · 하버브리지 아래" loading="lazy"><img src="assets/yacht/element-03.webp" alt="Element · 시내 스카이라인 앞" loading="lazy"><img src="assets/yacht/element-04.webp" alt="Element · 후면 데크 다이닝 테이블" loading="lazy"><img src="assets/yacht/element-05.webp" alt="Element · 실내 살롱" loading="lazy"><img src="assets/yacht/element-06.webp" alt="Element · 메인 살롱" loading="lazy"><img src="assets/yacht/element-07.webp" alt="Element · 살롱 다이닝" loading="lazy"><img src="assets/yacht/element-08.webp" alt="Element · 후면 데크" loading="lazy"><img src="assets/yacht/element-09.webp" alt="Element · 후면 데크 다이닝" loading="lazy"><img src="assets/yacht/element-10.webp" alt="Element · 플라이브리지 라운지" loading="lazy"><img src="assets/yacht/element-11.webp" alt="Element · 플라이브리지" loading="lazy"><img src="assets/yacht/element-12.webp" alt="Element · 후면 데크 테이블" loading="lazy"><img src="assets/yacht/element-13.webp" alt="Element · 시내 야경을 향해 순항" loading="lazy"><img src="assets/yacht/element-14.webp" alt="Element · 항공 사진" loading="lazy"><img src="assets/yacht/element-15.webp" alt="Element · 항공 사진" loading="lazy"><img src="assets/yacht/element-16.webp" alt="Element · 사이드 데크" loading="lazy"><img src="assets/yacht/element-17.webp" alt="Element · 항공 사진" loading="lazy"><img src="assets/yacht/element-18.webp" alt="Element · 위에서 본 Element" loading="lazy"><img src="assets/yacht/element-19.webp" alt="Element · 데크" loading="lazy"><img src="assets/yacht/element-20.webp" alt="Element · 마스터 욕실" loading="lazy"></div>
+  <p class="galnote">사진 20장 · 옆으로 넘기고, 누르면 크게 볼 수 있습니다</p>
+  <div class="opt-body">
+    <div><span class="letter">B</span><h3>Element</h3><p class="model">82ft Warren 모터요트</p></div>
+    <dl class="specs"><div><dt>건조 · 리퍼브</dt><dd>1999 · 2018</dd></div><div><dt>길이</dt><dd>25m</dd></div><div><dt>정원</dt><dd>35명 → 4명</dd></div><div><dt>특징</dt><dd>티크 데크</dd></div></dl>
+    <div class="cols">
+      <div><h4>좋은 점</h4><ul><li>호주 명문 조선소 Warren의 클래식 요트</li><li>2018년 새로 꾸민 모던 실내 살롱</li><li>개폐식 선루프 플라이브리지</li><li>앞쪽 선베드에서 브리지 야경</li></ul></div>
+      <div><h4>디너와 음료</h4><ul><li>Noranise 카나페 + 4인 디그스테이션</li><li>샴페인 포함 플래티넘 음료 패키지</li><li>논알콜 1인: 무알콜 프로세코·와인·맥주</li></ul></div>
+    </div>
+    <details class="cost"><summary><span>비용 내역</span><span class="ctotal">AUD $8,408</span></summary><div class="cbody"><p class="cgroup">요트</p><div class="crow"><div class="cdesc"><b>요트 4시간 전세</b><small>82ft 전용 · 캡틴·크루·연료 포함 · $1,450 × 4시간</small></div><span class="camt">$5,800</span></div><p class="cgroup">디너 · 음료 · 서비스 <span>$2,608</span></p><div class="crow"><div class="cdesc"><b>셰프 선상 디너</b><small>Noranise 셰프 출장 · 탑승 카나페 + 디그스테이션 코스 · 4인</small></div><span class="camt">$1,500</span></div><div class="crow"><div class="cdesc"><b>선상 주방 사용료</b><small>외부 셰프의 배 주방 사용</small></div><span class="camt">$200</span></div><div class="crow"><div class="cdesc"><b>플래티넘 음료 패키지 × 3인</b><small>샴페인, 와인, 맥주 · 4시간 무제한 · $120/인</small></div><span class="camt">$360</span></div><div class="crow"><div class="cdesc"><b>논알콜 패키지 × 1인</b><small>무알콜 프로세코·와인·맥주, 탄산음료 · 4시간 무제한</small></div><span class="camt">$48</span></div><div class="crow"><div class="cdesc"><b>전담 서버 1명</b><small>4시간 테이블 서비스</small></div><span class="camt">$400</span></div><div class="crow"><div class="cdesc"><b>시내 선착장 이용료</b><small>탑승·하선 2회</small></div><span class="camt">$100</span></div><div class="crow sum"><div class="cdesc"><b>합계 · 4명 · 4시간</b><small>요트, 셰프 디너, 음료, 서비스 모두 포함</small></div><span class="camt">$8,408</span></div></div></details>
+    <button class="pick" type="button" id="pick-B" aria-pressed="false">B · Element로 할게요</button>
+  </div>
+</article>
+<article class="opt" id="opt-C">
+  <div class="hero"><img src="assets/yacht/salt-01.webp" alt="Salt · 오페라하우스와 하버브리지 앞의 Salt"><span class="zoomhint" aria-hidden="true">눌러서 크게 보기</span></div>
+  <div class="gal" tabindex="0" aria-label="Salt 사진 18장, 옆으로 넘겨 보기"><img src="assets/yacht/salt-02.webp" alt="Salt · 하버브리지와 Salt" loading="lazy"><img src="assets/yacht/salt-03.webp" alt="Salt · 일몰의 Salt" loading="lazy"><img src="assets/yacht/salt-04.webp" alt="Salt · 오페라하우스 앞 순항" loading="lazy"><img src="assets/yacht/salt-05.webp" alt="Salt · 실내 살롱" loading="lazy"><img src="assets/yacht/salt-06.webp" alt="Salt · 살롱과 바" loading="lazy"><img src="assets/yacht/salt-07.webp" alt="Salt · 실내 메인 살롱" loading="lazy"><img src="assets/yacht/salt-08.webp" alt="Salt · 후면 데크 라운지" loading="lazy"><img src="assets/yacht/salt-09.webp" alt="Salt · 후면 데크 테이블" loading="lazy"><img src="assets/yacht/salt-10.webp" alt="Salt · 데크 위 샴페인 플래터" loading="lazy"><img src="assets/yacht/salt-11.webp" alt="Salt · 사이드 데크" loading="lazy"><img src="assets/yacht/salt-12.webp" alt="Salt · 지붕 있는 탑덱" loading="lazy"><img src="assets/yacht/salt-13.webp" alt="Salt · 뱃머리 선베드" loading="lazy"><img src="assets/yacht/salt-14.webp" alt="Salt · 탑덱 항공 사진" loading="lazy"><img src="assets/yacht/salt-15.webp" alt="Salt · 뱃머리 항공 사진" loading="lazy"><img src="assets/yacht/salt-16.webp" alt="Salt · 후면 항공 사진" loading="lazy"><img src="assets/yacht/salt-17.webp" alt="Salt · 사이드 데크" loading="lazy"><img src="assets/yacht/salt-18.webp" alt="Salt · 항공 사진" loading="lazy"><img src="assets/yacht/salt-19.webp" alt="Salt · 순항 중인 Salt" loading="lazy"></div>
+  <p class="galnote">사진 19장 · 옆으로 넘기고, 누르면 크게 볼 수 있습니다</p>
+  <div class="opt-body">
+    <div><span class="letter">C</span><h3>Salt</h3><p class="model">84ft Monte Fino 모터요트</p></div>
+    <dl class="specs"><div><dt>건조</dt><dd>2004년</dd></div><div><dt>길이</dt><dd>25.6m</dd></div><div><dt>정원</dt><dd>49명 → 4명</dd></div><div><dt>특징</dt><dd>3층 · 가장 큼</dd></div></dl>
+    <div class="cols">
+      <div><h4>좋은 점</h4><ul><li>오픈 탑덱에서 360도 야경</li><li>바가 있는 큰 실내 살롱, 에어컨</li><li>비가 와도 쓰는 지붕 있는 데크</li><li>뱃머리 선 라운지</li></ul></div>
+      <div><h4>디너와 음료</h4><ul><li>Noranise 카나페 + 4인 디그스테이션</li><li>샴페인 Moët &amp; Chandon (Veuve Clicquot로 변경 가능)</li><li>와인·맥주·스피릿 포함, 논알콜 1인</li></ul></div>
+    </div>
+    <details class="cost"><summary><span>비용 내역</span><span class="ctotal">AUD $8,492</span></summary><div class="cbody"><p class="cgroup">요트</p><div class="crow"><div class="cdesc"><b>요트 4시간 전세</b><small>84ft 전용 · 캡틴·크루·연료 포함 · $1,550 × 4시간</small></div><span class="camt">$6,200</span></div><p class="cgroup">디너 · 음료 · 서비스 <span>$2,292</span></p><div class="crow"><div class="cdesc"><b>셰프 선상 디너</b><small>Noranise 셰프 출장 · 탑승 카나페 + 디그스테이션 코스 · 4인</small></div><span class="camt">$1,500</span></div><div class="crow"><div class="cdesc"><b>럭셔리 음료 패키지 × 3인</b><small>Moët 샴페인, 화이트·로제·레드 와인 5종, 맥주, Grey Goose·Chivas 등 스피릿 · 4시간 무제한 · $120/인</small></div><span class="camt">$360</span></div><div class="crow"><div class="cdesc"><b>논알콜 패키지 × 1인</b><small>탄산음료·주스·탄산수 · 4시간 무제한</small></div><span class="camt">$32</span></div><div class="crow"><div class="cdesc"><b>전담 서버 1명</b><small>4시간 테이블 서비스</small></div><span class="camt">$300</span></div><div class="crow"><div class="cdesc"><b>시내 선착장 이용료</b><small>탑승·하선 2회</small></div><span class="camt">$100</span></div><div class="crow sum"><div class="cdesc"><b>합계 · 4명 · 4시간</b><small>요트, 셰프 디너, 음료, 서비스 모두 포함</small></div><span class="camt">$8,492</span></div></div></details>
+    <button class="pick" type="button" id="pick-C" aria-pressed="false">C · Salt로 할게요</button>
+  </div>
+</article>
+  </section>
+
+  <section style="display:grid;gap:16px">
+    <h2>선상 프렌치 디너</h2>
+    <p class="chef">세 척 모두 같은 셰프가 배 위에서 준비합니다. Noranise Dining의 Pierre Gaudin은 프랑스 미쉐린 스타 레스토랑과 Relais &amp; Châteaux 출신으로 2012년부터 시드니에서 활동하고 있습니다. 아래는 셰프 여름 메뉴의 예시이며 최종 코스는 셰프와 조율합니다.</p>
+    <div class="menu">
+      <div class="course"><p>탑승 카나페</p><ul><li>캐비아 프렌치 블리니</li><li>시드니 록 오이스터, 연어알</li><li>블랙 트러플, 훈제 셀러리악</li><li>숯불 와규, 트러플</li></ul></div>
+      <div class="course"><p>앙트레</p><ul><li>캐비아와 랍스터, 셰리 버터 소스</li><li>스패너 크랩, 아보카도, 핑거라임</li><li>일본산 관자 카르파치오</li></ul></div>
+      <div class="course"><p>메인</p><ul><li>포터하우스 와규와 숯불 새우</li><li>머레이 코드, 차이브 버터 소스</li><li>양 로인, 프로방스 라따뚜이</li></ul></div>
+      <div class="course"><p>디저트</p><ul><li>다크 초콜릿 수플레, 흑임자</li><li>라즈베리와 캐러멜 피스타치오</li><li>프랑스 치즈 3종</li></ul></div>
+    </div>
+  </section>
+
+</div></main>
+<footer><div class="wrap"><p>사진은 각 요트의 실제 사진입니다 (Sydney Harbour Specialists 제공). 비용은 호주달러(AUD) 기준 견적입니다.</p></div></footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="사진 크게 보기">
+  <div class="lb-top"><span id="lb-count"></span><button type="button" id="lb-close" aria-label="닫기">✕</button></div>
+  <div class="lb-stage" id="lb-stage">
+    <button type="button" class="lb-prev" id="lb-prev" aria-label="이전 사진">‹</button>
+    <img id="lb-img" alt="">
+    <button type="button" class="lb-next" id="lb-next" aria-label="다음 사진">›</button>
+  </div>
+  <p class="lb-cap" id="lb-cap"></p>
+</div>
+
+<div class="reply" id="reply" hidden>
+  <div class="wrap">
+    <div class="reply-top"><strong id="reply-title">선택: </strong><span class="status" id="status" role="status"></span></div>
+    <label for="extra">못 드시는 음식이나 요청 사항 (선택)</label>
+    <textarea id="extra" rows="1" placeholder="예: 갑각류 알레르기, 샴페인은 Veuve로"></textarea>
+    <div class="msg" id="msg"></div>
+    <button class="btn" type="button" id="copy">메시지 복사 → 카톡으로 보내기</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var picked = null;
+  var opts = { A:"Empress", B:"Element", C:"Salt" };
+  var reply = document.getElementById('reply');
+  var title = document.getElementById('reply-title');
+  var msg = document.getElementById('msg');
+  var extra = document.getElementById('extra');
+  var status = document.getElementById('status');
+  function message(){
+    var t = "16일 요트는 " + picked + " · " + opts[picked] + "로 하자.";
+    var e = extra.value.trim();
+    if (e) t += "\n요청: " + e;
+    return t;
+  }
+  function render(){
+    ['A','B','C'].forEach(function(k){
+      var on = k === picked;
+      document.getElementById('opt-'+k).classList.toggle('picked', on);
+      var b = document.getElementById('pick-'+k);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      b.textContent = on ? (k + ' · ' + opts[k] + ' 선택됨') : (k + ' · ' + opts[k] + '로 할게요');
+    });
+    if (!picked){ reply.hidden = true; return; }
+    reply.hidden = false;
+    title.textContent = '선택: ' + picked + ' · ' + opts[picked];
+    msg.textContent = message();
+    status.textContent = '';
+  }
+  ['A','B','C'].forEach(function(k){
+    document.getElementById('pick-'+k).addEventListener('click', function(){ picked = k; render(); });
+  });
+  extra.addEventListener('input', function(){ if (picked) msg.textContent = message(); });
+  document.getElementById('copy').addEventListener('click', function(){
+    var text = message();
+    function selectIt(){
+      var r = document.createRange(); r.selectNodeContents(msg);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      status.textContent = '선택된 글자를 길게 눌러 복사해 주세요';
+    }
+    try {
+      navigator.clipboard.writeText(text).then(function(){
+        status.textContent = '복사됐습니다. 카톡에 붙여넣어 보내주세요';
+      }, selectIt);
+    } catch(e){ selectIt(); }
+  });
+  render();
+
+  var lb = document.getElementById('lb'), lbImg = document.getElementById('lb-img'),
+      lbCount = document.getElementById('lb-count'), lbCap = document.getElementById('lb-cap');
+  var set = [], idx = 0, lastFocus = null;
+  function show(){
+    var im = set[idx];
+    lbImg.src = im.src; lbImg.alt = im.alt;
+    lbCap.textContent = im.alt;
+    lbCount.textContent = (idx + 1) + ' / ' + set.length;
+  }
+  function open(list, i){
+    set = list; idx = i; lastFocus = document.activeElement;
+    show(); lb.hidden = false; document.body.classList.add('lb-open');
+    document.getElementById('lb-close').focus();
+  }
+  function close(){
+    lb.hidden = true; document.body.classList.remove('lb-open');
+    if (lastFocus) lastFocus.focus();
+  }
+  function step(d){ idx = (idx + d + set.length) % set.length; show(); }
+  document.querySelectorAll('.opt').forEach(function(card){
+    var imgs = Array.prototype.slice.call(card.querySelectorAll('.hero img, .gal img'));
+    imgs.forEach(function(im, i){
+      im.setAttribute('tabindex','0'); im.setAttribute('role','button');
+      im.addEventListener('click', function(){ open(imgs, i); });
+      im.addEventListener('keydown', function(ev){ if (ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); open(imgs, i); } });
+    });
+  });
+  document.getElementById('lb-close').addEventListener('click', close);
+  document.getElementById('lb-prev').addEventListener('click', function(){ step(-1); });
+  document.getElementById('lb-next').addEventListener('click', function(){ step(1); });
+  lb.addEventListener('click', function(ev){ if (ev.target === lb || ev.target.id === 'lb-stage') close(); });
+  lb.addEventListener('keydown', function(ev){
+    if (ev.key === 'Escape') close();
+    else if (ev.key === 'ArrowLeft') step(-1);
+    else if (ev.key === 'ArrowRight') step(1);
+  });
+  var sx = null;
+  var stage = document.getElementById('lb-stage');
+  stage.addEventListener('touchstart', function(ev){ sx = ev.touches[0].clientX; }, {passive:true});
+  stage.addEventListener('touchend', function(ev){
+    if (sx === null) return;
+    var dx = ev.changedTouches[0].clientX - sx; sx = null;
+    if (Math.abs(dx) > 40) step(dx < 0 ? 1 : -1);
+  });
+})();
+</script>
+</body>
+</html>
