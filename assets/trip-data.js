@@ -34,7 +34,7 @@ window.TRIP = {
       items: [
         { t: '08:20', type: 'plane', name: '시드니 공항 제1터미널 도착 · OZ601', sub: '입국 심사와 수하물 수령 약 60–90분 · 식품·흙 묻은 골프화는 신고 대상이니 골프화는 깨끗이', q: 'Sydney Airport International Terminal 1', st: 'ok' },
         { via: 'car', text: '공항 → 호텔 차량 약 30–45분 (호스트 렌터카 · 골프백 2개)', mode: 'driving' },
-        { t: '10:15 전후', type: 'hotel', name: 'Capella Sydney · 짐 보관', sub: '객실이 준비되기 전이면 짐만 맡기고 나섭니다 · 얼리 체크인은 호텔과 미리 조율', addr: '24 Loftus St, Sydney', q: 'Capella Sydney, 24 Loftus Street Sydney', tel: '+61 2 9071 5000', key: 'capella_sydney', st: 'ok', note: '얼리 체크인 요청함(보장 체크인 15:00). 호텔 주차(발레·요금) 문의함.' },
+        { t: '10:15 전후', type: 'hotel', name: 'Capella Sydney · 짐 보관', sub: '객실이 준비되기 전이면 짐만 맡기고 나섭니다 · 얼리 체크인은 호텔과 미리 조율', addr: '24 Loftus St, Sydney', q: 'Capella Sydney, 24 Loftus Street Sydney', tel: '+61 2 9071 5000', key: 'capella_sydney', st: 'ok', note: '얼리 체크인 요청함(보장 체크인 15:00). 호텔 주차(대리주차·요금) 문의함.' },
         { via: 'walk', text: 'BridgeClimb 집결지까지 도보 약 10분 (더록스)', mode: 'walking' },
         { t: '11:00–12:00 출발', type: 'pin', name: 'BridgeClimb · Summit Climb', sub: '하버브리지 꼭대기 아치까지 · 총 약 3시간 · 정확한 출발 시각은 예약 뒤 이메일로 옵니다 · 출발 전 음주 불가 · 휴대폰·카메라는 보관함에 맡기고, 사진은 가이드가 찍어 줍니다', addr: '3 Cumberland St, The Rocks', q: 'BridgeClimb Sydney, 3 Cumberland Street The Rocks', tel: '+61 2 8274 7777', key: 'bridgeclimb', st: 'need', note: '11/16(월) 2명 11–12시 출발 회차 예약 가능 확인(10/29). 18일 아침은 8–9시 매진이라 비행기 시간과 안 맞고, 17일은 골프 때문에 저녁 회차만 남아 16일로 옮김. 입국이 늦어지면 12–13시 회차로 바꾸고 오페라하우스 투어는 생략.' },
         { via: 'walk', text: '더록스 → 호텔 도보 약 10분', mode: 'walking' },
