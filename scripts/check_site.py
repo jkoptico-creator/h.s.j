@@ -125,7 +125,7 @@ for key in set(re.findall(r"key: '([a-z0-9_]+)'", trip)):
     assert key in gallery and key in links and gallery[key], ('planner photo key', key)
 for day in ['d15', 'd16', 'd17', 'd18', 'd19', 'd20', 'd21']:
     assert f"id: '{day}'" in trip, ('planner day missing', day)
-assert 'Eastern Pontoon' in trip and 'VA1283' in trip and 'VA1496' in trip and 'KE408' in trip
+assert 'Empress' in trip and 'VA1283' in trip and 'VA1496' in trip and 'KE408' in trip
 assert '발레' not in trip and 'Copland' not in trip, 'the guests do not want the ballet'
 for name in ['index.html', 'plan-2-sydney-hamilton-brisbane.html']:
     assert 'href="itinerary.html"' in (ROOT/name).read_text(encoding='utf-8'), (name, 'planner link')
