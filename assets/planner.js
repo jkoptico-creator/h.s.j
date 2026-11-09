@@ -48,6 +48,7 @@
     if (it.q) out.push('<a href="' + mapUrl(it.q) + '" target="_blank" rel="noopener">지도</a>');
     var site = it.site || (it.key && L[it.key] && L[it.key].site);
     if (site) out.push('<a href="' + h(site) + '" target="_blank" rel="noopener">웹사이트</a>');
+    if (it.ig) out.push('<a href="' + h(it.ig) + '" target="_blank" rel="noopener">인스타</a>');
     if (it.tel) out.push('<a href="' + telUrl(it.tel) + '">전화 ' + h(it.tel) + '</a>');
     return out.length ? '<div class="ln">' + out.join('') + '</div>' : '';
   }
@@ -87,12 +88,14 @@
       var chips = '<button type="button" class="pf" data-pf="all" aria-pressed="true">전체</button>' +
         cats.map(function (c) { return '<button type="button" class="pf" data-pf="' + c + '" aria-pressed="false">' + h(PCAT[c][0]) + '</button>'; }).join('') +
         '<button type="button" class="pf" data-pf="date" aria-pressed="false">♥ 데이트</button>';
+      var dow = day.dow;
       var items = set.items.slice().sort(function (a, b) { return PORDER.indexOf(a.cat) - PORDER.indexOf(b.cat); }).map(function (x) {
         var c = PCAT[x.cat] || ['', 'pin'];
         return '<li class="pk" data-cat="' + h(x.cat) + '"' + (x.date ? ' data-date="1"' : '') + '>' +
           '<span class="ic ' + h(c[1]) + '" aria-hidden="true">' + (SVG[c[1]] || SVG.pin) + '</span>' +
           '<div class="bd"><div class="nm">' + h(x.name) + (x.date ? '<span class="tag love">데이트</span>' : '') + '</div>' +
           '<div class="pm">' + h(c[0]) + ' · ' + h(x.walk) + '</div>' +
+          (x.hours && x.hours[dow] ? '<div class="phr' + (/휴무/.test(x.hours[dow]) ? ' off' : '') + '">' + h(dow) + '요일 ' + h(x.hours[dow]) + '</div>' : '') +
           (x.sub ? '<div class="sb">' + h(x.sub) + '</div>' : '') +
           (x.tip ? '<div class="ptip">' + h(x.tip) + '</div>' : '') +
           links(x) + '</div></li>';

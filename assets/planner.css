@@ -126,3 +126,5 @@ dl dd{margin:0;min-width:0}
 .ptip::before{content:'· '}
 .tag.love{background:var(--peach-2);color:#7A4A2B}
 .pnote2{margin:8px 0 2px;color:var(--mute)}
+.phr{display:inline-block;margin-top:5px;font-size:11.5px;font-weight:600;color:#2C5A2E;background:#E3F0E0;border-radius:6px;padding:2px 7px}
+.phr.off{color:#8A3B2B;background:var(--peach-2)}
