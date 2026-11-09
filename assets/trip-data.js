@@ -10,8 +10,8 @@
    예약번호·여권·승객 이름 같은 개인정보는 넣지 않습니다. */
 window.TRIP = {
   title: '시드니 → 해밀턴 아일랜드 → 브리즈번',
-  dates: '2026년 11월 15일(일) – 21일(토)',
-  updated: '2026년 10월 29일',
+  dates: '2026년 11월 15일(일) – 22일(일)',
+  updated: '2026년 11월 9일',
   lookbook: 'plan-2-sydney-hamilton-brisbane.html',
   days: [
     {
@@ -67,12 +67,12 @@ window.TRIP = {
         { via: 'car', text: '리틀 베이 → 호텔 차량 약 35–45분 (오후 교통)', mode: 'driving' },
         { t: '17:30', type: 'hotel', name: '호텔 · 자유 시간', sub: '샤워하고 쉬는 시간 · 호텔 바에서 한 잔도 좋습니다', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney' },
         { via: 'walk', text: '오페라하우스까지 도보 약 15–20분 (서큘러키 물가)', mode: 'walking' },
-        { t: '19:45', type: 'dining', name: 'Bennelong 저녁 · 오페라하우스 안', sub: '오페라하우스 돛 아래의 레스토랑 · 매일 저녁 운영 · 소믈리에에게 코스에 맞는 와인을 맡기기 좋은 곳 · 문의 02 9240 8000', addr: 'Sydney Opera House, Bennelong Point', q: 'Bennelong Restaurant Sydney Opera House', tel: '+61 2 9240 8000', key: 'bennelong', st: 'need', note: '2명(두 분) 19:45 · 호텔 컨시어지에 예약 요청함 · 창가 · 와인 페어링 또는 소믈리에 추천(풀바디 레드 선호) 미리 알리기. 호스트는 근처에서 대기.' },
+        { t: '19:45', type: 'dining', name: 'Bennelong 저녁 · 오페라하우스 안', sub: '오페라하우스 돛 아래의 레스토랑 · 매일 저녁 운영 · 소믈리에에게 코스에 맞는 와인을 맡기기 좋은 곳 · 문의 02 9240 8000', addr: 'Sydney Opera House, Bennelong Point', q: 'Bennelong Restaurant Sydney Opera House', tel: '+61 2 9240 8000', key: 'bennelong', st: 'ok', note: '2명(두 분) 19:45 예약 완료(Capella 컨시어지, 10/31) · 창가 · 와인 페어링 또는 소믈리에 추천(풀바디 레드 선호) 미리 알리기. 호스트는 근처에서 대기.' },
         { via: 'walk', text: '호텔까지 서큘러키 물가를 따라 도보 약 15분', mode: 'walking' },
         { t: '22:15 전후', type: 'hotel', name: '호텔 복귀', sub: '내일 아침은 느긋하게 · 10:30 체크아웃', q: 'Capella Sydney, 24 Loftus Street Sydney' },
         { t: '대안', type: 'car', alt: true, name: '산책을 짧게 · 본다이 → 브론테 2.5km', sub: '전날 피곤하면 1시간만 걷고 브론테에서 차를 타고 쿠지로', q: 'Bondi to Bronte Coastal Walk', key: 'bondi_coogee' }
       ],
-      notes: '세인트 마이클은 11:40이 가장 이른 시간(클럽 답변). NSW Golf Club은 비회원 승인 문제로 제외. Auriga 스파는 17일 자리가 없어 16일로 옮김. Bennelong 19:45 컨시어지 요청.'
+      notes: '세인트 마이클은 11:40이 가장 이른 시간(클럽 답변). NSW Golf Club은 비회원 승인 문제로 제외. Auriga 스파는 17일 자리가 없어 16일로 옮김. Bennelong 19:45 예약 완료(Capella 컨시어지).'
     },
     {
       id: 'd18', date: '2026-11-18', dow: '수', n: 3, city: '해밀턴 아일랜드', short: '해밀턴', tz: 'Australia/Brisbane', tzLabel: '오전은 시드니 시각 · 도착 뒤 퀸즐랜드 시각(시드니 −1시간 · 한국 +1시간)',
@@ -126,10 +126,10 @@ window.TRIP = {
     },
     {
       id: 'd20', date: '2026-11-20', dow: '금', n: 5, city: '브리즈번', tz: 'Australia/Brisbane', tzLabel: '퀸즐랜드 시각 · 한국 +1시간',
-      title: '해밀턴 아일랜드 → 브리즈번 · 브루어리 산책 · Exhibition · 강변 야경',
-      intro: '아침은 비치프런트 조식과 캣츠아이 비치 산책으로 느긋하게 보내고 낮 비행기로 브리즈번에 옵니다. 제임스 스트리트의 The Calile에 짐을 푼 뒤, 오래된 양모 창고가 늘어선 테네리프 강변 동네를 걸어 브루어리에서 한 잔 하고, 18시에 Exhibition에서 마지막 저녁을 먹습니다. 원하면 식사 뒤 스토리브리지 아래 강변을 걸어 Howard Smith Wharves까지 갑니다. 다음 날 새벽 출발이라 밤 일정은 22시 전에 끝냅니다.',
-      stay: { name: 'The Calile Hotel', sub: '48 James St, Fortitude Valley QLD 4006', tel: '+61 7 3607 5888', q: 'The Calile Hotel, 48 James Street Fortitude Valley', key: 'the_calile', nights: '1박' },
-      bring: ['저녁 복장', '걷기 편한 신발', '새벽 출발용 짐 정리'],
+      title: '해밀턴 아일랜드 → 브리즈번 · Queen\'s Wharf 체크인 · Exhibition · 강변 야경',
+      intro: '아침은 비치프런트 조식과 캣츠아이 비치 산책으로 느긋하게 보내고 낮 비행기로 브리즈번에 옵니다. 강가에 새로 지은 Queen\'s Wharf의 The Star Grand 리버 스위트에 짐을 풉니다. 원하면 테네리프 강변 동네의 양조장에 들러 한 잔 하고, 18시에 Exhibition에서 테이스팅 코스로 저녁을 먹습니다. 호텔에서 걸어서 10분 남짓입니다. 식사 뒤에는 스토리브리지 아래 강변을 걷거나 바로 호텔로 돌아와 방에서 강 야경을 봅니다.',
+      stay: { name: 'The Star Grand Brisbane · River Suite', sub: 'Queen\'s Wharf, 33 William St, Brisbane City · 브리즈번강·사우스뱅크 전망', q: 'The Star Grand Brisbane, Queens Wharf', nights: '1/2박' },
+      bring: ['저녁 복장(Exhibition)', '걷기 편한 신발', '선글라스 · 모자'],
       items: [
         { t: '07:30', type: 'dining', name: '조식 · Sails · 비치프런트', sub: '캣츠아이 비치 앞 · 조식 07:00–10:30(포함)', q: 'Sails Restaurant Hamilton Island', key: 'sails_hi' },
         { t: '08:30', type: 'walk', name: '캣츠아이 비치 산책 · 카약 또는 SUP(선택)', sub: '짐 정리 전 가볍게 · 비치 스포츠 장비 무료', q: 'Catseye Beach Hamilton Island', key: 'catseye_beach' },
@@ -139,30 +139,52 @@ window.TRIP = {
         { t: '11:15', type: 'plane', name: '해밀턴 아일랜드 공항 · 버진 체크인', sub: '작은 공항 · 출발 60–90분 전', q: 'Hamilton Island Airport' },
         { t: '12:40', type: 'plane', name: 'VA1496 해밀턴 아일랜드 → 브리즈번', sub: '1시간 35분 · 14:15 도착 · 같은 퀸즐랜드 시각 · 보잉 737-800', key: 'reef_view', st: 'ok', note: '예약 완료(버진). 출발 전 좌석 지정·골프백 위탁 신고.' },
         { t: '14:15', type: 'plane', name: '브리즈번 공항 국내선 도착', sub: '수하물 수령 후 차량', q: 'Brisbane Airport Domestic Terminal' },
-        { via: 'car', text: '호텔까지 차량 약 20–35분', mode: 'driving' },
-        { t: '15:15', type: 'hotel', name: 'The Calile 체크인 · 휴식', sub: '제임스 스트리트 한가운데 · 수영장에서 잠깐', addr: '48 James St, Fortitude Valley', q: 'The Calile Hotel, 48 James Street Fortitude Valley', tel: '+61 7 3607 5888', key: 'the_calile', st: 'ok', note: '1박. 새벽 05:10 공항 차량 호텔에 요청.' },
-        { via: 'walk', text: '제임스 스트리트 → 뉴스테드 → 테네리프 도보 약 20–25분', mode: 'walking' },
-        { t: '16:15', type: 'walk', opt: true, name: '테네리프 브루어리 산책 · Green Beacon Brewing', sub: '제임스 스트리트 가게들을 지나 붉은 벽돌 양모 창고가 늘어선 강변 동네까지 걷고, 양조장 탭룸에서 시음 패들 한 판 · 금요일 11:00부터 운영', addr: '26 Helen St, Teneriffe', q: 'Green Beacon Brewing Co, 26 Helen Street Teneriffe', st: 'chk', note: '저녁 테이스팅 전이라 한 판만. 금요일 오후 운영 확인.' },
-        { via: 'car', text: '테네리프 → Exhibition 차량 약 10–15분', mode: 'driving' },
-        { t: '18:00', type: 'dining', name: 'Exhibition 저녁 · 여행의 마지막 식사', sub: '테이스팅 메뉴 약 2–2.5시간 · 지하 2층(Basement 2) · 18:00 예약 완료', addr: 'Basement 2, 109 Edward St, Brisbane', q: 'Exhibition Restaurant, 109 Edward Street Brisbane', key: 'exhibition_restaurant', st: 'ok', note: '18:00 예약 완료(18시 회차만 가능). 3명. 와인 페어링(풀바디 레드 선호) 미리 알리기.' },
+        { via: 'car', text: '공항 → Queen\'s Wharf 차량 약 20–30분 (호스트 렌터카)', mode: 'driving' },
+        { t: '15:00', type: 'hotel', name: 'The Star Grand 체크인 · River Suite', sub: '카지노 로비와 분리된 호텔 전용 리셉션 · 고층 · 사우스뱅크와 강 쪽 전망 요청 · 원하면 수영장에서 잠깐', addr: 'Queen\'s Wharf, 33 William St, Brisbane City', q: 'The Star Grand Brisbane, Queens Wharf', st: 'ok', note: '2박 예약 완료(Hotels.com, 호스트 이름). 두 분 이름 추가·최고층·공사 뷰 제외 요청 메일. 호스트 River King Room 별도. 주차: 셀프 약 $45 · 대리주차 약 $65/박.' },
+        { via: 'car', text: 'Queen\'s Wharf → 테네리프 차량 약 10–15분', mode: 'driving' },
+        { t: '16:15', type: 'walk', opt: true, name: '테네리프 브루어리 산책 · Green Beacon Brewing', sub: '붉은 벽돌 양모 창고가 늘어선 강변 동네를 잠깐 걷고, 양조장 탭룸에서 시음 패들 한 판 · 금요일 11:00부터 운영', addr: '26 Helen St, Teneriffe', q: 'Green Beacon Brewing Co, 26 Helen Street Teneriffe', st: 'chk', note: '저녁 테이스팅 전이라 한 판만. 금요일 오후 운영 확인.' },
+        { via: 'car', text: '테네리프 → 호텔 → Exhibition (호텔에서 도보 약 10–12분)', mode: 'driving' },
+        { t: '18:00', type: 'dining', name: 'Exhibition 저녁 · 테이스팅 코스', sub: '테이스팅 메뉴 약 2–2.5시간 · 지하 2층(Basement 2) · 18:00 예약 완료', addr: 'Basement 2, 109 Edward St, Brisbane', q: 'Exhibition Restaurant, 109 Edward Street Brisbane', key: 'exhibition_restaurant', st: 'ok', note: '18:00 예약 완료(18시 회차만 가능). 3명. 와인 페어링(풀바디 레드 선호) 미리 알리기.' },
         { via: 'walk', text: 'Edward St → 이글 스트리트 피어 → 스토리브리지 아래 리버워크 → Howard Smith Wharves 도보 약 25–30분', mode: 'walking' },
         { t: '20:45', type: 'walk', opt: true, name: '브리즈번강 야경 산책 · 리버워크와 스토리브리지', sub: '식사 뒤 강을 따라 불 켜진 스토리브리지 아래를 걸어 Howard Smith Wharves까지 · 브루어리 Felons Barrel Hall이나 강가 바에서 한 잔 · 피곤하면 차량으로 바로 호텔', addr: 'Howard Smith Wharves, 5 Boundary St', q: 'Howard Smith Wharves Brisbane', key: 'howard_smith_wharves', note: '브리즈번강 요트는 20일 예약이 모두 차서 뺐습니다(문의 완료).' },
-        { via: 'car', text: '호텔까지 차량 약 10분', mode: 'driving' },
-        { t: '22:00 전후', type: 'hotel', name: '호텔 복귀 · 짐 정리', sub: '내일 05:10 출발 · 공항 차량 재확인', q: 'The Calile Hotel, 48 James Street Fortitude Valley' }
+        { via: 'car', text: 'Howard Smith Wharves → 호텔 차량 약 5–10분', mode: 'driving' },
+        { t: '22:00 전후', type: 'hotel', name: '호텔 복귀', sub: '방에서 강과 스토리브리지 야경 · 내일은 느긋한 아침', q: 'The Star Grand Brisbane, Queens Wharf' }
       ],
-      notes: '하루 연장 검토 중(두 분 상의). 연장하면 21일에 Sirromet 와이너리(마운트 코튼, 시내에서 차로 약 40분 · 45분 투어와 6종 시음 · 레스토랑 Lurleen\'s 점심)를 넣고 22일 귀국. 대한항공 22일 프레스티지 좌석 먼저 확인.'
+      notes: '11/9 하루 연장 확정 → 브리즈번 2박(The Star Grand), 22일 귀국. The Calile은 예약하지 않았음.'
     },
     {
-      id: 'd21', date: '2026-11-21', dow: '토', n: 6, city: '귀국', tz: 'Australia/Brisbane', tzLabel: '퀸즐랜드 시각 · 한국 +1시간',
+      id: 'd21', date: '2026-11-21', dow: '토', n: 6, city: '브리즈번', tz: 'Australia/Brisbane', tzLabel: '퀸즐랜드 시각 · 한국 +1시간',
+      title: 'Sirromet 와이너리 · Sky Deck 선셋 디너 · 카지노',
+      intro: '느긋하게 아침을 먹고 차로 40분 거리의 Sirromet 와이너리에 갑니다. 포도밭과 양조장을 둘러보며 와인 메이커의 설명을 듣고 시음한 뒤, 와이너리 레스토랑에서 와인과 함께 점심을 먹습니다. 오후에는 호텔에서 쉬고, 해 질 무렵 호텔 위 100m 높이의 Sky Deck에 올라 선셋을 보며 Aloria에서 마지막 저녁을 먹습니다. 식사 뒤에는 원하면 같은 건물의 카지노로 내려갑니다.',
+      stay: { name: 'The Star Grand Brisbane · River Suite', sub: 'Queen\'s Wharf, 33 William St, Brisbane City · 브리즈번강·사우스뱅크 전망', q: 'The Star Grand Brisbane, Queens Wharf', nights: '2/2박' },
+      bring: ['걷기 편한 신발(포도밭)', '선글라스 · 모자', '저녁 복장(Aloria · 카지노는 스마트 캐주얼)'],
+      items: [
+        { t: '08:30', type: 'dining', name: '조식 · 호텔', sub: '느긋한 아침', q: 'The Star Grand Brisbane, Queens Wharf' },
+        { t: '10:15', type: 'car', name: '호텔 출발 · 호스트 차량', sub: '마운트 코튼까지 약 40분', q: 'The Star Grand Brisbane, Queens Wharf' },
+        { via: 'car', text: 'Queen\'s Wharf → Sirromet 차량 약 40분', mode: 'driving' },
+        { t: '11:00', type: 'pin', name: 'Sirromet · 프리미엄 투어 & 테이스팅', sub: '퀸즐랜드 대표 와이너리 · 포도밭과 양조장을 둘러보고 프리미엄 와인 시음 · 약 90분 · 언덕 위 포도밭 전망', addr: '850 Mount Cotton Rd, Mount Cotton', q: 'Sirromet Winery, 850 Mount Cotton Road', tel: '+61 7 3206 2999', st: 'need', note: '프리미엄 투어 1인 $55(매일). 3명 11:00 예약. 개인 투어는 10명 이상만 가능 → 공용 투어. tourism@sirromet.com' },
+        { t: '12:45', type: 'dining', name: '와이너리 점심 · 와인 페어링', sub: '와이너리 레스토랑에서 코스와 와인 · 포도밭이 내려다보이는 자리', q: 'Sirromet Winery, 850 Mount Cotton Road', tel: '+61 7 3206 2999', st: 'need', note: '토요일 점심 레스토랑(Lurleen\'s 또는 Tuscan Terrace) 운영·예약 확인. 3명 12:45.' },
+        { via: 'car', text: 'Sirromet → 호텔 차량 약 40분 (호스트는 음주 안 함)', mode: 'driving' },
+        { t: '15:00', type: 'hotel', name: '호텔 · 자유 시간', sub: '수영장 · 스파 · 낮잠 · 원하면 다리 건너 사우스뱅크 산책', q: 'The Star Grand Brisbane, Queens Wharf' },
+        { t: '17:45', type: 'pin', name: 'Sky Deck · 선셋', sub: '호텔 위 약 100m 높이의 전망 데크 · 일몰 약 18:15 · 시내, 강, 마운트 쿠사까지 360도', q: 'Sky Deck Queens Wharf Brisbane' },
+        { t: '18:15', type: 'dining', name: 'Aloria 저녁 · Sky Deck', sub: '드라이에이징 스테이크와 해산물, 장작 그릴 · 와인 리스트가 강점 · 해 지는 시간에 맞춰 창가 자리 · 토요일 저녁 17:30–22:00', addr: 'Sky Deck, Queen\'s Wharf, 33 William St', q: 'Aloria Sky Deck Brisbane', tel: '+61 1800 888 899', st: 'need', note: '3명 18:15 창가 예약(OpenTable 또는 호텔 컨시어지). 와인 페어링 또는 소믈리에 추천(풀바디 레드).' },
+        { t: '20:30', type: 'pin', opt: true, name: '카지노 · The Star Brisbane', sub: '같은 건물 · 원하는 만큼만', q: 'The Star Grand Brisbane, Queens Wharf' },
+        { t: '22:00 전후', type: 'hotel', name: '호텔 · 짐 정리', sub: '내일 05:10 출발', q: 'The Star Grand Brisbane, Queens Wharf' },
+        { t: '대안', type: 'pin', alt: true, name: '탬버린 마운틴 와이너리와 열대우림 산책', sub: '와이너리 여러 곳과 숲길 · 편도 약 1시간 15분이라 하루가 길어집니다', q: 'Tamborine Mountain QLD' }
+      ],
+      notes: '11/9 연장 확정으로 추가된 날. 와인(하은 씨)·야경과 카지노(학수형)를 하루에 묶음.'
+    },
+    {
+      id: 'd22', date: '2026-11-22', dow: '일', n: 7, city: '귀국', tz: 'Australia/Brisbane', tzLabel: '퀸즐랜드 시각 · 한국 +1시간',
       title: '브리즈번 → 인천',
       intro: '08:40 출발편이라 새벽에 움직입니다. 조식은 공항 라운지에서 하고, 같은 날 저녁 인천에 닿습니다.',
       stay: { name: '인천 도착', sub: '추가 숙박 없음' },
-      bring: ['여권 · 탑승권(휴대폰)', '면세품 영수증(해당 시)'],
+      bring: ['여권 · 탑승권(휴대폰)', '면세 환급(TRS) 영수증과 물건 · 기내 반입'],
       items: [
-        { t: '05:10', type: 'car', name: 'The Calile 출발', sub: '사전 예약 차량 · 조식은 라운지에서', q: 'The Calile Hotel, 48 James Street Fortitude Valley', st: 'need', note: '호텔 통해 05:10 공항 차량 예약(골프백 2개).' },
-        { via: 'car', text: '브리즈번 국제선 터미널까지 차량 약 20–35분', mode: 'driving' },
-        { t: '05:40', type: 'plane', name: '브리즈번 공항 국제선 · 대한항공 체크인', sub: '출발 3시간 전 · 프레스티지 카운터 · 수하물 1인 2개 · 라운지', q: 'Brisbane Airport International Terminal', st: 'ok' },
-        { t: '08:40', type: 'plane', name: 'KE408 브리즈번 → 인천', sub: '10시간 25분 · 보잉 787-9 · 프레스티지 스위트 10A · 10B', key: 'biz_class_787', st: 'ok', note: '발권·좌석 완료.' },
+        { t: '05:10', type: 'car', name: '호텔 출발 · 호스트 차량', sub: '익스프레스 체크아웃 · 조식은 라운지에서', q: 'The Star Grand Brisbane, Queens Wharf', note: '호텔에 05:10 출발·익스프레스 체크아웃 요청함.' },
+        { via: 'car', text: '브리즈번 국제선 터미널까지 차량 약 20–30분', mode: 'driving' },
+        { t: '05:40', type: 'plane', name: '브리즈번 공항 국제선 · 대한항공 체크인', sub: '출발 3시간 전 · 프레스티지 카운터 · 수하물 1인 2개 · TRS 환급은 출국심사 뒤 · 라운지', q: 'Brisbane Airport International Terminal', st: 'ok' },
+        { t: '08:40', type: 'plane', name: 'KE408 브리즈번 → 인천', sub: '10시간 25분 · 보잉 787-9 · 프레스티지', key: 'biz_class_787', st: 'ok', note: '21일 → 22일로 날짜 변경 완료(11/9). 좌석 재지정 확인.' },
         { t: '18:05', type: 'plane', name: '인천공항 제2터미널 도착', sub: '같은 날 저녁 · 한국 시각', q: 'Incheon International Airport Terminal 2', tz: 'Asia/Seoul' }
       ]
     }
@@ -171,12 +193,12 @@ window.TRIP = {
     { date: '11월 15일(일)', code: 'KE5001 · 아시아나 OZ601 운항', route: '인천 T2 → 시드니 T1', time: '20:00 → 다음 날 08:20', dur: '10시간 20분', cls: '프레스티지(비즈니스)', bag: '1인 2개', st: 'ok' },
     { date: '11월 18일(수)', code: 'VA1283 버진 오스트레일리아', route: '시드니 T2 → 해밀턴 아일랜드', time: '12:40 → 14:10 (퀸즐랜드 시각)', dur: '2시간 30분 · 737-800', cls: '비즈니스', bag: '위탁 수하물에 골프백 포함 · 출발 전 좌석 지정', st: 'ok' },
     { date: '11월 20일(금)', code: 'VA1496 버진 오스트레일리아', route: '해밀턴 아일랜드 → 브리즈번 국내선', time: '12:40 → 14:15', dur: '1시간 35분 · 737-800', cls: '예약 완료', bag: '위탁 수하물에 골프백 포함 · 출발 전 좌석 지정', st: 'ok' },
-    { date: '11월 21일(토)', code: 'KE408 대한항공', route: '브리즈번 국제선 → 인천 T2', time: '08:40 → 18:05', dur: '10시간 25분 · 787-9', cls: '프레스티지 스위트 · 10A · 10B', bag: '1인 2개', st: 'ok' }
+    { date: '11월 22일(일)', code: 'KE408 대한항공', route: '브리즈번 국제선 → 인천 T2', time: '08:40 → 18:05', dur: '10시간 25분 · 787-9', cls: '프레스티지(날짜 변경 완료 · 좌석 재지정 확인)', bag: '1인 2개', st: 'ok' }
   ],
   hotels: [
     { name: 'Capella Sydney', dates: '11월 16일(월) – 18일(수) · 2박', addr: '24 Loftus St, Sydney NSW 2000', tel: '+61 2 9071 5000', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney', sub: '서큘러키·오페라하우스 도보권 · 1912년 교육부 건물' },
     { name: 'Reef View Hotel · Superior Presidential Suite', dates: '11월 18일(수) 14:00 – 20일(금) 10:00 · 2박', addr: '12 Resort Drive, Hamilton Island QLD 4803', tel: '+61 7 4946 9999', q: 'Reef View Hotel, Hamilton Island', key: 'reef_view_suite', sub: '캣츠아이 비치 앞 · 2층 스위트(침실 2·욕실 2·전용 플런지 풀) · 조식 포함(Sails 또는 Pool Terrace) · 공항 왕복 VIP 차량 · 4인승 버기 · 무알코올 미니바 · 비치 스포츠 장비 · 예약 1800 370 800' },
-    { name: 'The Calile Hotel', dates: '11월 20일(금) – 21일(토) · 1박', addr: '48 James St, Fortitude Valley QLD 4006', tel: '+61 7 3607 5888', q: 'The Calile Hotel, 48 James Street Fortitude Valley', key: 'the_calile', sub: '제임스 스트리트 · 공항까지 차량 20–35분' }
+    { name: 'The Star Grand Brisbane · River Suite', dates: '11월 20일(금) – 22일(일) · 2박', addr: 'Queen\'s Wharf, 33 William St, Brisbane City QLD 4000', q: 'The Star Grand Brisbane, Queens Wharf', sub: '브리즈번강 앞 신축 5성 · 카지노·Sky Deck 같은 건물 · Exhibition 도보 10분 · 공항까지 차량 20–30분' }
   ],
   info: [
     { h: '시차와 해', rows: [
