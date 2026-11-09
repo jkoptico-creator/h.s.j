@@ -89,7 +89,7 @@
         cats.map(function (c) { return '<button type="button" class="pf" data-pf="' + c + '" aria-pressed="false">' + h(PCAT[c][0]) + '</button>'; }).join('') +
         '<button type="button" class="pf" data-pf="date" aria-pressed="false">♥ 데이트</button>';
       var dow = day.dow;
-      var items = set.items.slice().sort(function (a, b) { return PORDER.indexOf(a.cat) - PORDER.indexOf(b.cat); }).map(function (x) {
+      var items = set.items.filter(function (x) { return !(x.hours && /휴무/.test(x.hours[dow] || '')); }).sort(function (a, b) { return PORDER.indexOf(a.cat) - PORDER.indexOf(b.cat); }).map(function (x) {
         var c = PCAT[x.cat] || ['', 'pin'];
         return '<li class="pk" data-cat="' + h(x.cat) + '"' + (x.date ? ' data-date="1"' : '') + '>' +
           '<span class="ic ' + h(c[1]) + '" aria-hidden="true">' + (SVG[c[1]] || SVG.pin) + '</span>' +
