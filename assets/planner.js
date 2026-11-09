@@ -77,6 +77,35 @@
       (it.note ? '<div class="pn plan"><b>메모</b>' + h(it.note) + '</div>' : '') +
       '</div><div class="rt">' + right + '</div></li>';
   }
+  var PCAT = { cafe: ['카페·디저트', 'dining'], bar: ['바·라운지', 'dining'], food: ['맛집', 'dining'], sight: ['명소·산책', 'walk'], shop: ['쇼핑', 'shop'] };
+  var PORDER = ['cafe', 'bar', 'food', 'sight', 'shop'];
+  function renderPicks(day) {
+    if (!day.picks || !T.picks) return '';
+    return day.picks.map(function (p, n) {
+      var set = T.picks[p.set]; if (!set) return '';
+      var cats = PORDER.filter(function (c) { return set.items.some(function (x) { return x.cat === c; }); });
+      var chips = '<button type="button" class="pf" data-pf="all" aria-pressed="true">전체</button>' +
+        cats.map(function (c) { return '<button type="button" class="pf" data-pf="' + c + '" aria-pressed="false">' + h(PCAT[c][0]) + '</button>'; }).join('') +
+        '<button type="button" class="pf" data-pf="date" aria-pressed="false">♥ 데이트</button>';
+      var items = set.items.slice().sort(function (a, b) { return PORDER.indexOf(a.cat) - PORDER.indexOf(b.cat); }).map(function (x) {
+        var c = PCAT[x.cat] || ['', 'pin'];
+        return '<li class="pk" data-cat="' + h(x.cat) + '"' + (x.date ? ' data-date="1"' : '') + '>' +
+          '<span class="ic ' + h(c[1]) + '" aria-hidden="true">' + (SVG[c[1]] || SVG.pin) + '</span>' +
+          '<div class="bd"><div class="nm">' + h(x.name) + (x.date ? '<span class="tag love">데이트</span>' : '') + '</div>' +
+          '<div class="pm">' + h(c[0]) + ' · ' + h(x.walk) + '</div>' +
+          (x.sub ? '<div class="sb">' + h(x.sub) + '</div>' : '') +
+          (x.tip ? '<div class="ptip">' + h(x.tip) + '</div>' : '') +
+          links(x) + '</div></li>';
+      }).join('');
+      return '<section class="picks" aria-label="' + h(set.title) + ' 골라 가기">' +
+        '<div class="lbl">둘이서 골라 가기</div>' +
+        '<h2>' + h(set.title) + '</h2>' +
+        '<p class="pwhen">' + (p.when ? '<b>언제</b>' + h(p.when) + ' · ' : '') + h(set.base) + ' · 함께 가도, 두 분만 다녀와도 좋은 곳</p>' +
+        '<div class="pfs" role="group" aria-label="종류별 보기">' + chips + '</div>' +
+        '<ul class="pks">' + items + '</ul>' +
+        '<p class="small pnote2">운영 시간은 가기 전에 지도 링크에서 확인하세요.</p></section>';
+    }).join('');
+  }
   function dayRoute(day) {
     var stops = day.items.filter(function (x) { return !x.via && !x.alt && x.q; }).map(function (x) { return x.q; });
     var uniq = stops.filter(function (q, i) { return i === 0 || q !== stops[i - 1]; });
@@ -103,7 +132,7 @@
       '<div class="now" hidden></div>' +
       (day.intro ? '<p class="dintro">' + h(day.intro) + '</p>' : '') +
       (route ? '<div class="ln top"><a href="' + route + '" target="_blank" rel="noopener">오늘 동선 지도</a></div>' : '') +
-      '</div>' + stay + '<ol class="tl">' + rows.join('') + '</ol>' + bring + notes + '</section>';
+      '</div>' + stay + '<ol class="tl">' + rows.join('') + '</ol>' + renderPicks(day) + bring + notes + '</section>';
   }
   function renderInfo() {
     var fl = '<div class="card"><div class="lbl">항공</div><p class="small">예약번호와 승객 정보는 이 페이지에 싣지 않습니다. 항공사 앱에서 확인하세요.</p>' + T.flights.map(function (f) {
@@ -177,6 +206,14 @@
   var saved = ''; try { saved = localStorage.getItem(KEY) || ''; } catch (_) {}
   setMode(saved === '1', false);
   mode.addEventListener('click', function () { setMode(!document.body.classList.contains('plan-on'), true); });
+  view.addEventListener('click', function (e) {
+    var b = e.target.closest('.pf'); if (!b) return;
+    var sec = b.closest('.picks'), f = b.dataset.pf;
+    sec.querySelectorAll('.pf').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+    sec.querySelectorAll('.pk').forEach(function (li) {
+      li.hidden = !(f === 'all' || (f === 'date' ? li.dataset.date === '1' : li.dataset.cat === f));
+    });
+  });
   window.addEventListener('hashchange', function () { paint(true); });
   paint(false);
   setInterval(markNow, 60000);
