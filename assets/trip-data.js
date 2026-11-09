@@ -39,6 +39,8 @@ window.TRIP = {
         { t: '10:30', type: 'dining', name: '브런치 · Brasserie 1930 (Capella Sydney)', sub: '호텔 1층 · 비행 뒤 가볍게 · 스파 전이라 과식은 피하기', addr: '24 Loftus St, Sydney', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney', note: '패키지 조식이 도착일에도 적용되는지 호텔에 확인.' },
         { t: '12:45', type: 'spa', name: 'Auriga Spa · Connect to Country 90분 · 커플 룸', sub: '호텔 안 스파 · 여성 테라피스트 2명 · 15분 전 도착(일찍 가서 사우나·스팀 이용 가능) · 14:15 종료', addr: '24 Loftus St, Sydney', q: 'Capella Sydney, 24 Loftus Street Sydney', tel: '+61 2 9071 5010', key: 'capella_sydney', st: 'ok', note: '예약 완료(10/29). 패키지 포함 여부 확인 요청함(확인서에 1인 $380 표시). 체크인 전에도 스파 시설(사우나·스팀) 사용 가능, 가운·슬리퍼 제공. 취소·변경은 24시간 전까지.' },
         { t: '14:30', type: 'dining', name: '애프터눈 티 · Aperture (Capella Sydney)', sub: '호텔 안 · 샴페인과 함께 · 스파에서 바로 이어집니다', addr: '24 Loftus St, Sydney', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney', st: 'ok', note: '11/16 14:30 2명 예약 완료(Capella Sojourn 패키지 포함). 식이 제한 없음 회신.' },
+        { t: '15:30', type: 'shop', opt: true, name: 'IM Lingerie · 유럽 명품 실크 잠옷 부티크', sub: 'La Perla(이탈리아) · Lise Charmel · Aubade(프랑스) 잠옷과 란제리 · 선물 상담 가능 · 월요일 17:30까지 · 한 매장 $300 이상이면 출국 때 면세 환급(TRS) · 영수증 챙기기', addr: 'Stockland Piccadilly, 210 Pitt St, Sydney', q: 'IM Lingerie Stockland Piccadilly Sydney', tel: '+61 2 9232 0088', note: '학수형이 가보자고 함(11/9). 애프터눈 티 뒤 도보 약 12분. 근처 David Jones 본점(실크 잠옷 Simone Pérèle·Ginia), 명품 거리와 묶을 수 있음. 오페라하우스 투어와 같은 시간대라 둘 중 하나.' },
+        { via: 'walk', text: '호텔 → Pitt St 도보 약 12분', mode: 'walking' },
         { t: '15:30', type: 'pin', opt: true, name: '오페라하우스 한국어 투어 집결 · 15:45 시작', sub: '약 30분 · 계단 200개 정도 · 집결은 하부 콘코스의 Welcome Centre · 문의 02 8188 3734', addr: 'Bennelong Point, Sydney', q: 'Sydney Opera House Welcome Centre', tel: '+61 2 8188 3734', key: 'opera_house_tour', st: 'need', note: '한국어 투어는 매일 운영. 애프터눈 티가 길어지면 생략(17일 Bennelong에서 건물 안을 봄). 가려면 15:25 호텔 출발.' },
         { via: 'walk', text: '호텔까지 도보 약 15분', mode: 'walking' },
         { t: '16:30', type: 'hotel', name: '체크인 · 자유 시간', sub: '두 분이 쉬거나 호텔 주변을 걷는 시간 · 요트 전에 샤워하고 옷 갈아입기', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney' },
@@ -270,7 +272,8 @@ window.TRIP = {
         { cat: 'sight', name: '바랑가루 리저브', walk: '도보 20분', sub: '바다로 튀어나온 곶을 도는 사암 산책로. 새로 개발된 수변 지역', q: 'Barangaroo Reserve Sydney' },
         { cat: 'shop', name: '명품 거리 · Westfield Sydney', walk: '도보 10–15분', sub: 'Chanel(호주 최대 매장) · Hermès · Cartier(King St·Castlereagh St) · LV(George St) · Gucci·Prada·Celine(Westfield)', q: 'Westfield Sydney Pitt Street Mall' },
         { cat: 'shop', name: 'QVB · Strand Arcade', walk: '도보 15분', sub: '1890년대 빅토리아풍 아케이드. 건물 안이 사진 명소이고 호주 디자이너 브랜드가 모여 있습니다', q: 'Queen Victoria Building Sydney' },
-        { cat: 'shop', name: '실크 잠옷 · IM Lingerie / David Jones', walk: '도보 10–15분', sub: 'IM Lingerie(La Perla · Lise Charmel · Aubade), David Jones 본점(Simone Pérèle · Ginia 실크). $300 넘으면 출국 때 면세 환급', q: 'IM Lingerie Stockland Piccadilly Sydney' }
+        { cat: 'shop', name: 'IM Lingerie', walk: '도보 12분', date: true, sub: '유럽 명품 란제리·실크 잠옷 부티크. La Perla · Lise Charmel · Aubade · 월–수·금 17:30, 목 20:00, 주말 16:00까지', tip: '$300 이상이면 출국 때 면세 환급', q: 'IM Lingerie Stockland Piccadilly Sydney', tel: '+61 2 9232 0088' },
+        { cat: 'shop', name: 'David Jones 본점', walk: '도보 12분', sub: '호주 최고급 백화점 본점. 실크 잠옷(Simone Pérèle · Ginia · David Lawrence)과 명품관', q: 'David Jones Elizabeth Street Sydney' }
       ]
     },
     ham: {
