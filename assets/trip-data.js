@@ -108,11 +108,11 @@ window.TRIP = {
     },
     {
       id: 'd19', date: '2026-11-19', dow: '목', n: 4, city: '해밀턴 아일랜드', short: '해밀턴', tz: 'Australia/Brisbane', tzLabel: '퀸즐랜드 시각 · 한국 +1시간',
-      title: '덴트섬 골프 08:30 · 커플 스파 · Catseye Pool Club',
-      intro: '아침 페리로 덴트섬에 건너가 Hamilton Island Golf Club 18홀을 돕니다(티타임 08:30). 라운드 뒤 클럽하우스에서 점심을 먹고 돌아와, 오후에는 두 분이 스파에서 마사지를 받습니다. 저녁은 걸어서 갈 수 있는 The Sundays의 Catseye Pool Club입니다.',
+      title: '덴트섬 골프 08:30 · 플런지 풀에서 쉬기 · Catseye Pool Club',
+      intro: '아침 페리로 덴트섬에 건너가 Hamilton Island Golf Club 18홀을 돕니다(티타임 08:30). 라운드 뒤 클럽하우스에서 점심을 먹고 돌아와, 오후는 두 분이 스위트 플런지 풀과 해변에서 자유롭게 쉽니다. 저녁은 걸어서 갈 수 있는 The Sundays의 Catseye Pool Club입니다.',
       stay: { name: 'Reef View Hotel · Superior Presidential Suite', sub: '12 Resort Drive, Hamilton Island QLD 4803 · 침실 2 · 욕실 2 · 전용 플런지 풀 테라스', tel: '+61 7 4946 9999', q: 'Reef View Hotel, Hamilton Island', key: 'reef_view_suite', nights: '2/2박' },
       bring: ['골프복 · 골프화 · 장갑', '모자 · 선크림(자외선 매우 강함)', '모기 기피제', '저녁용 얇은 겉옷'],
-      picks: [{ set: 'ham', when: '골프 뒤 14:30–15:30 · 스파 뒤 17:15–18:45 · 저녁 뒤' }],
+      picks: [{ set: 'ham', when: '골프 뒤 15:00–18:45 · 저녁 뒤' }],
       items: [
         { t: '06:15', type: 'dining', name: '조식 · Pool Terrace', sub: '호텔 수영장 옆 · 조식 06:00부터(포함) · Sails는 07:00부터', q: 'Pool Terrace Restaurant Reef View Hotel Hamilton Island', key: 'reef_view_suite' },
         { via: 'buggy', text: '호텔 → 마리나 버기 약 10분 · 골프클럽 제티(Manta Ray 옆)에 주차', mode: 'driving' },
@@ -121,14 +121,13 @@ window.TRIP = {
         { t: '08:30', type: 'golf', name: 'Hamilton Island Golf Club · 18홀 · 티타임 08:30', sub: '약 4–4.5시간 · 버기와 왕복 페리 포함 · 클럽 렌탈 A$75–85 · 문의 07 4948 9760', addr: 'Dent Island', q: 'Hamilton Island Golf Club, Dent Island', tel: '+61 7 4948 9760', key: 'hamilton_island_golf', st: 'ok', note: '티타임 08:30 예약 완료(3명 · 18홀). 렌탈 클럽(남 Titleist T150 GT3 ×2 · 여 Titleist T350 GT2 ×1) 요청함(11/10).' },
         { t: '13:00 전후', type: 'dining', name: '클럽하우스 점심 · 덴트 패시지 전망', sub: '라운드 후', q: 'Hamilton Island Golf Club, Dent Island', key: 'hamilton_island_golf' },
         { t: '14:30 예시', type: 'ferry', name: '페리로 해밀턴 복귀', sub: '당일 시간표 확인 · 마리나에서 버기', q: 'Hamilton Island Marina Village' },
-        { t: '15:30', type: 'spa', name: 'Spa wumurdaylin · 커플 트리트먼트', sub: '골프 뒤 마사지 · 60–90분 · 리조트 센터 옆, 호텔에서 도보 5분 · 월–토 09:00–18:00 · 15분 전 도착', q: 'Spa wumurdaylin Hamilton Island', key: 'spa_wumurdaylin', st: 'need', note: '2명 15:30 커플 룸 요청(웹 요청 양식). 페리 시간 때문에 15:30보다 앞당기지 않기.' },
-        { t: '17:15', type: 'hotel', name: '자유 시간 · 플런지 풀', sub: '두 분이 쉬는 시간 · 테라스에서 해 지는 것 보기(일몰 약 18:20)', q: 'Reef View Hotel, Hamilton Island', key: 'reef_view_suite' },
+        { t: '15:00', type: 'hotel', name: '자유 시간 · 플런지 풀 · 해변', sub: '두 분이 쉬는 시간 · 스위트 테라스 플런지 풀, 캣츠아이 비치 · 원하면 아래 "둘이서 골라 가기"에서 · 테라스에서 해 지는 것 보기(일몰 약 18:20)', q: 'Reef View Hotel, Hamilton Island', key: 'reef_view_suite' },
         { via: 'walk', text: 'Catseye Pool Club까지 도보 약 5–10분 (리조트 드라이브 · 비치 쪽)', mode: 'walking' },
         { t: '19:00', type: 'dining', name: 'Catseye Pool Club 저녁 · The Sundays', sub: '조시·줄리 닐런드(시드니 Saint Peter) 메뉴 · 셰어 스타일 · 캣츠아이 베이 물가 · 저녁 17:00–21:00 · 셰프 햇', addr: 'The Sundays, Catseye Beach', q: 'Catseye Pool Club The Sundays Hamilton Island', key: 'catseye_pool_club', st: 'ok', note: '예약 완료(SevenRooms, 11/10) · 2명 19:00 · 물가 테이블·와인 추천 요청함. 대안: coca chu 또는 Romano\'s(마리나).' },
         { t: '21:00 전후', type: 'hotel', name: '호텔 복귀 · 도보', sub: '내일 10:00 체크아웃', q: 'Reef View Hotel, Hamilton Island' },
-        { t: '대안', type: 'boat', alt: true, name: '스파 대신 선셋 크루즈', sub: '바다에서 해 지는 것을 보고 싶을 때 · 프라이빗 차터(Palm Beach 55피트) 또는 On the Edge 공용 선셋 세일(약 90분) · 17:00 마리나 출항', q: 'Hamilton Island Marina Village', key: 'sunset_sail', st: 'ask', note: '해밀턴 아일랜드 투어 데스크 1300 659 133. 16일에 요트를 탔으니 기본안은 스파.' }
+        { t: '대안', type: 'boat', alt: true, name: '오후에 선셋 크루즈', sub: '바다에서 해 지는 것을 보고 싶을 때 · 프라이빗 차터(Palm Beach 55피트) 또는 On the Edge 공용 선셋 세일(약 90분) · 17:00 마리나 출항', q: 'Hamilton Island Marina Village', key: 'sunset_sail', st: 'ask', note: '해밀턴 아일랜드 투어 데스크 1300 659 133. 16일에 요트를 탔으니 기본안은 휴식.' }
       ],
-      notes: '골프 → 마사지 → 와인 저녁 순서로, 두 분이 평소 즐기는 하루 흐름에 맞춤. 저녁은 호텔에서 걸어가는 Catseye Pool Club으로 두어 버기 야간 운전을 피함.'
+      notes: '해밀턴 스파는 뺌(11/10). 섬 최고급 Spa qualia는 qualia 투숙객 전용이고, 시드니 Auriga에서 이미 90분을 받음. 저녁은 호텔에서 걸어가는 Catseye Pool Club으로 두어 버기 야간 운전을 피함.'
     },
     {
       id: 'd20', date: '2026-11-20', dow: '금', n: 5, city: '브리즈번', tz: 'Australia/Brisbane', tzLabel: '퀸즐랜드 시각 · 한국 +1시간',
