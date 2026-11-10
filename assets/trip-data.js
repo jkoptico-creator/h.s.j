@@ -104,7 +104,7 @@ window.TRIP = {
         { via: 'buggy', text: '호텔까지 버기 약 10분 또는 그린 셔틀(22:45까지, 10–12분 간격)', mode: 'driving' },
         { t: '21:30 전후', type: 'hotel', name: '호텔 복귀', sub: '내일 골프 · 06:15 조식', q: 'Reef View Hotel, Hamilton Island' }
       ],
-      notes: 'qualia 예약이 안 되어 Reef View Hotel 스위트로 변경. 스파는 골프 뒤 19일 오후로 옮김. 스위트에 4인승 버기가 포함되므로 별도 대여 버기는 호스트용(픽업 14:15 · 반납 20일 12:45 예약이지만 11:00 전후 반납).'
+      notes: 'qualia 예약이 안 되어 Reef View Hotel 스위트로 변경. 스위트에 4인승 버기가 포함되므로 별도 대여 버기는 호스트용(픽업 14:15 · 반납 20일 12:45 예약이지만 11:00 전후 반납).'
     },
     {
       id: 'd19', date: '2026-11-19', dow: '목', n: 4, city: '해밀턴 아일랜드', short: '해밀턴', tz: 'Australia/Brisbane', tzLabel: '퀸즐랜드 시각 · 한국 +1시간',
@@ -127,7 +127,7 @@ window.TRIP = {
         { t: '21:00 전후', type: 'hotel', name: '호텔 복귀 · 도보', sub: '내일 10:00 체크아웃', q: 'Reef View Hotel, Hamilton Island' },
         { t: '대안', type: 'boat', alt: true, name: '오후에 선셋 크루즈', sub: '바다에서 해 지는 것을 보고 싶을 때 · 프라이빗 차터(Palm Beach 55피트) 또는 On the Edge 공용 선셋 세일(약 90분) · 17:00 마리나 출항', q: 'Hamilton Island Marina Village', key: 'sunset_sail', st: 'ask', note: '해밀턴 아일랜드 투어 데스크 1300 659 133. 16일에 요트를 탔으니 기본안은 휴식.' }
       ],
-      notes: '해밀턴 스파는 뺌(11/10). 섬 최고급 Spa qualia는 qualia 투숙객 전용이고, 시드니 Auriga에서 이미 90분을 받음. 저녁은 호텔에서 걸어가는 Catseye Pool Club으로 두어 버기 야간 운전을 피함.'
+      notes: '저녁은 호텔에서 걸어가는 Catseye Pool Club으로 두어 버기 야간 운전을 피함.'
     },
     {
       id: 'd20', date: '2026-11-20', dow: '금', n: 5, city: '브리즈번', tz: 'Australia/Brisbane', tzLabel: '퀸즐랜드 시각 · 한국 +1시간',
