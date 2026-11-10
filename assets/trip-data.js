@@ -37,7 +37,7 @@ window.TRIP = {
         { via: 'car', text: '공항 → 호텔 차량 약 30–45분 (호스트 렌터카 · 골프백 2개)', mode: 'driving' },
         { t: '10:15 전후', type: 'hotel', name: 'Capella Sydney · 짐 보관', sub: '객실이 준비되기 전이면 짐만 맡기고 나섭니다 · 얼리 체크인은 호텔과 미리 조율', addr: '24 Loftus St, Sydney', q: 'Capella Sydney, 24 Loftus Street Sydney', tel: '+61 2 9071 5000', key: 'capella_sydney', st: 'ok', note: '얼리 체크인 요청함(보장 체크인 15:00). 호텔 자체 주차장 없음(헤리티지 건물) → 1 Farrer Place 또는 1 Bligh Street 주차장 이용.' },
         { t: '10:30', type: 'dining', name: '브런치 · Brasserie 1930 (Capella Sydney)', sub: '호텔 1층 · 비행 뒤 가볍게 · 스파 전이라 과식은 피하기', addr: '24 Loftus St, Sydney', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney', note: '패키지 조식이 도착일에도 적용되는지 호텔에 확인.' },
-        { t: '12:45', type: 'spa', name: 'Auriga Spa · Connect to Country 90분 · 커플 룸', sub: '호텔 안 스파 · 여성 테라피스트 2명 · 15분 전 도착(일찍 가서 사우나·스팀 이용 가능) · 14:15 종료', addr: '24 Loftus St, Sydney', q: 'Capella Sydney, 24 Loftus Street Sydney', tel: '+61 2 9071 5010', key: 'capella_sydney', st: 'ok', note: '예약 완료(10/29). 패키지 포함 여부 확인 요청함(확인서에 1인 $380 표시). 체크인 전에도 스파 시설(사우나·스팀) 사용 가능, 가운·슬리퍼 제공. 취소·변경은 24시간 전까지.' },
+        { t: '12:45', type: 'spa', name: 'Auriga Spa · Connect to Country 90분 · 커플 룸', sub: '호텔 안 스파 · 여성 테라피스트 2명 · 15분 전 도착(일찍 가서 사우나·스팀 이용 가능) · 14:15 종료', addr: '24 Loftus St, Sydney', q: 'Capella Sydney, 24 Loftus Street Sydney', tel: '+61 2 9071 5010', key: 'capella_sydney', st: 'ok', note: '예약 완료(10/29). 패키지 포함 확인(스파 답변 10/30). 추가로 Expedia VIP 스파 크레딧 예약당 $50. 체크인 전에도 스파 시설(사우나·스팀) 사용 가능, 가운·슬리퍼 제공. 취소·변경은 24시간 전까지.' },
         { t: '14:30', type: 'dining', name: '애프터눈 티 · Aperture (Capella Sydney)', sub: '호텔 안 · 샴페인과 함께 · 스파에서 바로 이어집니다', addr: '24 Loftus St, Sydney', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney', st: 'ok', note: '11/16 14:30 2명 예약 완료(Capella Sojourn 패키지 포함). 식이 제한 없음 회신.' },
         { t: '15:30', type: 'shop', opt: true, name: 'IM Lingerie · 유럽 명품 실크 잠옷 부티크', sub: 'La Perla(이탈리아) · Lise Charmel · Aubade(프랑스) 잠옷과 란제리 · 선물 상담 가능 · 월요일 17:30까지 · 한 매장 $300 이상이면 출국 때 면세 환급(TRS) · 영수증 챙기기', addr: 'Stockland Piccadilly, 210 Pitt St, Sydney', q: 'IM Lingerie Stockland Piccadilly Sydney', tel: '+61 2 9232 0088', note: '학수형이 가보자고 함(11/9). 애프터눈 티 뒤 도보 약 12분. 명품 거리(Castlereagh St · George St · Westfield Sydney)와 묶을 수 있음. 오페라하우스 투어와 같은 시간대라 둘 중 하나.' },
         { via: 'walk', text: '호텔 → Pitt St 도보 약 12분', mode: 'walking' },
@@ -45,7 +45,7 @@ window.TRIP = {
         { via: 'walk', text: '호텔까지 도보 약 15분', mode: 'walking' },
         { t: '16:30', type: 'hotel', name: '체크인 · 자유 시간', sub: '두 분이 쉬거나 호텔 주변을 걷는 시간 · 요트 전에 샤워하고 옷 갈아입기', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney' },
         { via: 'walk', text: '승선 선착장까지 도보 또는 차량 (확정 후 안내)', mode: 'walking' },
-        { t: '18:30', type: 'boat', name: 'Empress · 하버 나이트 크루즈 · 선상 프렌치 디너', sub: '77피트 모터요트 전세 · 4명(첫날 저녁 일행 1명 합류) · 승선 18:15 · 일몰 약 19:36 · 하버브리지 아래, 오페라하우스 앞, 시티 불빛 · 셰프 Pierre Gaudin(Noranise)의 맞춤 코스, 굴 3다스로 시작 · 셰프가 고른 호주 와인을 코스마다 · 전자담배는 바깥 데크에서 가능 · 22:30 하선', q: 'Circular Quay Sydney', key: 'harbour_yacht', st: 'ask', note: '예약(홀드)·인보이스 수령. 남은 것: ① 셰프 맞춤 메뉴($1,600, 굴 3다스 포함) 확정 ② 셰프 추천 와인 선택(House of Arras 로제/그랜드 빈티지, Tyrrell\'s VAT 1 세미용, Mount Mary 샤도네이, Hurley·Bass Philip 피노 누아, Henschke Mount Edelstone 2021, Pfeiffer Topaque 등 병당 약 $135–299) ③ 승선 선착장(서큘러키 쪽, SHS 확인 중) ④ 소믈리에 섭외 결과 ⑤ 결제. 음료는 마신 만큼 정산(인보이스는 선결제분). 디저트 전 30분은 두 분이 플라이브리지에서 따로 야경을 보도록 크루에게 부탁.' },
+        { t: '18:30', type: 'boat', name: 'Empress · 하버 나이트 크루즈 · 선상 프렌치 디너', sub: '77피트 모터요트 전세 · 4명(첫날 저녁 일행 1명 합류) · 승선 18:15 · 일몰 약 19:36 · 하버브리지 아래, 오페라하우스 앞, 시티 불빛 · 셰프 Pierre Gaudin(Noranise)의 맞춤 코스, 굴 3다스로 시작 · 셰프가 고른 호주 와인을 코스마다 · 전자담배는 바깥 데크에서 가능 · 22:30 하선', q: 'Circular Quay Sydney', key: 'harbour_yacht', st: 'ask', note: '예약(홀드)·인보이스 수령. 남은 것: ① 셰프 맞춤 메뉴($1,600, 굴 3다스 포함) 확정 ② 셰프 추천 와인 선택(House of Arras 로제/그랜드 빈티지, Tyrrell\'s VAT 1 세미용, Mount Mary 샤도네이, Hurley·Bass Philip 피노 누아, Henschke Mount Edelstone 2021, Pfeiffer Topaque 등 병당 약 $135–299) ③ 승선 선착장(서큘러키 쪽, SHS 확인 중) ④ 소믈리에: 셰프 Pierre가 직접 소믈리에 역할(11/10 확인) ⑤ 결제. 음료는 마신 만큼 정산(인보이스는 선결제분). 디저트 전 30분은 두 분이 플라이브리지에서 따로 야경을 보도록 크루에게 부탁.' },
         { via: 'car', text: '하선 뒤 호텔까지 차량 약 5–10분', mode: 'driving' },
         { t: '22:45 전후', type: 'hotel', name: '호텔 복귀', sub: '내일 06:55 출발 · 골프 가방과 골프복은 차에 실어 둡니다', q: 'Capella Sydney, 24 Loftus Street Sydney' },
       ],
@@ -54,7 +54,7 @@ window.TRIP = {
     {
       id: 'd17', date: '2026-11-17', dow: '화', n: 2, city: '시드니', tz: 'Australia/Sydney', tzLabel: '시드니 시각 · 한국 +2시간',
       title: '해안 산책 · 세인트 마이클 골프 · Bennelong',
-      intro: '아침에 본다이에서 쿠지까지 6km 해안 절벽길을 두 시간 정도 걷습니다. 쿠지 해변 앞에서 브런치를 먹고, 차로 15분 거리의 세인트 마이클 골프클럽에서 11:40에 18홀을 칩니다. 바다를 끼고 도는 코스입니다. 돌아와 호텔에서 쉬었다가, 저녁은 오페라하우스 안의 Bennelong에서 와인과 함께 천천히 먹습니다.',
+      intro: '아침에 본다이에서 쿠지까지 6km 해안 절벽길을 두 시간 정도 걷습니다. 쿠지 해변 앞에서 브런치를 먹고, 차로 15분 거리의 세인트 마이클 골프클럽에서 11:51에 18홀을 칩니다. 바다를 끼고 도는 코스입니다. 돌아와 호텔에서 쉬었다가, 저녁은 오페라하우스 안의 Bennelong에서 와인과 함께 천천히 먹습니다.',
       stay: { name: 'Capella Sydney', sub: '24 Loftus St, Sydney NSW 2000', tel: '+61 2 9071 5000', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney', nights: '2/2박' },
       bring: ['걷기 편한 운동화 · 모자 · 선크림', '골프복 · 골프화 · 장갑(차에 실어 두고 클럽에서 갈아입기)', '물 한 병', 'Bennelong은 스마트 캐주얼'],
       picks: [{ set: 'syd', when: '골프 뒤 17:30–19:15 · Bennelong 뒤 한 잔' }],
@@ -65,8 +65,8 @@ window.TRIP = {
         { t: '07:30', type: 'walk', name: '본다이 → 쿠지 해안 산책 · 약 6km', sub: '타마라마, 브론테, 클로벨리, 고든스 베이를 지나 쿠지까지 · 사진·휴식 포함 약 2시간 · 포장길과 가파른 계단이 섞여 있습니다 · 화장실과 식수대는 본다이·브론테·쿠지에', q: 'Bondi to Coogee Coastal Walk', key: 'bondi_coogee' },
         { t: '09:45', type: 'dining', name: '쿠지 해변 브런치 · Coogee Pavilion', sub: '바다 앞 · 걷고 난 뒤 든든하게 · 평일 아침 운영 시간 확인', addr: '169 Dolphin St, Coogee', q: 'Coogee Pavilion, 169 Dolphin Street Coogee', key: 'coogee_pavilion', st: 'need', note: '3명 09:45 예약 또는 워크인. 평일 조식 시작 시각 확인.' },
         { via: 'car', text: '쿠지 → 리틀 베이 차량 약 15분', mode: 'driving' },
-        { t: '11:00', type: 'golf', name: '세인트 마이클 골프클럽 도착 · 수속', sub: '티타임 40분 전 · 라커룸에서 갈아입기 · 드레스코드가 엄격합니다: 칼라 셔츠, 긴바지 또는 테일러드 쇼츠, 골프화', addr: 'Jennifer St, Little Bay NSW 2035', q: "St Michael's Golf Club, Little Bay", tel: '+61 2 9326 8000', st: 'need', note: '11:40 3명 예약(클럽에서 이 시간이 최선이라고 답함). 결제 링크 재요청함(11/9). 그린피 해외 방문객 $285, 호스트 $170, 카트 A$50.' },
-        { t: '11:40', type: 'golf', name: '세인트 마이클 · 18홀 · 티타임 11:40', sub: '약 4–4.5시간 · 바닷가를 따라 도는 파72 · 홀마다 바다 쪽 바람을 봐야 합니다', q: "St Michael's Golf Club, Little Bay", st: 'need' },
+        { t: '11:10', type: 'golf', name: '세인트 마이클 골프클럽 도착 · 수속', sub: '티타임 40분 전 · 라커룸에서 갈아입기 · 드레스코드가 엄격합니다: 칼라 셔츠, 긴바지 또는 테일러드 쇼츠, 골프화', addr: 'Jennifer St, Little Bay NSW 2035', q: "St Michael's Golf Club, Little Bay", tel: '+61 2 9326 8000', st: 'need', note: '11/17 11:51 3명 예약 확정(클럽 답변 11/10, 사전 결제 없이 당일 결제). 그린피 해외 방문객 $285, 호스트 $170, 카트 A$50.' },
+        { t: '11:51', type: 'golf', name: '세인트 마이클 · 18홀 · 티타임 11:51', sub: '약 4–4.5시간 · 바닷가를 따라 도는 파72 · 홀마다 바다 쪽 바람을 봐야 합니다', q: "St Michael's Golf Club, Little Bay", st: 'need' },
         { t: '16:15 전후', type: 'dining', opt: true, name: '라운드 후 클럽하우스에서 한 잔', sub: '바다 전망 · 30분 안팎', q: "St Michael's Golf Club, Little Bay" },
         { via: 'car', text: '리틀 베이 → 호텔 차량 약 35–45분 (오후 교통)', mode: 'driving' },
         { t: '17:30', type: 'hotel', name: '호텔 · 자유 시간', sub: '샤워하고 쉬는 시간 · 호텔 바에서 한 잔도 좋습니다', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney' },
@@ -76,7 +76,7 @@ window.TRIP = {
         { t: '22:15 전후', type: 'hotel', name: '호텔 복귀', sub: '내일 아침은 느긋하게 · 10:30 체크아웃', q: 'Capella Sydney, 24 Loftus Street Sydney' },
         { t: '대안', type: 'car', alt: true, name: '산책을 짧게 · 본다이 → 브론테 2.5km', sub: '전날 피곤하면 1시간만 걷고 브론테에서 차를 타고 쿠지로', q: 'Bondi to Bronte Coastal Walk', key: 'bondi_coogee' }
       ],
-      notes: '세인트 마이클은 11:40이 가장 이른 시간(클럽 답변). NSW Golf Club은 비회원 승인 문제로 제외. Auriga 스파는 17일 자리가 없어 16일로 옮김. Bennelong 19:45 예약 완료(Capella 컨시어지).'
+      notes: '세인트 마이클 11:51 확정(11/10). NSW Golf Club은 비회원 승인 문제로 제외. Auriga 스파는 17일 자리가 없어 16일로 옮김. Bennelong 19:45 예약 완료(Capella 컨시어지).'
     },
     {
       id: 'd18', date: '2026-11-18', dow: '수', n: 3, city: '해밀턴 아일랜드', short: '해밀턴', tz: 'Australia/Brisbane', tzLabel: '오전은 시드니 시각 · 도착 뒤 퀸즐랜드 시각(시드니 −1시간 · 한국 +1시간)',
@@ -238,7 +238,7 @@ window.TRIP = {
     ]},
     { h: '골프', rows: [
       ['복장', '칼라 셔츠 · 긴바지 또는 테일러드 쇼츠 · 소프트 스파이크 골프화 · 청바지 불가'],
-      ['세인트 마이클', '11/17 11:40 티타임 · 드레스코드가 엄격합니다 · 카트 A$50 · 바닷가 파72'],
+      ['세인트 마이클', '11/17 11:51 티타임 · 드레스코드가 엄격합니다 · 카트 A$50 · 바닷가 파72'],
       ['Hamilton Island Golf Club', '11/19 08:30 티타임 예약 완료 · 페리와 버기 포함 · 클럽 렌탈 A$75–85 · 운동화 가능']
     ]},
     { h: '이동', rows: [
