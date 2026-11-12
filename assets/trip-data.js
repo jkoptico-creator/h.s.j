@@ -20,7 +20,7 @@ window.TRIP = {
       title: '인천 출발',
       intro: '저녁 비행기입니다. 출발 3시간 전에 공항에 닿도록 움직이고, 기내에서 잠을 자 두면 시드니 아침 일정이 편합니다.',
       stay: { name: '기내', sub: '아시아나 프레스티지 · 시드니행 야간 비행' },
-      bring: ['여권 · 호주 ETA 확인', '골프복 · 골프화 · 장갑', '운동화(해안 산책)', '모기 기피제', '멀티 어댑터(호주 I타입)', '선크림 · 모자 · 선글라스', '얇은 겉옷'],
+      bring: ['여권 · 호주 ETA 확인', '시드니용 따뜻한 겉옷(아침저녁 15°C 안팎 · 가디건이나 가벼운 재킷)', '해밀턴·브리즈번용 여름옷(26–29°C · 습함)', '접이식 우산 · 얇은 방수 바람막이', '골프복 · 골프화 · 장갑(클럽은 현지 렌탈)', '걷기 편한 운동화', '선크림(SPF50+) · 모자 · 선글라스', '모기 기피제', '멀티 어댑터(호주 I타입)'],
       items: [
         { t: '17:00', type: 'plane', name: '인천공항 제2터미널 · 아시아나 카운터', sub: '출발 3시간 전 · 수하물 1인 2개까지 · 항공권은 대한항공 KE5001로 발권되었고 운항은 아시아나 OZ601입니다', addr: '인천국제공항 제2터미널', q: 'Incheon International Airport Terminal 2', st: 'ok', note: '터미널은 출발 전날 항공사 앱에서 한 번 더 확인(전자항공권 기준 제2터미널).' },
         { t: '20:00', type: 'plane', name: 'OZ601 인천 → 시드니', sub: '10시간 20분 · 프레스티지(비즈니스) · 16일 08:20 시드니 도착(현지 시각)', key: 'biz_class_a380', st: 'ok', note: '발권 완료. 좌석 지정 여부 확인.' }
@@ -32,7 +32,7 @@ window.TRIP = {
       title: '시드니 도착 · 커플 스파 · 애프터눈 티 · 하버 나이트 크루즈',
       intro: '밤 비행기로 아침에 도착해 호텔에 짐을 맡기고 가볍게 먹은 뒤, 호텔 안 Auriga Spa에서 두 분이 90분 트리트먼트를 받습니다. 이어서 Aperture에서 샴페인 애프터눈 티를 하고, 원하면 오페라하우스 한국어 투어를 본 뒤 쉬었다가 18:30 요트에 오릅니다. 해 지는 하버를 배 위에서 보며 셰프의 프렌치 코스로 저녁을 먹는 날입니다.',
       stay: { name: 'Capella Sydney', sub: '24 Loftus St, Sydney NSW 2000', tel: '+61 2 9071 5000', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney', nights: '1/2박' },
-      bring: ['편한 옷(스파 · 기내에서 바로)', '따뜻한 겉옷(요트 밤바다 약 15°C)', '접이식 우산(비 55%)', '선크림 · 모자', '요트에서는 신발을 벗는 곳이 많습니다'],
+      bring: ['따뜻한 겉옷(낮 17°C · 요트 밤바다 15°C · 바람 불면 더 쌀쌀)', '접이식 우산(비 55%)', '요트에서 벗기 편한 신발 · 굽 낮은 신발', '스파 · 애프터눈 티는 편한 옷차림이면 충분'],
       picks: [{ set: 'syd', when: '애프터눈 티 뒤 15:30–17:45 · 요트에서 내린 뒤 한 잔' }],
       items: [
         { t: '08:20', type: 'plane', name: '시드니 공항 제1터미널 도착 · OZ601', sub: '입국 심사와 수하물 수령 약 60–90분 · 식품·흙 묻은 골프화는 신고 대상이니 골프화는 깨끗이', q: 'Sydney Airport International Terminal 1', st: 'ok' },
@@ -59,7 +59,7 @@ window.TRIP = {
       title: '해안 산책 · 세인트 마이클 골프 · Bennelong',
       intro: '아침에 본다이에서 쿠지까지 6km 해안 절벽길을 두 시간 정도 걷습니다. 쿠지 해변 앞에서 브런치를 먹고, 차로 15분 거리의 세인트 마이클 골프클럽에서 11:51에 18홀을 칩니다. 바다를 끼고 도는 코스입니다. 돌아와 호텔에서 쉬었다가, 저녁은 오페라하우스 안의 Bennelong에서 와인과 함께 천천히 먹습니다.',
       stay: { name: 'Capella Sydney', sub: '24 Loftus St, Sydney NSW 2000', tel: '+61 2 9071 5000', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney', nights: '2/2박' },
-      bring: ['걷기 편한 운동화 · 모자 · 선크림', '골프복 · 골프화 · 장갑(차에 실어 두고 클럽에서 갈아입기)', '물 한 병', 'Bennelong은 스마트 캐주얼'],
+      bring: ['아침 산책용 얇은 겉옷(출발 시 15°C 안팎 · 걸으면 금방 더워짐)', '걷기 편한 운동화 · 모자 · 선크림 · 선글라스(맑음)', '골프복 · 골프화 · 장갑(차에 실어 두고 클럽에서 갈아입기 · 바닷바람 대비 바람막이)', '물 한 병', 'Bennelong은 스마트 캐주얼 · 밤에는 겉옷'],
       picks: [{ set: 'syd', when: '골프 뒤 17:30–19:15 · Bennelong 뒤 한 잔' }],
       items: [
         { t: '06:30', type: 'dining', name: '가벼운 조식 · 룸서비스 또는 커피', sub: '산책 전 간단히 · 브런치는 쿠지에서', q: 'Capella Sydney, 24 Loftus Street Sydney' },
@@ -87,7 +87,7 @@ window.TRIP = {
       title: '시드니 → 해밀턴 아일랜드 · 스위트 체크인 · 원트리힐 선셋',
       intro: '아침은 느긋하게, 원하면 호텔 옆 왕립 식물원을 걸어 미세스 매쿼리 체어에서 하버를 한 번 더 봅니다. 낮 비행기(버진 VA1283 12:40)로 섬에 건너가면 시계를 한 시간 뒤로 돌립니다. Reef View Hotel의 2층 스위트(전용 플런지 풀)에 짐을 풀고, 해 질 녘 원트리힐에서 휘트선데이 일몰을 본 뒤 요트클럽의 Bommie에서 두 분이 저녁을 먹습니다.',
       stay: { name: 'Reef View Hotel · Superior Presidential Suite', sub: '12 Resort Drive, Hamilton Island QLD 4803 · 침실 2 · 욕실 2 · 전용 플런지 풀 테라스', tel: '+61 7 4946 9999', q: 'Reef View Hotel, Hamilton Island', key: 'reef_view_suite', nights: '1/2박' },
-      bring: ['모기 기피제(저녁)', '샌들 · 선글라스', '플런지 풀용 옷', 'Bommie는 스마트 캐주얼'],
+      bring: ['시드니 출발은 겉옷 · 해밀턴 도착 후엔 반팔(26–28°C · 습함)', '접이식 우산(소나기 가능)', '샌들 · 선글라스 · 선크림(자외선 매우 강함)', '플런지 풀용 옷', '모기 기피제(저녁 원트리힐)', 'Bommie는 스마트 캐주얼'],
       picks: [{ set: 'syd', when: '아침 08:00–10:15 · 커피와 산책' }, { set: 'ham', when: '체크인 뒤 15:15–17:15' }],
       items: [
         { t: '08:00', type: 'dining', name: '조식 · 느긋한 아침', sub: '짐 정리', q: 'Capella Sydney, 24 Loftus Street Sydney', tz: 'Australia/Sydney' },
@@ -116,7 +116,7 @@ window.TRIP = {
       title: '덴트섬 골프 08:30 · 플런지 풀에서 쉬기 · Catseye Pool Club',
       intro: '아침 페리로 덴트섬에 건너가 Hamilton Island Golf Club 18홀을 돕니다(티타임 08:30). 라운드 뒤 클럽하우스에서 점심을 먹고 돌아와, 오후는 두 분이 스위트 플런지 풀과 해변에서 자유롭게 쉽니다. 저녁은 걸어서 갈 수 있는 The Sundays의 Catseye Pool Club입니다.',
       stay: { name: 'Reef View Hotel · Superior Presidential Suite', sub: '12 Resort Drive, Hamilton Island QLD 4803 · 침실 2 · 욕실 2 · 전용 플런지 풀 테라스', tel: '+61 7 4946 9999', q: 'Reef View Hotel, Hamilton Island', key: 'reef_view_suite', nights: '2/2박' },
-      bring: ['골프복 · 골프화 · 장갑', '모자 · 선크림(자외선 매우 강함)', '모기 기피제', '저녁용 얇은 겉옷'],
+      bring: ['골프복(통기성 좋은 옷) · 골프화 · 장갑', '모자 · 선크림(SPF50+, 자외선 매우 강함) · 선글라스', '얇은 우비 또는 바람막이(소나기 가능)', '물 · 수분 보충', '모기 기피제(저녁)', '저녁은 가벼운 여름 옷차림'],
       picks: [{ set: 'ham', when: '골프 뒤 15:00–18:45 · 저녁 뒤' }],
       items: [
         { t: '06:15', type: 'dining', name: '조식 · Pool Terrace', sub: '호텔 수영장 옆 · 조식 06:00부터(포함) · Sails는 07:00부터', q: 'Pool Terrace Restaurant Reef View Hotel Hamilton Island', key: 'reef_view_suite' },
@@ -140,7 +140,7 @@ window.TRIP = {
       title: '해밀턴 아일랜드 → 브리즈번 · Queen\'s Wharf 체크인 · Exhibition · 강변 야경',
       intro: '아침은 비치프런트 조식과 캣츠아이 비치 산책으로 느긋하게 보내고 낮 비행기로 브리즈번에 옵니다. 강가에 새로 지은 Queen\'s Wharf의 The Star Grand 리버 스위트에 짐을 풉니다. 원하면 테네리프 강변 동네의 양조장에 들러 한 잔 하고, 18시에 Exhibition에서 테이스팅 코스로 저녁을 먹습니다. 호텔에서 걸어서 10분 남짓입니다. 식사 뒤에는 스토리브리지 아래 강변을 걷거나 바로 호텔로 돌아와 방에서 강 야경을 봅니다.',
       stay: { name: 'The Star Grand Brisbane · River Suite', sub: 'Queen\'s Wharf, 33 William St, Brisbane City · 브리즈번강·사우스뱅크 전망', q: 'The Star Grand Brisbane, Queens Wharf', nights: '1/2박' },
-      bring: ['저녁 복장(Exhibition)', '걷기 편한 신발', '선글라스 · 모자'],
+      bring: ['해밀턴 출발은 반팔 · 접이식 우산(소나기 70%)', '브리즈번 저녁용 얇은 겉옷(밤 17°C · 소나기 가능)', '저녁 복장(Exhibition)', '걷기 편한 신발', '선글라스 · 모자'],
       picks: [{ set: 'ham', when: '아침 08:30–10:00' }, { set: 'bne', when: '저녁 뒤 · 원하면 테네리프 대신 15:30–17:30' }],
       items: [
         { t: '07:30', type: 'dining', name: '조식 · Sails · 비치프런트', sub: '캣츠아이 비치 앞 · 조식 07:00–10:30(포함)', q: 'Sails Restaurant Hamilton Island', key: 'sails_hi' },
@@ -170,7 +170,7 @@ window.TRIP = {
       title: '뉴팜 파크 마켓 · 강가에서 맥주 · 리버워크 · Howard Smith Wharves 점심 · SUUM · Sky Deck 야경',
       intro: '토요일 아침에만 열리는 파워하우스 파머스 마켓을 구경하고, 옛 발전소 건물의 강가 테라스에서 맥주와 칩스를 즐깁니다. 그다음 강을 따라 이어지는 리버워크를 걸어 스토리브리지 아래 Howard Smith Wharves까지 가서 점심을 먹습니다. 호스트가 뉴팜 파크에 내려 드리고 Howard Smith Wharves에서 다시 모시니, 낮 동안은 두 분만의 데이트입니다. 저녁은 16석 한식 오마카세 SUUM, 마무리는 Sky Deck 야경입니다.',
       stay: { name: 'The Star Grand Brisbane · River Suite', sub: 'Queen\'s Wharf, 33 William St, Brisbane City · 브리즈번강·사우스뱅크 전망', q: 'The Star Grand Brisbane, Queens Wharf', nights: '2/2박' },
-      bring: ['걷기 편한 신발 · 모자 · 선크림(예보 19–26°C, 리버워크는 그늘이 적음)', '장바구니(마켓)', '저녁 복장(SUUM · 스마트 캐주얼)'],
+      bring: ['걷기 편한 신발 · 모자 · 선크림 · 선글라스(19–26°C · 리버워크는 그늘이 적음)', '접이식 우산(소나기 40%)', '장바구니(마켓)', '저녁 복장(SUUM · 스마트 캐주얼) · 얇은 겉옷'],
       picks: [{ set: 'bne', when: '오후 14:30–17:00 · 저녁 뒤' }],
       items: [
         { t: '08:00', type: 'dining', name: '조식 · 호텔', sub: '느긋한 아침', q: 'The Star Grand Brisbane, Queens Wharf' },
@@ -198,7 +198,7 @@ window.TRIP = {
       title: '브리즈번 → 인천',
       intro: '08:40 출발편이라 새벽에 움직입니다. 조식은 공항 라운지에서 하고, 같은 날 저녁 인천에 닿습니다.',
       stay: { name: '인천 도착', sub: '추가 숙박 없음' },
-      bring: ['여권 · 탑승권(휴대폰)', '면세 환급(TRS) 영수증과 물건 · 기내 반입'],
+      bring: ['여권 · 탑승권(휴대폰)', '면세 환급(TRS) 영수증과 물건 · 기내 반입', '인천 도착 저녁은 쌀쌀할 수 있으니 겉옷 기내에'],
       items: [
         { t: '05:10', type: 'car', name: '호텔 출발 · 호스트 차량', sub: '익스프레스 체크아웃 · 조식은 라운지에서', q: 'The Star Grand Brisbane, Queens Wharf', note: '호텔에 05:10 출발·익스프레스 체크아웃 요청함.' },
         { via: 'car', text: '브리즈번 국제선 터미널까지 차량 약 20–30분', mode: 'driving' },
