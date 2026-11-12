@@ -160,20 +160,21 @@ window.TRIP = {
     },
     {
       id: 'd21', date: '2026-11-21', dow: '토', n: 6, city: '브리즈번', tz: 'Australia/Brisbane', tzLabel: '퀸즐랜드 시각 · 한국 +1시간',
-      title: '론파인 코알라 · 시내 점심 · SUUM 한식 오마카세 · Sky Deck 야경',
-      intro: '아침에 차로 20분 거리의 론파인 코알라 보호구역에 가서 캥거루에게 먹이를 주고 코알라를 안아 사진을 찍습니다. 시내로 돌아와 파리풍 비스트로에서 점심을 먹고 오후는 쉬거나 둘이서 사우스뱅크를 걷습니다. 저녁은 The Fat Duck 출신 셰프 앤디 최의 16석 한식 오마카세 SUUM에서 먹고, 호텔 위 Sky Deck에서 브리즈번 야경을 보며 마지막 밤을 마무리합니다. 다음 날 새벽 출발이라 22:30에 들어옵니다.',
+      title: '뉴팜 파크 마켓 · 강가에서 맥주 · 리버워크 · Howard Smith Wharves 점심 · SUUM · Sky Deck 야경',
+      intro: '토요일 아침에만 열리는 파워하우스 파머스 마켓을 구경하고, 옛 발전소 건물의 강가 테라스에서 맥주와 칩스를 즐깁니다. 그다음 강을 따라 이어지는 리버워크를 걸어 스토리브리지 아래 Howard Smith Wharves까지 가서 점심을 먹습니다. 호스트가 뉴팜 파크에 내려 드리고 Howard Smith Wharves에서 다시 모시니, 낮 동안은 두 분만의 데이트입니다. 저녁은 16석 한식 오마카세 SUUM, 마무리는 Sky Deck 야경입니다.',
       stay: { name: 'The Star Grand Brisbane · River Suite', sub: 'Queen\'s Wharf, 33 William St, Brisbane City · 브리즈번강·사우스뱅크 전망', q: 'The Star Grand Brisbane, Queens Wharf', nights: '2/2박' },
-      bring: ['편한 신발 · 모자 · 선크림(론파인 야외)', '저녁 복장(SUUM · 스마트 캐주얼)'],
+      bring: ['걷기 편한 신발 · 모자 · 선크림 · 물(리버워크는 그늘이 적습니다)', '장바구니(마켓)', '저녁 복장(SUUM · 스마트 캐주얼)'],
       picks: [{ set: 'bne', when: '오후 14:30–17:00 · 저녁 뒤' }],
       items: [
         { t: '08:00', type: 'dining', name: '조식 · 호텔', sub: '느긋한 아침', q: 'The Star Grand Brisbane, Queens Wharf' },
-        { t: '09:00', type: 'car', name: '호텔 출발 · 호스트 차량', sub: '피그트리 포켓까지 약 20–25분', q: 'The Star Grand Brisbane, Queens Wharf' },
-        { via: 'car', text: 'Queen\'s Wharf → 론파인 차량 약 20–25분', mode: 'driving' },
-        { t: '09:30', type: 'pin', name: '론파인 코알라 보호구역', sub: '세계에서 가장 오래되고 큰 코알라 보호구역 · 캥거루·왈라비 먹이 주기, 오리너구리관, 맹금류 쇼 · 그늘이 많지만 모자와 선크림', addr: '708 Jesmond Rd, Fig Tree Pocket', q: 'Lone Pine Koala Sanctuary, 708 Jesmond Road Fig Tree Pocket', site: 'https://lonepinekoalasanctuary.com/', st: 'need', note: '입장권 온라인 구매. 캥거루 먹이는 현장 구매.' },
-        { t: '10:00', type: 'pin', name: 'Koala Discovery Tour · 60분 가이드 투어', sub: '교육 담당 가이드와 함께 코알라 잎 분류장(비공개 구역) 견학 · 코알라 전시장 안에 들어가 가까이서 사진 · 한 명씩 코알라와 단독으로 보내는 "Koala Moment" · 코알라 핀 기념품 · 코알라 안기는 포함되지 않음', q: 'Lone Pine Koala Sanctuary, 708 Jesmond Road Fig Tree Pocket', site: 'https://lonepinekoalasanctuary.com/', st: 'need', note: '10:00 회차 예약 가능 확인(11/12). 입장권 별도. 끝나면 바로 11:00 코알라 안기로.' },
-        { t: '11:00', type: 'pin', name: '코알라 안고 사진 찍기', sub: '11:00–12:30 운영 · 한 명이 안고 최대 4명까지 같이 촬영 · 키 130cm 이상', q: 'Lone Pine Koala Sanctuary, 708 Jesmond Road Fig Tree Pocket', site: 'https://lonepinekoalasanctuary.com/', st: 'need', note: '코알라 홀드 사진은 입장료 별도. 두 분 각각 안고 찍으려면 2회.' },
-        { via: 'car', text: '론파인 → 시내 차량 약 25분', mode: 'driving' },
-        { t: '13:00', type: 'dining', name: '점심 · The French Exit', sub: '2026년 문을 연 파리풍 비스트로 · 파티시에 Arthur Carré의 디저트 · 토요일 11:30부터 · 저녁이 코스라 가볍게', addr: '169 Mary St, Brisbane City', q: 'The French Exit Brisbane', st: 'need', note: 'SevenRooms 3명 13:00 예약.' },
+        { t: '09:30', type: 'car', name: '호텔 출발 · 뉴팜 파크까지 모셔다드림', sub: '차로 약 10–15분 · 파워하우스 앞 하차', q: 'The Star Grand Brisbane, Queens Wharf' },
+        { via: 'car', text: 'Queen\'s Wharf → 뉴팜 파크(브리즈번 파워하우스) 차량 약 10–15분', mode: 'driving' },
+        { t: '09:45', type: 'shop', name: '파워하우스 파머스 마켓 (Jan Powers)', sub: '토요일 06:00–12:00 · 옛 발전소 앞 강가 · 제철 과일, 치즈, 꿀, 와인, 빵, 프렌치 페이스트리, 수제 비누·가죽 소품 · 뉴팜 파크 잔디밭과 강변 산책', addr: 'Brisbane Powerhouse, 119 Lamington St, New Farm', q: 'Brisbane Powerhouse Farmers Market New Farm', site: 'https://newfarmpark.com.au/jan-powers-farmers-markets/' },
+        { t: '11:00', type: 'dining', name: '강가 테라스에서 맥주와 칩스 · Mary Mae\'s', sub: '파워하우스 안 강변 테라스 · 브리즈번강이 막힘없이 보이는 자리 · 토요일 08:00–21:00 · 옆 Bar Alto(이탈리안, 09:30부터)도 가능', addr: 'Brisbane Powerhouse, 119 Lamington St, New Farm', q: 'Mary Maes Brisbane Powerhouse', site: 'https://brisbanepowerhouse.org/visit/' },
+        { via: 'walk', text: '뉴팜 강변 → 리버워크 → Howard Smith Wharves 도보 약 3km · 40분 · 그늘 적음', mode: 'walking' },
+        { t: '11:45', type: 'walk', name: '뉴팜 리버워크 산책', sub: '강 위로 이어진 보행로를 따라 시내 쪽으로 · 정면에 스토리브리지와 스카이라인 · 쉼터 벤치가 중간중간 있습니다', q: 'Brisbane Riverwalk New Farm' },
+        { t: '12:30', type: 'dining', name: '점심 · Howard Smith Wharves', sub: '스토리브리지 바로 아래 옛 부두 · 광둥 요리 Stanley(강가 테라스), 그리스 요리 Greca, 일식 Yoko Dining 중 선택 · 식사 뒤 Felons 양조장에서 한 잔도 가능', addr: '5 Boundary St, Brisbane City', q: 'Howard Smith Wharves Brisbane', site: 'https://howardsmithwharves.com/', st: 'need', note: '3명 12:30 예약(Stanley 또는 Greca). 호스트는 여기서 합류.' },
+        { t: '14:00', type: 'car', name: 'Howard Smith Wharves에서 픽업 · 호텔로', sub: 'Boundary St 쪽 픽업 · 호텔까지 차로 약 5–10분', q: 'Howard Smith Wharves Brisbane' },
         { t: '14:30', type: 'hotel', name: '호텔 휴식 · 자유 시간', sub: '수영장 · 낮잠 · 원하면 둘이서 다리 건너 사우스뱅크 꽃 아치길과 GOMA', q: 'The Star Grand Brisbane, Queens Wharf' },
         { via: 'walk', text: '호텔 → SUUM 도보 약 10분 (Charlotte St)', mode: 'walking' },
         { t: '17:30', type: 'dining', name: 'SUUM · 한식 오마카세', sub: 'The Fat Duck·Disfrutar 출신 셰프 앤디 최 · 콘크리트 카운터를 둘러싼 16석 · 약 14코스 · 막걸리·약주·청주 또는 프랑스·호주 와인 페어링(3잔·5잔) · 간판 없는 검은 문 안쪽 · 약 3시간', addr: '119 Charlotte St, Brisbane City', q: 'SUUM Restaurant 119 Charlotte Street Brisbane', tel: '+61 7 3865 8468', site: 'https://www.suumrestaurant.com/', ig: 'https://www.instagram.com/suum_brisbane/', st: 'need', note: '17:30 회차 3명 빈자리 확인(11/12, SevenRooms). 와인 페어링 요청(풀바디 레드).' },
@@ -182,7 +183,7 @@ window.TRIP = {
         { t: '21:30', type: 'pin', opt: true, name: '카지노 · The Star Brisbane', sub: '같은 건물 · 원하는 만큼만', q: 'The Star Grand Brisbane, Queens Wharf' },
         { t: '22:30', type: 'hotel', name: '호텔 · 짐 정리', sub: '내일 05:10 출발', q: 'The Star Grand Brisbane, Queens Wharf' }
       ],
-      notes: '와이너리 대신 시내 근처로(11/12). 론파인은 형 차로 다녀와 오후를 길게 씀. 대안: Mirimar 강 크루즈(09:00 사우스뱅크 출발, 14:45 귀항, $138/인) 또는 Platinum VIP 투어(09:00–15:00, $599/인).'
+      notes: '11/12 변경: 와이너리·론파인 대신 뉴팜 파크 마켓 → 파워하우스 맥주 → 리버워크 → Howard Smith Wharves 점심. 낮엔 두 분 데이트, 호스트는 하차·픽업만.'
     },
     {
       id: 'd22', date: '2026-11-22', dow: '일', n: 7, city: '귀국', tz: 'Australia/Brisbane', tzLabel: '퀸즐랜드 시각 · 한국 +1시간',
