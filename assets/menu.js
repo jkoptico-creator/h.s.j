@@ -43,13 +43,10 @@
     else if (d.fine_dining) warn += '<p class="mwarn">코스 요리 중심이라 메뉴가 자주 바뀝니다. 실제 메뉴와 다를 수 있어요.</p>';
     var meta = '<p class="mmeta">' + (m.updated ? '메뉴 기준 ' + h(m.updated) : '') +
       (m.source_file || m.source_page ? (m.updated ? ' · ' : '') + '<a href="' + h(m.source_file || m.source_page) + '" target="_blank" rel="noopener">원본 메뉴</a>' : '') + '</p>';
-    var tip = '<p class="mtip">' + (lang === 'ko'
-      ? '두 손가락으로 벌려 확대해 보세요. 주문할 때는 위에서 <b>English</b>로 바꿔 직원에게 보여 주시면 됩니다.'
-      : 'Showing the original menu. Point at the dish to order. <b>한글</b>로 바꾸면 한국어 메뉴가 보입니다.') + '</p>';
     var pages = m.pages.map(function (p, i) {
-      return '<figure class="mpage"><img src="' + h(lang === 'en' ? p.en : p.ko) + '" data-ko="' + h(p.ko) + '" data-en="' + h(p.en) + '" alt="' + h(d.name + ' ' + m.title_ko + ' ' + (i + 1) + '쪽 (' + (lang === 'en' ? '영어' : '한글') + ')') + '"' + (i ? ' loading="lazy"' : '') + ' decoding="async"></figure>';
+      return '<figure class="mpage"><img src="' + h(lang === 'en' ? p.en : p.ko) + '" data-ko="' + h(p.ko) + '" data-en="' + h(p.en) + '" alt="' + h(d.name + ' ' + m.title_ko + ' ' + (i + 1) + '쪽 (' + (lang === 'en' ? '원본' : '한글') + ')') + '"' + (i ? ' loading="lazy"' : '') + ' decoding="async"></figure>';
     }).join('');
-    view.innerHTML = tabs + warn + (d.note_ko ? '<p class="mnote">' + h(d.note_ko) + '</p>' : '') + tip + '<div class="mpages">' + pages + '</div>' + meta;
+    view.innerHTML = tabs + warn + (d.note_ko ? '<p class="mnote">' + h(d.note_ko) + '</p>' : '') + '<div class="mpages">' + pages + '</div>' + meta;
     // warm the other language so flipping is instant
     m.pages.forEach(function (p) { var im = new Image(); im.src = lang === 'en' ? p.ko : p.en; });
   }

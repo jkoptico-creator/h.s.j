@@ -45,7 +45,7 @@
   function icon(type) { return '<span class="ic ' + h(type) + '" aria-hidden="true">' + (SVG[type] || SVG.pin) + '</span>'; }
   function links(it) {
     var out = [], MN = window.MENUS || {};
-    if (it.menu && MN[it.menu]) out.push('<a class="mbtn" href="menu.html?k=' + encodeURIComponent(it.menu) + (it.menuId ? '&m=' + encodeURIComponent(it.menuId) : '') + '">메뉴 · 한글/English</a>');
+    if (it.menu && MN[it.menu]) out.push('<a class="mbtn" href="menu.html?k=' + encodeURIComponent(it.menu) + (it.menuId ? '&m=' + encodeURIComponent(it.menuId) : '') + '">메뉴</a>');
     if (it.q) out.push('<a href="' + mapUrl(it.q) + '" target="_blank" rel="noopener">지도</a>');
     var site = it.site || (it.key && L[it.key] && L[it.key].site);
     if (site) out.push('<a href="' + h(site) + '" target="_blank" rel="noopener">웹사이트</a>');
