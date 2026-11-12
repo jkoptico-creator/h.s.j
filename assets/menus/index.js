@@ -108,7 +108,7 @@ window.MENUS = {
   "menus": [
    {
     "id": "lunch",
-    "title_ko": "점심 코스 ($119, 2코스·왕복 페리 포함)"
+    "title_ko": "점심 코스 (2코스 · 왕복 페리 포함)"
    }
   ]
  },
