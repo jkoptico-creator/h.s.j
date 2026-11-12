@@ -14,6 +14,7 @@ window.TRIP = {
   updated: '2026년 11월 12일',
   wxNote: '날씨는 11월 12일 기준 예보입니다. 출발 전에 다시 확인하세요.',
   lookbook: 'plan-2-sydney-hamilton-brisbane.html',
+  host: { label: '지웅이 연락처', sub: '여행 중 궁금한 것, 급한 일 모두 편하게 연락 주세요', tel: '+61406644391', telText: '+61 406 644 391', kakao: 'https://qr.kakao.com/talk/AlJgujoECPFiSEPz4Ia5Nt0N60M-' },
   days: [
     {
       id: 'd15', cover: 'biz_class_a380', coverCap: '아시아나 비즈니스 클래스', date: '2026-11-15', dow: '일', n: 0, city: '인천', tz: 'Asia/Seoul', tzLabel: '한국 시각',

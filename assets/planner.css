@@ -143,6 +143,19 @@ dl dd{margin:0;min-width:0}
 .pnote2{margin:8px 0 2px;color:var(--mute)}
 .phr{display:inline-block;margin-top:5px;font-size:11.5px;font-weight:600;color:#2C5A2E;background:#E3F0E0;border-radius:6px;padding:2px 7px}
 .phr.off{color:#8A3B2B;background:var(--peach-2)}
+/* 호스트 연락처 (정보 탭 · 긴급 연락처 위) */
+.host{margin:10px 0 4px;padding:12px;border-radius:12px;background:var(--white);border:1px solid var(--line)}
+.hname{font-size:15px;font-weight:700;color:var(--ink)}
+.hsub{margin-top:2px;font-size:12px;color:var(--mute);line-height:1.5}
+.hbtns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.hb{display:flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:8px 10px;border-radius:10px;font-size:13px;font-weight:700;text-decoration:none;text-align:center;line-height:1.25}
+.hb svg{flex:none;width:17px;height:17px}
+.hb span{display:flex;flex-direction:column;align-items:flex-start}
+.hb small{font-size:11px;font-weight:500;opacity:.85;font-variant-numeric:tabular-nums;white-space:nowrap}
+.hb.call{background:var(--slate);color:#fff}
+.hb.kakao{background:#FEE500;color:#191600}
+.hb:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+@media(max-width:360px){.hbtns{grid-template-columns:1fr}}
 /* 일정 안 '둘이서 골라 가기' 바로가기 */
 .pickrow{list-style:none;padding:8px 0;border-bottom:1px solid var(--line)}
 .pickgo{appearance:none;width:100%;display:grid;grid-template-columns:28px minmax(0,1fr) auto;align-items:center;gap:10px;padding:9px 12px;border:1px dashed color-mix(in srgb,var(--peach) 70%,var(--line));border-radius:12px;background:color-mix(in srgb,var(--peach-2) 55%,var(--white));color:var(--ink);text-align:left;cursor:pointer;font:inherit;transition:background-color .2s cubic-bezier(.2,.8,.2,1)}

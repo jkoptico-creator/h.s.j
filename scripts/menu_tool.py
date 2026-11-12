@@ -157,6 +157,7 @@ def render(pdf, ko_json, out):
             rc = page.insert_htmlbox(r, html, css=css, archive=arch, scale_low=0.7)
             if rc[0] < 0:
                 print('OVERFLOW %s: %s' % (b['id'], text[:40]))
+    doc.subset_fonts()  # embed only the glyphs used (otherwise every box carries a full CJK font)
     doc.save(out, garbage=3, deflate=True)
     print('saved', out)
 

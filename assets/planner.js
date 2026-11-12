@@ -240,8 +240,11 @@
     var ho = '<div class="card"><div class="lbl">숙소</div>' + T.hotels.map(function (x) {
       return '<div class="stay">' + (x.key ? thumb(x.key, x.name) : '<span class="ic hotel" aria-hidden="true">' + SVG.hotel + '</span>') + '<div class="bd"><div class="nm">' + h(x.name) + '</div><div class="sb">' + h(x.dates) + '</div><div class="ad">' + h(x.addr) + '</div>' + (x.sub ? '<div class="sb">' + h(x.sub) + '</div>' : '') + links(x) + '</div></div>';
     }).join('') + '</div>';
+    var hostCard = T.host ? '<div class="host"><div class="hname">' + h(T.host.label) + '</div>' + (T.host.sub ? '<div class="hsub">' + h(T.host.sub) + '</div>' : '') +
+      '<div class="hbtns"><a class="hb call" href="' + telUrl(T.host.tel) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg><span>전화하기<small>' + h(T.host.telText || T.host.tel) + '</small></span></a>' +
+      (T.host.kakao ? '<a class="hb kakao" href="' + h(T.host.kakao) + '" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.8 5.3 4.6 6.7l-1 3.6c-.1.4.3.7.6.5l4.2-2.8c.5.1 1 .1 1.6.1 5.5 0 10-3.6 10-8.1S17.5 3 12 3z"/></svg><span>카톡 친구 추가<small>카카오톡으로 연락</small></span></a>' : '') + '</div></div>' : '';
     var inf = T.info.map(function (sec) {
-      return '<div class="card"><div class="lbl">' + h(sec.h) + '</div><dl>' + sec.rows.map(function (r) { return '<div><dt>' + h(r[0]) + '</dt><dd>' + h(r[1]) + '</dd></div>'; }).join('') + '</dl></div>';
+      return '<div class="card"><div class="lbl">' + h(sec.h) + '</div>' + (/긴급/.test(sec.h) ? hostCard : '') + '<dl>' + sec.rows.map(function (r) { return '<div><dt>' + h(r[0]) + '</dt><dd>' + h(r[1]) + '</dd></div>'; }).join('') + '</dl></div>';
     }).join('');
     var bk = [];
     T.days.forEach(function (d) {
