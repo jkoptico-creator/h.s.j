@@ -132,6 +132,7 @@
       '<div class="dhead"><div class="eyebrow">Day ' + (day.n + 1) + ' · ' + h(DOW[day.dow] || day.dow) + ' · ' + h(day.city) + '</div>' +
       '<h1>' + (+md[0]) + '월 ' + (+md[1]) + '일 <small>' + h(day.title) + '</small></h1>' +
       '<p class="tz">' + h(day.tzLabel || '') + '</p>' +
+      (day.wx ? '<div class="wx">' + day.wx.map(function (w) { return '<span><b>' + h(w.city ? w.city + ' ' : '') + h(w.lo) + '–' + h(w.hi) + '°C</b> · ' + h(w.sky) + (w.rain ? ' · 비 ' + h(w.rain) : '') + '</span>'; }).join('') + '<small>' + h(T.wxNote || '') + '</small></div>' : '') +
       '<div class="now" hidden></div>' +
       (day.intro ? '<p class="dintro">' + h(day.intro) + '</p>' : '') +
       (route ? '<div class="ln top"><a href="' + route + '" target="_blank" rel="noopener">오늘 동선 지도</a></div>' : '') +

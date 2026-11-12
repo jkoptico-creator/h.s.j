@@ -11,7 +11,8 @@
 window.TRIP = {
   title: '시드니 → 해밀턴 아일랜드 → 브리즈번',
   dates: '2026년 11월 15일(일) – 22일(일)',
-  updated: '2026년 11월 9일',
+  updated: '2026년 11월 12일',
+  wxNote: '날씨는 11월 12일 기준 예보예요. 출발 전에 한 번 더 확인하세요.',
   lookbook: 'plan-2-sydney-hamilton-brisbane.html',
   days: [
     {
@@ -27,10 +28,11 @@ window.TRIP = {
     },
     {
       id: 'd16', date: '2026-11-16', dow: '월', n: 1, city: '시드니', tz: 'Australia/Sydney', tzLabel: '시드니 시각 · 한국 +2시간',
+      wx: [{ lo: 15, hi: 17, sky: '흐리고 비 올 수 있음', rain: '55%' }],
       title: '시드니 도착 · 커플 스파 · 애프터눈 티 · 하버 나이트 크루즈',
       intro: '밤 비행기로 아침에 도착해 호텔에 짐을 맡기고 가볍게 먹은 뒤, 호텔 안 Auriga Spa에서 두 분이 90분 트리트먼트를 받습니다. 이어서 Aperture에서 샴페인 애프터눈 티를 하고, 원하면 오페라하우스 한국어 투어를 본 뒤 쉬었다가 18:30 요트에 오릅니다. 해 지는 하버를 배 위에서 보며 셰프의 프렌치 코스로 저녁을 먹는 날입니다.',
       stay: { name: 'Capella Sydney', sub: '24 Loftus St, Sydney NSW 2000', tel: '+61 2 9071 5000', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney', nights: '1/2박' },
-      bring: ['편한 옷(스파 · 기내에서 바로)', '겉옷(밤 바다 바람 · 17°C 안팎)', '선크림 · 모자', '요트에서는 신발을 벗는 곳이 많습니다'],
+      bring: ['편한 옷(스파 · 기내에서 바로)', '따뜻한 겉옷(요트 밤바다 약 15°C)', '접이식 우산(비 55%)', '선크림 · 모자', '요트에서는 신발을 벗는 곳이 많습니다'],
       picks: [{ set: 'syd', when: '애프터눈 티 뒤 15:30–17:45 · 요트에서 내린 뒤 한 잔' }],
       items: [
         { t: '08:20', type: 'plane', name: '시드니 공항 제1터미널 도착 · OZ601', sub: '입국 심사와 수하물 수령 약 60–90분 · 식품·흙 묻은 골프화는 신고 대상이니 골프화는 깨끗이', q: 'Sydney Airport International Terminal 1', st: 'ok' },
@@ -53,6 +55,7 @@ window.TRIP = {
     },
     {
       id: 'd17', date: '2026-11-17', dow: '화', n: 2, city: '시드니', tz: 'Australia/Sydney', tzLabel: '시드니 시각 · 한국 +2시간',
+      wx: [{ lo: 15, hi: 21, sky: '대체로 맑음', rain: '15%' }],
       title: '해안 산책 · 세인트 마이클 골프 · Bennelong',
       intro: '아침에 본다이에서 쿠지까지 6km 해안 절벽길을 두 시간 정도 걷습니다. 쿠지 해변 앞에서 브런치를 먹고, 차로 15분 거리의 세인트 마이클 골프클럽에서 11:51에 18홀을 칩니다. 바다를 끼고 도는 코스입니다. 돌아와 호텔에서 쉬었다가, 저녁은 오페라하우스 안의 Bennelong에서 와인과 함께 천천히 먹습니다.',
       stay: { name: 'Capella Sydney', sub: '24 Loftus St, Sydney NSW 2000', tel: '+61 2 9071 5000', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney', nights: '2/2박' },
@@ -80,6 +83,7 @@ window.TRIP = {
     },
     {
       id: 'd18', date: '2026-11-18', dow: '수', n: 3, city: '해밀턴 아일랜드', short: '해밀턴', tz: 'Australia/Brisbane', tzLabel: '오전은 시드니 시각 · 도착 뒤 퀸즐랜드 시각(시드니 −1시간 · 한국 +1시간)',
+      wx: [{ city: '시드니', lo: 16, hi: 23, sky: '맑음', rain: '10%' }, { city: '해밀턴', lo: 26, hi: 28, sky: '덥고 습함 · 소나기 가능', rain: '15–90%' }],
       title: '시드니 → 해밀턴 아일랜드 · 스위트 체크인 · 원트리힐 선셋',
       intro: '아침은 느긋하게, 원하면 호텔 옆 왕립 식물원을 걸어 미세스 매쿼리 체어에서 하버를 한 번 더 봅니다. 낮 비행기(버진 VA1283 12:40)로 섬에 건너가면 시계를 한 시간 뒤로 돌립니다. Reef View Hotel의 2층 스위트(전용 플런지 풀)에 짐을 풀고, 해 질 녘 원트리힐에서 휘트선데이 일몰을 본 뒤 요트클럽의 Bommie에서 두 분이 저녁을 먹습니다.',
       stay: { name: 'Reef View Hotel · Superior Presidential Suite', sub: '12 Resort Drive, Hamilton Island QLD 4803 · 침실 2 · 욕실 2 · 전용 플런지 풀 테라스', tel: '+61 7 4946 9999', q: 'Reef View Hotel, Hamilton Island', key: 'reef_view_suite', nights: '1/2박' },
@@ -108,6 +112,7 @@ window.TRIP = {
     },
     {
       id: 'd19', date: '2026-11-19', dow: '목', n: 4, city: '해밀턴 아일랜드', short: '해밀턴', tz: 'Australia/Brisbane', tzLabel: '퀸즐랜드 시각 · 한국 +1시간',
+      wx: [{ lo: 25, hi: 27, sky: '덥고 습함 · 소나기 가능', rain: '20–90%' }],
       title: '덴트섬 골프 08:30 · 플런지 풀에서 쉬기 · Catseye Pool Club',
       intro: '아침 페리로 덴트섬에 건너가 Hamilton Island Golf Club 18홀을 돕니다(티타임 08:30). 라운드 뒤 클럽하우스에서 점심을 먹고 돌아와, 오후는 두 분이 스위트 플런지 풀과 해변에서 자유롭게 쉽니다. 저녁은 걸어서 갈 수 있는 The Sundays의 Catseye Pool Club입니다.',
       stay: { name: 'Reef View Hotel · Superior Presidential Suite', sub: '12 Resort Drive, Hamilton Island QLD 4803 · 침실 2 · 욕실 2 · 전용 플런지 풀 테라스', tel: '+61 7 4946 9999', q: 'Reef View Hotel, Hamilton Island', key: 'reef_view_suite', nights: '2/2박' },
@@ -131,6 +136,7 @@ window.TRIP = {
     },
     {
       id: 'd20', date: '2026-11-20', dow: '금', n: 5, city: '브리즈번', tz: 'Australia/Brisbane', tzLabel: '퀸즐랜드 시각 · 한국 +1시간',
+      wx: [{ city: '해밀턴', lo: 25, hi: 29, sky: '소나기 가능', rain: '70%' }, { city: '브리즈번', lo: 17, hi: 24, sky: '구름 조금 · 밤에 소나기 가능', rain: '40%' }],
       title: '해밀턴 아일랜드 → 브리즈번 · Queen\'s Wharf 체크인 · Exhibition · 강변 야경',
       intro: '아침은 비치프런트 조식과 캣츠아이 비치 산책으로 느긋하게 보내고 낮 비행기로 브리즈번에 옵니다. 강가에 새로 지은 Queen\'s Wharf의 The Star Grand 리버 스위트에 짐을 풉니다. 원하면 테네리프 강변 동네의 양조장에 들러 한 잔 하고, 18시에 Exhibition에서 테이스팅 코스로 저녁을 먹습니다. 호텔에서 걸어서 10분 남짓입니다. 식사 뒤에는 스토리브리지 아래 강변을 걷거나 바로 호텔로 돌아와 방에서 강 야경을 봅니다.',
       stay: { name: 'The Star Grand Brisbane · River Suite', sub: 'Queen\'s Wharf, 33 William St, Brisbane City · 브리즈번강·사우스뱅크 전망', q: 'The Star Grand Brisbane, Queens Wharf', nights: '1/2박' },
@@ -160,6 +166,7 @@ window.TRIP = {
     },
     {
       id: 'd21', date: '2026-11-21', dow: '토', n: 6, city: '브리즈번', tz: 'Australia/Brisbane', tzLabel: '퀸즐랜드 시각 · 한국 +1시간',
+      wx: [{ lo: 19, hi: 26, sky: '구름 조금 · 소나기 가능', rain: '40%' }],
       title: '뉴팜 파크 마켓 · 강가에서 맥주 · 리버워크 · Howard Smith Wharves 점심 · SUUM · Sky Deck 야경',
       intro: '토요일 아침에만 열리는 파워하우스 파머스 마켓을 구경하고, 옛 발전소 건물의 강가 테라스에서 맥주와 칩스를 즐깁니다. 그다음 강을 따라 이어지는 리버워크를 걸어 스토리브리지 아래 Howard Smith Wharves까지 가서 점심을 먹습니다. 호스트가 뉴팜 파크에 내려 드리고 Howard Smith Wharves에서 다시 모시니, 낮 동안은 두 분만의 데이트입니다. 저녁은 16석 한식 오마카세 SUUM, 마무리는 Sky Deck 야경입니다.',
       stay: { name: 'The Star Grand Brisbane · River Suite', sub: 'Queen\'s Wharf, 33 William St, Brisbane City · 브리즈번강·사우스뱅크 전망', q: 'The Star Grand Brisbane, Queens Wharf', nights: '2/2박' },
@@ -187,6 +194,7 @@ window.TRIP = {
     },
     {
       id: 'd22', date: '2026-11-22', dow: '일', n: 7, city: '귀국', tz: 'Australia/Brisbane', tzLabel: '퀸즐랜드 시각 · 한국 +1시간',
+      wx: [{ lo: 19, hi: 27, sky: '대체로 맑음', rain: '40%' }],
       title: '브리즈번 → 인천',
       intro: '08:40 출발편이라 새벽에 움직입니다. 조식은 공항 라운지에서 하고, 같은 날 저녁 인천에 닿습니다.',
       stay: { name: '인천 도착', sub: '추가 숙박 없음' },
