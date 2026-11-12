@@ -1,6 +1,6 @@
 /* 여행 플래너 — site.css 위에 얹는 화면 규칙 */
 :root{--white:#fff;--card:#FBFBF8;--bar-h:54px}
-body.planner{font-size:15px}
+body.planner{font-size:15px;word-break:keep-all;overflow-wrap:break-word}
 .pbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:10px;min-height:var(--bar-h);padding:calc(6px + env(safe-area-inset-top,0px)) var(--gutr) 6px var(--gut);background:color-mix(in srgb,var(--paper) 90%,#fff);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .pbar .pback{flex:none;text-decoration:none;font-size:12.5px;color:var(--mute);padding:6px 10px 6px 6px;border-radius:999px}
 .pbar .pback:hover{background:var(--paper-2)}
@@ -35,8 +35,9 @@ main{max-width:760px;margin:0 auto;padding:4px var(--gutr) 60px var(--gut)}
 .ln a:hover{border-color:var(--slate)}
 .ln.top{margin-top:12px}
 .lbl{font-family:var(--font-display);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
-.stay{display:grid;grid-template-columns:56px 1fr;gap:12px;align-items:start;padding:12px;border:1px solid var(--line);border-radius:14px;background:var(--card);margin:8px 0 14px}
+.stay{display:grid;grid-template-columns:56px minmax(0,1fr);gap:12px;align-items:start;padding:12px;border:1px solid var(--line);border-radius:14px;background:var(--card);margin:8px 0 14px}
 .stay .th,.stay .ic{width:56px;height:56px}
+.stay .bd{min-width:0}
 .stay .nm{font-weight:700;font-size:15px;margin-top:2px}
 .stay .sb,.stay .ad{font-size:12.5px;color:var(--mute);line-height:1.5}
 .tl{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
@@ -86,7 +87,7 @@ body:not(.plan-on) .plan{display:none!important}
 .fl .ft{font-size:14px;margin-top:2px;font-variant-numeric:tabular-nums}
 .fl .fs{margin-top:3px;line-height:1.5}
 dl{margin:8px 0 0}
-dl>div{display:grid;grid-template-columns:118px 1fr;gap:8px;padding:8px 0;border-top:1px solid var(--line);font-size:13.5px;line-height:1.55}
+dl>div{display:grid;grid-template-columns:118px minmax(0,1fr);gap:8px;padding:8px 0;border-top:1px solid var(--line);font-size:13.5px;line-height:1.55}
 dl dt{color:var(--mute);font-weight:600;margin:0}
 dl dd{margin:0;min-width:0}
 .bk{list-style:none;margin:8px 0 0;padding:0}
@@ -111,8 +112,7 @@ dl dd{margin:0;min-width:0}
 .picks h2{font-family:var(--font-display);font-weight:600;font-size:20px;line-height:1.2;margin:4px 0 4px;color:var(--ink)}
 .pwhen{font-size:12.5px;line-height:1.55;color:var(--mute);margin:0 0 10px}
 .pwhen b{font-weight:700;color:var(--slate);margin-right:6px}
-.pfs{display:flex;gap:6px;overflow-x:auto;padding:2px 0 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.pfs::-webkit-scrollbar{display:none}
+.pfs{display:flex;flex-wrap:wrap;gap:6px;padding:2px 0 10px}
 .pf{flex:none;appearance:none;border:1px solid var(--line);background:var(--white);color:var(--slate);font:600 12px/1 var(--font-body);padding:7px 11px;border-radius:999px;cursor:pointer;white-space:nowrap}
 .pf[aria-pressed="true"]{background:var(--slate);border-color:var(--slate);color:#fff}
 .pks{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}

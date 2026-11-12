@@ -154,7 +154,7 @@
       return '<div class="fl"><div class="fd">' + h(f.date) + '</div><div class="fc">' + h(f.code) + (f.st && STATUS[f.st] ? '<span class="st ' + h(f.st) + ' plan">' + STATUS[f.st] + '</span>' : '') + '</div><div class="fr">' + h(f.route) + '</div><div class="ft">' + h(f.time) + ' · ' + h(f.dur) + '</div><div class="fs small">' + h(f.cls) + ' · 수하물 ' + h(f.bag) + (f.alt ? ' · ' + h(f.alt) : '') + '</div></div>';
     }).join('') + '</div>';
     var ho = '<div class="card"><div class="lbl">숙소</div>' + T.hotels.map(function (x) {
-      return '<div class="stay">' + thumb(x.key, x.name) + '<div class="bd"><div class="nm">' + h(x.name) + '</div><div class="sb">' + h(x.dates) + '</div><div class="ad">' + h(x.addr) + '</div>' + (x.sub ? '<div class="sb">' + h(x.sub) + '</div>' : '') + links(x) + '</div></div>';
+      return '<div class="stay">' + (x.key ? thumb(x.key, x.name) : '<span class="ic hotel" aria-hidden="true">' + SVG.hotel + '</span>') + '<div class="bd"><div class="nm">' + h(x.name) + '</div><div class="sb">' + h(x.dates) + '</div><div class="ad">' + h(x.addr) + '</div>' + (x.sub ? '<div class="sb">' + h(x.sub) + '</div>' : '') + links(x) + '</div></div>';
     }).join('') + '</div>';
     var inf = T.info.map(function (sec) {
       return '<div class="card"><div class="lbl">' + h(sec.h) + '</div><dl>' + sec.rows.map(function (r) { return '<div><dt>' + h(r[0]) + '</dt><dd>' + h(r[1]) + '</dd></div>'; }).join('') + '</dl></div>';
