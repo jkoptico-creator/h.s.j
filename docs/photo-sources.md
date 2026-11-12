@@ -54,3 +54,7 @@
 ## 요트 선택 페이지 (`yacht.html`, 2026-10-28)
 
 `assets/yacht/` 의 사진 51장은 Sydney Harbour Specialists 각 선박 페이지 갤러리에서 받은 실제 선박 사진입니다. 원본 페이지: https://sydneyhs.com.au/empress-boat-sydney/ (Empress 12장), https://sydneyhs.com.au/element-boat-sydney/ (Element 20장), https://sydneyhs.com.au/salt-boat-sydney/ (Salt 19장). 사람들이 물에 들어가 있는 Salt 사진 2장은 제외했습니다. 최대 1280px WebP로 줄였습니다.
+
+## 여행 플래너 사진
+
+2026-11-13 여행 플래너(itinerary.html)에 넣은 사진과 출처는 [planner-photo-sources.md](planner-photo-sources.md)에 따로 정리했습니다. 제안 페이지의 사진은 바꾸지 않았습니다.

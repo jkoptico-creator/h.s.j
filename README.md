@@ -10,6 +10,7 @@
 - `assets/places.js`: 장소별 사진과 공식 정보·지도
 - `itinerary.html`: 결정된 2안의 날짜별 여행 플래너(여행 중 휴대폰에서 보는 화면). 일정 데이터는 `assets/trip-data.js`, 화면은 `assets/planner.js`·`assets/planner.css`
 - `assets/photos/`: 출처를 확인해 저장한 사진과 `sources.json` 출처 목록
+- `assets/planner-photos.js`, `assets/photos/planner/`: 여행 플래너 전용 사진(itinerary.html에서만 사용). 출처는 `docs/planner-photo-sources.md`, 다시 만들 때는 `scripts/ingest_planner_photos.py`
 - `review/`: 미검증 사진 후보 시트. 검색 제외 설정이며 접근 통제 기능은 아닙니다.
 
 `호주여행제안.html`은 생성 파일입니다. 직접 편집하지 않고 개별 페이지·공통 파일을 수정한 뒤 아래 명령을 실행합니다. Python 표준 라이브러리만 사용합니다.

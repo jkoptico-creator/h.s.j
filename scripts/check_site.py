@@ -121,8 +121,19 @@ for path in [*ROOT.glob('*.html'), *ROOT.glob('assets/*.js'), *ROOT.glob('docs/*
 # Daily planner data: every photo key exists, every day present, the planner is linked from the decided pages.
 trip = (ROOT/'assets/trip-data.js').read_text(encoding='utf-8')
 assert 'window.TRIP' in trip
-for key in set(re.findall(r"key: '([a-z0-9_]+)'", trip)):
-    assert key in gallery and key in links and gallery[key], ('planner photo key', key)
+# Planner-only photos live in assets/planner-photos.js (loaded after places.js on itinerary.html only).
+planner_photos = (ROOT/'assets/planner-photos.js').read_text(encoding='utf-8')
+pg = re.search(r'window\.GALLERY = Object\.assign\(window\.GALLERY \|\| \{\}, (.*?)\);\n', planner_photos, re.S)
+ps = re.search(r'window\.PHOTO_SOURCES = Object\.assign\(window\.PHOTO_SOURCES \|\| \{\}, (.*?)\);\n', planner_photos, re.S)
+planner_gallery = {**gallery, **(json.loads(pg[1]) if pg else {})}
+planner_sources = {**photo_sources, **(json.loads(ps[1]) if ps else {})}
+for key, urls in (json.loads(pg[1]) if pg else {}).items():
+    for url in urls:
+        assert url in planner_sources and planner_sources[url].get('source_page'), ('planner photo without source', key, url)
+        if not url.startswith('http'):
+            assert (ROOT/url).exists(), ('planner photo file missing', url)
+for key in set(re.findall(r"(?:key|cover): '([a-z0-9_]+)'", trip)):
+    assert key in planner_gallery and planner_gallery[key], ('planner photo key', key)
 for day in ['d15', 'd16', 'd17', 'd18', 'd19', 'd20', 'd21']:
     assert f"id: '{day}'" in trip, ('planner day missing', day)
 assert 'Empress' in trip and 'VA1283' in trip and 'VA1496' in trip and 'KE408' in trip

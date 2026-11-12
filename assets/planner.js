@@ -39,7 +39,7 @@
   }
   function todayId() { for (var i = 0; i < T.days.length; i++) if (nowParts(T.days[i].tz).date === T.days[i].date) return T.days[i].id; return null; }
   function thumb(key, cap) {
-    if (key && G[key] && G[key].length) return '<div class="th g" role="button" tabindex="0" data-g="' + h(key) + '" data-cap="' + h(cap) + '" aria-label="' + h(cap) + ' 사진 보기"><img src="' + h(G[key][0]) + '" alt="" loading="lazy" decoding="async"></div>';
+    if (key && G[key] && G[key].length) return '<div class="th g" role="button" tabindex="0" data-g="' + h(key) + '" data-cap="' + h(cap) + '" aria-label="' + h(cap) + ' 사진 보기"><img src="' + h(G[key][0]) + '" alt="" loading="lazy" decoding="async">' + (G[key].length > 1 ? '<span class="tn">' + G[key].length + '</span>' : '') + '</div>';
     return '';
   }
   function icon(type) { return '<span class="ic ' + h(type) + '" aria-hidden="true">' + (SVG[type] || SVG.pin) + '</span>'; }
@@ -78,6 +78,50 @@
       (it.note ? '<div class="pn plan"><b>메모</b>' + h(it.note) + '</div>' : '') +
       '</div><div class="rt">' + right + '</div></li>';
   }
+  // ── weather card ─────────────────────────────────────────────
+  var WXI = {
+    sun: '<svg viewBox="0 0 48 48" class="wsun"><g class="ray" stroke="#E9A93A" stroke-width="3" stroke-linecap="round"><path d="M24 4v6M24 38v6M4 24h6M38 24h6M9.9 9.9l4.2 4.2M33.9 33.9l4.2 4.2M9.9 38.1l4.2-4.2M33.9 14.1l4.2-4.2"/></g><circle cx="24" cy="24" r="9" fill="#F5C04E"/></svg>',
+    msun: '<svg viewBox="0 0 48 48"><g class="ray" stroke="#E9A93A" stroke-width="2.6" stroke-linecap="round"><path d="M18 3v5M18 30v4M3 18h5M28 18h3M7.4 7.4l3.4 3.4M28.6 7.4l-3.4 3.4M7.4 28.6l3.4-3.4"/></g><circle cx="18" cy="18" r="7.5" fill="#F5C04E"/><path class="cl" d="M20 40h17a7 7 0 0 0 0-14 9 9 0 0 0-17 3 5.5 5.5 0 0 0 0 11z" fill="#fff" stroke="#B9C6D2" stroke-width="1.6"/></svg>',
+    cloud: '<svg viewBox="0 0 48 48"><path class="cl2" d="M14 30h18a6 6 0 0 0 0-12 8 8 0 0 0-15 2.5 4.8 4.8 0 0 0-3 9.5z" fill="#DCE3EA"/><path class="cl" d="M10 40h22a8 8 0 0 0 0-16 10.5 10.5 0 0 0-20 3.5 6.3 6.3 0 0 0-2 12.5z" fill="#fff" stroke="#9FB0C0" stroke-width="1.8"/></svg>',
+    rain: '<svg viewBox="0 0 48 48"><path class="cl" d="M10 30h22a8 8 0 0 0 0-16 10.5 10.5 0 0 0-20 3.5 6.3 6.3 0 0 0-2 12.5z" fill="#fff" stroke="#8FA2B5" stroke-width="1.8"/><g class="drop" stroke="#4F86B7" stroke-width="2.6" stroke-linecap="round"><path d="M15 35l-2 5"/><path d="M23 35l-2 5"/><path d="M31 35l-2 5"/></g></svg>',
+    shower: '<svg viewBox="0 0 48 48"><g class="ray" stroke="#E9A93A" stroke-width="2.4" stroke-linecap="round"><path d="M17 3v4M5 15h4M8.5 6.5l2.8 2.8M25.5 6.5l-2.8 2.8"/></g><circle cx="17" cy="15" r="6.5" fill="#F5C04E"/><path class="cl" d="M13 33h21a7.5 7.5 0 0 0 0-15 10 10 0 0 0-19 3.3A6 6 0 0 0 13 33z" fill="#fff" stroke="#8FA2B5" stroke-width="1.8"/><g class="drop" stroke="#4F86B7" stroke-width="2.6" stroke-linecap="round"><path d="M19 37l-1.8 4.5"/><path d="M27 37l-1.8 4.5"/></g></svg>',
+    storm: '<svg viewBox="0 0 48 48"><path class="cl" d="M10 30h22a8 8 0 0 0 0-16 10.5 10.5 0 0 0-20 3.5 6.3 6.3 0 0 0-2 12.5z" fill="#EEF1F4" stroke="#7D8FA2" stroke-width="1.8"/><path class="bolt" d="M24 31l-5 8h5l-3 7 8-10h-5l3-5z" fill="#F2B23E"/></svg>'
+  };
+  function wxKind(sky) {
+    if (/뇌우|천둥/.test(sky)) return 'storm';
+    if (/소나기|비/.test(sky)) return /맑|구름 조금|덥/.test(sky) ? 'shower' : 'rain';
+    if (/흐/.test(sky)) return 'cloud';
+    if (/구름|대체로/.test(sky)) return 'msun';
+    return 'sun';
+  }
+  function rainMax(r) { var n = String(r || '').match(/\d+/g); return n ? Math.max.apply(null, n.map(Number)) : 0; }
+  function wxCard(w) {
+    var kind = wxKind(w.sky || ''), rm = rainMax(w.rain);
+    var lo = +w.lo, hi = +w.hi, a = Math.max(0, Math.min(100, (lo - 10) / 25 * 100)), b = Math.max(a + 6, Math.min(100, (hi - 10) / 25 * 100));
+    var drops = '';
+    for (var i = 1; i <= 5; i++) drops += '<i class="' + (rm >= i * 20 - 10 ? 'on' : '') + '"></i>';
+    var feel = hi >= 27 ? '반팔 날씨' : hi >= 22 ? '가벼운 옷차림' : hi >= 18 ? '얇은 겉옷' : '따뜻한 겉옷';
+    return '<div class="wxc wx-' + kind + '">' +
+      '<div class="wxi" aria-hidden="true">' + WXI[kind] + '</div>' +
+      '<div class="wxm">' + (w.city ? '<div class="wcity">' + h(w.city) + '</div>' : '') +
+        '<div class="wt"><b>' + h(hi) + '°</b><span>/ ' + h(lo) + '°</span></div>' +
+        '<div class="wsky">' + h(w.sky || '') + '</div></div>' +
+      '<div class="wbar" aria-hidden="true"><span style="left:' + a.toFixed(0) + '%;width:' + (b - a).toFixed(0) + '%"></span></div>' +
+      '<div class="wfoot"><span class="wrain" aria-label="비 올 확률 ' + h(w.rain || '0%') + '"><span class="wdrops" aria-hidden="true">' + drops + '</span>비 ' + h(w.rain || '0%') + '</span><span class="wfeel">' + feel + '</span></div>' +
+    '</div>';
+  }
+  function renderWx(day) {
+    if (!day.wx) return '';
+    return '<div class="wxs' + (day.wx.length > 1 ? ' two' : '') + '">' + day.wx.map(wxCard).join('') + '</div><p class="wxnote">' + h(T.wxNote || '') + '</p>';
+  }
+  function renderCover(day) {
+    var k = day.cover; if (!k || !G[k] || !G[k].length) return '';
+    var cap = day.coverCap || day.title;
+    return '<div class="cover g" role="button" tabindex="0" data-g="' + h(k) + '" data-cap="' + h(cap) + '" aria-label="' + h(cap) + ' 사진 ' + G[k].length + '장 보기">' +
+      '<img src="' + h(G[k][0]) + '" alt="" decoding="async" fetchpriority="high">' +
+      '<span class="ccap">' + h(cap) + '</span>' + (G[k].length > 1 ? '<span class="ccount">사진 ' + G[k].length + '장</span>' : '') + '</div>';
+  }
+  function photoCount(key) { return key && G[key] ? G[key].length : 0; }
   var PCAT = { cafe: ['카페·디저트', 'dining'], bar: ['바·라운지', 'dining'], food: ['맛집', 'dining'], sight: ['명소·산책', 'walk'], shop: ['쇼핑', 'shop'] };
   var PORDER = ['cafe', 'bar', 'food', 'sight', 'shop'];
   function renderPack(day) {
@@ -103,7 +147,7 @@
       var items = set.items.filter(function (x) { return !(x.hours && /휴무/.test(x.hours[dow] || '')); }).sort(function (a, b) { return PORDER.indexOf(a.cat) - PORDER.indexOf(b.cat); }).map(function (x) {
         var c = PCAT[x.cat] || ['', 'pin'];
         return '<li class="pk" data-cat="' + h(x.cat) + '"' + (x.date ? ' data-date="1"' : '') + '>' +
-          '<span class="ic ' + h(c[1]) + '" aria-hidden="true">' + (SVG[c[1]] || SVG.pin) + '</span>' +
+          (thumb(x.key, x.name) || '<span class="ic ' + h(c[1]) + '" aria-hidden="true">' + (SVG[c[1]] || SVG.pin) + '</span>') +
           '<div class="bd"><div class="nm">' + h(x.name) + (x.date ? '<span class="tag love">데이트</span>' : '') + '</div>' +
           '<div class="pm">' + h(c[0]) + ' · ' + h(x.walk) + '</div>' +
           (x.hours && x.hours[dow] ? '<div class="phr' + (/휴무/.test(x.hours[dow]) ? ' off' : '') + '">' + h(dow) + '요일 ' + h(x.hours[dow]) + '</div>' : '') +
@@ -140,10 +184,10 @@
     var notes = day.notes ? '<div class="pnote plan"><div class="lbl">기획 메모</div><p>' + h(day.notes) + '</p></div>' : '';
     var md = day.date.slice(5).split('-');
     return '<section class="dayv" id="' + h(day.id) + '" data-date="' + h(day.date) + '" data-tz="' + h(day.tz) + '">' +
-      '<div class="dhead"><div class="eyebrow">Day ' + (day.n + 1) + ' · ' + h(DOW[day.dow] || day.dow) + ' · ' + h(day.city) + '</div>' +
+      renderCover(day) + '<div class="dhead"><div class="eyebrow">Day ' + (day.n + 1) + ' · ' + h(DOW[day.dow] || day.dow) + ' · ' + h(day.city) + '</div>' +
       '<h1>' + (+md[0]) + '월 ' + (+md[1]) + '일 <small>' + h(day.title) + '</small></h1>' +
       '<p class="tz">' + h(day.tzLabel || '') + '</p>' +
-      (day.wx ? '<div class="wx">' + day.wx.map(function (w) { return '<span><b>' + h(w.city ? w.city + ' ' : '') + h(w.lo) + '–' + h(w.hi) + '°C</b> · ' + h(w.sky) + (w.rain ? ' · 비 ' + h(w.rain) : '') + '</span>'; }).join('') + '<small>' + h(T.wxNote || '') + '</small></div>' : '') +
+      renderWx(day) +
       '<div class="now" hidden></div>' +
       (day.intro ? '<p class="dintro">' + h(day.intro) + '</p>' : '') +
       (route ? '<div class="ln top"><a href="' + route + '" target="_blank" rel="noopener">오늘 동선 지도</a></div>' : '') +

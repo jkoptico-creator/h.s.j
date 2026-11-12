@@ -1,0 +1,4702 @@
+/* 플래너 전용 사진. itinerary.html에서만 places.js 뒤에 불러와 GALLERY·PHOTO_SOURCES를 덮어씁니다.
+   제안 페이지(index·plan-*)는 이 파일을 쓰지 않습니다. 생성: scripts/ingest_planner_photos.py */
+window.GALLERY = Object.assign(window.GALLERY || {}, {
+"icn_t2": [
+"assets/photos/planner/icn_t2-1.webp",
+"assets/photos/planner/icn_t2-2.webp",
+"assets/photos/planner/icn_t2-3.webp",
+"assets/photos/planner/icn_t2-4.webp",
+"assets/photos/planner/icn_t2-5.webp",
+"assets/photos/planner/icn_t2-6.webp"
+],
+"syd_airport_t1": [
+"assets/photos/planner/syd_airport_t1-1.webp",
+"assets/photos/planner/syd_airport_t1-2.webp",
+"assets/photos/planner/syd_airport_t1-3.webp",
+"assets/photos/planner/syd_airport_t1-4.webp",
+"assets/photos/planner/syd_airport_t1-5.webp"
+],
+"capella_sydney": [
+"assets/photos/planner/capella_sydney-1.webp",
+"assets/photos/planner/capella_sydney-2.webp",
+"assets/photos/planner/capella_sydney-3.webp",
+"assets/photos/planner/capella_sydney-4.webp",
+"assets/photos/planner/capella_sydney-5.webp",
+"assets/photos/planner/capella_sydney-6.webp"
+],
+"brasserie_1930": [
+"assets/photos/planner/brasserie_1930-1.webp",
+"assets/photos/planner/brasserie_1930-2.webp",
+"assets/photos/planner/brasserie_1930-3.webp",
+"assets/photos/planner/brasserie_1930-4.webp",
+"assets/photos/planner/brasserie_1930-5.webp",
+"assets/photos/planner/brasserie_1930-6.webp"
+],
+"auriga_spa": [
+"assets/photos/planner/auriga_spa-1.webp",
+"assets/photos/planner/auriga_spa-2.webp",
+"assets/photos/planner/auriga_spa-3.webp",
+"assets/photos/planner/auriga_spa-4.webp",
+"assets/photos/planner/auriga_spa-5.webp",
+"assets/photos/planner/auriga_spa-6.webp"
+],
+"aperture_capella": [
+"assets/photos/planner/aperture_capella-1.webp",
+"assets/photos/planner/aperture_capella-2.webp",
+"assets/photos/planner/aperture_capella-3.webp",
+"assets/photos/planner/aperture_capella-4.webp",
+"assets/photos/planner/aperture_capella-5.webp",
+"assets/photos/planner/aperture_capella-6.webp"
+],
+"im_lingerie": [
+"assets/photos/planner/im_lingerie-1.webp",
+"assets/photos/planner/im_lingerie-2.webp",
+"assets/photos/planner/im_lingerie-3.webp"
+],
+"bills_bondi": [
+"assets/photos/planner/bills_bondi-1.webp",
+"assets/photos/planner/bills_bondi-2.webp",
+"assets/photos/planner/bills_bondi-3.webp",
+"assets/photos/planner/bills_bondi-4.webp",
+"assets/photos/planner/bills_bondi-5.webp",
+"assets/photos/planner/bills_bondi-6.webp"
+],
+"bondi_bronte": [
+"assets/photos/planner/bondi_bronte-1.webp",
+"assets/photos/planner/bondi_bronte-2.webp",
+"assets/photos/planner/bondi_bronte-3.webp",
+"assets/photos/planner/bondi_bronte-4.webp",
+"assets/photos/planner/bondi_bronte-5.webp"
+],
+"bogey_hole_cafe": [
+"assets/photos/planner/bogey_hole_cafe-1.webp",
+"assets/photos/planner/bogey_hole_cafe-2.webp",
+"assets/photos/planner/bogey_hole_cafe-3.webp",
+"assets/photos/planner/bogey_hole_cafe-4.webp",
+"assets/photos/planner/bogey_hole_cafe-5.webp",
+"assets/photos/planner/bogey_hole_cafe-6.webp"
+],
+"st_michaels_golf": [
+"assets/photos/planner/st_michaels_golf-1.webp",
+"assets/photos/planner/st_michaels_golf-2.webp",
+"assets/photos/planner/st_michaels_golf-3.webp",
+"assets/photos/planner/st_michaels_golf-4.webp",
+"assets/photos/planner/st_michaels_golf-5.webp",
+"assets/photos/planner/st_michaels_golf-6.webp"
+],
+"bennelong": [
+"assets/photos/planner/bennelong-1.webp",
+"assets/photos/planner/bennelong-2.webp",
+"assets/photos/planner/bennelong-3.webp",
+"assets/photos/planner/bennelong-4.webp",
+"assets/photos/planner/bennelong-5.webp",
+"assets/photos/planner/bennelong-6.webp"
+],
+"mrs_macquaries": [
+"assets/photos/planner/mrs_macquaries-1.webp",
+"assets/photos/planner/mrs_macquaries-2.webp",
+"assets/photos/planner/mrs_macquaries-3.webp",
+"assets/photos/planner/mrs_macquaries-4.webp",
+"assets/photos/planner/mrs_macquaries-5.webp",
+"assets/photos/planner/mrs_macquaries-6.webp"
+],
+"syd_airport_t2": [
+"assets/photos/planner/syd_airport_t2-1.webp",
+"assets/photos/planner/syd_airport_t2-2.webp",
+"assets/photos/planner/syd_airport_t2-3.webp",
+"assets/photos/planner/syd_airport_t2-4.webp",
+"assets/photos/planner/syd_airport_t2-5.webp",
+"assets/photos/planner/syd_airport_t2-6.webp"
+],
+"biz_class_a380": [
+"assets/photos/planner/biz_class_a380-1.webp",
+"assets/photos/planner/biz_class_a380-2.webp",
+"assets/photos/planner/biz_class_a380-3.webp",
+"assets/photos/planner/biz_class_a380-4.webp",
+"assets/photos/planner/biz_class_a380-5.webp",
+"assets/photos/planner/biz_class_a380-6.webp"
+],
+"p_syd_hacienda": [
+"assets/photos/planner/p_syd_hacienda-1.webp",
+"assets/photos/planner/p_syd_hacienda-2.webp",
+"assets/photos/planner/p_syd_hacienda-3.webp",
+"assets/photos/planner/p_syd_hacienda-4.webp"
+],
+"p_syd_larenaissance": [
+"assets/photos/planner/p_syd_larenaissance-1.webp",
+"assets/photos/planner/p_syd_larenaissance-2.webp",
+"assets/photos/planner/p_syd_larenaissance-3.webp",
+"assets/photos/planner/p_syd_larenaissance-4.webp",
+"assets/photos/planner/p_syd_larenaissance-5.webp"
+],
+"p_syd_mca_cafe": [
+"assets/photos/planner/p_syd_mca_cafe-1.webp",
+"assets/photos/planner/p_syd_mca_cafe-2.webp",
+"assets/photos/planner/p_syd_mca_cafe-3.webp",
+"assets/photos/planner/p_syd_mca_cafe-4.webp"
+],
+"p_syd_teacosy": [
+"assets/photos/planner/p_syd_teacosy-1.webp",
+"assets/photos/planner/p_syd_teacosy-2.webp",
+"assets/photos/planner/p_syd_teacosy-3.webp",
+"assets/photos/planner/p_syd_teacosy-4.webp",
+"assets/photos/planner/p_syd_teacosy-5.webp"
+],
+"p_syd_grounds_city": [
+"assets/photos/planner/p_syd_grounds_city-1.webp",
+"assets/photos/planner/p_syd_grounds_city-2.webp",
+"assets/photos/planner/p_syd_grounds_city-3.webp",
+"assets/photos/planner/p_syd_grounds_city-4.webp",
+"assets/photos/planner/p_syd_grounds_city-5.webp"
+],
+"p_syd_industry_beans": [
+"assets/photos/planner/p_syd_industry_beans-1.webp",
+"assets/photos/planner/p_syd_industry_beans-2.webp",
+"assets/photos/planner/p_syd_industry_beans-3.webp",
+"assets/photos/planner/p_syd_industry_beans-4.webp",
+"assets/photos/planner/p_syd_industry_beans-5.webp"
+],
+"p_syd_henry_deane": [
+"assets/photos/planner/p_syd_henry_deane-1.webp",
+"assets/photos/planner/p_syd_henry_deane-2.webp",
+"assets/photos/planner/p_syd_henry_deane-3.webp",
+"assets/photos/planner/p_syd_henry_deane-4.webp",
+"assets/photos/planner/p_syd_henry_deane-5.webp"
+],
+"p_syd_maybe_sammy": [
+"assets/photos/planner/p_syd_maybe_sammy-1.webp",
+"assets/photos/planner/p_syd_maybe_sammy-2.webp",
+"assets/photos/planner/p_syd_maybe_sammy-3.webp",
+"assets/photos/planner/p_syd_maybe_sammy-4.webp"
+],
+"p_syd_apollonia": [
+"assets/photos/planner/p_syd_apollonia-1.webp",
+"assets/photos/planner/p_syd_apollonia-2.webp",
+"assets/photos/planner/p_syd_apollonia-3.webp",
+"assets/photos/planner/p_syd_apollonia-4.webp",
+"assets/photos/planner/p_syd_apollonia-5.webp"
+],
+"p_syd_bar1880": [
+"assets/photos/planner/p_syd_bar1880-1.webp",
+"assets/photos/planner/p_syd_bar1880-2.webp",
+"assets/photos/planner/p_syd_bar1880-3.webp",
+"assets/photos/planner/p_syd_bar1880-4.webp",
+"assets/photos/planner/p_syd_bar1880-5.webp"
+],
+"p_syd_glenmore": [
+"assets/photos/planner/p_syd_glenmore-1.webp",
+"assets/photos/planner/p_syd_glenmore-2.webp",
+"assets/photos/planner/p_syd_glenmore-3.webp",
+"assets/photos/planner/p_syd_glenmore-4.webp",
+"assets/photos/planner/p_syd_glenmore-5.webp"
+],
+"p_syd_cafe_sydney": [
+"assets/photos/planner/p_syd_cafe_sydney-1.webp",
+"assets/photos/planner/p_syd_cafe_sydney-2.webp",
+"assets/photos/planner/p_syd_cafe_sydney-3.webp",
+"assets/photos/planner/p_syd_cafe_sydney-4.webp",
+"assets/photos/planner/p_syd_cafe_sydney-5.webp"
+],
+"p_syd_the_rocks": [
+"assets/photos/planner/p_syd_the_rocks-1.webp",
+"assets/photos/planner/p_syd_the_rocks-2.webp",
+"assets/photos/planner/p_syd_the_rocks-3.webp",
+"assets/photos/planner/p_syd_the_rocks-4.webp",
+"assets/photos/planner/p_syd_the_rocks-5.webp"
+],
+"p_syd_dawes_point": [
+"assets/photos/planner/p_syd_dawes_point-1.webp",
+"assets/photos/planner/p_syd_dawes_point-2.webp",
+"assets/photos/planner/p_syd_dawes_point-3.webp",
+"assets/photos/planner/p_syd_dawes_point-4.webp"
+],
+"p_syd_observatory_hill": [
+"assets/photos/planner/p_syd_observatory_hill-1.webp",
+"assets/photos/planner/p_syd_observatory_hill-2.webp",
+"assets/photos/planner/p_syd_observatory_hill-3.webp",
+"assets/photos/planner/p_syd_observatory_hill-4.webp",
+"assets/photos/planner/p_syd_observatory_hill-5.webp"
+],
+"p_syd_pylon_lookout": [
+"assets/photos/planner/p_syd_pylon_lookout-1.webp",
+"assets/photos/planner/p_syd_pylon_lookout-2.webp",
+"assets/photos/planner/p_syd_pylon_lookout-3.webp",
+"assets/photos/planner/p_syd_pylon_lookout-4.webp",
+"assets/photos/planner/p_syd_pylon_lookout-5.webp"
+],
+"p_syd_barangaroo": [
+"assets/photos/planner/p_syd_barangaroo-1.webp",
+"assets/photos/planner/p_syd_barangaroo-2.webp",
+"assets/photos/planner/p_syd_barangaroo-3.webp",
+"assets/photos/planner/p_syd_barangaroo-4.webp",
+"assets/photos/planner/p_syd_barangaroo-5.webp"
+],
+"p_syd_luxury_westfield": [
+"assets/photos/planner/p_syd_luxury_westfield-1.webp",
+"assets/photos/planner/p_syd_luxury_westfield-2.webp",
+"assets/photos/planner/p_syd_luxury_westfield-3.webp",
+"assets/photos/planner/p_syd_luxury_westfield-4.webp"
+],
+"p_syd_qvb": [
+"assets/photos/planner/p_syd_qvb-1.webp",
+"assets/photos/planner/p_syd_qvb-2.webp",
+"assets/photos/planner/p_syd_qvb-3.webp",
+"assets/photos/planner/p_syd_qvb-4.webp",
+"assets/photos/planner/p_syd_qvb-5.webp"
+],
+"virgin_business": [
+"assets/photos/planner/virgin_business-1.webp",
+"assets/photos/planner/virgin_business-2.webp",
+"assets/photos/planner/virgin_business-3.webp",
+"assets/photos/planner/virgin_business-4.webp",
+"assets/photos/planner/virgin_business-5.webp",
+"assets/photos/planner/virgin_business-6.webp"
+],
+"hamilton_airport": [
+"assets/photos/planner/hamilton_airport-1.webp",
+"assets/photos/planner/hamilton_airport-2.webp",
+"assets/photos/planner/hamilton_airport-3.webp",
+"assets/photos/planner/hamilton_airport-4.webp",
+"assets/photos/planner/hamilton_airport-5.webp",
+"assets/photos/planner/hamilton_airport-6.webp"
+],
+"reef_view_suite": [
+"assets/photos/planner/reef_view_suite-1.webp",
+"assets/photos/planner/reef_view_suite-2.webp",
+"assets/photos/planner/reef_view_suite-3.webp",
+"assets/photos/planner/reef_view_suite-4.webp",
+"assets/photos/planner/reef_view_suite-5.webp",
+"assets/photos/planner/reef_view_suite-6.webp"
+],
+"pool_terrace": [
+"assets/photos/planner/pool_terrace-1.webp",
+"assets/photos/planner/pool_terrace-2.webp",
+"assets/photos/planner/pool_terrace-3.webp",
+"assets/photos/planner/pool_terrace-4.webp"
+],
+"catseye_beach": [
+"assets/photos/planner/catseye_beach-1.webp",
+"assets/photos/planner/catseye_beach-2.webp",
+"assets/photos/planner/catseye_beach-3.webp",
+"assets/photos/planner/catseye_beach-4.webp",
+"assets/photos/planner/catseye_beach-5.webp",
+"assets/photos/planner/catseye_beach-6.webp"
+],
+"one_tree_hill": [
+"assets/photos/planner/one_tree_hill-1.webp",
+"assets/photos/planner/one_tree_hill-2.webp",
+"assets/photos/planner/one_tree_hill-3.webp",
+"assets/photos/planner/one_tree_hill-4.webp",
+"assets/photos/planner/one_tree_hill-5.webp",
+"assets/photos/planner/one_tree_hill-6.webp"
+],
+"bommie": [
+"assets/photos/planner/bommie-1.webp",
+"assets/photos/planner/bommie-2.webp",
+"assets/photos/planner/bommie-3.webp",
+"assets/photos/planner/bommie-4.webp",
+"assets/photos/planner/bommie-5.webp",
+"assets/photos/planner/bommie-6.webp"
+],
+"hamilton_island_golf": [
+"assets/photos/planner/hamilton_island_golf-1.webp",
+"assets/photos/planner/hamilton_island_golf-2.webp",
+"assets/photos/planner/hamilton_island_golf-3.webp",
+"assets/photos/planner/hamilton_island_golf-4.webp",
+"assets/photos/planner/hamilton_island_golf-5.webp",
+"assets/photos/planner/hamilton_island_golf-6.webp"
+],
+"catseye_pool_club": [
+"assets/photos/planner/catseye_pool_club-1.webp",
+"assets/photos/planner/catseye_pool_club-2.webp",
+"assets/photos/planner/catseye_pool_club-3.webp",
+"assets/photos/planner/catseye_pool_club-4.webp",
+"assets/photos/planner/catseye_pool_club-5.webp",
+"assets/photos/planner/catseye_pool_club-6.webp"
+],
+"sunset_sail": [
+"assets/photos/planner/sunset_sail-1.webp",
+"assets/photos/planner/sunset_sail-2.webp",
+"assets/photos/planner/sunset_sail-3.webp",
+"assets/photos/planner/sunset_sail-4.webp",
+"assets/photos/planner/sunset_sail-5.webp",
+"assets/photos/planner/sunset_sail-6.webp"
+],
+"sails_hi": [
+"assets/photos/planner/sails_hi-1.webp",
+"assets/photos/planner/sails_hi-2.webp",
+"assets/photos/planner/sails_hi-3.webp",
+"assets/photos/planner/sails_hi-4.webp",
+"assets/photos/planner/sails_hi-5.webp",
+"assets/photos/planner/sails_hi-6.webp"
+],
+"resort_centre_hi": [
+"assets/photos/planner/resort_centre_hi-1.webp",
+"assets/photos/planner/resort_centre_hi-2.webp",
+"assets/photos/planner/resort_centre_hi-3.webp",
+"assets/photos/planner/resort_centre_hi-4.webp",
+"assets/photos/planner/resort_centre_hi-5.webp"
+],
+"p_ham_beach_pavilion": [
+"assets/photos/planner/p_ham_beach_pavilion-1.webp",
+"assets/photos/planner/p_ham_beach_pavilion-2.webp",
+"assets/photos/planner/p_ham_beach_pavilion-3.webp",
+"assets/photos/planner/p_ham_beach_pavilion-4.webp"
+],
+"p_ham_marina_cafe": [
+"assets/photos/planner/p_ham_marina_cafe-1.webp",
+"assets/photos/planner/p_ham_marina_cafe-2.webp"
+],
+"p_ham_bobs_bakery": [
+"assets/photos/planner/p_ham_bobs_bakery-1.webp",
+"assets/photos/planner/p_ham_bobs_bakery-2.webp",
+"assets/photos/planner/p_ham_bobs_bakery-3.webp"
+],
+"p_ham_bommie_deck": [
+"assets/photos/planner/p_ham_bommie_deck-1.webp",
+"assets/photos/planner/p_ham_bommie_deck-2.webp",
+"assets/photos/planner/p_ham_bommie_deck-3.webp",
+"assets/photos/planner/p_ham_bommie_deck-4.webp",
+"assets/photos/planner/p_ham_bommie_deck-5.webp"
+],
+"p_ham_sails_sunbed": [
+"assets/photos/planner/p_ham_sails_sunbed-1.webp",
+"assets/photos/planner/p_ham_sails_sunbed-2.webp",
+"assets/photos/planner/p_ham_sails_sunbed-3.webp"
+],
+"p_ham_island_bar": [
+"assets/photos/planner/p_ham_island_bar-1.webp",
+"assets/photos/planner/p_ham_island_bar-2.webp",
+"assets/photos/planner/p_ham_island_bar-3.webp"
+],
+"p_ham_romanos": [
+"assets/photos/planner/p_ham_romanos-1.webp",
+"assets/photos/planner/p_ham_romanos-2.webp",
+"assets/photos/planner/p_ham_romanos-3.webp"
+],
+"p_ham_coca_chu": [
+"assets/photos/planner/p_ham_coca_chu-1.webp",
+"assets/photos/planner/p_ham_coca_chu-2.webp",
+"assets/photos/planner/p_ham_coca_chu-3.webp",
+"assets/photos/planner/p_ham_coca_chu-4.webp",
+"assets/photos/planner/p_ham_coca_chu-5.webp"
+],
+"p_ham_manta_ray": [
+"assets/photos/planner/p_ham_manta_ray-1.webp",
+"assets/photos/planner/p_ham_manta_ray-2.webp",
+"assets/photos/planner/p_ham_manta_ray-3.webp",
+"assets/photos/planner/p_ham_manta_ray-4.webp"
+],
+"p_ham_flat_top_hill": [
+"assets/photos/planner/p_ham_flat_top_hill-1.webp",
+"assets/photos/planner/p_ham_flat_top_hill-2.webp"
+],
+"p_ham_hesperus": [
+"assets/photos/planner/p_ham_hesperus-1.webp",
+"assets/photos/planner/p_ham_hesperus-2.webp",
+"assets/photos/planner/p_ham_hesperus-3.webp",
+"assets/photos/planner/p_ham_hesperus-4.webp"
+],
+"p_ham_escape_beach": [
+"assets/photos/planner/p_ham_escape_beach-1.webp",
+"assets/photos/planner/p_ham_escape_beach-2.webp",
+"assets/photos/planner/p_ham_escape_beach-3.webp",
+"assets/photos/planner/p_ham_escape_beach-4.webp"
+],
+"p_ham_coral_cove": [
+"assets/photos/planner/p_ham_coral_cove-1.webp",
+"assets/photos/planner/p_ham_coral_cove-2.webp",
+"assets/photos/planner/p_ham_coral_cove-3.webp"
+],
+"p_ham_passage_peak": [
+"assets/photos/planner/p_ham_passage_peak-1.webp",
+"assets/photos/planner/p_ham_passage_peak-2.webp",
+"assets/photos/planner/p_ham_passage_peak-3.webp",
+"assets/photos/planner/p_ham_passage_peak-4.webp",
+"assets/photos/planner/p_ham_passage_peak-5.webp"
+],
+"star_grand_brisbane": [
+"assets/photos/planner/star_grand_brisbane-1.webp",
+"assets/photos/planner/star_grand_brisbane-2.webp",
+"assets/photos/planner/star_grand_brisbane-3.webp",
+"assets/photos/planner/star_grand_brisbane-4.webp",
+"assets/photos/planner/star_grand_brisbane-5.webp",
+"assets/photos/planner/star_grand_brisbane-6.webp"
+],
+"bne_airport": [
+"assets/photos/planner/bne_airport-1.webp",
+"assets/photos/planner/bne_airport-2.webp",
+"assets/photos/planner/bne_airport-3.webp",
+"assets/photos/planner/bne_airport-4.webp",
+"assets/photos/planner/bne_airport-5.webp",
+"assets/photos/planner/bne_airport-6.webp"
+],
+"exhibition_restaurant": [
+"assets/photos/planner/exhibition_restaurant-1.webp",
+"assets/photos/planner/exhibition_restaurant-2.webp",
+"assets/photos/planner/exhibition_restaurant-3.webp",
+"assets/photos/planner/exhibition_restaurant-4.webp",
+"assets/photos/planner/exhibition_restaurant-5.webp",
+"assets/photos/planner/exhibition_restaurant-6.webp"
+],
+"howard_smith_wharves": [
+"assets/photos/planner/howard_smith_wharves-1.webp",
+"assets/photos/planner/howard_smith_wharves-2.webp",
+"assets/photos/planner/howard_smith_wharves-3.webp",
+"assets/photos/planner/howard_smith_wharves-4.webp",
+"assets/photos/planner/howard_smith_wharves-5.webp",
+"assets/photos/planner/howard_smith_wharves-6.webp"
+],
+"new_farm_market": [
+"assets/photos/planner/new_farm_market-1.webp",
+"assets/photos/planner/new_farm_market-2.webp",
+"assets/photos/planner/new_farm_market-3.webp",
+"assets/photos/planner/new_farm_market-4.webp",
+"assets/photos/planner/new_farm_market-5.webp",
+"assets/photos/planner/new_farm_market-6.webp"
+],
+"mary_maes": [
+"assets/photos/planner/mary_maes-1.webp",
+"assets/photos/planner/mary_maes-2.webp",
+"assets/photos/planner/mary_maes-3.webp",
+"assets/photos/planner/mary_maes-4.webp",
+"assets/photos/planner/mary_maes-5.webp",
+"assets/photos/planner/mary_maes-6.webp"
+],
+"new_farm_riverwalk": [
+"assets/photos/planner/new_farm_riverwalk-1.webp",
+"assets/photos/planner/new_farm_riverwalk-2.webp",
+"assets/photos/planner/new_farm_riverwalk-3.webp",
+"assets/photos/planner/new_farm_riverwalk-4.webp"
+],
+"hsw_stanley_greca": [
+"assets/photos/planner/hsw_stanley_greca-1.webp",
+"assets/photos/planner/hsw_stanley_greca-2.webp",
+"assets/photos/planner/hsw_stanley_greca-3.webp",
+"assets/photos/planner/hsw_stanley_greca-4.webp",
+"assets/photos/planner/hsw_stanley_greca-5.webp",
+"assets/photos/planner/hsw_stanley_greca-6.webp"
+],
+"suum": [
+"assets/photos/planner/suum-1.webp",
+"assets/photos/planner/suum-2.webp",
+"assets/photos/planner/suum-3.webp",
+"assets/photos/planner/suum-4.webp",
+"assets/photos/planner/suum-5.webp",
+"assets/photos/planner/suum-6.webp"
+],
+"sky_deck_brisbane": [
+"assets/photos/planner/sky_deck_brisbane-1.webp",
+"assets/photos/planner/sky_deck_brisbane-2.webp",
+"assets/photos/planner/sky_deck_brisbane-3.webp",
+"assets/photos/planner/sky_deck_brisbane-4.webp",
+"assets/photos/planner/sky_deck_brisbane-5.webp",
+"assets/photos/planner/sky_deck_brisbane-6.webp"
+],
+"star_casino_bne": [
+"assets/photos/planner/star_casino_bne-1.webp",
+"assets/photos/planner/star_casino_bne-2.webp"
+],
+"biz_class_787": [
+"assets/photos/planner/biz_class_787-1.webp",
+"assets/photos/planner/biz_class_787-2.webp",
+"assets/photos/planner/biz_class_787-3.webp",
+"assets/photos/planner/biz_class_787-4.webp"
+],
+"p_bne_belle_epoque": [
+"assets/photos/planner/p_bne_belle_epoque-1.webp",
+"assets/photos/planner/p_bne_belle_epoque-2.webp",
+"assets/photos/planner/p_bne_belle_epoque-3.webp",
+"assets/photos/planner/p_bne_belle_epoque-4.webp",
+"assets/photos/planner/p_bne_belle_epoque-5.webp"
+],
+"p_bne_french_exit": [
+"assets/photos/planner/p_bne_french_exit-1.webp",
+"assets/photos/planner/p_bne_french_exit-2.webp",
+"assets/photos/planner/p_bne_french_exit-3.webp",
+"assets/photos/planner/p_bne_french_exit-4.webp",
+"assets/photos/planner/p_bne_french_exit-5.webp",
+"assets/photos/planner/p_bne_french_exit-6.webp"
+],
+"p_bne_le_royale": [
+"assets/photos/planner/p_bne_le_royale-1.webp",
+"assets/photos/planner/p_bne_le_royale-2.webp",
+"assets/photos/planner/p_bne_le_royale-3.webp",
+"assets/photos/planner/p_bne_le_royale-4.webp",
+"assets/photos/planner/p_bne_le_royale-5.webp"
+],
+"p_bne_goma_bistro": [
+"assets/photos/planner/p_bne_goma_bistro-1.webp",
+"assets/photos/planner/p_bne_goma_bistro-2.webp",
+"assets/photos/planner/p_bne_goma_bistro-3.webp",
+"assets/photos/planner/p_bne_goma_bistro-4.webp"
+],
+"p_bne_lisboa": [
+"assets/photos/planner/p_bne_lisboa-1.webp",
+"assets/photos/planner/p_bne_lisboa-2.webp",
+"assets/photos/planner/p_bne_lisboa-3.webp",
+"assets/photos/planner/p_bne_lisboa-4.webp",
+"assets/photos/planner/p_bne_lisboa-5.webp"
+],
+"p_bne_denim_co": [
+"assets/photos/planner/p_bne_denim_co-1.webp",
+"assets/photos/planner/p_bne_denim_co-2.webp",
+"assets/photos/planner/p_bne_denim_co-3.webp",
+"assets/photos/planner/p_bne_denim_co-4.webp",
+"assets/photos/planner/p_bne_denim_co-5.webp"
+],
+"p_bne_hsw_bars": [
+"assets/photos/planner/p_bne_hsw_bars-1.webp",
+"assets/photos/planner/p_bne_hsw_bars-2.webp",
+"assets/photos/planner/p_bne_hsw_bars-3.webp",
+"assets/photos/planner/p_bne_hsw_bars-4.webp",
+"assets/photos/planner/p_bne_hsw_bars-5.webp"
+],
+"p_bne_fish_lane": [
+"assets/photos/planner/p_bne_fish_lane-1.webp",
+"assets/photos/planner/p_bne_fish_lane-2.webp",
+"assets/photos/planner/p_bne_fish_lane-3.webp",
+"assets/photos/planner/p_bne_fish_lane-4.webp",
+"assets/photos/planner/p_bne_fish_lane-5.webp"
+],
+"p_bne_arbour": [
+"assets/photos/planner/p_bne_arbour-1.webp",
+"assets/photos/planner/p_bne_arbour-2.webp",
+"assets/photos/planner/p_bne_arbour-3.webp",
+"assets/photos/planner/p_bne_arbour-4.webp"
+],
+"p_bne_streets_beach": [
+"assets/photos/planner/p_bne_streets_beach-1.webp",
+"assets/photos/planner/p_bne_streets_beach-2.webp",
+"assets/photos/planner/p_bne_streets_beach-3.webp",
+"assets/photos/planner/p_bne_streets_beach-4.webp",
+"assets/photos/planner/p_bne_streets_beach-5.webp"
+],
+"p_bne_goma": [
+"assets/photos/planner/p_bne_goma-1.webp",
+"assets/photos/planner/p_bne_goma-2.webp",
+"assets/photos/planner/p_bne_goma-3.webp",
+"assets/photos/planner/p_bne_goma-4.webp",
+"assets/photos/planner/p_bne_goma-5.webp"
+],
+"p_bne_kurilpa": [
+"assets/photos/planner/p_bne_kurilpa-1.webp",
+"assets/photos/planner/p_bne_kurilpa-2.webp",
+"assets/photos/planner/p_bne_kurilpa-3.webp",
+"assets/photos/planner/p_bne_kurilpa-4.webp",
+"assets/photos/planner/p_bne_kurilpa-5.webp"
+],
+"p_bne_queens_gardens": [
+"assets/photos/planner/p_bne_queens_gardens-1.webp",
+"assets/photos/planner/p_bne_queens_gardens-2.webp",
+"assets/photos/planner/p_bne_queens_gardens-3.webp",
+"assets/photos/planner/p_bne_queens_gardens-4.webp",
+"assets/photos/planner/p_bne_queens_gardens-5.webp"
+],
+"p_bne_botanic": [
+"assets/photos/planner/p_bne_botanic-1.webp",
+"assets/photos/planner/p_bne_botanic-2.webp",
+"assets/photos/planner/p_bne_botanic-3.webp",
+"assets/photos/planner/p_bne_botanic-4.webp",
+"assets/photos/planner/p_bne_botanic-5.webp"
+],
+"p_bne_wilson_outlook": [
+"assets/photos/planner/p_bne_wilson_outlook-1.webp",
+"assets/photos/planner/p_bne_wilson_outlook-2.webp",
+"assets/photos/planner/p_bne_wilson_outlook-3.webp",
+"assets/photos/planner/p_bne_wilson_outlook-4.webp",
+"assets/photos/planner/p_bne_wilson_outlook-5.webp"
+],
+"p_bne_city_hall": [
+"assets/photos/planner/p_bne_city_hall-1.webp",
+"assets/photos/planner/p_bne_city_hall-2.webp",
+"assets/photos/planner/p_bne_city_hall-3.webp",
+"assets/photos/planner/p_bne_city_hall-4.webp",
+"assets/photos/planner/p_bne_city_hall-5.webp"
+],
+"p_bne_luxury": [
+"assets/photos/planner/p_bne_luxury-1.webp",
+"assets/photos/planner/p_bne_luxury-2.webp",
+"assets/photos/planner/p_bne_luxury-3.webp",
+"assets/photos/planner/p_bne_luxury-4.webp",
+"assets/photos/planner/p_bne_luxury-5.webp"
+],
+"empress": [
+"assets/yacht/empress-01.webp",
+"assets/yacht/empress-02.webp",
+"assets/yacht/empress-03.webp",
+"assets/yacht/empress-04.webp",
+"assets/yacht/empress-05.webp",
+"assets/yacht/empress-06.webp",
+"assets/yacht/empress-07.webp",
+"assets/yacht/empress-08.webp",
+"assets/yacht/empress-09.webp",
+"assets/yacht/empress-10.webp",
+"assets/yacht/empress-11.webp",
+"assets/yacht/empress-12.webp"
+]
+});
+window.PHOTO_SOURCES = Object.assign(window.PHOTO_SOURCES || {}, {
+"assets/photos/planner/icn_t2-1.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/%EC%95%84%EC%8B%9C%EC%95%84%EB%82%98%ED%95%AD%EA%B3%B5_%EC%B9%B4%EC%9A%B4%ED%84%B0_20260910.jpg/1280px-%EC%95%84%EC%8B%9C%EC%95%84%EB%82%98%ED%95%AD%EA%B3%B5_%EC%B9%B4%EC%9A%B4%ED%84%B0_20260910.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:%EC%95%84%EC%8B%9C%EC%95%84%EB%82%98%ED%95%AD%EA%B3%B5_%EC%B9%B4%EC%9A%B4%ED%84%B0_20260910.jpg",
+"alt_ko": "인천공항 T2 아시아나항공 자동 수속(셀프 체크인) 카운터 줄",
+"credit": "Twotwo2019 / Wikimedia Commons (CC BY 4.0)",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/icn_t2-2.webp": {
+"image_url": "https://image.newdaily.co.kr/site/data/img/2026/01/14/2026011400175_3.jpg?u=20260114144502",
+"source_page": "https://biz.newdaily.co.kr/site/data/html/2026/01/14/2026011400175.html",
+"alt_ko": "T2 이전 첫날 아시아나항공 안내판과 J·H 카운터 방향 출국장",
+"credit": "뉴데일리",
+"width": 800,
+"height": 534,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/icn_t2-3.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/%EC%9D%B8%EC%B2%9C%EA%B3%B5%ED%95%ADT2_%EC%B2%B4%ED%81%AC%EC%9D%B8E_2024_01.jpg/1280px-%EC%9D%B8%EC%B2%9C%EA%B3%B5%ED%95%ADT2_%EC%B2%B4%ED%81%AC%EC%9D%B8E_2024_01.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:%EC%9D%B8%EC%B2%9C%EA%B3%B5%ED%95%ADT2_%EC%B2%B4%ED%81%AC%EC%9D%B8E_2024_01.jpg",
+"alt_ko": "인천공항 T2 3층 출국장 E 체크인 카운터와 곡선 천장",
+"credit": "Narubaru7 / Wikimedia Commons (CC BY 4.0)",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/icn_t2-4.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/%EC%9D%B8%EC%B2%9C%EA%B3%B5%ED%95%ADT2_%EC%B2%B4%ED%81%AC%EC%9D%B8F_2024.jpg/1280px-%EC%9D%B8%EC%B2%9C%EA%B3%B5%ED%95%ADT2_%EC%B2%B4%ED%81%AC%EC%9D%B8F_2024.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:%EC%9D%B8%EC%B2%9C%EA%B3%B5%ED%95%ADT2_%EC%B2%B4%ED%81%AC%EC%9D%B8F_2024.jpg",
+"alt_ko": "인천공항 T2 F·E 카운터 구역과 대형 출발 안내 전광판",
+"credit": "Narubaru7 / Wikimedia Commons (CC BY 4.0)",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/icn_t2-5.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/%EC%9D%B8%EC%B2%9C%EA%B3%B5%ED%95%ADT2_%EC%B6%9C%EA%B5%AD%EC%9E%A5_2024.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:%EC%9D%B8%EC%B2%9C%EA%B3%B5%ED%95%ADT2_%EC%B6%9C%EA%B5%AD%EC%9E%A5_2024.jpg",
+"alt_ko": "인천공항 T2 출국장 내부, H 카운터와 출국장 입구 디스플레이",
+"credit": "Narubaru7 / Wikimedia Commons (CC BY 4.0)",
+"width": 1004,
+"height": 1338,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/icn_t2-6.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Incheon_International_Airport_Air_Traffic_Control_tower_and_terminal_2.jpg/1280px-Incheon_International_Airport_Air_Traffic_Control_tower_and_terminal_2.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Incheon_International_Airport_Air_Traffic_Control_tower_and_terminal_2.jpg",
+"alt_ko": "인천공항 T2 탑승교와 관제탑이 보이는 계류장 전경",
+"credit": "Christophe95 / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 922,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/syd_airport_t1-1.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/2012-12-12_Sydney_Kingsford_Smith_airport._International_arrivals_01.jpg/1280px-2012-12-12_Sydney_Kingsford_Smith_airport._International_arrivals_01.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:2012-12-12_Sydney_Kingsford_Smith_airport._International_arrivals_01.jpg",
+"alt_ko": "시드니공항 T1 국제선 입국장(도착 홀) 출구와 마중 구역",
+"credit": "Maksym Kozlenko / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/syd_airport_t1-2.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/2012-12-12_Sydney_Kingsford_Smith_airport._International_arrivals_04.jpg/1280px-2012-12-12_Sydney_Kingsford_Smith_airport._International_arrivals_04.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:2012-12-12_Sydney_Kingsford_Smith_airport._International_arrivals_04.jpg",
+"alt_ko": "시드니공항 T1 국제선 도착 홀, 카페 좌석과 넓은 대합실",
+"credit": "Maksym Kozlenko / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/syd_airport_t1-3.webp": {
+"image_url": "https://images.ctfassets.net/v228i5y5k0x4/6LbuTLWVVBhlTButXsf65t/48029fca8b3cbffa3bea927de04d2dd1/SYD_AIRPORT_AMBASSADORS_-05254.jpg?w=1600",
+"source_page": "https://www.sydneyairport.com.au/",
+"alt_ko": "시드니공항 T1 안내 데스크와 출발 안내판",
+"credit": "Sydney Airport",
+"width": 1065,
+"height": 989,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/syd_airport_t1-4.webp": {
+"image_url": "https://images.ctfassets.net/v228i5y5k0x4/4cDg5d3zkAq2IBuYURL5iE/3c81249312eb8047c8c40a4136c47661/Inside_terminal.jpg?w=1600",
+"source_page": "https://www.sydneyairport.com.au/",
+"alt_ko": "시드니공항 T1 국제선 터미널 내부, 24–37번 게이트 안내판과 여행객",
+"credit": "Sydney Airport",
+"width": 1100,
+"height": 733,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/syd_airport_t1-5.webp": {
+"image_url": "https://images.ctfassets.net/v228i5y5k0x4/3YUBuPItkG4jHLGZSIhvGt/a789a73a6451cd36bfb9a25ea2ebb8f3/Sydney_Airport_Luxury_Precinct_1.jpg?w=1600",
+"source_page": "https://www.sydneyairport.com.au/",
+"alt_ko": "시드니공항 T1 면세 명품 구역(프라다·보테가 베네타·발렌시아가)",
+"credit": "Sydney Airport",
+"width": 1200,
+"height": 800,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/capella_sydney-1.webp": {
+"image_url": "https://capellahotels.com/assets/img/site_images/sydney/Capella-Sydney.jpg",
+"source_page": "https://capellahotels.com/en/capella-sydney",
+"alt_ko": "Capella Sydney 외관, 사암으로 지은 옛 교육부 헤리티지 건물",
+"credit": "Capella Hotels",
+"width": 763,
+"height": 480,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/capella_sydney-2.webp": {
+"image_url": "https://capellahotels.com/assets/img/site_images/sydney/Capella-Sydney-Heritage-Stair.jpg",
+"source_page": "https://capellahotels.com/en/capella-sydney/culture",
+"alt_ko": "대리석 기둥과 곡선 계단이 있는 헤리티지 로비 홀",
+"credit": "Capella Hotels",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/capella_sydney-3.webp": {
+"image_url": "https://capellahotels.com/assets/img/site_images/sydney/CPSYD_Culturist_1.jpg",
+"source_page": "https://capellahotels.com/en/capella-sydney/culture",
+"alt_ko": "로비 리셉션(컬처리스트 데스크)과 대형 미술작품",
+"credit": "Capella Hotels",
+"width": 1280,
+"height": 713,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/capella_sydney-4.webp": {
+"image_url": "https://capellahotels.com/assets/img/site_images/sydney/Capella-Sydney-Accommodation-Premier-Room-01.jpg",
+"source_page": "https://capellahotels.com/en/capella-sydney/accommodation/premier-room",
+"alt_ko": "프리미어 룸, 킹 베드와 큰 창, 데스크와 라운지 체어",
+"credit": "Capella Hotels",
+"width": 1280,
+"height": 715,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/capella_sydney-5.webp": {
+"image_url": "https://capellahotels.com/assets/img/site_images/sydney/Capella-Sydney-Accommodation-Premier-Room-04.jpg",
+"source_page": "https://capellahotels.com/en/capella-sydney/accommodation/premier-room",
+"alt_ko": "프리미어 룸 내부, 침대와 창가 소파, 욕실로 이어지는 공간",
+"credit": "Capella Hotels",
+"width": 1280,
+"height": 715,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/capella_sydney-6.webp": {
+"image_url": "https://capellahotels.com/assets/img/site_images/sydney/Capella-Sydney-Gallery-01a.jpg_.jpg",
+"source_page": "https://capellahotels.com/en/capella-sydney",
+"alt_ko": "천창 아래 실내 수영장(오리가 스파), 기둥이 늘어선 헤리티지 공간",
+"credit": "Capella Hotels",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/brasserie_1930-1.webp": {
+"image_url": "https://capellahotels.com/assets/img/site_images/sydney/Capella-Sydney-Brasserie-1930-Gallery-mh03.jpg",
+"source_page": "https://capellahotels.com/en/capella-sydney/dining/brasserie-1930",
+"alt_ko": "Brasserie 1930 다이닝룸, 체크무늬 바닥과 아치형 창",
+"credit": "Capella Hotels",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/brasserie_1930-2.webp": {
+"image_url": "https://capellahotels.com/assets/img/site_images/sydney/Capella-Sydney-Dining-Brasserie-1930-01a.jpg",
+"source_page": "https://capellahotels.com/en/capella-sydney/dining",
+"alt_ko": "Brasserie 1930 메인 홀, 아치형 바와 테이블 배치",
+"credit": "Capella Hotels",
+"width": 1280,
+"height": 715,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/brasserie_1930-3.webp": {
+"image_url": "https://capellahotels.com/assets/img/site_images/sydney/Best_Available_Rate_with_Breakfast-03.jpg",
+"source_page": "https://capellahotels.com/en/capella-sydney/offers/best-flexible-rate-with-breakfast",
+"alt_ko": "조식 메뉴: 스크램블 에그와 훈제연어, 연어알을 올린 브리오슈",
+"credit": "Capella Hotels",
+"width": 1280,
+"height": 852,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/brasserie_1930-4.webp": {
+"image_url": "https://capellahotels.com/assets/img/site_images/sydney/Best_Flexible_Rate_with_Breakfast-01.jpg",
+"source_page": "https://capellahotels.com/en/capella-sydney/offers/best-flexible-rate-with-breakfast",
+"alt_ko": "조식 메뉴: 아보카도 토스트에 수란과 방울토마토",
+"credit": "Capella Hotels",
+"width": 1280,
+"height": 852,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/brasserie_1930-5.webp": {
+"image_url": "https://capellahotels.com/assets/img/site_images/sydney/Brasserie-1930-Alla_Chitarra.jpg",
+"source_page": "https://capellahotels.com/en/capella-sydney/dining/brasserie-1930",
+"alt_ko": "Brasserie 1930 알라 키타라 해산물 파스타",
+"credit": "Capella Hotels",
+"width": 1280,
+"height": 855,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/brasserie_1930-6.webp": {
+"image_url": "https://capellahotels.com/assets/img/site_images/sydney/Brasserie_8012026_2.jpg",
+"source_page": "https://capellahotels.com/en/capella-sydney/dining/brasserie-1930",
+"alt_ko": "검은 대리석 테이블 위 Brasserie 1930 요리와 포카치아, 와인",
+"credit": "Capella Hotels",
+"width": 1280,
+"height": 855,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/auriga_spa-1.webp": {
+"image_url": "https://capellahotels.com/assets/img/site_images/sydney/Auriga_7412_LR.jpg",
+"source_page": "https://capellahotels.com/en/capella-sydney/wellness",
+"alt_ko": "오리가 스파 커플 트리트먼트 룸, 나란히 놓인 마사지 베드와 그린 월",
+"credit": "Capella Hotels",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/auriga_spa-2.webp": {
+"image_url": "https://capellahotels.com/assets/img/site_images/sydney/Capella-Sydney-Wellness-B-04.jpg",
+"source_page": "https://capellahotels.com/en/capella-sydney/wellness",
+"alt_ko": "천창 빛이 드는 1인 트리트먼트 룸",
+"credit": "Capella Hotels",
+"width": 800,
+"height": 1199,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/auriga_spa-3.webp": {
+"image_url": "https://capellahotels.com/assets/img/site_images/sydney/Stay_a_little_longer_1366x911px.jpg",
+"source_page": "https://capellahotels.com/en/capella-sydney",
+"alt_ko": "오리가 스파 실내 수영장, 천창과 선베드",
+"credit": "Capella Hotels",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/auriga_spa-4.webp": {
+"image_url": "https://www.hotelmanagement.com.au/wp-content/uploads/2023/06/Auriga_7214_HR.jpg?w=1600",
+"source_page": "https://www.hotelmanagement.com.au/?p=51930",
+"alt_ko": "원목으로 마감된 스파 복도와 휴식 라운지 의자",
+"credit": "Hotel Management (Capella Sydney 제공)",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/auriga_spa-5.webp": {
+"image_url": "https://www.hotelmanagement.com.au/wp-content/uploads/2023/06/Auriga_6797_HR.jpg?w=1000",
+"source_page": "https://www.hotelmanagement.com.au/?p=51930",
+"alt_ko": "식물 벽으로 꾸민 익스피리언셜 샤워 공간",
+"credit": "Hotel Management (Capella Sydney 제공)",
+"width": 999,
+"height": 1499,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/auriga_spa-6.webp": {
+"image_url": "https://www.hotelmanagement.com.au/wp-content/uploads/2023/06/Auriga_7248_HR.jpg?w=1600",
+"source_page": "https://www.hotelmanagement.com.au/?p=51930",
+"alt_ko": "오리가 스파 리셉션 데스크와 대기 공간",
+"credit": "Hotel Management (Capella Sydney 제공)",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/aperture_capella-1.webp": {
+"image_url": "https://capellahotels.com/assets/img/site_images/sydney/Aperture_mh.jpg",
+"source_page": "https://capellahotels.com/en/capella-sydney/dining/aperture",
+"alt_ko": "Aperture 라운지, 유리 지붕 아트리움과 꽃 모양 조명, 식물 벽",
+"credit": "Capella Hotels",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/aperture_capella-2.webp": {
+"image_url": "https://capellahotels.com/assets/img/site_images/sydney/Timothy_Kaye_Aperture_4.jpg",
+"source_page": "https://capellahotels.com/en/capella-sydney/dining/aperture",
+"alt_ko": "Aperture 좌석 구역과 바, 나무와 식물로 꾸민 아트리움",
+"credit": "Timothy Kaye / Capella Hotels",
+"width": 1280,
+"height": 713,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/aperture_capella-3.webp": {
+"image_url": "https://capellahotels.com/assets/img/site_images/sydney/AFT-2026.jpg",
+"source_page": "https://capellahotels.com/en/capella-sydney/dining/aperture",
+"alt_ko": "애프터눈 티 3단 스탠드와 찻주전자",
+"credit": "Capella Hotels",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/aperture_capella-4.webp": {
+"image_url": "https://capellahotels.com/assets/img/site_images/sydney/Alicia_Taylor_Aperture_tea.jpg",
+"source_page": "https://capellahotels.com/en/capella-sydney/dining/aperture",
+"alt_ko": "꽃무늬 찻주전자와 찻잔, 디저트가 놓인 테이블",
+"credit": "Alicia Taylor / Capella Hotels",
+"width": 1280,
+"height": 713,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/aperture_capella-5.webp": {
+"image_url": "https://capellahotels.com/assets/img/site_images/sydney/Alicia_Taylor_Aperture_Tea_10.jpg",
+"source_page": "https://capellahotels.com/en/capella-sydney/dining/aperture",
+"alt_ko": "애프터눈 티 세이버리: 해산물 카나페와 연어알",
+"credit": "Alicia Taylor / Capella Hotels",
+"width": 1280,
+"height": 713,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/aperture_capella-6.webp": {
+"image_url": "https://capellahotels.com/assets/img/site_images/sydney/Alicia_Taylor_Aperture_Daisy_Tart.jpg",
+"source_page": "https://capellahotels.com/en/capella-sydney/dining/aperture",
+"alt_ko": "머랭을 올린 데이지 타르트 디저트",
+"credit": "Alicia Taylor / Capella Hotels",
+"width": 1280,
+"height": 713,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/im_lingerie-1.webp": {
+"image_url": "https://imlingerie.com.au/cdn/shop/files/1_bottom_pg_hero_4096_2731px_1512x.jpg?v=1614315399",
+"source_page": "https://imlingerie.com.au/",
+"alt_ko": "IM Lingerie 브랜드 이미지: 에펠탑 앞 레이스 드레스 차림의 커플(흑백)",
+"credit": "IM Lingerie",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/im_lingerie-2.webp": {
+"image_url": "https://cdn.shopify.com/s/files/1/0246/2901/8687/files/Classic_Robe_Ivory_main.jpg?v=1772662132",
+"source_page": "https://imlingerie.com.au/products/classic-by-im-lingerie-ivory-long-robe",
+"alt_ko": "IM Lingerie 자체 브랜드 아이보리 실크 롱 로브",
+"credit": "IM Lingerie",
+"width": 746,
+"height": 1200,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/im_lingerie-3.webp": {
+"image_url": "https://cdn.shopify.com/s/files/1/0246/2901/8687/files/Long_Robe_Coral_frontmain.jpg?v=1773367143",
+"source_page": "https://imlingerie.com.au/products/s3-by-joelle-by-la-perla-coral-long-robe",
+"alt_ko": "La Perla Joelle 코럴 롱 로브 (IM Lingerie 판매 제품)",
+"credit": "IM Lingerie",
+"width": 746,
+"height": 1200,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bills_bondi-1.webp": {
+"image_url": "https://cdn.sanity.io/images/ras6zn60/production/5b76a730450150366d1ba4332bbe0380dc7ef6a8-3543x2655.jpg?w=1600",
+"source_page": "https://www.bills.com.au/bondi-beach",
+"alt_ko": "bills 본다이 다이닝룸, 벚꽃 가지 장식과 핑크 바",
+"credit": "bills",
+"width": 1280,
+"height": 959,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bills_bondi-2.webp": {
+"image_url": "https://cdn.sanity.io/images/ras6zn60/production/5e0d8c8b02bcc24f299c50eeca7bd7a50bd42748-3543x2591.jpg?w=1600",
+"source_page": "https://www.bills.com.au/bondi-beach",
+"alt_ko": "bills 본다이 실내, 그림 액자 벽과 라탄 의자, 대리석 테이블",
+"credit": "bills",
+"width": 1280,
+"height": 936,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bills_bondi-3.webp": {
+"image_url": "https://media.timeout.com/images/103803770/1372/772/image.jpg",
+"source_page": "https://www.timeout.com/sydney/restaurants/bills-bondi",
+"alt_ko": "bills 대표 메뉴 리코타 핫케이크, 바나나와 허니콤 버터",
+"credit": "Anna Kucera / Time Out",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bills_bondi-4.webp": {
+"image_url": "https://media.timeout.com/images/103803767/1372/772/image.jpg",
+"source_page": "https://www.timeout.com/sydney/restaurants/bills-bondi",
+"alt_ko": "작은 무쇠 팬에 담긴 에그 브런치와 토스트",
+"credit": "Anna Kucera / Time Out",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bills_bondi-5.webp": {
+"image_url": "https://media.timeout.com/images/103803772/1372/772/image.jpg",
+"source_page": "https://www.timeout.com/sydney/restaurants/bills-bondi",
+"alt_ko": "브런치 손님으로 붐비는 bills 본다이 실내",
+"credit": "Anna Kucera / Time Out",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bills_bondi-6.webp": {
+"image_url": "https://media.timeout.com/images/103803773/1372/772/image.jpg",
+"source_page": "https://www.timeout.com/sydney/restaurants/bills-bondi",
+"alt_ko": "Hall St에 면한 bills 본다이 외관과 야외 테라스 좌석",
+"credit": "Anna Kucera / Time Out",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bondi_bronte-1.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Bondi_Icebergs_%285848281116%29.jpg/1280px-Bondi_Icebergs_%285848281116%29.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Bondi_Icebergs_%285848281116%29.jpg",
+"alt_ko": "본다이 아이스버그 바다 수영장, 파도가 치는 오션 풀",
+"credit": "Alex Proimos / Wikimedia Commons (CC BY 2.0)",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bondi_bronte-2.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mackenzies_Bay_Tamarama-5.jpg/1280px-Mackenzies_Bay_Tamarama-5.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Mackenzies_Bay_Tamarama-5.jpg",
+"alt_ko": "매켄지스 포인트 부근 해안 절벽길을 걷는 사람들, 멀리 타마라마",
+"credit": "Sardaka / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bondi_bronte-3.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Tamarama_Beach_Sydney_2019_03.jpg/1280px-Tamarama_Beach_Sydney_2019_03.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Tamarama_Beach_Sydney_2019_03.jpg",
+"alt_ko": "타마라마 비치, 작은 만과 모래사장",
+"credit": "MDRX / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 851,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bondi_bronte-4.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Bronte_Beach%2C_north_view_20230224_2.jpg/1280px-Bronte_Beach%2C_north_view_20230224_2.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Bronte_Beach%2C_north_view_20230224_2.jpg",
+"alt_ko": "브론테 비치 북쪽 전경, 모래사장과 공원 언덕",
+"credit": "DXR / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 814,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bondi_bronte-5.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Sydney_%28AU%29%2C_Bondi_To_Bronte_Coastal_Walk_--_2019_--_2358.jpg/1280px-Sydney_%28AU%29%2C_Bondi_To_Bronte_Coastal_Walk_--_2019_--_2358.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Sydney_%28AU%29%2C_Bondi_To_Bronte_Coastal_Walk_--_2019_--_2358.jpg",
+"alt_ko": "본다이–브론테 해안길에서 본 사암 곶과 바다",
+"credit": "Dietmar Rabich / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bogey_hole_cafe-1.webp": {
+"image_url": "https://cdn.broadsheet.com.au/cache/2f/b5/2fb56fbafcc6fcdbcc75dc38a561a615.jpg",
+"source_page": "https://broadsheet.com.au/sydney/bronte/cafes/bogey-hole-cafe",
+"alt_ko": "Bogey Hole Cafe 외관과 보도 위 야외 테이블",
+"credit": "Broadsheet",
+"width": 860,
+"height": 600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bogey_hole_cafe-2.webp": {
+"image_url": "https://cdn.broadsheet.com.au/cache/5d/0b/5d0b21eaf6a5b33301254e22feb2a559.jpg",
+"source_page": "https://broadsheet.com.au/sydney/bronte/cafes/bogey-hole-cafe",
+"alt_ko": "카페 안에서 본 출입문과 바깥 테라스, 브론테 공원 쪽 풍경",
+"credit": "Broadsheet",
+"width": 860,
+"height": 600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bogey_hole_cafe-3.webp": {
+"image_url": "https://cdn.broadsheet.com.au/cache/6b/89/6b89667c6e8cdf67edef8647ae3d2e2e.jpg",
+"source_page": "https://broadsheet.com.au/sydney/bronte/cafes/bogey-hole-cafe",
+"alt_ko": "민트색 벽과 칠판 메뉴, 둥근 거울이 있는 카페 실내",
+"credit": "Broadsheet",
+"width": 860,
+"height": 600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bogey_hole_cafe-4.webp": {
+"image_url": "https://cdn.broadsheet.com.au/cache/30/f9/30f99f9c95aa5219ec13b04f12da6c9b.jpg",
+"source_page": "https://broadsheet.com.au/sydney/bronte/cafes/bogey-hole-cafe",
+"alt_ko": "압착 금속 천장 아래 주문 카운터와 직원",
+"credit": "Broadsheet",
+"width": 860,
+"height": 600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bogey_hole_cafe-5.webp": {
+"image_url": "https://cdn.broadsheet.com.au/cache/63/32/6332ac9d5f915d0dc9fd39298b8f249b.jpg",
+"source_page": "https://broadsheet.com.au/sydney/bronte/cafes/bogey-hole-cafe",
+"alt_ko": "카운터 위 수제 머핀과 커피 머신",
+"credit": "Broadsheet",
+"width": 860,
+"height": 600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bogey_hole_cafe-6.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Natural_Pool_Bronte_Beach_%2855031316%29.jpeg/1280px-Natural_Pool_Bronte_Beach_%2855031316%29.jpeg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Natural_Pool_Bronte_Beach_%2855031316%29.jpeg",
+"alt_ko": "카페 이름의 유래인 브론테 바위 천연 수영장(보기 홀) 일출",
+"credit": "Paul Carmona / Wikimedia Commons (CC BY-SA 3.0)",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/st_michaels_golf-1.webp": {
+"image_url": "https://static.wixstatic.com/media/ff9d3c_dbd5fde57a0049ddb1403b64db6478c9~mv2.jpg/v1/fit/w_1600,h_1600,q_85/ff9d3c_dbd5fde57a0049ddb1403b64db6478c9~mv2.jpg",
+"source_page": "https://www.stmichaelsgolfclub.com.au/",
+"alt_ko": "해 질 녘 바다를 따라 이어진 세인트 마이클스 골프장 항공 사진",
+"credit": "St Michael's Golf Club",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/st_michaels_golf-2.webp": {
+"image_url": "https://static.wixstatic.com/media/ff9d3c_a82b4df398fa41108f99f1d9664b0449~mv2.jpg/v1/fit/w_1600,h_1600,q_85/ff9d3c_a82b4df398fa41108f99f1d9664b0449~mv2.jpg",
+"source_page": "https://www.stmichaelsgolfclub.com.au/visitors",
+"alt_ko": "해안 암반 옆 그린과 벙커가 보이는 오션 홀 항공 사진",
+"credit": "St Michael's Golf Club",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/st_michaels_golf-3.webp": {
+"image_url": "https://static.wixstatic.com/media/ff9d3c_1bb9661aed9c4c31b41763e831885ffc~mv2.jpg/v1/fit/w_1600,h_1600,q_85/ff9d3c_1bb9661aed9c4c31b41763e831885ffc~mv2.jpg",
+"source_page": "https://www.stmichaelsgolfclub.com.au/visitors",
+"alt_ko": "클럽하우스 다이닝룸, 통창 너머 바다와 석양",
+"credit": "St Michael's Golf Club",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/st_michaels_golf-4.webp": {
+"image_url": "https://static.wixstatic.com/media/ff9d3c_d2f8c12833804477850f3f3382b54ae8~mv2.jpg/v1/fit/w_1600,h_1600,q_85/ff9d3c_d2f8c12833804477850f3f3382b54ae8~mv2.jpg",
+"source_page": "https://www.stmichaelsgolfclub.com.au/practice-facilities",
+"alt_ko": "석양 무렵 클럽하우스와 코스, 벙커 항공 사진",
+"credit": "St Michael's Golf Club",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/st_michaels_golf-5.webp": {
+"image_url": "https://static.wixstatic.com/media/ff9d3c_0fb88bc78acf4176acc4b8c95d02d69c~mv2.jpg/v1/fit/w_1600,h_1600,q_85/ff9d3c_0fb88bc78acf4176acc4b8c95d02d69c~mv2.jpg",
+"source_page": "https://www.stmichaelsgolfclub.com.au/practice-facilities",
+"alt_ko": "바다 위로 해가 지는 페어웨이와 그린",
+"credit": "St Michael's Golf Club",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/st_michaels_golf-6.webp": {
+"image_url": "https://static.wixstatic.com/media/ff9d3c_75bd373b510749789755227842ed7758~mv2.jpg/v1/fit/w_1600,h_1600,q_85/ff9d3c_75bd373b510749789755227842ed7758~mv2.jpg",
+"source_page": "https://www.stmichaelsgolfclub.com.au/membership",
+"alt_ko": "관목 사이 그린과 벙커를 내려다본 항공 사진",
+"credit": "St Michael's Golf Club",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bennelong-1.webp": {
+"image_url": "https://www.bennelong.com.au/wp-content/uploads/2019/02/The-Venue-1-Bennelong.jpg",
+"source_page": "https://www.bennelong.com.au/events/",
+"alt_ko": "Bennelong 다이닝룸, 오페라하우스 돛 아래 리브 천장과 계단식 좌석",
+"credit": "Bennelong",
+"width": 1280,
+"height": 1310,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bennelong-2.webp": {
+"image_url": "https://www.bennelong.com.au/wp-content/uploads/2019/02/The-Venue-2-Bennelong.jpg",
+"source_page": "https://www.bennelong.com.au/events/",
+"alt_ko": "저녁 손님으로 가득 찬 Bennelong 홀, 붉은 리브 천장과 하버 창",
+"credit": "Bennelong",
+"width": 1280,
+"height": 1310,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bennelong-3.webp": {
+"image_url": "https://www.bennelong.com.au/wp-content/uploads/2019/02/bennelong-story.jpg",
+"source_page": "https://www.bennelong.com.au/about/",
+"alt_ko": "오페라하우스 돛 외관과 그 아래 Bennelong 유리창",
+"credit": "Bennelong",
+"width": 1280,
+"height": 1310,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bennelong-4.webp": {
+"image_url": "https://www.bennelong.com.au/wp-content/uploads/2025/11/Bennelong_EthanS_HRDSC01779-2-scaled.jpg",
+"source_page": "https://www.bennelong.com.au/about/",
+"alt_ko": "저녁 노을빛의 돛 타일이 보이는 Bennelong 상층 좌석",
+"credit": "Bennelong",
+"width": 1280,
+"height": 1920,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bennelong-5.webp": {
+"image_url": "https://www.bennelong.com.au/wp-content/uploads/2024/11/menu-noodles.jpg",
+"source_page": "https://www.bennelong.com.au/menu/",
+"alt_ko": "Bennelong 요리: 크럼블을 올린 생면 파스타",
+"credit": "Bennelong",
+"width": 1280,
+"height": 1310,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bennelong-6.webp": {
+"image_url": "https://www.bennelong.com.au/wp-content/uploads/2019/02/Events-1-Bennelong.jpg",
+"source_page": "https://www.bennelong.com.au/events/",
+"alt_ko": "Bennelong 초콜릿 쁘띠 디저트",
+"credit": "Bennelong",
+"width": 1280,
+"height": 1310,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/mrs_macquaries-1.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/View_from_Mrs_Macquaries_Point%2C_Sydney_%28483335%29_%289442898124%29.jpg/1280px-View_from_Mrs_Macquaries_Point%2C_Sydney_%28483335%29_%289442898124%29.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:View_from_Mrs_Macquaries_Point%2C_Sydney_%28483335%29_%289442898124%29.jpg",
+"alt_ko": "미세스 매쿼리스 포인트에서 본 오페라하우스와 하버브리지, 요트",
+"credit": "Robert Linsdell / Wikimedia Commons (CC BY 2.0)",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/mrs_macquaries-2.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/View_from_Mrs_Macquaries_Point%2C_Sydney.jpg/1280px-View_from_Mrs_Macquaries_Point%2C_Sydney.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:View_from_Mrs_Macquaries_Point%2C_Sydney.jpg",
+"alt_ko": "미세스 매쿼리스 포인트에서 본 오페라하우스·하버브리지 파노라마",
+"credit": "Bernard Gagnon / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 397,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/mrs_macquaries-3.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Mrs_Macquarie%27s_Chair%2C_Mrs_Macquaries_Point%2C_Sydney_%28483345%29_%289442941632%29.jpg/1280px-Mrs_Macquarie%27s_Chair%2C_Mrs_Macquaries_Point%2C_Sydney_%28483345%29_%289442941632%29.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Mrs_Macquarie%27s_Chair%2C_Mrs_Macquaries_Point%2C_Sydney_%28483345%29_%289442941632%29.jpg",
+"alt_ko": "사암 바위를 깎아 만든 미세스 매쿼리스 체어",
+"credit": "Robert Linsdell / Wikimedia Commons (CC BY 2.0)",
+"width": 1280,
+"height": 719,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/mrs_macquaries-4.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Sydney_%28AU%29%2C_Royal_Botanic_Gardens_--_2019_--_3082.jpg/1280px-Sydney_%28AU%29%2C_Royal_Botanic_Gardens_--_2019_--_3082.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Sydney_%28AU%29%2C_Royal_Botanic_Gardens_--_2019_--_3082.jpg",
+"alt_ko": "왕립 식물원 산책로와 보라색 자카란다 나무",
+"credit": "Dietmar Rabich / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/mrs_macquaries-5.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Sydney_%28AU%29%2C_Royal_Botanic_Gardens_--_2019_--_3081.jpg/1280px-Sydney_%28AU%29%2C_Royal_Botanic_Gardens_--_2019_--_3081.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Sydney_%28AU%29%2C_Royal_Botanic_Gardens_--_2019_--_3081.jpg",
+"alt_ko": "왕립 식물원 잔디밭의 커다란 무화과나무",
+"credit": "Dietmar Rabich / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/mrs_macquaries-6.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Sydney_%28AU%29%2C_Farm_Cove_--_2019_--_2283.jpg/1280px-Sydney_%28AU%29%2C_Farm_Cove_--_2019_--_2283.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Sydney_%28AU%29%2C_Farm_Cove_--_2019_--_2283.jpg",
+"alt_ko": "팜 코브 너머 식물원 숲과 시드니 도심 스카이라인",
+"credit": "Dietmar Rabich / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/syd_airport_t2-1.webp": {
+"image_url": "https://www.executivetraveller.com/photos/view/size:1500,844/655a9a988ac84741b3986e33dd799465-virgin-australia-sydney-lounge-entrance.jpg",
+"source_page": "https://www.executivetraveller.com/review-virgin-australia-lounge-sydney-airport",
+"alt_ko": "시드니공항 T2 버진 오스트레일리아 라운지 입구와 에스컬레이터",
+"credit": "Executive Traveller",
+"width": 1280,
+"height": 721,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/syd_airport_t2-2.webp": {
+"image_url": "https://www.executivetraveller.com/photos/view/size:1500,844/65b18c0a39e04c6ebd3ba2e0dd799465-virgin-australia-sydney-lounge-upper-level.jpg",
+"source_page": "https://www.executivetraveller.com/review-virgin-australia-lounge-sydney-airport",
+"alt_ko": "버진 오스트레일리아 시드니 라운지 상층 좌석 구역",
+"credit": "Executive Traveller",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/syd_airport_t2-3.webp": {
+"image_url": "https://www.executivetraveller.com/photos/view/size:1500,844/655a99244ed849e9a1c66cafdd799465-virgin-australia-sydney-lounge-window-seat.jpg",
+"source_page": "https://www.executivetraveller.com/review-virgin-australia-lounge-sydney-airport",
+"alt_ko": "계류장이 내려다보이는 라운지 창가 바 좌석",
+"credit": "Executive Traveller",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/syd_airport_t2-4.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Sydney_Airport_Terminal_2%2C_2022%2C_07.jpg/1280px-Sydney_Airport_Terminal_2%2C_2022%2C_07.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Sydney_Airport_Terminal_2%2C_2022%2C_07.jpg",
+"alt_ko": "시드니공항 T2 원형 유리 돔 아래 푸드코트",
+"credit": "Kgbo / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 1707,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/syd_airport_t2-5.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Sydney_Airport_Terminal_2%2C_2022%2C_10.jpg/1280px-Sydney_Airport_Terminal_2%2C_2022%2C_10.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Sydney_Airport_Terminal_2%2C_2022%2C_10.jpg",
+"alt_ko": "시드니공항 T2 게이트로 이어지는 아치형 탑승동 복도",
+"credit": "Kgbo / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/syd_airport_t2-6.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Virgin_Australia_aircraft_at_Sydney_Airport_Virgin_Australia_Terminal_2.jpg/1280px-Virgin_Australia_aircraft_at_Sydney_Airport_Virgin_Australia_Terminal_2.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Virgin_Australia_aircraft_at_Sydney_Airport_Virgin_Australia_Terminal_2.jpg",
+"alt_ko": "T2 게이트에 주기된 버진 오스트레일리아 항공기",
+"credit": "Kgbo / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/biz_class_a380-1.webp": {
+"image_url": "https://cdn.onemileatatime.com/wp-content/uploads/2017/10/Asiana-Business-Class-A380-1.jpg?width=1200",
+"source_page": "https://onemileatatime.com/asiana-business-class-a380-review/",
+"alt_ko": "아시아나 A380 비즈니스 스마티움 창가 좌석과 사이드 콘솔",
+"credit": "One Mile at a Time",
+"width": 1200,
+"height": 811,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/biz_class_a380-2.webp": {
+"image_url": "https://cdn.onemileatatime.com/wp-content/uploads/2017/10/Asiana-Business-Class-A380-30.jpg?width=1200",
+"source_page": "https://onemileatatime.com/asiana-business-class-a380-review/",
+"alt_ko": "A380 2층 비즈니스 스마티움 객실 전경, 1-2-1 배열",
+"credit": "One Mile at a Time",
+"width": 1200,
+"height": 800,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/biz_class_a380-3.webp": {
+"image_url": "https://cdn.onemileatatime.com/wp-content/uploads/2017/10/Asiana-Business-Class-A380-28.jpg?width=1200",
+"source_page": "https://onemileatatime.com/asiana-business-class-a380-review/",
+"alt_ko": "칸막이 셸 좌석이 엇갈려 배치된 비즈니스 객실",
+"credit": "One Mile at a Time",
+"width": 1200,
+"height": 800,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/biz_class_a380-4.webp": {
+"image_url": "https://cdn.onemileatatime.com/wp-content/uploads/2017/10/Asiana-Business-Class-A380-2.jpg?width=1200",
+"source_page": "https://onemileatatime.com/asiana-business-class-a380-review/",
+"alt_ko": "좌석 앞 개인 모니터와 발 받침 공간",
+"credit": "One Mile at a Time",
+"width": 1200,
+"height": 849,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/biz_class_a380-5.webp": {
+"image_url": "https://cdn.onemileatatime.com/wp-content/uploads/2017/10/Asiana-Business-Class-A380-25.jpg?width=1200",
+"source_page": "https://onemileatatime.com/asiana-business-class-a380-review/",
+"alt_ko": "A380 2층 비즈니스 승객용 라운지 소파 공간",
+"credit": "One Mile at a Time",
+"width": 1200,
+"height": 800,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/biz_class_a380-6.webp": {
+"image_url": "https://cdn.onemileatatime.com/wp-content/uploads/2017/10/Asiana-Business-Class-A380-19.jpg?width=1200",
+"source_page": "https://onemileatatime.com/asiana-business-class-a380-review/",
+"alt_ko": "록시땅 어메니티 키트 구성품",
+"credit": "One Mile at a Time",
+"width": 1200,
+"height": 817,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_hacienda-1.webp": {
+"image_url": "https://media.timeout.com/images/106220568/1372/1029/image.jpg",
+"source_page": "https://www.timeout.com/sydney/bars/hacienda-bar-sydney",
+"alt_ko": "하버브리지가 보이는 하시엔다 라운지 내부",
+"credit": "Steven Woodburn / Time Out Sydney",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_hacienda-2.webp": {
+"image_url": "https://media.timeout.com/images/106220567/1372/1029/image.jpg",
+"source_page": "https://www.timeout.com/sydney/bars/hacienda-bar-sydney",
+"alt_ko": "리뉴얼된 하시엔다 실내 좌석",
+"credit": "Steven Woodburn / Time Out Sydney",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_hacienda-3.webp": {
+"image_url": "https://media.timeout.com/images/106220570/1372/1029/image.jpg",
+"source_page": "https://www.timeout.com/sydney/bars/hacienda-bar-sydney",
+"alt_ko": "하시엔다 시푸드 플래터",
+"credit": "Steven Woodburn / Time Out Sydney",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_hacienda-4.webp": {
+"image_url": "https://australianbartender.com.au/wp-content/uploads/2016/07/HACIENDA_FB_Venue_22.7.16_51.jpg",
+"source_page": "https://australianbartender.com.au/2016/07/28/hacienda-circular-quay/",
+"alt_ko": "핑크 소파와 하버브리지 뷰 (2016년 오픈 당시 인테리어)",
+"credit": "Australian Bartender (venue-supplied)",
+"width": 750,
+"height": 501,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_larenaissance-1.webp": {
+"image_url": "https://therocks.com/getmedia/a1e4a98c-1695-429f-9a6f-a43c6d2d1661/La-Renaissance-Cafe-005.jpg?width=1600",
+"source_page": "https://therocks.com/Tenants/La-Renaissance-Cafe",
+"alt_ko": "라 르네상스의 프렌치 타르트와 음료",
+"credit": "The Rocks (Property NSW)",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_larenaissance-2.webp": {
+"image_url": "https://therocks.com/getmedia/58354ab2-6680-448f-a053-2506a6b1295d/La-Renaissance-Cafe-004.jpg?width=1600",
+"source_page": "https://therocks.com/Tenants/La-Renaissance-Cafe",
+"alt_ko": "사암 벽 안뜰(코트야드) 좌석",
+"credit": "The Rocks (Property NSW)",
+"width": 1280,
+"height": 558,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_larenaissance-3.webp": {
+"image_url": "https://imgix.theurbanlist.com/content/article/La-Renaissance-Patisserie.jpg?auto=compress&w=1200",
+"source_page": "https://www.theurbanlist.com/sydney/directory/la-renaissance-patisserie-caf",
+"alt_ko": "안뜰 테이블 위 커피와 페이스트리",
+"credit": "The Urban List",
+"width": 1200,
+"height": 958,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_larenaissance-4.webp": {
+"image_url": "https://larenaissance.com.au/cdn/shop/files/Tart_image_for_website_resized_2_1512x-2_1024x.jpg?v=1613772529",
+"source_page": "https://www.larenaissance.com.au/",
+"alt_ko": "과일 타르트와 케이크",
+"credit": "La Renaissance Patisserie",
+"width": 1024,
+"height": 599,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_larenaissance-5.webp": {
+"image_url": "https://larenaissance.com.au/cdn/shop/files/F_Coffee_and_Chocolate_Eclairs_1024x.jpg?v=1673170050",
+"source_page": "https://www.larenaissance.com.au/",
+"alt_ko": "커피·초콜릿 에클레어",
+"credit": "La Renaissance Patisserie",
+"width": 1024,
+"height": 537,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_mca_cafe-1.webp": {
+"image_url": "https://www.therocks.com/getmedia/6a493457-b6c3-48b6-9014-a531fbb1c0f6/MCA-Cafe-interior.jpg?width=1600",
+"source_page": "https://www.therocks.com/Tenants/MCA-cafe-sculpture-terrace",
+"alt_ko": "MCA 카페 내부와 원목 바닥",
+"credit": "The Rocks (Property NSW)",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_mca_cafe-2.webp": {
+"image_url": "https://www.therocks.com/getmedia/d2d8ddb4-d610-47af-bfd5-2dc70e6b4fdd/MCA-Cafe-exterior.jpg?width=1600",
+"source_page": "https://www.therocks.com/Tenants/MCA-cafe-sculpture-terrace",
+"alt_ko": "MCA 카페 야외 테라스 좌석",
+"credit": "The Rocks (Property NSW)",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_mca_cafe-3.webp": {
+"image_url": "https://www.therocks.com/getmedia/c7379207-156f-481d-8926-4a62396a9f92/MCA-Cafe-food.jpg?width=1600",
+"source_page": "https://www.therocks.com/Tenants/MCA-cafe-sculpture-terrace",
+"alt_ko": "MCA 카페의 파이와 샐러드",
+"credit": "The Rocks (Property NSW)",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_mca_cafe-4.webp": {
+"image_url": "https://media.timeout.com/images/105739487/1372/1029/image.jpg",
+"source_page": "https://www.timeout.com/sydney/museums/museum-of-contemporary-art-mca",
+"alt_ko": "서큘러 키 옆 MCA 건물과 하버브리지",
+"credit": "Time Out Sydney",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_teacosy-1.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/5b6be52f3e2d099c921994d4/1571802211265-LDSJVQGPKPADN212B0W6/TheRocksTenants-TheTeaCosy-33.jpg?format=1500w",
+"source_page": "https://theteacosy.com.au/",
+"alt_ko": "앤티크 가구가 놓인 티룸 내부",
+"credit": "The Tea Cosy",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_teacosy-2.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/5b6be52f3e2d099c921994d4/1571801865340-K86XCRZOLTMBK421N3YS/TheRocksTenants-TheTeaCosy-24.jpg?format=1500w",
+"source_page": "https://theteacosy.com.au/",
+"alt_ko": "스콘과 손뜨개 티코지",
+"credit": "The Tea Cosy",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_teacosy-3.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/5b6be52f3e2d099c921994d4/1571802150037-E93S5OWA58E8RF2VA3OQ/TheRocksTenants-TheTeaCosy-23.jpg?format=1500w",
+"source_page": "https://theteacosy.com.au/",
+"alt_ko": "야외 테이블의 스콘·홍차 세트",
+"credit": "The Tea Cosy",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_teacosy-4.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/5b6be52f3e2d099c921994d4/1571802101120-FNN0E8OKC49D65UODNSB/TheRocksTenants-TheTeaCosy-15.jpg?format=1500w",
+"source_page": "https://theteacosy.com.au/",
+"alt_ko": "3단 애프터눈 티",
+"credit": "The Tea Cosy",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_teacosy-5.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/5b6be52f3e2d099c921994d4/1571801850661-1JYI7A12P2KQIL9GV0XS/TheRocksTenants-TheTeaCosy-27.jpg?format=1500w",
+"source_page": "https://theteacosy.com.au/",
+"alt_ko": "털실 바구니 자전거가 선 입구 앞",
+"credit": "The Tea Cosy",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_grounds_city-1.webp": {
+"image_url": "https://cdn.concreteplayground.com/content/uploads/2017/06/the-grounds-of-the-city-bodhi-liggett-1.jpg",
+"source_page": "https://concreteplayground.com/sydney/cafes/the-grounds-of-the-city",
+"alt_ko": "빈티지 진열장과 조명이 있는 실내",
+"credit": "Bodhi Liggett / Concrete Playground",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_grounds_city-2.webp": {
+"image_url": "https://cdn.concreteplayground.com/content/uploads/2017/06/the-grounds-of-the-city-bodhi-liggett-7.jpg",
+"source_page": "https://concreteplayground.com/sydney/cafes/the-grounds-of-the-city",
+"alt_ko": "붐비는 빈티지풍 다이닝룸",
+"credit": "Bodhi Liggett / Concrete Playground",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_grounds_city-3.webp": {
+"image_url": "https://cdn.concreteplayground.com/content/uploads/2017/06/the-grounds-of-the-city-bodhi-liggett-3.jpg",
+"source_page": "https://concreteplayground.com/sydney/cafes/the-grounds-of-the-city",
+"alt_ko": "앤티크 바 카운터",
+"credit": "Bodhi Liggett / Concrete Playground",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_grounds_city-4.webp": {
+"image_url": "https://cdn.concreteplayground.com/content/uploads/2017/06/the-grounds-of-the-city-bodhi-liggett-2.jpg",
+"source_page": "https://concreteplayground.com/sydney/cafes/the-grounds-of-the-city",
+"alt_ko": "약국풍 빈티지 선반",
+"credit": "Bodhi Liggett / Concrete Playground",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_grounds_city-5.webp": {
+"image_url": "https://media.timeout.com/images/103928734/1372/1029/image.jpg",
+"source_page": "https://www.timeout.com/sydney/restaurants/the-grounds-of-the-city",
+"alt_ko": "바 카운터의 바텐더들",
+"credit": "Time Out Sydney",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_industry_beans-1.webp": {
+"image_url": "https://cdn.concreteplayground.com/content/uploads/2021/03/industry-beans-york-street-store-supplied-1.jpg",
+"source_page": "https://concreteplayground.com/sydney/cafes/industry-beans-york-st",
+"alt_ko": "아치형 창문의 사암 건물 외관",
+"credit": "Concrete Playground (supplied)",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_industry_beans-2.webp": {
+"image_url": "https://industrybeans.com/cdn/shop/files/Industry-Beans-York-Street-Sydney-Cafe_46df4f73-b80f-4f33-9948-f89e0e71e2ce.jpg?v=1697671861&width=1600",
+"source_page": "https://www.industrybeans.com/pages/york-st-cafe",
+"alt_ko": "요크 스트리트 매장 입구",
+"credit": "Industry Beans",
+"width": 1280,
+"height": 640,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_industry_beans-3.webp": {
+"image_url": "https://industrybeans.com/cdn/shop/articles/Industry_Beans_York_St_1.JPG?v=1565329392&width=1600",
+"source_page": "https://industrybeans.com/blogs/news/industry-beans-york-street",
+"alt_ko": "화이트 톤 미니멀 실내",
+"credit": "Industry Beans",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_industry_beans-4.webp": {
+"image_url": "https://media.timeout.com/images/105439854/1372/1029/image.jpg",
+"source_page": "https://www.timeout.com/sydney/restaurants/industry-beans",
+"alt_ko": "커피를 내리는 바리스타",
+"credit": "Anna Kucera / Time Out Sydney",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_industry_beans-5.webp": {
+"image_url": "https://media.timeout.com/images/105439858/1372/1029/image.jpg",
+"source_page": "https://www.timeout.com/sydney/restaurants/industry-beans",
+"alt_ko": "라테아트 플랫화이트",
+"credit": "Anna Kucera / Time Out Sydney",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_henry_deane-1.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/65d5675a1480256f56858b84/f3476efa-92b9-4782-8e6b-419d643155fd/Best+Bar+with+Sydney+Harbour+Views.jpg?format=1500w",
+"source_page": "https://hotelpalisade.com.au/",
+"alt_ko": "하버브리지가 보이는 유리 라운지",
+"credit": "Hotel Palisade",
+"width": 1280,
+"height": 1600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_henry_deane-2.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/65d5675a1480256f56858b84/fd63454e-5f26-4633-b8f3-1e089e966085/Amazing+Views+of+Sydney+Harbour.jpeg?format=1500w",
+"source_page": "https://hotelpalisade.com.au/",
+"alt_ko": "통유리 너머 시드니 하버 전망",
+"credit": "Hotel Palisade",
+"width": 1280,
+"height": 1600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_henry_deane-3.webp": {
+"image_url": "https://media.timeout.com/images/106294073/1372/1029/image.jpg",
+"source_page": "https://www.timeout.com/sydney/bars/henry-deane",
+"alt_ko": "하버브리지 뷰 루프톱 라운지 좌석",
+"credit": "Time Out Sydney",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_henry_deane-4.webp": {
+"image_url": "https://cdn.concreteplayground.com/content/uploads/2015/10/hotel-palisade-rooftop-sydney.jpg",
+"source_page": "https://concreteplayground.com/sydney/bars/henry-deane",
+"alt_ko": "하버브리지가 보이는 루프톱 테라스",
+"credit": "Concrete Playground",
+"width": 1280,
+"height": 780,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_henry_deane-5.webp": {
+"image_url": "https://cdn.concreteplayground.com/content/uploads/2015/12/Hotel-Palisade-Henry-Deane-Sydney-05.jpeg",
+"source_page": "https://concreteplayground.com/sydney/bars/henry-deane",
+"alt_ko": "해질녘 브리지 실루엣과 라운지",
+"credit": "Concrete Playground",
+"width": 1280,
+"height": 780,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_maybe_sammy-1.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/660362c11206bd180b5e25f6/d53a6be3-f92d-4667-a8aa-fbc18d5b1665/20190102_Maybe+Sammy_Cocktails+-+Food+Shoot_DS+OFICINA-8208_High+Res.jpg?format=1500w",
+"source_page": "https://www.maybesammy.com/",
+"alt_ko": "아치형 백바와 바 좌석",
+"credit": "Maybe Sammy (DS Oficina)",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_maybe_sammy-2.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/660362c11206bd180b5e25f6/c622f29f-4e39-4e81-b6e5-af45ec5be137/20190102_Maybe+Sammy_Cocktails+-+Food+Shoot_DS+OFICINA-8248_High+Res+v2.jpg?format=1500w",
+"source_page": "https://www.maybesammy.com/",
+"alt_ko": "핑크 벨벳 라운지 좌석",
+"credit": "Maybe Sammy (DS Oficina)",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_maybe_sammy-3.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/660362c11206bd180b5e25f6/1756878772977-JGNJ29XAD748AF02VX53/Sequence+01.00_00_10_10.Still002_Afterlight.jpg?format=1500w",
+"source_page": "https://www.maybesammy.com/",
+"alt_ko": "아치 선반 앞 화이트 재킷 바텐더들",
+"credit": "Maybe Sammy",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_maybe_sammy-4.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/660362c11206bd180b5e25f6/1758013546430-2HMFXL02VBFTW43VCF08/Cocodrile+Dundee+004_Afterlight.jpg?format=1500w",
+"source_page": "https://www.maybesammy.com/",
+"alt_ko": "칵테일을 든 바텐더",
+"credit": "Maybe Sammy",
+"width": 1280,
+"height": 1024,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_apollonia-1.webp": {
+"image_url": "https://media.timeout.com/images/105826144/1372/1029/image.jpg",
+"source_page": "https://www.timeout.com/sydney/bars/apollonia",
+"alt_ko": "촛불 켜진 사암 지하 셀러",
+"credit": "Time Out Sydney",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_apollonia-2.webp": {
+"image_url": "https://cdn.broadsheet.com.au/cache/70/5f/705f75fbfc303e7d541b73572fb64e37.jpg",
+"source_page": "https://www.broadsheet.com.au/sydney/bars/apollonia",
+"alt_ko": "사암 기둥과 긴 바 카운터",
+"credit": "Broadsheet",
+"width": 860,
+"height": 600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_apollonia-3.webp": {
+"image_url": "https://cdn.broadsheet.com.au/cache/c5/e8/c5e80f9061300713657d2e5941904b71.jpg",
+"source_page": "https://www.broadsheet.com.au/sydney/bars/apollonia",
+"alt_ko": "어두운 조명의 바 라운지",
+"credit": "Broadsheet",
+"width": 860,
+"height": 600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_apollonia-4.webp": {
+"image_url": "https://cdn.broadsheet.com.au/cache/c9/8f/c98f8056a20a08886b0aef71739aae28.jpg",
+"source_page": "https://www.broadsheet.com.au/sydney/bars/apollonia",
+"alt_ko": "'A' 각인 얼음을 넣은 네그로니",
+"credit": "Broadsheet",
+"width": 860,
+"height": 600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_apollonia-5.webp": {
+"image_url": "https://cdn.concreteplayground.com/content/uploads/2021/12/Hinchcliff-house-apollonia-Credit-Jiwon-Kim-2.jpg",
+"source_page": "https://concreteplayground.com/sydney/bars/apollonia",
+"alt_ko": "로프터스 레인 쪽 입구",
+"credit": "Jiwon Kim / Concrete Playground",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_bar1880-1.webp": {
+"image_url": "https://media.timeout.com/images/106017372/1372/1029/image.jpg",
+"source_page": "https://www.timeout.com/sydney/bars/bar-1880",
+"alt_ko": "불러틴 플레이스 골목 야외 좌석",
+"credit": "Time Out Sydney",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_bar1880-2.webp": {
+"image_url": "https://media.timeout.com/images/106017373/1372/1029/image.jpg",
+"source_page": "https://www.timeout.com/sydney/bars/bar-1880",
+"alt_ko": "아치형 백바",
+"credit": "Time Out Sydney",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_bar1880-3.webp": {
+"image_url": "https://cdn.concreteplayground.com/content/uploads/2023/07/Bar1880_UpdatedImages_Interior_supplied25.jpg",
+"source_page": "https://concreteplayground.com/sydney/bars/bar-1880",
+"alt_ko": "'Press Room' 문과 2층 라운지",
+"credit": "Concrete Playground (supplied)",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_bar1880-4.webp": {
+"image_url": "https://cdn.concreteplayground.com/content/uploads/2023/07/Bar1880_UpdatedImages-Bar_supplied25.jpg",
+"source_page": "https://concreteplayground.com/sydney/bars/bar-1880",
+"alt_ko": "벽돌벽과 아치형 바",
+"credit": "Concrete Playground (supplied)",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_bar1880-5.webp": {
+"image_url": "https://australianbartender.com.au/wp-content/uploads/2023/07/IMG_3100.jpg",
+"source_page": "https://australianbartender.com.au/?p=63720",
+"alt_ko": "손님들로 찬 바 카운터",
+"credit": "Australian Bartender",
+"width": 1200,
+"height": 800,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_glenmore-1.webp": {
+"image_url": "https://cdn.prod.website-files.com/652950e4138fe5d187323a40/6810634e596cbf791773f5de_TheGlenmore_March_StevenWoodburn_42%20(1)-p-1600.jpg",
+"source_page": "https://www.theglenmore.com.au/",
+"alt_ko": "오페라하우스가 보이는 루프톱에서 건배",
+"credit": "Steven Woodburn / The Glenmore",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_glenmore-2.webp": {
+"image_url": "https://cdn.prod.website-files.com/652950e4138fe5d187323a40/65420762326911a76c8c996f_wis-09446-p-1080.jpg",
+"source_page": "https://www.theglenmore.com.au/",
+"alt_ko": "해질녘 루프톱과 오페라하우스",
+"credit": "The Glenmore",
+"width": 1080,
+"height": 1619,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_glenmore-3.webp": {
+"image_url": "https://cdn.prod.website-files.com/652950e4138fe5d187323a40/653daac2e29df46651448e69_20230905-Glenmore-222-p-1600.jpg",
+"source_page": "https://www.theglenmore.com.au/",
+"alt_ko": "오페라하우스 뷰 루프톱 바",
+"credit": "The Glenmore",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_glenmore-4.webp": {
+"image_url": "https://cdn.prod.website-files.com/652950e4138fe5d187323a40/653daaaea20fb774801880aa_20230905-Glenmore-48-p-1600.jpg",
+"source_page": "https://www.theglenmore.com.au/",
+"alt_ko": "클래식 펍 실내",
+"credit": "The Glenmore",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_glenmore-5.webp": {
+"image_url": "https://www.therocks.com/getmedia/99224d9a-e94f-4ddf-8bbe-ff9e6846a80f/The-Glenmore-006.jpg?width=1600",
+"source_page": "https://www.therocks.com/",
+"alt_ko": "루프톱 테이블과 오페라하우스 전망",
+"credit": "The Rocks (Property NSW)",
+"width": 1080,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_cafe_sydney-1.webp": {
+"image_url": "https://cafesydney.com/wp-content/uploads/2025/01/Cafe-Sydney-Restaurant-1600L-4.jpg",
+"source_page": "https://cafesydney.com/",
+"alt_ko": "하버브리지를 마주한 테라스 좌석",
+"credit": "Cafe Sydney",
+"width": 1280,
+"height": 850,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_cafe_sydney-2.webp": {
+"image_url": "https://cafesydney.com/wp-content/uploads/2025/01/Cafe-Sydney-Restaurant-1300-x-1300-8.jpg",
+"source_page": "https://cafesydney.com/",
+"alt_ko": "브리지가 보이는 다이닝룸",
+"credit": "Cafe Sydney",
+"width": 1280,
+"height": 1280,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_cafe_sydney-3.webp": {
+"image_url": "https://cafesydney.com/wp-content/uploads/Cafe-Sydney-Restaurant-1x1-01.jpg",
+"source_page": "https://cafesydney.com/",
+"alt_ko": "하버 전망 테이블 서비스",
+"credit": "Cafe Sydney",
+"width": 1280,
+"height": 1280,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_cafe_sydney-4.webp": {
+"image_url": "https://cafesydney.com/wp-content/uploads/Cafe-Sydney-Sydney-Harbour-Bridge-Climb-.png",
+"source_page": "https://cafesydney.com/",
+"alt_ko": "촛불 테이블 너머 하버브리지",
+"credit": "Cafe Sydney",
+"width": 1280,
+"height": 1280,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_cafe_sydney-5.webp": {
+"image_url": "https://cafesydney.com/wp-content/uploads/2025/01/Cafe-Sydney-Restaurant-1300-x-1300-12.jpg",
+"source_page": "https://cafesydney.com/",
+"alt_ko": "시그니처 생선 요리",
+"credit": "Cafe Sydney",
+"width": 1200,
+"height": 1200,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_the_rocks-1.webp": {
+"image_url": "https://www.sydney.com/sites/sydney/files/styles/gallery_no_thumb_large/public/2023-05/177934%20-%20The%20Rocks%20-%20Sydney%20-%20night%20streetscape%20-%20DNSW.jpg?h=f15981de&itok=nD19e_FZ",
+"source_page": "https://www.sydney.com/destinations/sydney/sydney-city/the-rocks",
+"alt_ko": "조명 켜진 더 록스 밤거리",
+"credit": "Destination NSW",
+"width": 1280,
+"height": 562,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_the_rocks-2.webp": {
+"image_url": "https://www.sydney.com/sites/sydney/files/styles/gallery_no_thumb_large/public/2023-05/164527%20-%20The%20Doss%20House%20-%20The%20Rocks%20-%20Sydney%20-%20DNSW%20-%20crop.jpg?h=557ba350&itok=tZlM6SvD",
+"source_page": "https://www.sydney.com/destinations/sydney/sydney-city/the-rocks",
+"alt_ko": "사암 벽의 바 'The Doss House'",
+"credit": "Destination NSW",
+"width": 1280,
+"height": 562,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_the_rocks-3.webp": {
+"image_url": "https://www.sydney.com/sites/sydney/files/styles/landscape_1700x956/public/2023-05/175996%20-%20The%20Rocks%20-%20Sydney%20-%20enjoying%20the%20outdoor%20dining%20seating%20-%20DNSW%20-%20sml.jpg?h=3c63dc44&itok=fjYWZCkS",
+"source_page": "https://www.sydney.com/destinations/sydney/sydney-city/the-rocks",
+"alt_ko": "더 록스 야외 다이닝",
+"credit": "Destination NSW",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_the_rocks-4.webp": {
+"image_url": "https://www.therocks.com/getmedia/69752d0b-b720-4ca0-adad-bd1a0e5ce31a/The-Rocks-Markets-Playfair-St_1.jpg?width=1600",
+"source_page": "https://www.therocks.com/",
+"alt_ko": "플레이페어 스트리트 주말 마켓",
+"credit": "The Rocks (Property NSW)",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_the_rocks-5.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Laneway_in_the_Rocks_district_of_Sydney.jpg/1280px-Laneway_in_the_Rocks_district_of_Sydney.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Laneway_in_the_Rocks_district_of_Sydney.jpg",
+"alt_ko": "사암 건물 사이의 좁은 골목",
+"credit": "Returned dude12345 / Wikimedia Commons (CC0)",
+"width": 1280,
+"height": 1707,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_dawes_point-1.webp": {
+"image_url": "https://www.therocks.com/getmedia/30ba24b6-d424-4ca2-8cef-ae37947bad03/nye24-dawes-point-park.jpg?width=1600",
+"source_page": "https://www.therocks.com/whats-on/campaigns/new-years-eve",
+"alt_ko": "하버브리지 바로 아래 잔디밭 피크닉",
+"credit": "The Rocks (Property NSW)",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_dawes_point-2.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Dawes_Point_Park.jpg/1280px-Dawes_Point_Park.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Dawes_Point_Park.jpg",
+"alt_ko": "브리지 아래 공원과 야자수",
+"credit": "Vanbasten 23 / Wikimedia Commons (CC BY-SA 3.0)",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_dawes_point-3.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Dawes_Point-Tarra_-_1.jpg/1280px-Dawes_Point-Tarra_-_1.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Dawes_Point-Tarra_-_1.jpg",
+"alt_ko": "옛 포대 대포와 하버 전망",
+"credit": "Collywolly / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_dawes_point-4.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Dawes_Point%2C_2007_%2801%29.JPG/1280px-Dawes_Point%2C_2007_%2801%29.JPG",
+"source_page": "https://commons.wikimedia.org/wiki/File:Dawes_Point%2C_2007_%2801%29.JPG",
+"alt_ko": "배에서 본 도스 포인트, 브리지와 오페라하우스",
+"credit": "Bahnfrend / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 851,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_observatory_hill-1.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Observatory_Hill_Sydney.jpg/1280px-Observatory_Hill_Sydney.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Observatory_Hill_Sydney.jpg",
+"alt_ko": "해질녘 잔디 언덕과 하버브리지",
+"credit": "MDRX / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_observatory_hill-2.webp": {
+"image_url": "https://www.cityofsydney.nsw.gov.au/-/jssmedia/corporate/images/places-and-spaces/parks/observatory-hill-park/cos-csps-item-a-010.jpg?mw=1600",
+"source_page": "https://www.cityofsydney.nsw.gov.au/parks/observatory-park",
+"alt_ko": "언덕에서 본 하버브리지 전경",
+"credit": "City of Sydney",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_observatory_hill-3.webp": {
+"image_url": "https://www.cityofsydney.nsw.gov.au/-/jssmedia/corporate/images/places-and-spaces/parks/observatory-hill-park/observatory-hill.jpg?mw=1600",
+"source_page": "https://www.cityofsydney.nsw.gov.au/parks/observatory-park",
+"alt_ko": "큰 무화과나무와 브리지",
+"credit": "City of Sydney",
+"width": 1280,
+"height": 626,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_observatory_hill-4.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/e48d818ba2ecc1f3c5039166f306cf08.jpeg?rect=0%2C0%2C1600%2C1200&w=1600&h=1200&rot=360&q=eyJ0eXBlIjoibGlzdGluZyIsImxpc3RpbmdJZCI6IjU2YjI0MGUwMjY2MTQwNTk0NTY4NDk4NSIsImRpc3RyaWJ1dG9ySWQiOiI1NmIxZWI5MzQ0ZmVjYTNkZjJlMzIwYzgiLCJhcGlrZXlJZCI6IjU2YjFlZTU5MGNmMjEzYWQyMGRjNTgxOSJ9",
+"source_page": "https://www.sydney.com/destinations/sydney/sydney-city/the-rocks/attractions/sydney-observatory",
+"alt_ko": "야경 속 시드니 천문대 건물",
+"credit": "Sydney Observatory via Destination NSW (ATDW)",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_observatory_hill-5.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/205b1384c9af42cbeccee407209dc0c7.jpeg?rect=0%2C0%2C1600%2C1200&w=1600&h=1200&&rot=360&q=eyJ0eXBlIjoibGlzdGluZyIsImxpc3RpbmdJZCI6IjU2YjI0MGUwMjY2MTQwNTk0NTY4NDk4NSIsImRpc3RyaWJ1dG9ySWQiOiI1NmIxZWI5MzQ0ZmVjYTNkZjJlMzIwYzgiLCJhcGlrZXlJZCI6IjU2YjFlZTU5MGNmMjEzYWQyMGRjNTgxOSJ9",
+"source_page": "https://www.sydney.com/destinations/sydney/sydney-city/the-rocks/attractions/sydney-observatory",
+"alt_ko": "천문대 돔과 하버 야경",
+"credit": "Sydney Observatory via Destination NSW (ATDW)",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_pylon_lookout-1.webp": {
+"image_url": "https://www.bridgemuseum.com.au/getContentAsset/7f397f9c-faa5-4158-86e7-818e2355f35f/13b2d5a9-667d-4ebd-8eb2-a38833e560ad/BridgeMuseum-Hero-SkyhouseSelfie.jpg?language=en-AU",
+"source_page": "https://www.bridgemuseum.com.au/",
+"alt_ko": "파일론 꼭대기 전망대에서 셀피",
+"credit": "BridgeMuseum",
+"width": 1280,
+"height": 549,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_pylon_lookout-2.webp": {
+"image_url": "https://www.bridgemuseum.com.au/getContentAsset/81ad9a35-5d41-4735-8e4e-fc1174dc83f1/13b2d5a9-667d-4ebd-8eb2-a38833e560ad/BridgeMuseum-Hero-SkyhouseFriends.jpg?language=en-AU",
+"source_page": "https://www.bridgemuseum.com.au/",
+"alt_ko": "브리지 아치를 배경으로 한 전망대",
+"credit": "BridgeMuseum",
+"width": 1280,
+"height": 549,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_pylon_lookout-3.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Sydney_Opera_House_seen_from_Pylon_Lookout.jpg/1280px-Sydney_Opera_House_seen_from_Pylon_Lookout.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Sydney_Opera_House_seen_from_Pylon_Lookout.jpg",
+"alt_ko": "파일론 전망대에서 본 오페라하우스",
+"credit": "Ymblanter / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_pylon_lookout-4.webp": {
+"image_url": "https://www.bridgemuseum.com.au/getContentAsset/58a1f2ce-c23a-43f7-b142-aa8e4d059ebb/13b2d5a9-667d-4ebd-8eb2-a38833e560ad/BridgeMuseum-Hero-Bridge.jpg?language=en-AU",
+"source_page": "https://www.bridgemuseum.com.au/",
+"alt_ko": "하버브리지 파일론 외관",
+"credit": "BridgeMuseum",
+"width": 1280,
+"height": 549,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_pylon_lookout-5.webp": {
+"image_url": "https://www.bridgemuseum.com.au/getContentAsset/0d0464e6-50b1-4805-9d89-fbbed0c4cd96/13b2d5a9-667d-4ebd-8eb2-a38833e560ad/BM_Footer_2000x1336px_Medium.jpg?language=en-AU",
+"source_page": "https://www.bridgemuseum.com.au/",
+"alt_ko": "해질녘 하버브리지와 파일론",
+"credit": "BridgeMuseum",
+"width": 1280,
+"height": 855,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_barangaroo-1.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/3b5921e46b23e133857a5877d650c5a4.jpeg?rect=214%2C0%2C3333%2C2500&w=2048&h=1536&rot=360&q=eyJ0eXBlIjoibGlzdGluZyIsImxpc3RpbmdJZCI6IjY0NGIxZThjZjMyMzA4ZDgzNWNjYWQ4NSIsImRpc3RyaWJ1dG9ySWQiOiI1NmIxZWI5MzQ0ZmVjYTNkZjJlMzIwYzgiLCJhcGlrZXlJZCI6IjU2YjFlZTU5MGNmMjEzYWQyMGRjNTgxOSJ9",
+"source_page": "https://www.sydney.com/destinations/sydney/sydney-city/barangaroo/attractions/barangaroo-reserve",
+"alt_ko": "사암 블록 해안과 물가 계단",
+"credit": "Destination NSW (ATDW)",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_barangaroo-2.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/209eac52def8a6901eee38660488620e.jpeg?rect=213%2C0%2C3333%2C2500&w=1600&h=1200&&rot=360&q=eyJ0eXBlIjoibGlzdGluZyIsImxpc3RpbmdJZCI6IjY0NGIxZThjZjMyMzA4ZDgzNWNjYWQ4NSIsImRpc3RyaWJ1dG9ySWQiOiI1NmIxZWI5MzQ0ZmVjYTNkZjJlMzIwYzgiLCJhcGlrZXlJZCI6IjU2YjFlZTU5MGNmMjEzYWQyMGRjNTgxOSJ9",
+"source_page": "https://www.sydney.com/destinations/sydney/sydney-city/barangaroo/attractions/barangaroo-reserve",
+"alt_ko": "사암 바위 너머 하버브리지",
+"credit": "Destination NSW (ATDW)",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_barangaroo-3.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/9ad0702c48061cd1579d43e1ba091b52.jpeg?rect=210%2C0%2C3333%2C2500&w=1600&h=1200&&rot=360&q=eyJ0eXBlIjoibGlzdGluZyIsImxpc3RpbmdJZCI6IjY0NGIxZThjZjMyMzA4ZDgzNWNjYWQ4NSIsImRpc3RyaWJ1dG9ySWQiOiI1NmIxZWI5MzQ0ZmVjYTNkZjJlMzIwYzgiLCJhcGlrZXlJZCI6IjU2YjFlZTU5MGNmMjEzYWQyMGRjNTgxOSJ9",
+"source_page": "https://www.sydney.com/destinations/sydney/sydney-city/barangaroo/attractions/barangaroo-reserve",
+"alt_ko": "브리지가 보이는 해안 산책로",
+"credit": "Destination NSW (ATDW)",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_barangaroo-4.webp": {
+"image_url": "https://www.infrastructure.nsw.gov.au/media/3hxo1fnx/burrawang-steps-at-barangaroo-reserve.jpg",
+"source_page": "https://www.infrastructure.nsw.gov.au/news/barangaroo-reserve-turns-10/",
+"alt_ko": "토착 식물 사이 버라왕 계단",
+"credit": "Infrastructure NSW",
+"width": 999,
+"height": 666,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_barangaroo-5.webp": {
+"image_url": "https://www.barangaroo.com/getmedia/49499ac2-e9c6-4b6a-8c97-244c940d26f0/sandstone.jpg",
+"source_page": "https://www.barangaroo.com/Past-Present-Future/The-Place/Nature/Sandstone-Spectacular",
+"alt_ko": "곶을 따라 이어진 사암 해안선 항공샷",
+"credit": "Barangaroo (Infrastructure NSW)",
+"width": 1280,
+"height": 483,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_luxury_westfield-1.webp": {
+"image_url": "https://assets.yellowtrace.com.au/wp-content/uploads/2025/07/09163009/Yellowtrace-chanel-chanel-opens-doors-to-spacious-new-fashion-and-watches-fine-jewellery-boutique-in-sydney-CBD.jpg",
+"source_page": "https://www.yellowtrace.com.au/chanel-sydney-cbd-fashion-and-watches-fine-jewellery-boutique/",
+"alt_ko": "샤넬 시드니 부티크 외관",
+"credit": "Chanel / Yellowtrace",
+"width": 1240,
+"height": 835,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_luxury_westfield-2.webp": {
+"image_url": "https://assets.yellowtrace.com.au/wp-content/uploads/2025/07/09162830/Yellowtrace-chanel-chanel-opens-doors-to-spacious-new-fashion-and-watches-fine-jewellery-boutique-in-sydney-CBD-05_opt80.jpg",
+"source_page": "https://www.yellowtrace.com.au/chanel-sydney-cbd-fashion-and-watches-fine-jewellery-boutique/",
+"alt_ko": "샤넬 부티크 내부 계단과 진열",
+"credit": "Chanel / Yellowtrace",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_luxury_westfield-3.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Westfield_Sydney_L1_2017.jpg/1280px-Westfield_Sydney_L1_2017.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Westfield_Sydney_L1_2017.jpg",
+"alt_ko": "웨스트필드 시드니 1층 쇼핑몰",
+"credit": "Wpcpey / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_luxury_westfield-4.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Pitt_Street_Mall_201708.jpg/1280px-Pitt_Street_Mall_201708.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Pitt_Street_Mall_201708.jpg",
+"alt_ko": "피트 스트리트 몰 보행자 거리",
+"credit": "Wpcpey / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_qvb-1.webp": {
+"image_url": "https://www.sydney.com/sites/sydney/files/styles/gallery_no_thumb_large/public/2025-09/172069%20-%20Four%20levels%20of%20shopping%20-%20Queen%20Victoria%20Building%20-%20Sydney%20CBD%20-%20DNSW.jpg?h=0f4230fa&itok=rLDZxYeL",
+"source_page": "https://www.sydney.com/things-to-do/fashion-and-shopping/city-centre-shopping",
+"alt_ko": "QVB 4개 층 아케이드와 유리 천장",
+"credit": "Destination NSW",
+"width": 1280,
+"height": 562,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_qvb-2.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Interior_of_Queen_Victoria_Building_level_1%2C_01.jpg/1280px-Interior_of_Queen_Victoria_Building_level_1%2C_01.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Interior_of_Queen_Victoria_Building_level_1%2C_01.jpg",
+"alt_ko": "QVB 1층 대형 시계와 아케이드",
+"credit": "Kgbo / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_qvb-3.webp": {
+"image_url": "https://www.sydney.com/sites/sydney/files/styles/gallery_no_thumb_large/public/2025-09/175966%20-%20Friends%20enjoying%20a%20day%20of%20shopping%20-%20The%20Strand%20Arcade%20-%20Sydney%20CBD%20-%20DNSW.png?h=f0fb51a5&itok=O5_RGTpI",
+"source_page": "https://www.sydney.com/things-to-do/fashion-and-shopping/city-centre-shopping",
+"alt_ko": "스트랜드 아케이드 2층 난간의 쇼핑객",
+"credit": "Destination NSW",
+"width": 1280,
+"height": 562,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_qvb-4.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/AUS_Sydney%2C_Central_Business_District%2C_Strand_Arcade_004.jpg/1280px-AUS_Sydney%2C_Central_Business_District%2C_Strand_Arcade_004.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:AUS_Sydney%2C_Central_Business_District%2C_Strand_Arcade_004.jpg",
+"alt_ko": "스트랜드 아케이드 모자이크 바닥 통로",
+"credit": "-wuppertaler / Wikimedia Commons (CC BY 4.0)",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_syd_qvb-5.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/The_Strand_Arcade_Level_1_201708.jpg/1280px-The_Strand_Arcade_Level_1_201708.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:The_Strand_Arcade_Level_1_201708.jpg",
+"alt_ko": "스트랜드 아케이드 입구",
+"credit": "Wpcpey / Wikimedia Commons (CC BY-SA 4.0)",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/virgin_business-1.webp": {
+"image_url": "https://www.executivetraveller.com/photos/view/size:1500,844/62324c934c684aecb3358ccddd799465-virgin-australia-business-class-1200a.jpg",
+"source_page": "https://www.executivetraveller.com/virgin-australia-boeing-737-business-class",
+"alt_ko": "버진 오스트레일리아 737 비즈니스석 좌석 열",
+"credit": "Executive Traveller",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/virgin_business-2.webp": {
+"image_url": "https://www.executivetraveller.com/photos/view/size:1500,844/623114e9b67c4c6ab5a5a875dd799465-virgin-australia-737-aisle.jpg",
+"source_page": "https://www.executivetraveller.com/virgin-australia-boeing-737-business-class",
+"alt_ko": "737 비즈니스 캐빈 2-2 배열과 통로",
+"credit": "Executive Traveller",
+"width": 1200,
+"height": 675,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/virgin_business-3.webp": {
+"image_url": "https://www.executivetraveller.com/photos/view/size:1500,844/623115667de84e4eb8c3a8c0dd799465-virgin-australia-737-business-class-meal.jpg",
+"source_page": "https://www.executivetraveller.com/virgin-australia-boeing-737-business-class",
+"alt_ko": "비즈니스석 기내식 서비스",
+"credit": "Executive Traveller",
+"width": 1200,
+"height": 675,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/virgin_business-4.webp": {
+"image_url": "https://i.australianfrequentflyer.com.au/2025/08/virgin-business-refurbished-seats.jpg",
+"source_page": "https://www.australianfrequentflyer.com.au/virgin-australia-refurbished-737-business-class-review/",
+"alt_ko": "리퍼브 737-800 비즈니스 신형 좌석",
+"credit": "Australian Frequent Flyer",
+"width": 1200,
+"height": 900,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/virgin_business-5.webp": {
+"image_url": "https://i.australianfrequentflyer.com.au/2025/05/virgin-737-business-seats-2025-row-2.jpg",
+"source_page": "https://www.australianfrequentflyer.com.au/virgin-australia-refurbished-737-business-class-review/",
+"alt_ko": "비즈니스석 2열 좌석과 센터 콘솔",
+"credit": "Australian Frequent Flyer",
+"width": 1200,
+"height": 900,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/virgin_business-6.webp": {
+"image_url": "https://i.australianfrequentflyer.com.au/2025/08/virgin-business-sparkling-va291.jpg",
+"source_page": "https://www.australianfrequentflyer.com.au/virgin-australia-refurbished-737-business-class-review/",
+"alt_ko": "비즈니스석 스파클링 와인 웰컴 드링크",
+"credit": "Australian Frequent Flyer",
+"width": 1200,
+"height": 900,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/hamilton_airport-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/general-island-(airport,-retail,-marina)/new-airport-webpage/arrivals-and-departures.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/getting-here/airport",
+"alt_ko": "공항 터미널 외관과 깃발, 버기 승강장",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 1920,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/hamilton_airport-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/general-island-(airport,-retail,-marina)/new-airport-webpage/parking-and-landing.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/getting-here/airport",
+"alt_ko": "바다 위로 뻗은 공항 활주로 항공 사진",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 850,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/hamilton_airport-3.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/general-island-(airport,-retail,-marina)/new-airport-webpage/terminal-information.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/getting-here/airport",
+"alt_ko": "밝은 출발 라운지 대기석",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 1920,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/hamilton_airport-4.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/general-island-(airport,-retail,-marina)/new-airport-webpage/facilities-and-charges.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/getting-here/airport",
+"alt_ko": "수하물 수취대가 있는 도착 홀",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 1920,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/hamilton_airport-5.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/general-island-(airport,-retail,-marina)/new-airport-webpage/airplane-landing-slide.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/getting-here/airport",
+"alt_ko": "바다 건너 착륙하는 여객기",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/hamilton_airport-6.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Great_Barrier_Reef_Airport.JPG/1280px-Great_Barrier_Reef_Airport.JPG",
+"source_page": "https://commons.wikimedia.org/wiki/File:Great_Barrier_Reef_Airport.JPG",
+"alt_ko": "착륙 접근 중 내려다본 활주로와 터미널",
+"credit": "Emil Hedaya / Wikimedia Commons, CC BY 3.0",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/reef_view_suite-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Accommodation/Reef-View-Hotel/SupPresSuite1.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/reef-view-hotel/superior-presidential-suite",
+"alt_ko": "바다가 보이는 스위트 거실",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/reef_view_suite-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Accommodation/Reef-View-Hotel/SupPresSuite2.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/reef-view-hotel/superior-presidential-suite",
+"alt_ko": "플런지 풀이 있는 스위트 테라스",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/reef_view_suite-3.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Accommodation/Reef-View-Hotel/SupPresSuite3.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/reef-view-hotel/superior-presidential-suite",
+"alt_ko": "욕조가 있는 스위트 욕실",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 1919,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/reef_view_suite-4.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Accommodation/Reef-View-Hotel/SupPresSuite4.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/reef-view-hotel/superior-presidential-suite",
+"alt_ko": "거실과 다이닝이 이어진 오픈 공간",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/reef_view_suite-5.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Accommodation/Reef-View-Hotel/RVH-Pool-(1).jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/accommodation/reef-view-hotel",
+"alt_ko": "야자수에 둘러싸인 리프 뷰 호텔 수영장",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/reef_view_suite-6.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Accommodation/Reef-View-Hotel/Hotel-driveway.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/accommodation/reef-view-hotel",
+"alt_ko": "리프 뷰 호텔 정문 로비 진입로",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 737,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/pool_terrace-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/Pool-Terrace/Pool-Terrace-seating-new.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/restaurants/pool-terrace",
+"alt_ko": "수영장을 바라보는 풀 테라스 좌석",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/pool_terrace-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/food-and-wine/pool-terrace/pool-terrace-sunset-view.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/restaurants/pool-terrace",
+"alt_ko": "해 질 녘 풀 테라스와 수영장",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/pool_terrace-3.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/Pool-Terrace/restaurant-shot.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/restaurants/pool-terrace",
+"alt_ko": "풀 테라스 레스토랑 전경",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/pool_terrace-4.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/General-Island-(Airport,-Retail,-Marina)/pool-terrace-restaurant-overlooking-pool.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Pool%20Terrace",
+"alt_ko": "수영장 옆 풀 테라스 테이블",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 715,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/catseye_beach-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Scenery-(GBR,-Catseye,-Whitehaven)/catseye-beach-landscape.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Catseye%20Beach",
+"alt_ko": "야자수 너머 캣츠아이 비치 전경",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/catseye_beach-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Scenery-(GBR,-Catseye,-Whitehaven)/catseye-beach-sand.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Catseye%20Beach",
+"alt_ko": "썰물 때 드러난 캣츠아이 모래톱",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 686,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/catseye_beach-3.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Scenery-(GBR,-Catseye,-Whitehaven)/Catseye-Beach-Sports-aerial.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Catseye%20Beach",
+"alt_ko": "비치 스포츠 허트와 해변 항공 사진",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/catseye_beach-4.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/the-sundays/new-images-from-launch/catseye-bay-beach-sports.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/water-activities/beach-sports",
+"alt_ko": "캣츠아이 베이의 비치 스포츠",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/catseye_beach-5.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Scenery-(GBR,-Catseye,-Whitehaven)/catseye-beach-with-two-kayaks.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Catseye%20Beach",
+"alt_ko": "해변에 놓인 카약 두 대",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/catseye_beach-6.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/community-development/catseye-beach.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/community-and-development/community-facilities/parks-ovals-beaches",
+"alt_ko": "야자수 아래 캣츠아이 비치와 카약",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 1920,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/one_tree_hill-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/One-Tree-Hill/one-tree-hill-with-red-tree.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/things-to-do/sunset-activities",
+"alt_ko": "원 트리 힐에서 본 휘트선데이 전망",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/one_tree_hill-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Scenery-(GBR,-Catseye,-Whitehaven)/one-tree-hill-sunset.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Sunset%20Cocktails",
+"alt_ko": "원 트리 힐 선셋",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 888,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/one_tree_hill-3.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/one-tree-hill-interior.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/bars-and-clubs/sunset-cocktails",
+"alt_ko": "바다가 내려다보이는 원 트리 힐 바 내부",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 712,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/one_tree_hill-4.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/General-Island-(Airport,-Retail,-Marina)/one-tree-hill-cafe-14.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=One%20Tree%20Hill",
+"alt_ko": "언덕 위 원 트리 힐 바 건물",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 714,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/one_tree_hill-5.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/Beverages/sunset-cocktails-14.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=One%20Tree%20Hill",
+"alt_ko": "선셋 칵테일",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/one_tree_hill-6.webp": {
+"image_url": "https://wp.australiantraveller.com/wp-content/uploads/2024/10/things-to-do-on-hamilton-island-6.jpg",
+"source_page": "https://www.australiantraveller.com/qld/the-whitsundays/hamilton-island/things-to-do-on-hamilton-island/",
+"alt_ko": "원 트리 힐의 노을 풍경",
+"credit": "Australian Traveller",
+"width": 600,
+"height": 450,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bommie-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/Bommie-(Restaurant-Bar)/page-gallery/interior.png?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/restaurants/bommie",
+"alt_ko": "통창 너머 덴트 패시지가 보이는 다이닝 룸",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bommie-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/Bommie-(Restaurant-Bar)/Bommie-Restaurant.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/restaurants/bommie",
+"alt_ko": "곡선형 봄미 다이닝 룸",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bommie-3.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/Bommie-(Restaurant-Bar)/page-gallery/Food-1.png?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/restaurants/bommie",
+"alt_ko": "봄미 시그니처 요리",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bommie-4.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/Bommie-(Restaurant-Bar)/page-gallery/Food-3.png?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/restaurants/bommie",
+"alt_ko": "봄미 코스 요리",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bommie-5.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/Bommie-(Restaurant-Bar)/page-gallery/Table-setting.png?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/restaurants/bommie",
+"alt_ko": "창가 테이블 세팅",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bommie-6.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Hamilton-Island-Yacht-Club/yacht-club-shot-from-road.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Hamilton%20Island%20Yacht%20Club",
+"alt_ko": "해밀턴 아일랜드 요트 클럽 건물 외관",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 589,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/hamilton_island_golf-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Activities/Dent-Island/HIGC-aerial.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/things-to-do/play-golf",
+"alt_ko": "덴트 아일랜드 골프 코스 항공 사진",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 803,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/hamilton_island_golf-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Hamilton-Island-Golf-Club/hole-15.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/golf/hamilton-island-golf-club",
+"alt_ko": "바다를 낀 15번 홀",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/hamilton_island_golf-3.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Activities/Dent-Island/HIGC-with-buggy-and-view.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/things-to-do/play-golf",
+"alt_ko": "버기와 바다 전망 페어웨이",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/hamilton_island_golf-4.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Hamilton-Island-Golf-Club/clubhouse-and-golf-carts.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/things-to-do/play-golf",
+"alt_ko": "클럽하우스와 골프 카트",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/hamilton_island_golf-5.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Activities/Dent-Island/HIGC-island-links-transfer.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/things-to-do/play-golf",
+"alt_ko": "덴트 아일랜드로 가는 골프 페리",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/hamilton_island_golf-6.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Hamilton-Island-Golf-Club/sunset-over-the-hamilton-island-golf-course.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/destination/hamilton-island-golf-club",
+"alt_ko": "골프 코스 위 노을",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/catseye_pool_club-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/The-Sundays/Pool-Club-1.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/the-sundays/dine",
+"alt_ko": "캣츠아이 풀 클럽 요리 한상",
+"credit": "Hamilton Island / Christopher Pearce",
+"width": 1280,
+"height": 1920,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/catseye_pool_club-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/the-sundays/new-images-from-launch/poolside-dining.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/the-sundays/dine",
+"alt_ko": "수영장 옆 다이닝",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 1920,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/catseye_pool_club-3.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/the-sundays/new-images-from-launch/pool-view-onto-catseye-bay.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/the-sundays/dine",
+"alt_ko": "캣츠아이 베이를 향한 수영장",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 1920,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/catseye_pool_club-4.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/the-sundays/new-images-from-launch/breakfast-from-catseye-pool-club.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/the-sundays/dine",
+"alt_ko": "풀 클럽 아침 식사",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 1920,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/catseye_pool_club-5.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/The-Sundays-gallery-(linked-on-the-HI-accom-a-feat/Lobster.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=The%20Sundays",
+"alt_ko": "랍스터 요리",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 1920,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/catseye_pool_club-6.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/the-sundays/new-images-from-launch/catseye-pool-club-sunrise.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/the-sundays/dine",
+"alt_ko": "일출 무렵 캣츠아이 풀 클럽",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 1920,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/sunset_sail-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Activities/Explore-Group/OTE-Sunset-Sail-View-From-qualia.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/sailing/sunset-sail-whitsunday-islands",
+"alt_ko": "노을 속 세일링 카타마란",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/sunset_sail-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Activities/sunset-sail-on-the-edge.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/sailing/ricochet-sunset-sail",
+"alt_ko": "바다 위 일몰",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/sunset_sail-3.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Activities/Sailing-(1)/Ricochet-Sunset-Sail.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/sailing/ricochet-sunset-sail",
+"alt_ko": "요트 위에서 보는 선셋",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 888,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/sunset_sail-4.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Activities/Explore-Group/ricochet.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/things-to-do/sailing",
+"alt_ko": "럭셔리 세일링 카타마란 리코셰",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/sunset_sail-5.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Activities/Boats/Palm-Beach-Gallery/qualia-Palm-Beach-1.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/fishing-and-boating/palm-beach-luxury-charters",
+"alt_ko": "프라이빗 차터 보트 위 커플",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 1528,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/sunset_sail-6.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Activities/on-the-edge-heading-out-to-sea.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Sailing",
+"alt_ko": "바다로 나가는 세일링 요트",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 512,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/sails_hi-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/food-and-wine/sails/reopen/sails-beach-front.png?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/restaurants/sails",
+"alt_ko": "파라솔 아래 비치프런트 좌석",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/sails_hi-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/food-and-wine/sails/new/bar.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/restaurants/sails",
+"alt_ko": "새로 단장한 세일즈 바",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 860,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/sails_hi-3.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/food-and-wine/sails/new/sails-cuisine-aerial.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/restaurants/sails",
+"alt_ko": "세일즈 요리 테이블",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/sails_hi-4.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/food-and-wine/sails/new/swimup-bar.png?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/bars-and-clubs/sails-swim-up-bar",
+"alt_ko": "바다를 향한 세일즈 수영장",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/sails_hi-5.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/food-and-wine/sails/new/swim-up-bar-3.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/bars-and-clubs/sails-swim-up-bar",
+"alt_ko": "스윔업 바에서 즐기는 음료",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/sails_hi-6.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/General-Island-(Airport,-Retail,-Marina)/dolphin-pool-hero-image.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/water-activities/swimming-pools",
+"alt_ko": "야자수와 세일즈 풀",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/resort_centre_hi-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/General-Island-(Airport,-Retail,-Marina)/marina-village-14.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Marina%20Page%20Gallery",
+"alt_ko": "프런트 스트리트 상점가와 마리나",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/resort_centre_hi-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/General-Island-(Airport,-Retail,-Marina)/New-Marina/Tiles/Marina-from-front-street.png?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Marina%20Page%20Gallery",
+"alt_ko": "프런트 스트리트에서 본 마리나",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 1920,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/resort_centre_hi-3.webp": {
+"image_url": "https://wp.australiantraveller.com/wp-content/uploads/2024/10/things-to-do-on-hamilton-island-8.jpg",
+"source_page": "https://www.australiantraveller.com/qld/the-whitsundays/hamilton-island/things-to-do-on-hamilton-island/",
+"alt_ko": "프런트 스트리트 편집숍 The Deckhouse",
+"credit": "Australian Traveller / Kara Rosenlund",
+"width": 600,
+"height": 800,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/resort_centre_hi-4.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/General-Island-(Airport,-Retail,-Marina)/woman-shopping-at-the-hut-on-hamilton-island.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Shopping",
+"alt_ko": "빌리지 의류 매장 쇼핑",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/resort_centre_hi-5.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/General-Island-(Airport,-Retail,-Marina)/chairs-overlooking-catseye-beach.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/static/api/map/activity.json",
+"alt_ko": "리조트 센터 앞 캣츠아이 비치 의자",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 1920,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_beach_pavilion-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/food-and-wine/beach-pavilion-kiosk/beach-pavilion-kiosk.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/bars-and-clubs/beach-pavilion-kiosk",
+"alt_ko": "비치 파빌리온 키오스크 건물",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_beach_pavilion-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/General-Island-(Airport,-Retail,-Marina)/bougainvillea-pool.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Bougainvillea%20Pool",
+"alt_ko": "야자수에 둘러싸인 부겐빌레아 풀",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_beach_pavilion-3.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/activities/water-activities-(kayak,-snorkeling,-sup,-dingy,-w/bougainvillea-pool-front.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/water-activities/swimming-pools",
+"alt_ko": "부겐빌레아 풀과 선베드",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_beach_pavilion-4.webp": {
+"image_url": "https://wp.australiantraveller.com/wp-content/uploads/2024/10/hamilton-island-beach-3.jpg",
+"source_page": "https://www.australiantraveller.com/qld/the-whitsundays/hamilton-island/hamilton-island-beaches-and-pools/",
+"alt_ko": "캣츠아이 비치 뒤 부겐빌레아 풀 항공 사진",
+"credit": "Australian Traveller",
+"width": 600,
+"height": 450,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_marina_cafe-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/marina-cafe-drinks-lunch-on-table-outsite.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/cafes-and-takeaway/marina-cafe",
+"alt_ko": "마리나를 배경으로 한 주스와 브런치",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_marina_cafe-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/General-Island-(Airport,-Retail,-Marina)/New-Marina/Tiles/Marina-Village.png?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Marina%20Page%20Gallery",
+"alt_ko": "마리나가 보이는 빌리지 카페 좌석",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 1920,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_bobs_bakery-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/food-and-wine/bob-s-bakery/bob-s-bakery.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/cafes-and-takeaway/bobs-bakery",
+"alt_ko": "밥스 베이커리",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_bobs_bakery-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/food-and-wine/bob-s-bakery/bread-bob-s-bakery.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/cafes-and-takeaway/bobs-bakery",
+"alt_ko": "갓 구운 빵",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 852,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_bobs_bakery-3.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/General-Island-(Airport,-Retail,-Marina)/marina-village-14.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/static/api/map/foodandwine.json",
+"alt_ko": "마리나 앞 BAKERY 간판 매장",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_bommie_deck-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/Bommie-(Restaurant-Bar)/bommie-deck-sunset-glow.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/food-wine/bommie-deck",
+"alt_ko": "노을 속 봄미 데크의 손님들",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_bommie_deck-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Scenery-(GBR,-Catseye,-Whitehaven)/sunset-from-bommie-deck.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/food-wine/bommie-deck",
+"alt_ko": "봄미 데크 끝에서 보는 일몰",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_bommie_deck-3.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Scenery-(GBR,-Catseye,-Whitehaven)/sunset-over-dent-passage.JPG?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/static/api/map/foodandwine.json",
+"alt_ko": "덴트 패시지 위 노을과 데크",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 799,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_bommie_deck-4.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Hamilton-Island-Yacht-Club/couple-on-the-flag-deck-at-sunset.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Hamilton%20Island%20Yacht%20Club",
+"alt_ko": "요트 클럽 플래그 데크의 커플",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_bommie_deck-5.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/Food/bommie-deck-dill-lemon-fish-and-chips.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Bommie%20Deck",
+"alt_ko": "봄미 데크 피시 앤 칩스",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_sails_sunbed-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/food-and-wine/sails/new/sunbed.png?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/swimming-pools/sails-sunbed-series",
+"alt_ko": "선베드에서 즐기는 샴페인과 요리",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_sails_sunbed-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/food-and-wine/sails/new/pool.png?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/bars-and-clubs/sails-swim-up-bar",
+"alt_ko": "세일즈 풀의 선베드와 파라솔",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_sails_sunbed-3.webp": {
+"image_url": "https://wp.australiantraveller.com/wp-content/uploads/2024/10/hamilton-island-beach-6.jpg",
+"source_page": "https://www.australiantraveller.com/qld/the-whitsundays/hamilton-island/hamilton-island-beaches-and-pools/",
+"alt_ko": "야자수에 둘러싸인 세일즈 풀",
+"credit": "Australian Traveller / Kara Rosenlund",
+"width": 600,
+"height": 450,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_island_bar-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/food-and-wine/island-bar/kara-rosenlund-main-pool-a-feature.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/bars-and-clubs/island-bar",
+"alt_ko": "메인 풀과 초가지붕 아일랜드 바",
+"credit": "Hamilton Island / Kara Rosenlund",
+"width": 1280,
+"height": 380,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_island_bar-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/General-Island-(Airport,-Retail,-Marina)/Island-bar.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/bars-and-clubs/island-bar",
+"alt_ko": "풀 한가운데 초가지붕 바",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_island_bar-3.webp": {
+"image_url": "https://wp.australiantraveller.com/wp-content/uploads/2024/10/hamilton-island-beach-4.jpg",
+"source_page": "https://www.australiantraveller.com/qld/the-whitsundays/hamilton-island/hamilton-island-beaches-and-pools/",
+"alt_ko": "스윔업 바가 있는 메인 풀",
+"credit": "Australian Traveller / Kara Rosenlund",
+"width": 600,
+"height": 450,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_romanos-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/food-and-wine/romano-s/romanos.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/restaurants/romanos",
+"alt_ko": "마리나가 보이는 로마노스 테이블",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 855,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_romanos-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/romanos-exterior.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Romano%27s",
+"alt_ko": "물 위에 지어진 로마노스 외관",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_romanos-3.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/romanos-table-near-water.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/static/api/map/foodandwine.json",
+"alt_ko": "요트를 배경으로 한 이탈리안 요리",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_coca_chu-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/food-and-wine/coca-chu/new-2026/seating.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/restaurants/coca-chu",
+"alt_ko": "코카 추 좌석",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_coca_chu-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/coca-chu-food-14.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=coca%20chu",
+"alt_ko": "동남아 스타일 요리",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 1920,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_coca_chu-3.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/coca-chu-bird-cages.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=coca%20chu",
+"alt_ko": "새장 조명이 있는 실내",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 1920,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_coca_chu-4.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/coca-chu-open-kitchen.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=coca%20chu",
+"alt_ko": "오픈 키친",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_coca_chu-5.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/Food/coca-chu-dish-on-banana-leaf.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=coca%20chu",
+"alt_ko": "바나나잎 위 요리",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 1920,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_manta_ray-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/food-and-wine/manta-ray/new-2026/food-overview-balcony.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/restaurants/manta-ray",
+"alt_ko": "마리나가 보이는 발코니 요리",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_manta_ray-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/manta-ray-tabletop-14.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/static/api/map/foodandwine.json",
+"alt_ko": "마리나 앞 테이블",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_manta_ray-3.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/manta-ray-pizza-server.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Manta%20Ray",
+"alt_ko": "화덕 피자 서빙",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_manta_ray-4.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Food-and-Wine/manta-ray-food-14.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Manta%20Ray",
+"alt_ko": "해산물 요리",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 1920,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_flat_top_hill-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Activities/Bushwalking/Hilltop-Lookout.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Bushwalking",
+"alt_ko": "플랫 톱 힐 전망대 벤치와 리조트 전경",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 859,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_flat_top_hill-2.webp": {
+"image_url": "https://wp.australiantraveller.com/wp-content/uploads/2021/07/6Views-from-Flat-Top-Hill.jpg",
+"source_page": "https://www.australiantraveller.com/qld/the-whitsundays/hamilton-island/hamilton-island-walks-and-hiking-trails/",
+"alt_ko": "플랫 톱 힐에서 본 캣츠아이 베이",
+"credit": "Australian Traveller",
+"width": 600,
+"height": 450,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_hesperus-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/General-Island-(Airport,-Retail,-Marina)/marina-sunset.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Marina%20Page%20Gallery",
+"alt_ko": "노을 진 해밀턴 마리나",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_hesperus-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/General-Island-(Airport,-Retail,-Marina)/marina-lookout.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Marina%20Page%20Gallery",
+"alt_ko": "마리나 전망",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 1920,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_hesperus-3.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/General-Island-(Airport,-Retail,-Marina)/yacht-club-and-marina.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Marina%20Page%20Gallery",
+"alt_ko": "요트 클럽과 마리나",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 644,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_hesperus-4.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/General-Island-(Airport,-Retail,-Marina)/Marina-Aerial-1.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Marina%20Page%20Gallery",
+"alt_ko": "마리나 항공 사진",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_escape_beach-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Activities/Bushwalking/Escape-Beach.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Bushwalking",
+"alt_ko": "한적한 이스케이프 비치",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_escape_beach-2.webp": {
+"image_url": "https://wp.australiantraveller.com/wp-content/uploads/2024/02/1001681-Walking_Trails_-_Riley_Williams21_13-__creator__-2.jpg",
+"source_page": "https://www.australiantraveller.com/qld/the-whitsundays/hamilton-island/hamilton-island-walks-and-hiking-trails/",
+"alt_ko": "이스케이프 비치로 내려가는 산책로",
+"credit": "Australian Traveller / Riley Williams",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_escape_beach-3.webp": {
+"image_url": "https://wp.australiantraveller.com/wp-content/uploads/2024/10/hamilton-island-beach-2.jpg",
+"source_page": "https://www.australiantraveller.com/qld/the-whitsundays/hamilton-island/hamilton-island-beaches-and-pools/",
+"alt_ko": "이스케이프 비치 표지판 앞 도착",
+"credit": "Australian Traveller / TEQ",
+"width": 600,
+"height": 450,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_escape_beach-4.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/articles/blog/5-unique-nature-experience-at-hamilton-island/escape-beach-at-hamilton-island-andrew-caitens.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/community-and-development/community-facilities/walking-trails",
+"alt_ko": "바위와 맑은 바다의 이스케이프 비치",
+"credit": "Hamilton Island / Andrew Caitens",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_coral_cove-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Scenery-(GBR,-Catseye,-Whitehaven)/Coral-Cove-Swing.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Bushwalking",
+"alt_ko": "코럴 코브 해변의 나무 그네",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_coral_cove-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/activities/bushwalking/walking-trail-swing.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/nature-and-wildlife/icons-trail",
+"alt_ko": "바다 앞 대형 그네",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_coral_cove-3.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/articles/blog/5-unique-nature-experience-at-hamilton-island/coral-cove-at-hamilton-island-beach-andrew-caitens.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/community-and-development/community-facilities/walking-trails",
+"alt_ko": "썰물 때 넓게 드러난 코럴 코브 모래사장",
+"credit": "Hamilton Island / Andrew Caitens",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_passage_peak-1.webp": {
+"image_url": "https://hamilton-island.imgix.net/Originals/Activities/Bushwalking/Walking-Trails-gallery/Passage-Peak-(1).png?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/api/ImageGallery?type=or&size=Gallery:800x460&tags=Bushwalking",
+"alt_ko": "패시지 피크 정상 전망 데크와 일출",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 855,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_passage_peak-2.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/activities/bushwalking/bush-walking-passage-peak.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/blog/ultimate-guide-to-hamilton-islands-bushwalking-trails",
+"alt_ko": "패시지 피크 바위 정상의 하이커",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_passage_peak-3.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/articles/blog/ultimate-hike/passage-peak-sunrise-andrew-caitens.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/blog/ultimate-guide-to-hamilton-island-bushwalks-hike",
+"alt_ko": "일출 속 패시지 피크 정상",
+"credit": "Hamilton Island / Andrew Caitens",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_passage_peak-4.webp": {
+"image_url": "https://hamilton-island.imgix.net/originals/community-development/passage-peak.jpg?w=1600&fit=crop",
+"source_page": "https://www.hamiltonisland.com.au/community-and-development/community-facilities/walking-trails",
+"alt_ko": "절벽 위 패시지 피크 전망대",
+"credit": "Hamilton Island",
+"width": 1280,
+"height": 1920,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_ham_passage_peak-5.webp": {
+"image_url": "https://wp.australiantraveller.com/wp-content/uploads/2024/02/1001667-Walking_Trails_-_Riley_Williams21_21-__creator__-2.jpg",
+"source_page": "https://www.australiantraveller.com/qld/the-whitsundays/hamilton-island/hamilton-island-walks-and-hiking-trails/",
+"alt_ko": "패시지 피크 하이킹",
+"credit": "Australian Traveller / Riley Williams",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/star_grand_brisbane-1.webp": {
+"image_url": "https://www.star.com.au/sites/default/files/styles/small_mobile_hero_1x1/public/2024-12/The%20star%20grand%20hotel%20landing%20page.png.webp?itok=5nzcZ1OM",
+"source_page": "https://www.star.com.au/brisbane/hotels/the-star-grand-hotel",
+"alt_ko": "더 스타 그랜드 호텔 정문·포르트코셰르 입구",
+"credit": "The Star Brisbane",
+"width": 576,
+"height": 324,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/star_grand_brisbane-2.webp": {
+"image_url": "https://www.star.com.au/sites/default/files/styles/paragraph_16x9/public/2025-03/The%20Star%20Grand%20Brisbane%2C%20River%20King%20Room%20%281%29.jpg.webp?itok=BfUvWDse",
+"source_page": "https://www.star.com.au/brisbane/hotels/the-star-grand-hotel",
+"alt_ko": "리버 킹룸 – 통창 너머 브리즈번 강 전망",
+"credit": "The Star Brisbane",
+"width": 920,
+"height": 517,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/star_grand_brisbane-3.webp": {
+"image_url": "https://www.star.com.au/sites/default/files/styles/paragraph_16x9/public/2025-03/The%20Star%20Grand%20Brisbane%2C%20River%20Suite%20%281%29.jpg.webp?itok=rIXc5yct",
+"source_page": "https://www.star.com.au/brisbane/hotels/the-star-grand-hotel",
+"alt_ko": "리버 스위트 거실",
+"credit": "The Star Brisbane",
+"width": 920,
+"height": 517,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/star_grand_brisbane-4.webp": {
+"image_url": "https://www.star.com.au/sites/default/files/2025-04/Isoletto%20Pool%20Club%20The%20Star%20Brisbane.jpg",
+"source_page": "https://www.star.com.au/brisbane/hotels/isoletto-pool-club",
+"alt_ko": "이솔레토 풀 클럽과 호텔 외관 항공샷",
+"credit": "The Star Brisbane",
+"width": 1280,
+"height": 664,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/star_grand_brisbane-5.webp": {
+"image_url": "https://www.star.com.au/sites/default/files/styles/paragraph_16x9/public/2025-04/Isoletto%20-%20Markus%20Ravik%20-%20006.jpg.webp?itok=QHKaidCw",
+"source_page": "https://www.star.com.au/brisbane/hotels/isoletto-pool-club",
+"alt_ko": "이솔레토 인피니티 풀과 도심 스카이라인",
+"credit": "The Star Brisbane / Markus Ravik",
+"width": 920,
+"height": 517,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/star_grand_brisbane-6.webp": {
+"image_url": "https://www.star.com.au/sites/default/files/styles/paragraph_16x9/public/2025-03/The%20Star%20Grand%20Brisbane%2C%20Skyline%20Penthouse%20Suite%20%281a%29.jpg.webp?itok=F0aKq9eO",
+"source_page": "https://www.star.com.au/brisbane/hotels/the-star-grand-hotel",
+"alt_ko": "스카이라인 펜트하우스 스위트 라운지",
+"credit": "The Star Brisbane",
+"width": 920,
+"height": 517,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bne_airport-1.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Brisbane_Airport_International_Terminal%2C_2022.jpg/1280px-Brisbane_Airport_International_Terminal%2C_2022.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Brisbane_Airport_International_Terminal%2C_2022.jpg",
+"alt_ko": "국제선 터미널 게이트 통로 (2022)",
+"credit": "Kgbo / CC BY-SA 4.0",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bne_airport-2.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Brisbane_International_Airport_Terminal%2C_Australia_%286907749392%29.jpg/1280px-Brisbane_International_Airport_Terminal%2C_Australia_%286907749392%29.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Brisbane_International_Airport_Terminal%2C_Australia_%286907749392%29.jpg",
+"alt_ko": "국제선 터미널 출국장 라운지 공간",
+"credit": "David McKelvey / CC BY 2.0",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bne_airport-3.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Christmas_trees_at_Brisbane_Airport_International_Terminal%2C_2025.jpg/1280px-Christmas_trees_at_Brisbane_Airport_International_Terminal%2C_2025.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Christmas_trees_at_Brisbane_Airport_International_Terminal%2C_2025.jpg",
+"alt_ko": "국제선 도착장 BNE 사인 (2025년 11월 크리스마스 장식)",
+"credit": "Chris Olszewski / CC BY-SA 4.0",
+"width": 1280,
+"height": 959,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bne_airport-4.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Brisbane_Airport_Domestic_Terminal%2C_2025%2C_02.jpg/1280px-Brisbane_Airport_Domestic_Terminal%2C_2025%2C_02.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Brisbane_Airport_Domestic_Terminal%2C_2025%2C_02.jpg",
+"alt_ko": "국내선 터미널 에이프런과 관제탑",
+"credit": "Chris Olszewski / CC BY-SA 4.0",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bne_airport-5.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Brisbane_Airport_Domestic_Terminal%2C_8pm%2C_May_2021%2C_02.jpg/1280px-Brisbane_Airport_Domestic_Terminal%2C_8pm%2C_May_2021%2C_02.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Brisbane_Airport_Domestic_Terminal%2C_8pm%2C_May_2021%2C_02.jpg",
+"alt_ko": "국내선 터미널 콴타스 체크인 홀",
+"credit": "Kgbo / CC BY-SA 4.0",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/bne_airport-6.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Brisbane_Airport_Qantas_Domestic_Terminal%2C_2025%2C_01.jpg/1280px-Brisbane_Airport_Qantas_Domestic_Terminal%2C_2025%2C_01.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Brisbane_Airport_Qantas_Domestic_Terminal%2C_2025%2C_01.jpg",
+"alt_ko": "국내선 터미널 외관과 진입 도로",
+"credit": "Chris Olszewski / CC BY-SA 4.0",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/exhibition_restaurant-1.webp": {
+"image_url": "https://cdn.broadsheet.com.au/cache/25/10/25107c6f3fcda1c92a4699fa7dceb7a7.jpg",
+"source_page": "https://www.broadsheet.com.au/brisbane/food-and-drink/article/first-look-exhibition-former-joy-owners-celebration-food-beverage-and-creativity-opens-beneath-heritage-listed-cbd-ex-arts-centre",
+"alt_ko": "에드워드 스트리트의 Exhibition 간판과 입구",
+"credit": "Broadsheet",
+"width": 860,
+"height": 600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/exhibition_restaurant-2.webp": {
+"image_url": "https://cdn.broadsheet.com.au/cache/12/e8/12e8881d8b3270df242a7c34c3c56d16.jpg",
+"source_page": "https://www.broadsheet.com.au/brisbane/food-and-drink/article/first-look-exhibition-former-joy-owners-celebration-food-beverage-and-creativity-opens-beneath-heritage-listed-cbd-ex-arts-centre",
+"alt_ko": "지하로 내려가는 계단과 벽화",
+"credit": "Broadsheet",
+"width": 860,
+"height": 600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/exhibition_restaurant-3.webp": {
+"image_url": "https://cdn.broadsheet.com.au/cache/3d/36/3d3625cb5813542c4bd66bdcaaee4d74.jpg",
+"source_page": "https://www.broadsheet.com.au/brisbane/food-and-drink/article/first-look-exhibition-former-joy-owners-celebration-food-beverage-and-creativity-opens-beneath-heritage-listed-cbd-ex-arts-centre",
+"alt_ko": "셰프 카운터에서 요리를 마무리하는 모습",
+"credit": "Broadsheet",
+"width": 860,
+"height": 600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/exhibition_restaurant-4.webp": {
+"image_url": "https://cdn.broadsheet.com.au/cache/81/44/8144efaa79adbd9f1c4147245314d92c.jpg",
+"source_page": "https://www.broadsheet.com.au/brisbane/food-and-drink/article/first-look-exhibition-former-joy-owners-celebration-food-beverage-and-creativity-opens-beneath-heritage-listed-cbd-ex-arts-centre",
+"alt_ko": "테이스팅 코스 요리 구성",
+"credit": "Broadsheet",
+"width": 860,
+"height": 600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/exhibition_restaurant-5.webp": {
+"image_url": "https://cdn.broadsheet.com.au/cache/9d/b1/9db1b690e473781defc38cfff20c7e20.jpg",
+"source_page": "https://www.broadsheet.com.au/brisbane/food-and-drink/article/first-look-exhibition-former-joy-owners-celebration-food-beverage-and-creativity-opens-beneath-heritage-listed-cbd-ex-arts-centre",
+"alt_ko": "캐비아를 올린 스낵 코스",
+"credit": "Broadsheet",
+"width": 860,
+"height": 600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/exhibition_restaurant-6.webp": {
+"image_url": "https://cdn.broadsheet.com.au/cache/51/4e/514eb9923d006bbfd6dc1315ca70b650.jpg",
+"source_page": "https://www.broadsheet.com.au/brisbane/food-and-drink/article/first-look-exhibition-former-joy-owners-celebration-food-beverage-and-creativity-opens-beneath-heritage-listed-cbd-ex-arts-centre",
+"alt_ko": "어두운 지하 다이닝룸",
+"credit": "Broadsheet",
+"width": 860,
+"height": 600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/howard_smith_wharves-1.webp": {
+"image_url": "https://howardsmithwharves.com/wp-content/uploads/2022/05/Home-Page-1600x1000-1.jpg",
+"source_page": "https://howardsmithwharves.com/",
+"alt_ko": "스토리 브리지 아래 하워드 스미스 워브스 – 해질녘 항공샷",
+"credit": "Howard Smith Wharves",
+"width": 1280,
+"height": 800,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/howard_smith_wharves-2.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/06781c089e4846c3fb1d1cc820b52d74.jpeg?w=1600",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/eat-and-drink/howard-smith-wharves-5499",
+"alt_ko": "밤의 스토리 브리지 조명과 Felons Barrel Hall",
+"credit": "Visit Brisbane / ATDW",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/howard_smith_wharves-3.webp": {
+"image_url": "https://howardsmithwharves.com/wp-content/uploads/2022/02/FBH2-1.png",
+"source_page": "https://howardsmithwharves.com/venues/felons-barrel-hall/",
+"alt_ko": "Felons Barrel Hall 내부 – 북적이는 비어홀",
+"credit": "Howard Smith Wharves",
+"width": 1280,
+"height": 817,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/howard_smith_wharves-4.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/8142d6143501a3fdc0bd89184124fe8d.jpeg?w=1600",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/eat-and-drink/howard-smith-wharves-5499",
+"alt_ko": "노을 진 스토리 브리지와 Felons Brewing 건물",
+"credit": "Visit Brisbane / ATDW",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/howard_smith_wharves-5.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/619fa2cf28689feff89b65c6dc259dfb.jpeg?w=1600",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/eat-and-drink/howard-smith-wharves-5499",
+"alt_ko": "강변 데크 위 야외 테이블",
+"credit": "Visit Brisbane / ATDW",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/howard_smith_wharves-6.webp": {
+"image_url": "https://howardsmithwharves.com/wp-content/uploads/2022/02/BOUGAINVILLEA2.jpg",
+"source_page": "https://howardsmithwharves.com/",
+"alt_ko": "강 건너 도심과 스토리 브리지가 보이는 테라스",
+"credit": "Howard Smith Wharves",
+"width": 1280,
+"height": 817,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/new_farm_market-1.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/60d2fd8680166c694f99802a/5eb1e977-fdf7-4e4b-9e1a-2e4fa4e79045/JV+%28174+of+225%29+_N0I4650.jpg?format=1500w",
+"source_page": "https://janpowersfarmersmarkets.com.au/powerhouse-farmers-markets",
+"alt_ko": "파워하우스 붉은 벽돌 건물 옆 토요 마켓 인파",
+"credit": "Jan Powers Farmers Markets",
+"width": 1200,
+"height": 800,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/new_farm_market-2.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/60d2fd8680166c694f99802a/f84e00a9-ca97-4095-9985-efec0d803500/powerhouse.jpg?format=1500w",
+"source_page": "https://janpowersfarmersmarkets.com.au/powerhouse-farmers-markets",
+"alt_ko": "빨간 파라솔이 늘어선 마켓 전경 파노라마",
+"credit": "Jan Powers Farmers Markets",
+"width": 1280,
+"height": 476,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/new_farm_market-3.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/33dce28bbd63c8bd7e605f24053b1cf8.jpeg?w=1600",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/eat-and-drink/jan-powers-farmers-markets-brisbane-powerhouse-3250",
+"alt_ko": "천막 사이 장보는 사람들",
+"credit": "Visit Brisbane / ATDW",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/new_farm_market-4.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/6339a80120f4de61654e32393b15d780.jpeg?w=1600",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/eat-and-drink/jan-powers-farmers-markets-brisbane-powerhouse-3250",
+"alt_ko": "뉴팜 공원 잔디 옆 노점 행렬",
+"credit": "Visit Brisbane / ATDW",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/new_farm_market-5.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/e9b44dbfb054dfd4b62f4e1bd1f4f614.jpeg?w=1600",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/eat-and-drink/jan-powers-farmers-markets-brisbane-powerhouse-3250",
+"alt_ko": "신선한 채소 진열대",
+"credit": "Visit Brisbane / ATDW",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/new_farm_market-6.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/6c7bfda2098ca59f953d43edbc9f4338.jpeg?w=1600",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/eat-and-drink/jan-powers-farmers-markets-brisbane-powerhouse-3250",
+"alt_ko": "해바라기 꽃 노점 상인",
+"credit": "Visit Brisbane / ATDW",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/mary_maes-1.webp": {
+"image_url": "https://marymaes.com.au/wp-content/uploads/sites/16/2021/09/HOME-1-1.jpeg",
+"source_page": "https://www.marymaes.com.au/",
+"alt_ko": "강가에서 본 브리즈번 파워하우스와 메리 메이스",
+"credit": "Mary Mae's",
+"width": 1280,
+"height": 1076,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/mary_maes-2.webp": {
+"image_url": "https://marymaes.com.au/wp-content/uploads/sites/16/2022/05/MaryMaes_VenueRefresh_May22_267.jpg",
+"source_page": "https://www.marymaes.com.au/",
+"alt_ko": "'Eat, Drink & Be Mary' 입구",
+"credit": "Mary Mae's",
+"width": 1200,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/mary_maes-3.webp": {
+"image_url": "https://marymaes.com.au/wp-content/uploads/sites/16/2022/05/MaryMaes_VenueRefresh_May22_185.jpg",
+"source_page": "https://www.marymaes.com.au/",
+"alt_ko": "강변 테라스 바",
+"credit": "Mary Mae's",
+"width": 1200,
+"height": 1500,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/mary_maes-4.webp": {
+"image_url": "https://marymaes.com.au/wp-content/uploads/sites/16/2022/05/MaryMaes_VenueRefresh_May22_212.jpg",
+"source_page": "https://www.marymaes.com.au/",
+"alt_ko": "MM 로고 바 카운터와 요리·와인",
+"credit": "Mary Mae's",
+"width": 1200,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/mary_maes-5.webp": {
+"image_url": "https://marymaes.com.au/wp-content/uploads/sites/16/2022/05/S_D_610.jpg",
+"source_page": "https://www.marymaes.com.au/",
+"alt_ko": "저녁 노을 속 강변 테라스",
+"credit": "Mary Mae's",
+"width": 1000,
+"height": 667,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/mary_maes-6.webp": {
+"image_url": "https://brisbanepowerhouse.org/wp-content/uploads/2024/06/Brisbane-Powerhouse-Exterior-5-Photo-by-Chelsea-Shotton-1024x683.png",
+"source_page": "https://brisbanepowerhouse.org/visit/",
+"alt_ko": "브리즈번 파워하우스 붉은 벽돌 외관",
+"credit": "Brisbane Powerhouse / Chelsea Shotton",
+"width": 1024,
+"height": 683,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/new_farm_riverwalk-1.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/73d4d992041dd3633b5cef157e68fa2c.jpeg?w=1600",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/history-and-heritage/the-brisbane-riverwalk-3bfb",
+"alt_ko": "밤의 리버워크와 조명 켜진 스토리 브리지",
+"credit": "Visit Brisbane / ATDW",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/new_farm_riverwalk-2.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/75176110d6df9a58c043ae20e025cdd9.jpeg?w=1600",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/history-and-heritage/the-brisbane-riverwalk-3bfb",
+"alt_ko": "스토리 브리지를 배경으로 자전거 타는 리버워크",
+"credit": "Visit Brisbane / ATDW",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/new_farm_riverwalk-3.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/1427e14725660de24eaa3c2d4e168029.jpeg?w=1600",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/history-and-heritage/the-brisbane-riverwalk-3bfb",
+"alt_ko": "해질녘 스토리 브리지와 도심, 강변 산책로",
+"credit": "Visit Brisbane / ATDW",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/new_farm_riverwalk-4.webp": {
+"image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/New_Farm_Riverwalk_01.JPG/1280px-New_Farm_Riverwalk_01.JPG",
+"source_page": "https://commons.wikimedia.org/wiki/File:New_Farm_Riverwalk_01.JPG",
+"alt_ko": "강 위로 이어지는 뉴팜 리버워크",
+"credit": "Kgbo / CC BY-SA 4.0",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/hsw_stanley_greca-1.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/5ce77a70052c1800010c2f87/bbd787cf-05d4-48c3-ae72-2d52dbba448a/Stanley+-+Markus+Ravik+-+002.jpg?format=1500w",
+"source_page": "https://stanleyrestaurant.com.au/functions",
+"alt_ko": "Stanley – 스토리 브리지 아래 옛 수상경찰서 건물 외관",
+"credit": "Stanley / Markus Ravik",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/hsw_stanley_greca-2.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/5ce77a70052c1800010c2f87/3cd590a2-ad30-4930-bde6-ad2ab8da6572/Stanley+front+deck.jpg?format=1500w",
+"source_page": "https://stanleyrestaurant.com.au/brisbane",
+"alt_ko": "Stanley – 스토리 브리지 아래 프런트 데크",
+"credit": "Stanley",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/hsw_stanley_greca-3.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/5ce77a70052c1800010c2f87/874a579c-39f2-4d7c-90f3-619ffd1b6da6/HSW+2+Nov+23_0545.jpg?format=1500w",
+"source_page": "https://stanleyrestaurant.com.au/functions",
+"alt_ko": "Stanley – 북경오리·딤섬 등 광둥 요리 한 상",
+"credit": "Stanley",
+"width": 1280,
+"height": 577,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/hsw_stanley_greca-4.webp": {
+"image_url": "https://cdn.sanity.io/images/dgke0xoo/production/c358db049ea59d6d3826568340da4a8981888576-1000x1500.jpg?w=1200&auto=format",
+"source_page": "https://www.orkhestra.com.au/venues/greca",
+"alt_ko": "Greca – 강변 테라스 다이닝",
+"credit": "Greca / Orkhestra",
+"width": 1200,
+"height": 1800,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/hsw_stanley_greca-5.webp": {
+"image_url": "https://cdn.sanity.io/images/dgke0xoo/production/8a083e195e4db13d3f8db9e5ffaedd77f025469d-3313x4969.jpg?w=1200&auto=format",
+"source_page": "https://www.orkhestra.com.au/venues/greca",
+"alt_ko": "Greca – 목조 트러스 천장 아래 다이닝룸",
+"credit": "Greca / Orkhestra",
+"width": 1200,
+"height": 1800,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/hsw_stanley_greca-6.webp": {
+"image_url": "https://cdn.sanity.io/images/dgke0xoo/production/31c06a436685d457738494befda3b3ab32ef3657-2250x1500.jpg?w=1200&auto=format",
+"source_page": "https://www.orkhestra.com.au/venues/greca",
+"alt_ko": "Greca – 사가나키(구운 치즈) 무쇠팬",
+"credit": "Greca / Orkhestra",
+"width": 1200,
+"height": 800,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/suum-1.webp": {
+"image_url": "https://cdn.broadsheet.com.au/images/2025/12/12/SUUM_FergusHurst_17%20of%2020-d36f07b4ac.webp",
+"source_page": "https://www.broadsheet.com.au/brisbane/food-and-drink/article/suum-korean-fine-diner",
+"alt_ko": "'숨' 손잡이가 달린 검은 문",
+"credit": "Broadsheet / Fergus Hurst",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/suum-2.webp": {
+"image_url": "https://cdn.broadsheet.com.au/images/2025/12/12/SUUM_FergusHurst_14%20of%2020-9c497931dc.webp",
+"source_page": "https://www.broadsheet.com.au/brisbane/food-and-drink/article/suum-korean-fine-diner",
+"alt_ko": "16석 콘크리트 셰프 카운터",
+"credit": "Broadsheet / Fergus Hurst",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/suum-3.webp": {
+"image_url": "https://cdn.broadsheet.com.au/images/2025/12/12/SUUM_FergusHurst_1%20of%2020-ccf64132d7.webp",
+"source_page": "https://www.broadsheet.com.au/brisbane/food-and-drink/article/suum-korean-fine-diner",
+"alt_ko": "토마토 모양 시그니처 코스",
+"credit": "Broadsheet / Fergus Hurst",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/suum-4.webp": {
+"image_url": "https://cdn.broadsheet.com.au/images/2025/12/12/SUUM_FergusHurst_2%20of%2020-cf2040441f.webp",
+"source_page": "https://www.broadsheet.com.au/brisbane/food-and-drink/article/suum-korean-fine-diner",
+"alt_ko": "소고기 코스와 곁들임 플레이팅",
+"credit": "Broadsheet / Fergus Hurst",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/suum-5.webp": {
+"image_url": "https://cdn.broadsheet.com.au/images/2025/12/12/SUUM_FergusHurst_7%20of%2020-13d4f28925.webp",
+"source_page": "https://www.broadsheet.com.au/brisbane/food-and-drink/article/suum-korean-fine-diner",
+"alt_ko": "연어알을 올린 솥밥",
+"credit": "Broadsheet / Fergus Hurst",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/suum-6.webp": {
+"image_url": "https://static.wixstatic.com/media/b2d06a_439e8ffa348949cca92ee9fade91f5cd~mv2.jpg/v1/fit/w_1600,h_1600,q_85/b2d06a_439e8ffa348949cca92ee9fade91f5cd~mv2.jpg",
+"source_page": "https://www.suumrestaurant.com/",
+"alt_ko": "어두운 조명 아래 카운터 위 코스 요리",
+"credit": "SUUM",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/sky_deck_brisbane-1.webp": {
+"image_url": "https://www.star.com.au/sites/default/files/styles/desktop_hero/public/2024-12/sky%20deck.png.webp?itok=a7TnvtyA",
+"source_page": "https://www.star.com.au/brisbane/sky-deck",
+"alt_ko": "해질녘 100m 높이 스카이 데크 전망대",
+"credit": "The Star Brisbane",
+"width": 1280,
+"height": 576,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/sky_deck_brisbane-2.webp": {
+"image_url": "https://www.star.com.au/sites/default/files/styles/paragraph_16x9/public/2025-06/rooftop%20events%20brisbane.jpg.webp?itok=YTbQ8uz2",
+"source_page": "https://www.star.com.au/brisbane/sky-deck",
+"alt_ko": "밤의 스카이 데크 루프톱 라운지",
+"credit": "The Star Brisbane",
+"width": 920,
+"height": 517,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/sky_deck_brisbane-3.webp": {
+"image_url": "https://www.star.com.au/sites/default/files/styles/paragraph_16x9/public/2026-09/Axis%20Productions%20AU%20%2840%20of%2064%29.jpg.webp?itok=3-khm1sK",
+"source_page": "https://www.star.com.au/brisbane/eat-and-drink/bars-and-clubs/cicada-blu",
+"alt_ko": "Cicada Blu 테라스에서 보는 노을",
+"credit": "The Star Brisbane / Axis Productions",
+"width": 920,
+"height": 517,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/sky_deck_brisbane-4.webp": {
+"image_url": "https://www.star.com.au/sites/default/files/styles/paragraph_16x9/public/2024-12/Cicada%20Blu.png.webp?itok=RG-ghMba",
+"source_page": "https://www.star.com.au/brisbane/sky-deck",
+"alt_ko": "Cicada Blu 칵테일",
+"credit": "The Star Brisbane",
+"width": 920,
+"height": 517,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/sky_deck_brisbane-5.webp": {
+"image_url": "https://www.star.com.au/sites/default/files/styles/paragraph_16x9/public/2024-12/aloria.png.webp?itok=u0o7kVdf",
+"source_page": "https://www.star.com.au/brisbane/sky-deck",
+"alt_ko": "Aloria 다이닝 테이블",
+"credit": "The Star Brisbane",
+"width": 920,
+"height": 517,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/sky_deck_brisbane-6.webp": {
+"image_url": "https://www.star.com.au/sites/default/files/styles/paragraph_16x9/public/2025-05/039A3237.jpg.webp?itok=l0_HT1iO",
+"source_page": "https://www.star.com.au/brisbane/sky-deck",
+"alt_ko": "Babblers 플랫브레드와 브런치",
+"credit": "The Star Brisbane",
+"width": 920,
+"height": 517,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/star_casino_bne-1.webp": {
+"image_url": "https://www.star.com.au/sites/default/files/styles/desktop_hero/public/2024-07/tsbne00051_jul_casino_web_2880x1620_fa_g4.jpg.webp?itok=eabXNYYF",
+"source_page": "https://www.star.com.au/brisbane/casino",
+"alt_ko": "메인 카지노 플로어 테이블 게임",
+"credit": "The Star Brisbane",
+"width": 1280,
+"height": 576,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/star_casino_bne-2.webp": {
+"image_url": "https://www.star.com.au/sites/default/files/styles/paragraph_16x9/public/2026-03/Sovereign%20504x284%20P2.jpg.webp?itok=PRbVtLV8",
+"source_page": "https://www.star.com.au/brisbane/casino/premium-gaming",
+"alt_ko": "Sovereign 라운지·바",
+"credit": "The Star Brisbane",
+"width": 920,
+"height": 517,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/biz_class_787-1.webp": {
+"image_url": "https://www.executivetraveller.com/photos/view/size:1500,844/651d10edb61049cabf46389edd799465-korean-air-b787-interior.jpeg",
+"source_page": "https://www.executivetraveller.com/news/korean-air-brisbane-seoul-flights",
+"alt_ko": "787 프레스티지 스위트 객실 (2-2-2 지그재그 배열)",
+"credit": "Korean Air via Executive Traveller",
+"width": 1280,
+"height": 721,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/biz_class_787-2.webp": {
+"image_url": "https://www.executivetraveller.com/photos/view/size:1500,844/58be35b3f2304bfda2ea1cf6dd799acd-korean-air-boeing-787-business-class-1000c.jpg",
+"source_page": "https://www.executivetraveller.com/korean-air-s-boeing-787-first-class-is-the-same-as-business-class",
+"alt_ko": "787 프레스티지 좌석과 개인 모니터",
+"credit": "Korean Air via Executive Traveller",
+"width": 930,
+"height": 581,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/biz_class_787-3.webp": {
+"image_url": "https://www.executivetraveller.com/photos/view/size:1500,844/58be35d002b04bdfbcd82f3bdd799acd-korean-air-boeing-787-business-class-1000b.jpg",
+"source_page": "https://www.executivetraveller.com/korean-air-s-boeing-787-first-class-is-the-same-as-business-class",
+"alt_ko": "높은 칸막이의 787 프레스티지 스위트",
+"credit": "Korean Air via Executive Traveller",
+"width": 930,
+"height": 581,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/biz_class_787-4.webp": {
+"image_url": "https://www.executivetraveller.com/photos/view/size:1200,675/58be37fcc4144174af9f2f3bdd799acd-korean-air-boeing-787-920a.jpg",
+"source_page": "https://www.executivetraveller.com/korean-air-s-boeing-787-first-class-is-the-same-as-business-class",
+"alt_ko": "787 프레스티지석 승무원 서비스",
+"credit": "Korean Air via Executive Traveller",
+"width": 920,
+"height": 520,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_belle_epoque-1.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/cb7ab9398df6d8bb877afdaacc7f409a.jpeg?w=1600",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/eat-and-drink/belle-poque-101e",
+"alt_ko": "Belle Époque 간판과 입구",
+"credit": "Visit Brisbane / ATDW",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_belle_epoque-2.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/ba4692b2b50ed6d3e4ac7a788ad4dbe7.jpeg?w=1600",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/eat-and-drink/belle-poque-101e",
+"alt_ko": "흑백 타일과 황동 바가 있는 파리풍 실내",
+"credit": "Visit Brisbane / ATDW",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_belle_epoque-3.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/3ab16ed40c0f0ef76bc45b8bca9b17fb.jpeg?w=1600",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/eat-and-drink/belle-poque-101e",
+"alt_ko": "행잉 플랜트 아래 다이닝룸",
+"credit": "Visit Brisbane / ATDW",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_belle_epoque-4.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/9fd9f88aba5aefeff5e177d54517a120.jpeg?w=1600",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/eat-and-drink/belle-poque-101e",
+"alt_ko": "야외 테라스 좌석",
+"credit": "Visit Brisbane / ATDW",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_belle_epoque-5.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/1f7beb715ed5ea789964a448ddb06e6d.jpeg?w=1600",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/eat-and-drink/belle-poque-101e",
+"alt_ko": "스테인드글라스 천장 아래 파티스리 카운터",
+"credit": "Visit Brisbane / ATDW",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_french_exit-1.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/633f7b736a91413cb544a0b3/9d82e1ed-10a4-4719-88b5-ecddc29f4f02/251213-FrenchExit6797.jpg?format=1500w",
+"source_page": "https://anyday.com.au/the-french-exit-venue-page",
+"alt_ko": "황동 바와 글로브 조명의 비스트로 실내",
+"credit": "Anyday",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_french_exit-2.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/633f7b736a91413cb544a0b3/6eaad445-6a88-4129-a407-8faa705b9c6a/251213-FrenchExit6743.jpg?format=1500w",
+"source_page": "https://anyday.com.au/the-french-exit-venue-page",
+"alt_ko": "헤리티지 건물 속 다이닝룸",
+"credit": "Anyday",
+"width": 1280,
+"height": 1600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_french_exit-3.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/633f7b736a91413cb544a0b3/07b40887-5412-4ee0-8145-ee7616016829/FrenchExit_lr+59.jpg?format=1500w",
+"source_page": "https://anyday.com.au/the-french-exit-venue-page",
+"alt_ko": "에스카르고와 바게트",
+"credit": "Anyday",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_french_exit-4.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/633f7b736a91413cb544a0b3/c935badc-0c98-430c-8e69-a8b4ed597449/FrenchExit_lr+96.jpg?format=1500w",
+"source_page": "https://anyday.com.au/the-french-exit-venue-page",
+"alt_ko": "스테이크 타르타르",
+"credit": "Anyday",
+"width": 1280,
+"height": 1600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_french_exit-5.webp": {
+"image_url": "https://cdn.broadsheet.com.au/images/2025/12/15/TheFrenchExit_lr%20170-bb342a8a8f.webp",
+"source_page": "https://www.broadsheet.com.au/brisbane/food-and-drink/article/french-exit-anyday-group-opens-brisbane-cbd",
+"alt_ko": "스테이크 프리트",
+"credit": "Broadsheet",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_french_exit-6.webp": {
+"image_url": "https://cdn.broadsheet.com.au/images/2025/12/15/TheFrenchExit_lr%20224-ab65c12c53.webp",
+"source_page": "https://www.broadsheet.com.au/brisbane/food-and-drink/article/french-exit-anyday-group-opens-brisbane-cbd",
+"alt_ko": "크렘 브륄레·마들렌 등 디저트",
+"credit": "Broadsheet",
+"width": 1280,
+"height": 1919,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_le_royale-1.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/633f7b736a91413cb544a0b3/2098e18b-3f39-4bf1-a378-68a84d4e4114/Tamsin_Johnson_Le_Royale_300326483411.jpg?format=1500w",
+"source_page": "https://anyday.com.au/le-royale",
+"alt_ko": "벨벳 소파와 램프가 있는 재즈 라운지 전경",
+"credit": "Anyday / Tamsin Johnson",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_le_royale-2.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/633f7b736a91413cb544a0b3/b49f22b4-a0ad-4ef5-baa7-653fd8c6ddaa/260224_LeRoyale_2336.jpg?format=1500w",
+"source_page": "https://anyday.com.au/le-royale",
+"alt_ko": "아치 창과 붉은 부스 좌석",
+"credit": "Anyday",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_le_royale-3.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/633f7b736a91413cb544a0b3/679d1cc0-7617-4c7c-9bce-2eba90c37192/260224_LeRoyale_2156.jpg?format=1500w",
+"source_page": "https://anyday.com.au/le-royale",
+"alt_ko": "조명 켜진 곡선 바",
+"credit": "Anyday",
+"width": 1280,
+"height": 1707,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_le_royale-4.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/633f7b736a91413cb544a0b3/43d4b6ac-76e0-4576-b753-31f56c7863e7/Tamsin_Johnson_Le_Royale_300326483446.jpg?format=1500w",
+"source_page": "https://anyday.com.au/le-royale",
+"alt_ko": "대리석 바닥과 아치형 통로",
+"credit": "Anyday / Tamsin Johnson",
+"width": 1280,
+"height": 1707,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_le_royale-5.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/633f7b736a91413cb544a0b3/0bb3915e-977a-4811-9785-b923ca348e52/Le-Royale-via-Anyday-Group-03-02-20265211-2200.jpg?format=1500w",
+"source_page": "https://anyday.com.au/le-royale",
+"alt_ko": "테이블 램프와 마티니",
+"credit": "Anyday",
+"width": 1280,
+"height": 684,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_goma_bistro-1.webp": {
+"image_url": "https://cdn.sanity.io/images/m2obzhc2/production/665ee89649d063ab5658111d198abebe3ada8f43-2500x1646.jpg?w=1600&q=85",
+"source_page": "https://www.qagoma.qld.gov.au/visit/eat-and-drink/",
+"alt_ko": "강변 나무 그늘 아래 GOMA 비스트로 야외 테라스 좌석",
+"credit": "Claudia Baxter / QAGOMA",
+"width": 1280,
+"height": 842,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_goma_bistro-2.webp": {
+"image_url": "https://cdn.sanity.io/images/m2obzhc2/production/4c1fe11f3e4d9455cff9313ec7161a6fb798835e-3840x2561.jpg?w=1600&q=85",
+"source_page": "https://www.qagoma.qld.gov.au/visit/eat-and-drink/",
+"alt_ko": "GOMA 비스트로 브런치·런치 메뉴 한상 (위에서 본 모습)",
+"credit": "Claudia Baxter / QAGOMA",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_goma_bistro-3.webp": {
+"image_url": "https://cdn.sanity.io/images/m2obzhc2/production/250e8edc1abf454ddbce9ea404cb773add3ed389-1667x2500.jpg?w=1200&q=85",
+"source_page": "https://www.qagoma.qld.gov.au/visit/eat-and-drink/",
+"alt_ko": "테라스 테이블 위 버거·디저트와 로제 와인",
+"credit": "Claudia Baxter / QAGOMA",
+"width": 1200,
+"height": 1800,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_goma_bistro-4.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/2535fcfc4f2ecb75c3049a6de3f1e8ca.jpeg",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/arts-and-culture/queensland-art-gallery-gallery-of-modern-art-qagoma-ef88",
+"alt_ko": "초록 뱀 조형물 놀이 공간 옆 비스트로 야외석, 강 건너 도심 뷰",
+"credit": "QAGOMA via Visit Brisbane (ATDW)",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_lisboa-1.webp": {
+"image_url": "https://cdn.broadsheet.com.au/cache/a6/3a/a63aa8bbb2f8d70a984bb7c455330e90.jpg",
+"source_page": "https://www.broadsheet.com.au/brisbane/south-brisbane/cafes/caffe-lisboa",
+"alt_ko": "에그타르트가 진열된 리스보아 카페 하얀 카운터 내부",
+"credit": "Broadsheet",
+"width": 860,
+"height": 600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_lisboa-2.webp": {
+"image_url": "https://cdn.broadsheet.com.au/cache/c9/0d/c90da38bd30a56d43149a68d31cfccd8.jpg",
+"source_page": "https://www.broadsheet.com.au/brisbane/south-brisbane/cafes/caffe-lisboa",
+"alt_ko": "빨간 줄무늬 차양 아래 주문하는 손님들, 매장 정면",
+"credit": "Broadsheet",
+"width": 860,
+"height": 600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_lisboa-3.webp": {
+"image_url": "https://cdn.broadsheet.com.au/cache/32/ba/32ba192eaa7b9fb46686ba31ed38fc90.jpg",
+"source_page": "https://www.broadsheet.com.au/brisbane/south-brisbane/cafes/caffe-lisboa",
+"alt_ko": "포르투갈 타일 무늬 접시에 담긴 갓 구운 나타(에그타르트)",
+"credit": "Broadsheet",
+"width": 860,
+"height": 600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_lisboa-4.webp": {
+"image_url": "https://cdn.broadsheet.com.au/cache/bc/1d/bc1d9484338f4918af9df464a7f39b8b.jpg",
+"source_page": "https://www.broadsheet.com.au/brisbane/south-brisbane/cafes/caffe-lisboa",
+"alt_ko": "Hope St 길가에서 본 매장 외관과 야외 테이블",
+"credit": "Broadsheet",
+"width": 860,
+"height": 600,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_lisboa-5.webp": {
+"image_url": "https://cdn.concreteplayground.com/content/uploads/2022/04/Lisboa_01_Markus-Ravik_supplied.jpg",
+"source_page": "https://concreteplayground.com/brisbane/food-drink/lisboa-caffe-portuguese-custard-tart-south-brisbane",
+"alt_ko": "오븐에서 막 나온 에그타르트 한 판",
+"credit": "Markus Ravik (supplied) via Concrete Playground",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_denim_co-1.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/58d44044cd0f68ac6fea7c87/1728629187756-K5UVD368SEAGJM1IBWIK/Denimco+Cafe+Shoot+10.05.17+Low-Res-228.jpg?format=1500w",
+"source_page": "https://www.denimcocafe.com/",
+"alt_ko": "리틀 스탠리 스트리트의 민트색 데님코 카페 외관과 테라스",
+"credit": "Denim Co. (official)",
+"width": 1100,
+"height": 629,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_denim_co-2.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/58d44044cd0f68ac6fea7c87/1728629187324-ZOUWXK2FJKZNN75KJQC8/Denimco+Cafe+Shoot+10.05.17+Low-Res-212.jpg?format=1500w",
+"source_page": "https://www.denimcocafe.com/",
+"alt_ko": "하늘색 의자가 놓인 처마 밑 야외 좌석",
+"credit": "Denim Co. (official)",
+"width": 733,
+"height": 1100,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_denim_co-3.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/58d44044cd0f68ac6fea7c87/1728629368537-3QQ8EVU0EJMG4ZNH2RZ3/39.jpg?format=1500w",
+"source_page": "https://www.denimcocafe.com/",
+"alt_ko": "버거·와플·팬케이크 등 브런치 한상",
+"credit": "Denim Co. (official)",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_denim_co-4.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/58d44044cd0f68ac6fea7c87/1777956904621-M0HZYWO7XN4P79CA6HWP/DENIMCO_EASTER_2026_68.jpg?format=1500w",
+"source_page": "https://www.denimcocafe.com/",
+"alt_ko": "말차·카라멜 등 토핑 듬뿍 올린 시그니처 쉐이크",
+"credit": "Denim Co. (official)",
+"width": 1080,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_denim_co-5.webp": {
+"image_url": "https://images.squarespace-cdn.com/content/v1/58d44044cd0f68ac6fea7c87/1621125249504-70B1PEIZYGJEZACPZYOC/hc.jpg?format=1500w",
+"source_page": "https://www.denimcocafe.com/",
+"alt_ko": "버터와 시럽을 올린 수플레 팬케이크",
+"credit": "Denim Co. (official)",
+"width": 1280,
+"height": 1920,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_hsw_bars-1.webp": {
+"image_url": "https://howardsmithwharves.com/wp-content/uploads/2022/02/BarrelHall-Feature-scaled.jpg",
+"source_page": "https://howardsmithwharves.com/eat-drink/felons-barrel-hall/",
+"alt_ko": "절벽 아래 강변에 불 밝힌 펠론스 배럴 홀 야경",
+"credit": "Howard Smith Wharves (official)",
+"width": 1280,
+"height": 533,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_hsw_bars-2.webp": {
+"image_url": "https://howardsmithwharves.com/wp-content/uploads/2022/02/FBH-3.jpg",
+"source_page": "https://howardsmithwharves.com/eat-drink/felons-barrel-hall/",
+"alt_ko": "라이브 공연이 열리는 배럴 홀 내부 무대",
+"credit": "Howard Smith Wharves (official)",
+"width": 768,
+"height": 576,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_hsw_bars-3.webp": {
+"image_url": "https://howardsmithwharves.com/wp-content/uploads/2024/11/Mr-Percivals_City-Deck-1.jpg",
+"source_page": "https://howardsmithwharves.com/eat-drink/mr-percivals/",
+"alt_ko": "빨간 파라솔 아래 강과 도심 스카이라인이 보이는 미스터 퍼시벌스 데크",
+"credit": "Howard Smith Wharves (official)",
+"width": 1280,
+"height": 817,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_hsw_bars-4.webp": {
+"image_url": "https://howardsmithwharves.com/wp-content/uploads/2022/02/Felons_2.jpg",
+"source_page": "https://howardsmithwharves.com/eat-drink/felons-brewing-co/",
+"alt_ko": "스토리 브리지 아래 노을 지는 펠론스 비어가든",
+"credit": "Howard Smith Wharves (official)",
+"width": 768,
+"height": 576,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_hsw_bars-5.webp": {
+"image_url": "https://howardsmithwharves.com/wp-content/uploads/2022/02/FelonsBrewing-Feature-scaled.jpg",
+"source_page": "https://howardsmithwharves.com/eat-drink/felons-brewing-co/",
+"alt_ko": "양조 탱크가 보이는 펠론스 브루잉 바 내부",
+"credit": "Howard Smith Wharves (official)",
+"width": 1280,
+"height": 533,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_fish_lane-1.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/e980ffc18be72254c9146d3cc22b0455.jpeg",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/history-and-heritage/fish-lane-fb9e",
+"alt_ko": "붉은 벽돌의 'FISH LANE' 건물과 골목 입구 노을",
+"credit": "Visit Brisbane (ATDW)",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_fish_lane-2.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/6065039daf2679748ef03d0e28077d93.jpeg?w=1600",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/history-and-heritage/fish-lane-fb9e",
+"alt_ko": "밤의 피시 레인, 사카로마이세스 비어카페 간판과 차량 불빛",
+"credit": "Visit Brisbane (ATDW)",
+"width": 1280,
+"height": 855,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_fish_lane-3.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/%E2%80%98The_Greatest%E2%80%99_mural_in_Fish_Lane%2C_South_Brisbane%2C_Queensland_21.jpg/1280px-%E2%80%98The_Greatest%E2%80%99_mural_in_Fish_Lane%2C_South_Brisbane%2C_Queensland_21.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:%E2%80%98The_Greatest%E2%80%99_mural_in_Fish_Lane%2C_South_Brisbane%2C_Queensland_21.jpg",
+"alt_ko": "무하마드 알리를 그린 대형 벽화 'The Greatest'",
+"credit": "Kgbo, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_fish_lane-4.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/%E2%80%9DTotems_of_Nature%E2%80%9D_mural_by_Gris_One_in_Fish_Lane%2C_South_Brisbane%2C_Queensland_1.jpg/1280px-%E2%80%9DTotems_of_Nature%E2%80%9D_mural_by_Gris_One_in_Fish_Lane%2C_South_Brisbane%2C_Queensland_1.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:%E2%80%9DTotems_of_Nature%E2%80%9D_mural_by_Gris_One_in_Fish_Lane%2C_South_Brisbane%2C_Queensland_1.jpg",
+"alt_ko": "알록달록한 벽화 'Totems of Nature' (Gris One)",
+"credit": "Kgbo, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_fish_lane-5.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/%E2%80%98Head_in_the_Clouds%E2%80%99_mural_by_Fintan_Magee_in_Fish_Lane%2C_South_Brisbane%2C_Queensland_15.jpg/1280px-%E2%80%98Head_in_the_Clouds%E2%80%99_mural_by_Fintan_Magee_in_Fish_Lane%2C_South_Brisbane%2C_Queensland_15.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:%E2%80%98Head_in_the_Clouds%E2%80%99_mural_by_Fintan_Magee_in_Fish_Lane%2C_South_Brisbane%2C_Queensland_15.jpg",
+"alt_ko": "건물 한 면을 덮은 핀탄 매기의 벽화 'Head in the Clouds'",
+"credit": "Kgbo, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_arbour-1.webp": {
+"image_url": "https://cd-visit.beda.systems/-/jssmedia/project/beda/shared/1_brisbane-lga/2_south-bank/brisbane_south-bank-parklands_arbour_couple.jpg",
+"source_page": "https://visit.brisbane.qld.au/places-to-go/inner-city/south-bank",
+"alt_ko": "보라색 부겐빌레아 아래 아버 산책로를 걷는 커플",
+"credit": "Visit Brisbane",
+"width": 1280,
+"height": 852,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_arbour-2.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/South_Bank_Grand_Arbour%2C_South_Bank_Parklands%2C_Brisbane%2C_2020%2C_02.jpg/1280px-South_Bank_Grand_Arbour%2C_South_Bank_Parklands%2C_Brisbane%2C_2020%2C_02.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:South_Bank_Grand_Arbour%2C_South_Bank_Parklands%2C_Brisbane%2C_2020%2C_02.jpg",
+"alt_ko": "꽃이 만개한 아치형 아버 터널 정면",
+"credit": "Kgbo, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_arbour-3.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/South_Bank_Grand_Arbour%2C_South_Bank_Parklands%2C_Brisbane%2C_2020%2C_01.jpg/1280px-South_Bank_Grand_Arbour%2C_South_Bank_Parklands%2C_Brisbane%2C_2020%2C_01.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:South_Bank_Grand_Arbour%2C_South_Bank_Parklands%2C_Brisbane%2C_2020%2C_01.jpg",
+"alt_ko": "분홍 부겐빌레아로 뒤덮인 철제 덩굴 기둥 길",
+"credit": "Kgbo, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 1707,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_arbour-4.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/South_Bank_Grand_Arbour%2C_Brisbane%2C_Queensland_May_2016.jpg/1280px-South_Bank_Grand_Arbour%2C_Brisbane%2C_Queensland_May_2016.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:South_Bank_Grand_Arbour%2C_Brisbane%2C_Queensland_May_2016.jpg",
+"alt_ko": "곡선형 노란 지붕과 이어지는 아버 산책로",
+"credit": "Kgbo, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_streets_beach-1.webp": {
+"image_url": "https://cd-visit.beda.systems/-/jssmedia/project/beda/shared/1_brisbane-lga/2_south-bank/brisbane_south-bank-parklands_streets-beach-through-arbour.jpg",
+"source_page": "https://visit.brisbane.qld.au/places-to-go/inner-city/south-bank",
+"alt_ko": "부겐빌레아 너머로 보이는 스트리츠 비치와 도심 빌딩",
+"credit": "Visit Brisbane",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_streets_beach-2.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/141f82581b48ac04b8850b322122a7e0.jpeg",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/natural-attractions/streets-beach-3528",
+"alt_ko": "모래사장과 얕은 라군을 걷는 커플, 뒤로 도심 스카이라인",
+"credit": "Visit Brisbane (ATDW)",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_streets_beach-3.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/3d2b748c9c9d6568f2652fcff2b28a17.jpeg?w=1600",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/natural-attractions/streets-beach-3528",
+"alt_ko": "수면 높이에서 본 맑은 라군과 야자수",
+"credit": "Visit Brisbane (ATDW)",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_streets_beach-4.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/cdc0d825eb758f2de4fac368da48c5f3.jpeg?w=1600",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/natural-attractions/streets-beach-3528",
+"alt_ko": "강변 도심을 배경으로 한 스트리츠 비치 전경 파노라마",
+"credit": "Visit Brisbane (ATDW)",
+"width": 1280,
+"height": 652,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_streets_beach-5.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Nepal_Peace_Pagoda%2C_South_Bank%2C_Brisbane.jpg/1280px-Nepal_Peace_Pagoda%2C_South_Bank%2C_Brisbane.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Nepal_Peace_Pagoda%2C_South_Bank%2C_Brisbane.jpg",
+"alt_ko": "숲속 계단 위 목조 네팔 평화 파고다",
+"credit": "Kgbo, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 1000,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_goma-1.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/6cea7eadde4fb790c0669d39f5ca873e.jpeg",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/arts-and-culture/queensland-art-gallery-gallery-of-modern-art-qagoma-ef88",
+"alt_ko": "'GALLERY OF MODERN ART' 간판이 있는 GOMA 정문",
+"credit": "QAGOMA via Visit Brisbane (ATDW)",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_goma-2.webp": {
+"image_url": "https://cdn.sanity.io/images/m2obzhc2/production/f11e4454da8be66a453b378e42a3fdf395227b44-2500x1875.jpg?w=1600&q=85",
+"source_page": "https://www.qagoma.qld.gov.au/visit/eat-and-drink/",
+"alt_ko": "거대한 평지붕이 돌출된 GOMA 건물 외관과 잔디밭",
+"credit": "QAGOMA",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_goma-3.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Queensland_Gallery_of_Modern_Art_at_dusk%2C_Brisbane%2C_2019.jpg/1280px-Queensland_Gallery_of_Modern_Art_at_dusk%2C_Brisbane%2C_2019.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Queensland_Gallery_of_Modern_Art_at_dusk%2C_Brisbane%2C_2019.jpg",
+"alt_ko": "해 질 녘 노란 조명이 켜진 GOMA 유리 외벽",
+"credit": "Chris Olszewski, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_goma-4.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/f80b33795dca23174a349207127dad65.jpeg",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/arts-and-culture/queensland-art-gallery-gallery-of-modern-art-qagoma-f350",
+"alt_ko": "매일 밤 GOMA 외벽을 물들이는 제임스 터렐 'Night Life' 조명",
+"credit": "QAGOMA via Visit Brisbane (ATDW)",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_goma-5.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/cb330d8d09ca6cfd6c7d2c492d45349c.jpeg",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/arts-and-culture/queensland-art-gallery-gallery-of-modern-art-qagoma-f350",
+"alt_ko": "GOMA 전시 'I, Object' 설치작품 앞의 관람객",
+"credit": "QAGOMA via Visit Brisbane (ATDW)",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_kurilpa-1.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Kurilpa_Bridge_at_Night_01.jpg/1280px-Kurilpa_Bridge_at_Night_01.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Kurilpa_Bridge_at_Night_01.jpg",
+"alt_ko": "강물에 비친 파란·보라 조명의 쿠릴파 브리지 야경",
+"credit": "Mint0ri, CC0 / Wikimedia Commons",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_kurilpa-2.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Kurilpa_Bridge_at_Night_02.jpg/1280px-Kurilpa_Bridge_at_Night_02.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Kurilpa_Bridge_at_Night_02.jpg",
+"alt_ko": "다리 위에서 바라본 LED 조명 돛대와 보행로",
+"credit": "Mint0ri, CC0 / Wikimedia Commons",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_kurilpa-3.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Kurilpa_Bridge_Lights_-_panoramio.jpg/1280px-Kurilpa_Bridge_Lights_-_panoramio.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Kurilpa_Bridge_Lights_-_panoramio.jpg",
+"alt_ko": "푸른 조명이 켜진 다리 구조물을 아래에서 올려다본 모습",
+"credit": "figaj, CC BY 3.0 / Wikimedia Commons",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_kurilpa-4.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Kuripla_Bridge_floodlit_from_Kurilpa_Bridge_South_Brisbane_IMGP1836.jpg/1280px-Kuripla_Bridge_floodlit_from_Kurilpa_Bridge_South_Brisbane_IMGP1836.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Kuripla_Bridge_floodlit_from_Kurilpa_Bridge_South_Brisbane_IMGP1836.jpg",
+"alt_ko": "붉은 조명의 돛대와 도심 빌딩 야경",
+"credit": "John Robert McPherson, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 850,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_kurilpa-5.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Kuripla_Bridge_floodlit_from_Kurilpa_Bridge_South_Brisbane_IMGP1847.jpg/1280px-Kuripla_Bridge_floodlit_from_Kurilpa_Bridge_South_Brisbane_IMGP1847.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Kuripla_Bridge_floodlit_from_Kurilpa_Bridge_South_Brisbane_IMGP1847.jpg",
+"alt_ko": "사우스 브리즈번 쪽 진입부에서 본 조명 켜진 다리",
+"credit": "John Robert McPherson, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 850,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_queens_gardens-1.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Statue_of_Queen_Victoria%2C_Brisbane_02.jpg/1280px-Statue_of_Queen_Victoria%2C_Brisbane_02.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Statue_of_Queen_Victoria%2C_Brisbane_02.jpg",
+"alt_ko": "빅토리아 여왕 동상으로 이어지는 퀸즈 가든 산책로",
+"credit": "Chris Olszewski, CC BY-SA 3.0 / Wikimedia Commons",
+"width": 1280,
+"height": 1707,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_queens_gardens-2.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Queen%27s_Garden_George_Street_and_Elizabeth_Street_Brisbane_L1020366.jpg/1280px-Queen%27s_Garden_George_Street_and_Elizabeth_Street_Brisbane_L1020366.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Queen%27s_Garden_George_Street_and_Elizabeth_Street_Brisbane_L1020366.jpg",
+"alt_ko": "조지 St·엘리자베스 St 모퉁이의 야자수 정원 (2023)",
+"credit": "John Robert McPherson, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_queens_gardens-3.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Treasury_Building%2C_Brisbane%2C_2023_%2801%29.jpg/1280px-Treasury_Building%2C_Brisbane%2C_2023_%2801%29.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Treasury_Building%2C_Brisbane%2C_2023_%2801%29.jpg",
+"alt_ko": "밤 조명에 빛나는 옛 트레저리 빌딩 정면 (2023)",
+"credit": "Bahnfrend, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_queens_gardens-4.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Treasury_Building_floodlit_George_St_Brisbane_P1140843.jpg/1280px-Treasury_Building_floodlit_George_St_Brisbane_P1140843.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Treasury_Building_floodlit_George_St_Brisbane_P1140843.jpg",
+"alt_ko": "낮에 본 이탈리아 르네상스풍 트레저리 빌딩 외관",
+"credit": "John Robert McPherson, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_queens_gardens-5.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Treasury_Building%2C_Brisbane%2C_2017_%2801%29.jpg/1280px-Treasury_Building%2C_Brisbane%2C_2017_%2801%29.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Treasury_Building%2C_Brisbane%2C_2017_%2801%29.jpg",
+"alt_ko": "초록·분홍 조명으로 물든 트레저리 빌딩 야경",
+"credit": "Bahnfrend, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_botanic-1.webp": {
+"image_url": "https://cd-visit.beda.systems/-/jssmedia/project/beda/shared/1_brisbane-lga/1_the-city/sunset-over-the-city-botanic-gardens.jpg",
+"source_page": "https://visit.brisbane.qld.au/inspiration/brisbanes-best-local-parks",
+"alt_ko": "노을 진 도심 빌딩 아래 펼쳐진 시티 보타닉 가든 항공뷰",
+"credit": "Visit Brisbane",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_botanic-2.webp": {
+"image_url": "https://www.brisbane.qld.gov.au/content/dam/brisbanecitycouncil/corpwebsite/parks-and-recreation/images/city-botanic-gardens-2024_1.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg",
+"source_page": "https://www.brisbane.qld.gov.au/things-to-see-and-do/council-venues-and-precincts/parks/city-botanic-gardens",
+"alt_ko": "큰 나무 그늘 아래 정원 산책로를 걷는 사람들",
+"credit": "Brisbane City Council",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_botanic-3.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Formal_Garden_and_Rotunda_City_Botanic_Gardens_Gardens_Point_Brisbane_P1180580.jpg/1280px-Formal_Garden_and_Rotunda_City_Botanic_Gardens_Gardens_Point_Brisbane_P1180580.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Formal_Garden_and_Rotunda_City_Botanic_Gardens_Gardens_Point_Brisbane_P1180580.jpg",
+"alt_ko": "꽃밭과 로툰다가 있는 포멀 가든",
+"credit": "John Robert McPherson, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_botanic-4.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/City_Botanic_Gardens_Riverwalk_City_Botanic_Gardens_Brisbane_L1000251.jpg/1280px-City_Botanic_Gardens_Riverwalk_City_Botanic_Gardens_Brisbane_L1000251.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:City_Botanic_Gardens_Riverwalk_City_Botanic_Gardens_Brisbane_L1000251.jpg",
+"alt_ko": "브리즈번 강을 따라 이어지는 정원 리버워크",
+"credit": "John Robert McPherson, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_botanic-5.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Bamboo_Grove_Brisbane_City_Botanic_Gardens_Brisbane_P1250697.jpg/1280px-Bamboo_Grove_Brisbane_City_Botanic_Gardens_Brisbane_P1250697.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Bamboo_Grove_Brisbane_City_Botanic_Gardens_Brisbane_P1250697.jpg",
+"alt_ko": "대나무 숲 사이로 난 그늘진 산책길",
+"credit": "John Robert McPherson, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_wilson_outlook-1.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/1427e14725660de24eaa3c2d4e168029.jpeg",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/history-and-heritage/the-brisbane-riverwalk-3bfb",
+"alt_ko": "윌슨 아웃룩에서 본 조명 켜진 스토리 브리지와 도심 황혼",
+"credit": "Visit Brisbane (ATDW)",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_wilson_outlook-2.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Story_Bridge_seen_from_Wilson_Outlook_Reserve%2C_Brisbane%2C_Queensland.jpg/1280px-Story_Bridge_seen_from_Wilson_Outlook_Reserve%2C_Brisbane%2C_Queensland.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Story_Bridge_seen_from_Wilson_Outlook_Reserve%2C_Brisbane%2C_Queensland.jpg",
+"alt_ko": "맑은 날 전망대에서 본 스토리 브리지와 CBD 스카이라인",
+"credit": "Kgbo, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 813,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_wilson_outlook-3.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Story_Bridge_seen_from_Wilson_Outlook_Reserve%2C_Brisbane%2C_Queensland_pano.jpg/1280px-Story_Bridge_seen_from_Wilson_Outlook_Reserve%2C_Brisbane%2C_Queensland_pano.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Story_Bridge_seen_from_Wilson_Outlook_Reserve%2C_Brisbane%2C_Queensland_pano.jpg",
+"alt_ko": "강 굽이와 다리, 도심을 한눈에 담은 파노라마",
+"credit": "Kgbo, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 717,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_wilson_outlook-4.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Howard_Smith_Wharves_under_Story_Bridge_seen_from_Wilson_Outlook_Reserve%2C_Brisbane%2C_Queensland.jpg/1280px-Howard_Smith_Wharves_under_Story_Bridge_seen_from_Wilson_Outlook_Reserve%2C_Brisbane%2C_Queensland.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Howard_Smith_Wharves_under_Story_Bridge_seen_from_Wilson_Outlook_Reserve%2C_Brisbane%2C_Queensland.jpg",
+"alt_ko": "절벽 아래 하워드 스미스 워프와 스토리 브리지",
+"credit": "Chris Olszewski, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_wilson_outlook-5.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Captain_Burke_Park_under_Story_Bridge_seen_from_Wilson_Outlook_Reserve%2C_Brisbane%2C_Queensland.jpg/1280px-Captain_Burke_Park_under_Story_Bridge_seen_from_Wilson_Outlook_Reserve%2C_Brisbane%2C_Queensland.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Captain_Burke_Park_under_Story_Bridge_seen_from_Wilson_Outlook_Reserve%2C_Brisbane%2C_Queensland.jpg",
+"alt_ko": "다리 너머 캥거루 포인트 쪽 캡틴 버크 공원과 페리",
+"credit": "Kgbo, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 1263,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_city_hall-1.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/f596fa662a10ff88753f2d435f7baa4b.jpeg",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/history-and-heritage/brisbane-city-hall-0232",
+"alt_ko": "킹 조지 스퀘어에서 본 시청과 시계탑",
+"credit": "Visit Brisbane (ATDW)",
+"width": 1280,
+"height": 854,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_city_hall-2.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/0329b33b9bcccf70a9968df70bd711ff.jpeg",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/history-and-heritage/brisbane-city-hall-0232",
+"alt_ko": "원형 메인 오디토리엄과 파이프 오르간",
+"credit": "Visit Brisbane (ATDW)",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_city_hall-3.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/c9e48eb9da010245c0f2a6c058022b91.jpeg",
+"source_page": "https://visit.brisbane.qld.au/whats-on/inner-city/eat-and-drink-events/city-hall-clock-tower-tours-5c0e",
+"alt_ko": "시계탑 내부에서 본 거대한 시계판 뒷면",
+"credit": "Visit Brisbane (ATDW)",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_city_hall-4.webp": {
+"image_url": "https://assets.atdw-online.com.au/images/0c761d6881bdc8b6aa8ff0a8b5202f1c.jpeg",
+"source_page": "https://visit.brisbane.qld.au/things-to-do/inner-city/history-and-heritage/brisbane-city-hall-0232",
+"alt_ko": "시계탑 전망층에서 도심을 내려다보는 투어 참가자들",
+"credit": "Museum of Brisbane via Visit Brisbane (ATDW)",
+"width": 1280,
+"height": 853,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_city_hall-5.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Brisbane_City_Hall_Clock_Tower_view_Brisbane_IMGP4723.jpg/1280px-Brisbane_City_Hall_Clock_Tower_view_Brisbane_IMGP4723.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Brisbane_City_Hall_Clock_Tower_view_Brisbane_IMGP4723.jpg",
+"alt_ko": "시계탑에서 내려다본 앨버트 St와 붉은 벽돌 교회",
+"credit": "John Robert McPherson, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 850,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_luxury-1.webp": {
+"image_url": "https://cd-visit.beda.systems/-/jssmedia/project/beda/shared/1_brisbane-lga/1_the-city/city-centre/brisbane_cbd_queensplaza.jpg",
+"source_page": "https://visit.brisbane.qld.au/inspiration/luxury-shopping-brisbane-city",
+"alt_ko": "디올 매장이 있는 퀸즈플라자 입구 (LV·티파니·구찌 입점)",
+"credit": "Visit Brisbane",
+"width": 1268,
+"height": 845,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_luxury-2.webp": {
+"image_url": "https://cd-visit.beda.systems/-/jssmedia/project/beda/shared/1_brisbane-lga/1_the-city/edward-street-mitchell-ogilvie.jpg",
+"source_page": "https://visit.brisbane.qld.au/inspiration/guide-to-queen-street-mall",
+"alt_ko": "에드워드 스트리트의 부티크 거리 (Mitchell Ogilvie·Canali)",
+"credit": "Visit Brisbane",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_luxury-3.webp": {
+"image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Herm%C3%A8s_store%2C_171_Edward_Street%2C_Brisbane%2C_2019.jpg/1280px-Herm%C3%A8s_store%2C_171_Edward_Street%2C_Brisbane%2C_2019.jpg",
+"source_page": "https://commons.wikimedia.org/wiki/File:Herm%C3%A8s_store%2C_171_Edward_Street%2C_Brisbane%2C_2019.jpg",
+"alt_ko": "에드워드 St 171번지 아르데코풍 에르메스 매장",
+"credit": "Kgbo, CC BY-SA 4.0 / Wikimedia Commons",
+"width": 1280,
+"height": 960,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_luxury-4.webp": {
+"image_url": "https://cd-visit.beda.systems/-/jssmedia/project/beda/shared/1_brisbane-lga/1_the-city/qsm-queen-street-mall-evening.jpg",
+"source_page": "https://visit.brisbane.qld.au/inspiration/guide-to-queen-street-mall",
+"alt_ko": "저녁 불빛이 켜진 퀸 스트리트 몰",
+"credit": "Visit Brisbane",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/p_bne_luxury-5.webp": {
+"image_url": "https://cd-visit.beda.systems/-/jssmedia/project/beda/shared/1_brisbane-lga/1_the-city/qsm-queen-street-mall-brisbane-arcade.jpg",
+"source_page": "https://visit.brisbane.qld.au/inspiration/guide-to-queen-street-mall",
+"alt_ko": "퀸 스트리트 몰의 헤리티지 브리즈번 아케이드 입구",
+"credit": "Visit Brisbane",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/yacht/empress-01.webp": {
+"image_url": "",
+"source_page": "https://sydneyhs.com.au/",
+"alt_ko": "Empress · 후면 데크 다이닝 테이블과 오페라하우스",
+"credit": "Sydney Harbour Specialists",
+"checked_on": "2026-11-13"
+},
+"assets/yacht/empress-02.webp": {
+"image_url": "",
+"source_page": "https://sydneyhs.com.au/",
+"alt_ko": "Empress · 순항 중인 Empress",
+"credit": "Sydney Harbour Specialists",
+"checked_on": "2026-11-13"
+},
+"assets/yacht/empress-03.webp": {
+"image_url": "",
+"source_page": "https://sydneyhs.com.au/",
+"alt_ko": "Empress · 항공 사진",
+"credit": "Sydney Harbour Specialists",
+"checked_on": "2026-11-13"
+},
+"assets/yacht/empress-04.webp": {
+"image_url": "",
+"source_page": "https://sydneyhs.com.au/",
+"alt_ko": "Empress · 실내 살롱",
+"credit": "Sydney Harbour Specialists",
+"checked_on": "2026-11-13"
+},
+"assets/yacht/empress-05.webp": {
+"image_url": "",
+"source_page": "https://sydneyhs.com.au/",
+"alt_ko": "Empress · 실내 라운지",
+"credit": "Sydney Harbour Specialists",
+"checked_on": "2026-11-13"
+},
+"assets/yacht/empress-06.webp": {
+"image_url": "",
+"source_page": "https://sydneyhs.com.au/",
+"alt_ko": "Empress · 메인 살롱",
+"credit": "Sydney Harbour Specialists",
+"checked_on": "2026-11-13"
+},
+"assets/yacht/empress-07.webp": {
+"image_url": "",
+"source_page": "https://sydneyhs.com.au/",
+"alt_ko": "Empress · 플라이브리지 바",
+"credit": "Sydney Harbour Specialists",
+"checked_on": "2026-11-13"
+},
+"assets/yacht/empress-08.webp": {
+"image_url": "",
+"source_page": "https://sydneyhs.com.au/",
+"alt_ko": "Empress · 플라이브리지 라운지",
+"credit": "Sydney Harbour Specialists",
+"checked_on": "2026-11-13"
+},
+"assets/yacht/empress-09.webp": {
+"image_url": "",
+"source_page": "https://sydneyhs.com.au/",
+"alt_ko": "Empress · 뱃머리 선베드",
+"credit": "Sydney Harbour Specialists",
+"checked_on": "2026-11-13"
+},
+"assets/yacht/empress-10.webp": {
+"image_url": "",
+"source_page": "https://sydneyhs.com.au/",
+"alt_ko": "Empress · 위에서 본 후면 데크",
+"credit": "Sydney Harbour Specialists",
+"checked_on": "2026-11-13"
+},
+"assets/yacht/empress-11.webp": {
+"image_url": "",
+"source_page": "https://sydneyhs.com.au/",
+"alt_ko": "Empress · 하버 순항",
+"credit": "Sydney Harbour Specialists",
+"checked_on": "2026-11-13"
+},
+"assets/yacht/empress-12.webp": {
+"image_url": "",
+"source_page": "https://sydneyhs.com.au/",
+"alt_ko": "Empress · 후면 데크 항공 사진",
+"credit": "Sydney Harbour Specialists",
+"checked_on": "2026-11-13"
+}
+});
