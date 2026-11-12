@@ -218,7 +218,7 @@
       if (!it.via) prev = it;
     });
     var stay = day.stay ? '<div class="stay">' + (day.stay.key ? thumb(day.stay.key, day.stay.name) : '<span class="ic hotel" aria-hidden="true">' + SVG.hotel + '</span>') +
-      '<div class="bd"><div class="lbl">숙박' + (day.stay.nights ? ' · ' + h(day.stay.nights) : '') + '</div><div class="nm">' + h(day.stay.name) + '</div>' + (day.stay.sub ? '<div class="sb">' + h(day.stay.sub) + '</div>' : '') + links(day.stay) + '</div></div>' : '';
+      '<div class="bd"><div class="lbl">숙박' + (day.stay.nights ? ' · ' + h(day.stay.nights) : '') + '</div><div class="nm">' + h(day.stay.name) + '</div>' + (day.stay.sub ? '<div class="sb">' + h(day.stay.sub) + '</div>' : '') + incl(hotelOf(day.stay.key)) + links(day.stay) + '</div></div>' : '';
     var route = dayRoute(day);
     var bring = day.bring && day.bring.length ? '<details class="bring"><summary><span class="bsum">오늘 챙길 것</span><span class="bcnt">' + day.bring.length + '가지</span></summary><ul class="blist">' + day.bring.map(function (b) { return '<li>' + h(b) + '</li>'; }).join('') + '</ul></details>' : '';
     var notes = day.notes ? '<div class="pnote plan"><div class="lbl">기획 메모</div><p>' + h(day.notes) + '</p></div>' : '';
@@ -233,12 +233,17 @@
       (route ? '<div class="ln top"><a href="' + route + '" target="_blank" rel="noopener">오늘 동선 지도</a></div>' : '') +
       '</div>' + stay + '<ol class="tl">' + rows.join('') + '</ol>' + renderPicks(day) + notes + '</section>';
   }
+  function hotelOf(key) { return key ? (T.hotels || []).filter(function (x) { return x.key === key; })[0] : null; }
+  function incl(x) {
+    if (!x || !x.incl) return '';
+    return '<div class="incl"><b>' + (x.pkg ? '숙박에 포함 · ' + h(x.pkg) : '숙박에 포함') + '</b>' + h(x.incl) + '</div>';
+  }
   function renderInfo() {
     var fl = '<div class="card"><div class="lbl">항공</div><p class="small">예약번호와 승객 정보는 이 페이지에 싣지 않습니다. 항공사 앱에서 확인하세요.</p>' + T.flights.map(function (f) {
       return '<div class="fl"><div class="fd">' + h(f.date) + '</div><div class="fc">' + h(f.code) + (f.st && STATUS[f.st] ? '<span class="st ' + h(f.st) + ' plan">' + STATUS[f.st] + '</span>' : '') + '</div><div class="fr">' + h(f.route) + '</div><div class="ft">' + h(f.time) + ' · ' + h(f.dur) + '</div><div class="fs small">' + h(f.cls) + ' · 수하물 ' + h(f.bag) + (f.alt ? ' · ' + h(f.alt) : '') + '</div></div>';
     }).join('') + '</div>';
     var ho = '<div class="card"><div class="lbl">숙소</div>' + T.hotels.map(function (x) {
-      return '<div class="stay">' + (x.key ? thumb(x.key, x.name) : '<span class="ic hotel" aria-hidden="true">' + SVG.hotel + '</span>') + '<div class="bd"><div class="nm">' + h(x.name) + '</div><div class="sb">' + h(x.dates) + '</div><div class="ad">' + h(x.addr) + '</div>' + (x.sub ? '<div class="sb">' + h(x.sub) + '</div>' : '') + links(x) + '</div></div>';
+      return '<div class="stay">' + (x.key ? thumb(x.key, x.name) : '<span class="ic hotel" aria-hidden="true">' + SVG.hotel + '</span>') + '<div class="bd"><div class="nm">' + h(x.name) + '</div><div class="sb">' + h(x.dates) + '</div><div class="ad">' + h(x.addr) + '</div>' + (x.sub ? '<div class="sb">' + h(x.sub) + '</div>' : '') + incl(x) + links(x) + '</div></div>';
     }).join('') + '</div>';
     var hostCard = T.host ? '<div class="host"><div class="hname">' + h(T.host.label) + '</div>' + (T.host.sub ? '<div class="hsub">' + h(T.host.sub) + '</div>' : '') +
       '<div class="hbtns"><a class="hb call" href="' + telUrl(T.host.tel) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg><span>전화하기<small>' + h(T.host.telText || T.host.tel) + '</small></span></a>' +
