@@ -236,7 +236,7 @@
   function hotelOf(key) { return key ? (T.hotels || []).filter(function (x) { return x.key === key; })[0] : null; }
   function incl(x) {
     if (!x || !x.incl) return '';
-    return '<div class="incl"><b>' + (x.pkg ? '숙박에 포함 · ' + h(x.pkg) : '숙박에 포함') + '</b>' + h(x.incl) + '</div>';
+    return '<div class="incl"><b>' + (x.pkg ? '숙박에 포함 · ' + h(x.pkg) : '숙박 포함 내역') + '</b>' + h(x.incl) + '</div>';
   }
   function renderInfo() {
     var fl = '<div class="card"><div class="lbl">항공</div><p class="small">예약번호와 승객 정보는 이 페이지에 싣지 않습니다. 항공사 앱에서 확인하세요.</p>' + T.flights.map(function (f) {
