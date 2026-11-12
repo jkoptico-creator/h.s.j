@@ -44,7 +44,8 @@
   }
   function icon(type) { return '<span class="ic ' + h(type) + '" aria-hidden="true">' + (SVG[type] || SVG.pin) + '</span>'; }
   function links(it) {
-    var out = [];
+    var out = [], MN = window.MENUS || {};
+    if (it.menu && MN[it.menu]) out.push('<a class="mbtn" href="menu.html?k=' + encodeURIComponent(it.menu) + (it.menuId ? '&m=' + encodeURIComponent(it.menuId) : '') + '">메뉴 · 한글/English</a>');
     if (it.q) out.push('<a href="' + mapUrl(it.q) + '" target="_blank" rel="noopener">지도</a>');
     var site = it.site || (it.key && L[it.key] && L[it.key].site);
     if (site) out.push('<a href="' + h(site) + '" target="_blank" rel="noopener">웹사이트</a>');
@@ -197,18 +198,18 @@
     var stay = day.stay ? '<div class="stay">' + (day.stay.key ? thumb(day.stay.key, day.stay.name) : '<span class="ic hotel" aria-hidden="true">' + SVG.hotel + '</span>') +
       '<div class="bd"><div class="lbl">숙박' + (day.stay.nights ? ' · ' + h(day.stay.nights) : '') + '</div><div class="nm">' + h(day.stay.name) + '</div>' + (day.stay.sub ? '<div class="sb">' + h(day.stay.sub) + '</div>' : '') + links(day.stay) + '</div></div>' : '';
     var route = dayRoute(day);
-    var bring = day.bring && day.bring.length ? '<div class="bring"><div class="lbl">챙길 것</div><div class="chips">' + day.bring.map(function (b) { return '<span>' + h(b) + '</span>'; }).join('') + '</div></div>' : '';
+    var bring = day.bring && day.bring.length ? '<details class="bring"><summary><span class="bsum">오늘 챙길 것</span><span class="bcnt">' + day.bring.length + '가지</span></summary><ul class="blist">' + day.bring.map(function (b) { return '<li>' + h(b) + '</li>'; }).join('') + '</ul></details>' : '';
     var notes = day.notes ? '<div class="pnote plan"><div class="lbl">기획 메모</div><p>' + h(day.notes) + '</p></div>' : '';
     var md = day.date.slice(5).split('-');
     return '<section class="dayv" id="' + h(day.id) + '" data-date="' + h(day.date) + '" data-tz="' + h(day.tz) + '">' +
       renderCover(day) + '<div class="dhead"><div class="eyebrow">Day ' + (day.n + 1) + ' · ' + h(DOW[day.dow] || day.dow) + ' · ' + h(day.city) + '</div>' +
       '<h1>' + (+md[0]) + '월 ' + (+md[1]) + '일 <small>' + h(day.title) + '</small></h1>' +
       '<p class="tz">' + h(day.tzLabel || '') + '</p>' +
-      renderWx(day) +
+      renderWx(day) + bring +
       '<div class="now" hidden></div>' +
       (day.intro ? '<p class="dintro">' + h(day.intro) + '</p>' : '') +
       (route ? '<div class="ln top"><a href="' + route + '" target="_blank" rel="noopener">오늘 동선 지도</a></div>' : '') +
-      '</div>' + stay + '<ol class="tl">' + rows.join('') + '</ol>' + renderPicks(day) + bring + notes + '</section>';
+      '</div>' + stay + '<ol class="tl">' + rows.join('') + '</ol>' + renderPicks(day) + notes + '</section>';
   }
   function renderInfo() {
     var fl = '<div class="card"><div class="lbl">항공</div><p class="small">예약번호와 승객 정보는 이 페이지에 싣지 않습니다. 항공사 앱에서 확인하세요.</p>' + T.flights.map(function (f) {
@@ -315,6 +316,19 @@
     sec.querySelectorAll('.pk').forEach(function (li) {
       li.hidden = !(f === 'all' || (f === 'date' ? li.dataset.date === '1' : li.dataset.cat === f));
     });
+  });
+  // Photo viewer (site.js) closes with history.back(); the browser then jumps to the #day anchor.
+  // Remember where the guest was when they opened a photo and put them back there.
+  var photoY = null;
+  function rememberY(e) { if (e.target.closest && e.target.closest('.g') && !e.target.closest('a')) photoY = window.scrollY; }
+  document.addEventListener('click', rememberY, true);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') rememberY(e); }, true);
+  window.addEventListener('popstate', function () {
+    if (photoY == null) return;
+    var y = photoY; photoY = null;
+    window.scrollTo(0, y);
+    requestAnimationFrame(function () { window.scrollTo(0, y); });
+    setTimeout(function () { window.scrollTo(0, y); }, 60);
   });
   window.addEventListener('hashchange', function () { paint(true); });
   paint(false);

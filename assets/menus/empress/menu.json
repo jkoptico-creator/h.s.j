@@ -1,0 +1,5 @@
+{"key":"empress","name":"Empress · Noranise Dining","fine_dining":true,
+ "menus":[{"id":"chef","title_ko":"선상 셰프 코스","title_en":"Chef's menu","source_page":"","source_file":"",
+   "updated":"2026-11-04 (셰프가 이 크루즈용으로 보낸 맞춤 메뉴)","sample":false,
+   "pages":[{"en":"assets/menus/empress/chef-en-1.webp","ko":"assets/menus/empress/chef-ko-1.webp"}]}],
+ "note_ko":"셰프 Pierre가 이날을 위해 짠 코스입니다. 재료 사정에 따라 일부 바뀔 수 있어요."}
