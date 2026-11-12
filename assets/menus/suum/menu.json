@@ -1,0 +1,23 @@
+{
+ "key": "suum",
+ "name": "SUUM",
+ "fine_dining": true,
+ "menus": [
+  {
+   "id": "tasting",
+   "title_ko": "한식 오마카세 코스 (지난 메뉴 예시)",
+   "title_en": "Omakase tasting menu (past sample)",
+   "source_page": "https://www.indailyqld.com.au/theweekendedition-brisbane/food-drink/2025/07/17/suum-brisbane-city",
+   "source_file": "https://wp.solsticemedia.com.au/wp-content/uploads/2025/07/TWE-SUUM-James-Frostick-01.jpg",
+   "updated": "2025-07 (언론 기사 사진 속 메뉴 카드)",
+   "sample": true,
+   "pages": [
+    {
+     "en": "assets/menus/suum/tasting-en-1.webp",
+     "ko": "assets/menus/suum/tasting-ko-1.webp"
+    }
+   ]
+  }
+ ],
+ "note_ko": "SUUM은 메뉴를 공개하지 않아 2025년 7월 기사 사진에 찍힌 메뉴 카드를 옮겼습니다. 메뉴는 3~4개월마다 바뀌어 당일 코스는 다릅니다. 페어링(전통주 3잔 $70, 와인 5잔 $110)도 당시 가격입니다. 주말 10% 추가 요금."
+}

@@ -69,7 +69,7 @@ window.TRIP = {
       id: 'd17', cover: 'bondi_bronte', coverCap: '본다이 → 브론테 해안 산책', date: '2026-11-17', dow: '화', n: 2, city: '시드니', tz: 'Australia/Sydney', tzLabel: '시드니 시각 · 한국 +2시간',
       wx: [{ lo: 15, hi: 21, sky: '대체로 맑음', rain: '15%' }],
       title: '본다이 브런치 · 해안 산책 · 세인트 마이클 골프 · Bennelong · Whisky Thief',
-      intro: '아침은 본다이의 bills에서 브런치로 시작합니다. 리코타 핫케이크로 유명한 빌 그레인저의 첫 가게입니다. 식사 뒤에는 본다이에서 브론테까지 해안 절벽길 2.5km를 40분쯤 걷습니다. 브론테에서 차로 20분 거리의 세인트 마이클 골프클럽으로 가서 11:51에 18홀을 돕니다. 바다를 낀 코스입니다. 골프가 끝나면 바로 호텔로 돌아와 45분쯤 준비하고, 17:45에 로비에서 만나 차로 오페라하우스 안 Bennelong에 갑니다(18:00). 식사 뒤에는 차로 8분 거리의 위스키 바 Whisky Thief에서 호스트 일행과 한잔합니다.',
+      intro: '아침은 본다이의 bills에서 브런치로 시작합니다. 리코타 핫케이크로 유명한 빌 그레인저의 첫 가게입니다. 식사 뒤에는 본다이에서 브론테까지 해안 절벽길 2.5km를 40분쯤 걷습니다. 브론테에서 차로 20분 거리의 세인트 마이클 골프클럽으로 가서 11:51에 18홀을 돕니다. 바다를 낀 코스입니다. 골프가 끝나면 바로 호텔로 돌아와 45분쯤 준비하고 17:45에 로비에서 만나 차로 오페라하우스 안 Bennelong에 갑니다(18:00). 식사 뒤에는 차로 8분 거리의 위스키 바 Whisky Thief에서 호스트 일행과 한잔합니다.',
       stay: { name: 'Capella Sydney', sub: '24 Loftus St, Sydney NSW 2000', tel: '+61 2 9071 5000', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney', nights: '2/2박' },
       bring: ['아침 산책용 얇은 겉옷(출발 때 15°C 안팎 · 걸으면 금방 더워짐)', '걷기 편한 운동화 · 모자 · 선글라스 · 선크림', '골프 복장: 칼라 셔츠 · 긴바지나 테일러드 쇼츠 · 골프화 · 장갑(드레스코드 엄격 · 청바지 불가)', '라커룸에서 갈아입을 옷 · 바닷바람 대비 바람막이', 'Bennelong · Whisky Thief는 스마트 캐주얼 · 밤에는 겉옷'],
       picks: [{ set: 'syd', when: '오늘은 골프 뒤 쉬는 시간이 짧아요 · 호텔 주변 산책은 내일 아침에도' }],
@@ -93,7 +93,7 @@ window.TRIP = {
         { t: '23:00 전후', type: 'hotel', name: '호텔 복귀', sub: '내일 아침은 느긋하게 · 10:15 체크아웃', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney' },
         { t: '대안', type: 'walk', alt: true, under: '09:40', name: '더 짧게 · Icebergs 전망만 보기 · 20분', sub: '전날 요트로 피곤하면 브런치 뒤 Icebergs 수영장 위 전망대까지만 걷고 본다이에서 바로 차로 · 골프장까지 약 25분', q: 'Bondi Icebergs Lookout', key: 'bondi_bronte' }
       ],
-      notes: '11/12 변경: 본다이→쿠지 6km(2시간)를 본다이→브론테 2.5km(40–50분)로 줄이고, 쿠지 Coogee Pavilion 대신 bills 본다이 브런치로. 출발도 06:55→07:50. 세인트 마이클 11:51 확정(11/10). NSW Golf Club은 비회원 승인 문제로 제외. Auriga 스파는 17일 자리가 없어 16일로 옮김. Bennelong 19:45(Capella 컨시어지)를 18:00으로 변경 요청 중. 11/13: 식사 뒤 Whisky Thief(호스트 지인 바, 제임스형 · 지인 1명 합류) 추가.'
+      notes: '11/12 변경: 본다이→쿠지 6km(2시간)를 본다이→브론테 2.5km(40–50분)로 줄이고 쿠지 Coogee Pavilion 대신 bills 본다이 브런치로. 출발도 06:55→07:50. 세인트 마이클 11:51 확정(11/10). NSW Golf Club은 비회원 승인 문제로 제외. Auriga 스파는 17일 자리가 없어 16일로 옮김. Bennelong 19:45(Capella 컨시어지)를 18:00으로 변경 요청 중. 11/13: 식사 뒤 Whisky Thief(호스트 지인 바, 제임스형 · 지인 1명 합류) 추가.'
     },
     {
       id: 'd18', cover: 'one_tree_hill', coverCap: '원트리힐에서 보는 휘트선데이 일몰', date: '2026-11-18', dow: '수', n: 3, city: '해밀턴 아일랜드', short: '해밀턴', tz: 'Australia/Brisbane', tzLabel: '오전은 시드니 시각 · 도착 뒤 퀸즐랜드 시각(시드니 −1시간 · 한국 +1시간)',
@@ -284,7 +284,7 @@ window.TRIP = {
       title: '시드니 · Capella 주변',
       base: 'Capella Sydney에서 걸어서',
       items: [
-        { key: 'p_syd_hacienda', cat: 'bar', name: 'Hacienda (Pullman Quay Grand)', walk: '도보 5분', date: true, sub: 'Pullman Quay Grand 호텔의 라운지 바(옛 Hyde Hacienda). 2025년 리뉴얼로 흙빛 톤과 초록 식물의 차분한 분위기가 됐고, 창밖은 서큘러키 하버', tip: '사진: 창가 자리에서 서큘러키 하버를 배경으로', q: 'Hacienda Bar Pullman Quay Grand Sydney', hours: { '월': '15:00–22:00', '화': '15:00–22:00', '수': '15:00–23:00' }, site: 'https://www.haciendasydney.com.au/' },
+        { key: 'p_syd_hacienda', cat: 'bar', name: 'Hacienda (Pullman Quay Grand)', walk: '도보 5분', date: true, sub: 'Pullman Quay Grand 호텔의 라운지 바(옛 Hyde Hacienda). 2025년 리뉴얼로 흙빛 톤과 초록 식물의 차분한 분위기가 됐고 창밖은 서큘러키 하버', tip: '사진: 창가 자리에서 서큘러키 하버를 배경으로', q: 'Hacienda Bar Pullman Quay Grand Sydney', hours: { '월': '15:00–22:00', '화': '15:00–22:00', '수': '15:00–23:00' }, site: 'https://www.haciendasydney.com.au/' },
         { key: 'p_syd_larenaissance', cat: 'cafe', name: 'La Renaissance Patisserie', walk: '도보 7분', sub: '더록스의 프랑스 파티세리. 마카롱과 케이크, 안뜰 정원 테이블', tip: '사진: 돌담 안뜰 테이블에 마카롱', q: 'La Renaissance Patisserie The Rocks Sydney', hours: { '월': '07:00–18:00', '화': '07:00–18:00', '수': '07:00–18:00' }, site: 'https://www.larenaissance.com.au/', ig: 'https://www.instagram.com/la_renaissance_patisserie/' },
         { key: 'p_syd_mca_cafe', cat: 'cafe', name: 'MCA 카페', walk: '도보 7분', sub: '현대미술관 1층 카페(MCA Cafe at Tallawoladah). 미술관 관람은 무료 · 화요일은 미술관과 카페 모두 휴관', tip: '사진: 미술관 앞 서큘러키 물가에서 오페라하우스', q: 'MCA Cafe Museum of Contemporary Art Sydney', hours: { '월': '10:00–17:00', '화': '휴무', '수': '10:00–17:00' }, site: 'https://www.mca.com.au/visitor-information/eat-and-drink/' },
         { key: 'p_syd_teacosy', cat: 'cafe', name: 'The Tea Cosy', walk: '도보 7분', sub: '더록스 옛 오두막의 아일랜드식 티룸. 스콘과 잎차', q: 'The Tea Cosy The Rocks Sydney', hours: { '월': '09:00–16:30', '화': '09:00–16:30', '수': '09:00–16:30' }, site: 'https://www.theteacosy.com.au/', ig: 'https://www.instagram.com/theteacosy/' },

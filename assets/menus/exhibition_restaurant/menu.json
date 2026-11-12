@@ -1,0 +1,23 @@
+{
+ "key": "exhibition_restaurant",
+ "name": "Exhibition",
+ "fine_dining": true,
+ "menus": [
+  {
+   "id": "tasting",
+   "title_ko": "Exhibition Experience 오마카세 코스 (샘플)",
+   "title_en": "Exhibition Experience (sample)",
+   "source_page": "https://www.exhibitionrestaurant.com/menu",
+   "source_file": "https://www.exhibitionrestaurant.com/s/240726.pdf",
+   "updated": "2026-07-25 (PDF 수정일, 식당이 올린 샘플 메뉴)",
+   "sample": true,
+   "pages": [
+    {
+     "en": "assets/menus/exhibition_restaurant/tasting-en-1.webp",
+     "ko": "assets/menus/exhibition_restaurant/tasting-ko-1.webp"
+    }
+   ]
+  }
+ ],
+ "note_ko": "식당이 공개한 샘플 메뉴입니다. 실제 코스는 제철 재료에 따라 매번 바뀝니다. 금·토요일은 1인 $340(코스 $260 + 음료·추가 요리용 크레딧 $80)."
+}

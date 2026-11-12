@@ -1,0 +1,38 @@
+{
+ "key": "mary_maes",
+ "name": "Mary Mae's (Brisbane Powerhouse)",
+ "fine_dining": false,
+ "menus": [
+  {
+   "id": "lunch",
+   "title_ko": "음식 메뉴 (점심·저녁 오전 11시부터)",
+   "title_en": "Food — Lunch & Dinner from 11am",
+   "source_page": "https://marymaes.com.au/menu/",
+   "source_file": "https://marymaes.com.au/wp-content/uploads/sites/16/2026/08/MM_LUNCH_A3_AUG26_V6.pdf",
+   "updated": "2026-08-17 (PDF 수정일, 2026년 8월 메뉴)",
+   "sample": false,
+   "pages": [
+    {
+     "en": "assets/menus/mary_maes/lunch-en-1.webp",
+     "ko": "assets/menus/mary_maes/lunch-ko-1.webp"
+    }
+   ]
+  },
+  {
+   "id": "drinks",
+   "title_ko": "음료 메뉴 (맥주·와인·칵테일)",
+   "title_en": "Drinks — Beers, Wines & Cocktails",
+   "source_page": "https://marymaes.com.au/menu/",
+   "source_file": "https://marymaes.com.au/wp-content/uploads/sites/16/2026/08/MM_BEVERAGE_A3_AUG26.pdf",
+   "updated": "2026-08-24 (PDF 수정일, 2026년 8월 메뉴)",
+   "sample": false,
+   "pages": [
+    {
+     "en": "assets/menus/mary_maes/drinks-en-1.webp",
+     "ko": "assets/menus/mary_maes/drinks-ko-1.webp"
+    }
+   ]
+  }
+ ],
+ "note_ko": "오전 11시부터 점심·저녁 메뉴가 나옵니다(아침 메뉴는 11시까지). 감자튀김은 '사이드'에 있습니다. 생맥주 스페셜: Balter 'Easy Hazy' 스쿠너 $10, 파인트 $13. 주류는 오전 10시부터, 공휴일 15% 추가 요금."
+}

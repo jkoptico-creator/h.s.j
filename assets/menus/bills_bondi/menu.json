@@ -1,0 +1,38 @@
+{
+ "key": "bills_bondi",
+ "name": "bills Bondi Beach",
+ "fine_dining": false,
+ "menus": [
+  {
+   "id": "breakfast",
+   "title_ko": "아침 메뉴 (낮 12시까지)",
+   "title_en": "Breakfast (until 12pm)",
+   "source_page": "https://www.bills.com.au/locations/bondi-beach",
+   "source_file": "https://cdn.sanity.io/files/ras6zn60/production/56c24755966b05ac2f5f8e483ee9db9a08df8641.pdf",
+   "updated": "2026-10-13 (PDF 수정일, SS26 봄·여름 메뉴)",
+   "sample": false,
+   "pages": [
+    {
+     "en": "assets/menus/bills_bondi/breakfast-en-1.webp",
+     "ko": "assets/menus/bills_bondi/breakfast-ko-1.webp"
+    }
+   ]
+  },
+  {
+   "id": "lunch",
+   "title_ko": "점심 메뉴 (오후 5시까지)",
+   "title_en": "Lunch (until 5pm)",
+   "source_page": "https://www.bills.com.au/locations/bondi-beach",
+   "source_file": "https://cdn.sanity.io/files/ras6zn60/production/9cb22ff06002a428434c72df8ec01c2e457d3a57.pdf",
+   "updated": "2026-10-20 (PDF 수정일, SS26 봄·여름 메뉴)",
+   "sample": false,
+   "pages": [
+    {
+     "en": "assets/menus/bills_bondi/lunch-en-1.webp",
+     "ko": "assets/menus/bills_bondi/lunch-ko-1.webp"
+    }
+   ]
+  }
+ ],
+ "note_ko": "아침 메뉴는 낮 12시까지입니다. 토·일요일 10%, 공휴일 15% 추가 요금이 붙습니다. 채식 전용 메뉴도 따로 있으니 직원에게 요청하세요."
+}

@@ -1,0 +1,41 @@
+{
+ "key": "sails_hi",
+ "name": "Sails Restaurant (Catseye Beach)",
+ "fine_dining": false,
+ "menus": [
+  {
+   "id": "breakfast",
+   "title_ko": "아침 메뉴 · 음료",
+   "title_en": "Breakfast & Drinks",
+   "source_page": "https://www.hamiltonisland.com.au/restaurants/sails",
+   "source_file": "https://www.hamiltonisland.com.au/HamiltonIsland/media/Menu/menu-sails.pdf",
+   "updated": "2026-09-18 (PDF 수정일)",
+   "sample": false,
+   "pages": [
+    {
+     "en": "assets/menus/sails_hi/breakfast-en-1.webp",
+     "ko": "assets/menus/sails_hi/breakfast-ko-1.webp"
+    },
+    {
+     "en": "assets/menus/sails_hi/breakfast-en-2.webp",
+     "ko": "assets/menus/sails_hi/breakfast-ko-2.webp"
+    }
+   ]
+  },
+  {
+   "id": "lunch",
+   "title_ko": "점심 메뉴",
+   "title_en": "Lunch",
+   "source_page": "https://www.hamiltonisland.com.au/restaurants/sails",
+   "source_file": "https://www.hamiltonisland.com.au/HamiltonIsland/media/Menu/menu-sails.pdf",
+   "updated": "2026-09-18 (PDF 수정일)",
+   "sample": false,
+   "pages": [
+    {
+     "en": "assets/menus/sails_hi/lunch-en-1.webp",
+     "ko": "assets/menus/sails_hi/lunch-ko-1.webp"
+    }
+   ]
+  }
+ ]
+}

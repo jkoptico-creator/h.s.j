@@ -1,0 +1,35 @@
+{
+ "key": "catseye_pool_club",
+ "name": "Catseye Pool Club (The Sundays)",
+ "fine_dining": true,
+ "menus": [
+  {
+   "id": "dinner",
+   "title_ko": "메뉴 (점심·저녁 공통, 2~3인 셰어)",
+   "title_en": "Menu (lunch & dinner, sharing)",
+   "source_page": "https://www.hamiltonisland.com.au/the-sundays/dine",
+   "source_file": "https://www.hamiltonisland.com.au/HamiltonIsland/media/Menu/menu-catseye-pool-club.pdf",
+   "updated": "2026-10-27 (PDF 수정일)",
+   "sample": false,
+   "pages": [
+    {
+     "en": "assets/menus/catseye_pool_club/dinner-en-1.webp",
+     "ko": "assets/menus/catseye_pool_club/dinner-ko-1.webp"
+    },
+    {
+     "en": "assets/menus/catseye_pool_club/dinner-en-2.webp",
+     "ko": "assets/menus/catseye_pool_club/dinner-ko-2.webp"
+    },
+    {
+     "en": "assets/menus/catseye_pool_club/dinner-en-3.webp",
+     "ko": "assets/menus/catseye_pool_club/dinner-ko-3.webp"
+    },
+    {
+     "en": "assets/menus/catseye_pool_club/dinner-en-4.webp",
+     "ko": "assets/menus/catseye_pool_club/dinner-ko-4.webp"
+    }
+   ]
+  }
+ ],
+ "note_ko": "Josh·Julie Niland 셰프의 제철 셰어 메뉴로 시즌마다 바뀝니다. 2~3인이 나눠 먹는 구성입니다."
+}

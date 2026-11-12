@@ -1,0 +1,31 @@
+{
+ "key": "bommie",
+ "name": "Bommie (Hamilton Island Yacht Club)",
+ "fine_dining": true,
+ "menus": [
+  {
+   "id": "dinner",
+   "title_ko": "저녁 메뉴 (3코스·5코스)",
+   "title_en": "Dinner — Three Course / Five Course",
+   "source_page": "https://www.hamiltonisland.com.au/restaurants/bommie",
+   "source_file": "https://www.hamiltonisland.com.au/HamiltonIsland/media/Menu/menu-bommie.pdf",
+   "updated": "2026-09-23 (PDF 수정일)",
+   "sample": false,
+   "pages": [
+    {
+     "en": "assets/menus/bommie/dinner-en-1.webp",
+     "ko": "assets/menus/bommie/dinner-ko-1.webp"
+    },
+    {
+     "en": "assets/menus/bommie/dinner-en-2.webp",
+     "ko": "assets/menus/bommie/dinner-ko-2.webp"
+    },
+    {
+     "en": "assets/menus/bommie/dinner-en-3.webp",
+     "ko": "assets/menus/bommie/dinner-ko-3.webp"
+    }
+   ]
+  }
+ ],
+ "note_ko": "식당 공식 PDF 자체가 '샘플 메뉴'로 표기되어 있어 당일 구성은 조금 다를 수 있습니다. 1쪽은 3코스($160), 2쪽은 5코스($195), 3쪽은 단체 프라이빗 룸 메뉴입니다."
+}

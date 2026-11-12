@@ -1,0 +1,35 @@
+{
+ "key": "bogey_hole_cafe",
+ "name": "The Bogey Hole Cafe",
+ "fine_dining": false,
+ "menus": [
+  {
+   "id": "all-day",
+   "title_ko": "올데이 메뉴 (음료 포함)",
+   "title_en": "All Day Menu",
+   "source_page": "https://www.bogeyholecafe.com/menu",
+   "source_file": "https://www.bogeyholecafe.com/menu",
+   "updated": "2026-06-16 (카페 홈페이지 메뉴 페이지 수정일)",
+   "sample": false,
+   "pages": [
+    {
+     "en": "assets/menus/bogey_hole_cafe/all-day-en-1.webp",
+     "ko": "assets/menus/bogey_hole_cafe/all-day-ko-1.webp"
+    },
+    {
+     "en": "assets/menus/bogey_hole_cafe/all-day-en-2.webp",
+     "ko": "assets/menus/bogey_hole_cafe/all-day-ko-2.webp"
+    },
+    {
+     "en": "assets/menus/bogey_hole_cafe/all-day-en-3.webp",
+     "ko": "assets/menus/bogey_hole_cafe/all-day-ko-3.webp"
+    },
+    {
+     "en": "assets/menus/bogey_hole_cafe/all-day-en-4.webp",
+     "ko": "assets/menus/bogey_hole_cafe/all-day-ko-4.webp"
+    }
+   ]
+  }
+ ],
+ "note_ko": "카페 홈페이지에 올라온 메뉴입니다. 커피는 Salvador Coffee를 씁니다. 가격·메뉴는 현장에서 다를 수 있습니다."
+}

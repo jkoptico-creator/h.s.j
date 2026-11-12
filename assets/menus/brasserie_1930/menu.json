@@ -1,0 +1,42 @@
+{
+ "key": "brasserie_1930",
+ "name": "Brasserie 1930 (Capella Sydney)",
+ "fine_dining": false,
+ "menus": [
+  {
+   "id": "breakfast",
+   "title_ko": "조식 메뉴",
+   "title_en": "Breakfast",
+   "source_page": "https://capellahotels.com/en/capella-sydney/dining/brasserie-1930",
+   "source_file": "https://capellahotels.com/assets/docs/sydney/Brasserie_1930_-_Breakfast_Menu_17.06.2026-No-CC_.pdf",
+   "updated": "2026-09-29 (PDF 수정일, 메뉴명 17.06.2026)",
+   "sample": false,
+   "pages": [
+    {
+     "en": "assets/menus/brasserie_1930/breakfast-en-1.webp",
+     "ko": "assets/menus/brasserie_1930/breakfast-ko-1.webp"
+    }
+   ]
+  },
+  {
+   "id": "a-la-carte",
+   "title_ko": "단품 메뉴 (점심·저녁)",
+   "title_en": "À la carte (Spring)",
+   "source_page": "https://capellahotels.com/en/capella-sydney/dining/brasserie-1930",
+   "source_file": "https://capellahotels.com/assets/docs/sydney/Brasserie-1930-Spring-Menu-6102026.pdf",
+   "updated": "2026-10-06 (PDF 수정일, 봄 메뉴)",
+   "sample": false,
+   "pages": [
+    {
+     "en": "assets/menus/brasserie_1930/a-la-carte-en-1.webp",
+     "ko": "assets/menus/brasserie_1930/a-la-carte-ko-1.webp"
+    },
+    {
+     "en": "assets/menus/brasserie_1930/a-la-carte-en-2.webp",
+     "ko": "assets/menus/brasserie_1930/a-la-carte-ko-2.webp"
+    }
+   ]
+  }
+ ],
+ "note_ko": "조식은 투숙객 기준 06:30–10:30(일부 날은 11:00까지)입니다. 단품 메뉴는 화–금 점심, 화–토 저녁에만 나옵니다."
+}

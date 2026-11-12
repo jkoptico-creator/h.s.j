@@ -1,0 +1,27 @@
+{
+ "key": "hamilton_island_golf",
+ "name": "Hamilton Island Golf Club — Clubhouse (Dent Island)",
+ "fine_dining": false,
+ "menus": [
+  {
+   "id": "lunch",
+   "title_ko": "점심 코스 ($119, 2코스·왕복 페리 포함)",
+   "title_en": "The $119pp Lunch Experience",
+   "source_page": "https://www.hamiltonislandgolfclub.com.au/club-house",
+   "source_file": "https://www.hamiltonisland.com.au/HamiltonIsland/media/Menu/menu-clubhouse.pdf",
+   "updated": "2026-09-29 (PDF 수정일)",
+   "sample": false,
+   "pages": [
+    {
+     "en": "assets/menus/hamilton_island_golf/lunch-en-1.webp",
+     "ko": "assets/menus/hamilton_island_golf/lunch-ko-1.webp"
+    },
+    {
+     "en": "assets/menus/hamilton_island_golf/lunch-en-2.webp",
+     "ko": "assets/menus/hamilton_island_golf/lunch-ko-2.webp"
+    }
+   ]
+  }
+ ],
+ "note_ko": "비골퍼용 점심 패키지: 전채+메인 또는 메인+디저트 2코스와 Hamilton Island–Dent Island 왕복 이동 포함. 사이드는 별도 요금입니다."
+}

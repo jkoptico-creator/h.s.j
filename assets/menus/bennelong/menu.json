@@ -1,0 +1,54 @@
+{
+ "key": "bennelong",
+ "name": "Bennelong",
+ "fine_dining": true,
+ "menus": [
+  {
+   "id": "dinner",
+   "title_ko": "저녁 3코스 메뉴",
+   "title_en": "Three-course menu",
+   "source_page": "https://www.bennelong.com.au/menu/",
+   "source_file": "https://www.bennelong.com.au/wp-content/uploads/2026/10/Bennelong-Three-course-Menu-1-1.pdf",
+   "updated": "2026-10-27 (PDF 수정일)",
+   "sample": false,
+   "pages": [
+    {
+     "en": "assets/menus/bennelong/dinner-en-1.webp",
+     "ko": "assets/menus/bennelong/dinner-ko-1.webp"
+    },
+    {
+     "en": "assets/menus/bennelong/dinner-en-2.webp",
+     "ko": "assets/menus/bennelong/dinner-ko-2.webp"
+    },
+    {
+     "en": "assets/menus/bennelong/dinner-en-3.webp",
+     "ko": "assets/menus/bennelong/dinner-ko-3.webp"
+    },
+    {
+     "en": "assets/menus/bennelong/dinner-en-4.webp",
+     "ko": "assets/menus/bennelong/dinner-ko-4.webp"
+    }
+   ]
+  },
+  {
+   "id": "a-la-carte",
+   "title_ko": "단품 메뉴 (The Counter)",
+   "title_en": "The Counter à la carte",
+   "source_page": "https://www.bennelong.com.au/menu/",
+   "source_file": "https://www.bennelong.com.au/wp-content/uploads/2026/10/Bennelong-The-Counter-ALC-Menu_.pdf",
+   "updated": "2026-10-27 (PDF 수정일)",
+   "sample": false,
+   "pages": [
+    {
+     "en": "assets/menus/bennelong/a-la-carte-en-1.webp",
+     "ko": "assets/menus/bennelong/a-la-carte-ko-1.webp"
+    },
+    {
+     "en": "assets/menus/bennelong/a-la-carte-en-2.webp",
+     "ko": "assets/menus/bennelong/a-la-carte-ko-2.webp"
+    }
+   ]
+  }
+ ],
+ "note_ko": "메인 다이닝룸은 3코스(1인 $240)이고, 단품 메뉴는 The Counter 좌석용입니다. 식재료에 따라 요리가 자주 바뀝니다."
+}

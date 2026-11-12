@@ -1,0 +1,66 @@
+{
+ "key": "hsw_stanley_greca",
+ "name": "Stanley / Greca (Howard Smith Wharves)",
+ "fine_dining": false,
+ "menus": [
+  {
+   "id": "stanley-lunch",
+   "title_ko": "Stanley 점심 메뉴",
+   "title_en": "Stanley Yum Cha Lunch (Mon–Sat)",
+   "source_page": "https://www.stanleyrestaurant.com.au/menu",
+   "source_file": "https://www.stanleyrestaurant.com.au/s/STANLEY-A5-YUM-CHA-LUNCH-MENU-WEB-1st-OCT-2026.pdf",
+   "updated": "2026-09-30 (PDF 수정일, 2026년 10월 1일자 메뉴)",
+   "sample": false,
+   "pages": [
+    {
+     "en": "assets/menus/hsw_stanley_greca/stanley-lunch-en-1.webp",
+     "ko": "assets/menus/hsw_stanley_greca/stanley-lunch-ko-1.webp"
+    },
+    {
+     "en": "assets/menus/hsw_stanley_greca/stanley-lunch-en-2.webp",
+     "ko": "assets/menus/hsw_stanley_greca/stanley-lunch-ko-2.webp"
+    },
+    {
+     "en": "assets/menus/hsw_stanley_greca/stanley-lunch-en-3.webp",
+     "ko": "assets/menus/hsw_stanley_greca/stanley-lunch-ko-3.webp"
+    },
+    {
+     "en": "assets/menus/hsw_stanley_greca/stanley-lunch-en-4.webp",
+     "ko": "assets/menus/hsw_stanley_greca/stanley-lunch-ko-4.webp"
+    },
+    {
+     "en": "assets/menus/hsw_stanley_greca/stanley-lunch-en-5.webp",
+     "ko": "assets/menus/hsw_stanley_greca/stanley-lunch-ko-5.webp"
+    },
+    {
+     "en": "assets/menus/hsw_stanley_greca/stanley-lunch-en-6.webp",
+     "ko": "assets/menus/hsw_stanley_greca/stanley-lunch-ko-6.webp"
+    }
+   ]
+  },
+  {
+   "id": "greca-lunch",
+   "title_ko": "Greca 점심 메뉴",
+   "title_en": "Greca A La Carte",
+   "source_page": "https://www.orkhestra.com.au/venues/greca/menu",
+   "source_file": "https://www.orkhestra.com.au/venues/greca/menu",
+   "updated": "2026-11-13 확인 (식당 웹페이지 단품 메뉴)",
+   "sample": false,
+   "pages": [
+    {
+     "en": "assets/menus/hsw_stanley_greca/greca-lunch-en-1.webp",
+     "ko": "assets/menus/hsw_stanley_greca/greca-lunch-ko-1.webp"
+    },
+    {
+     "en": "assets/menus/hsw_stanley_greca/greca-lunch-en-2.webp",
+     "ko": "assets/menus/hsw_stanley_greca/greca-lunch-ko-2.webp"
+    },
+    {
+     "en": "assets/menus/hsw_stanley_greca/greca-lunch-en-3.webp",
+     "ko": "assets/menus/hsw_stanley_greca/greca-lunch-ko-3.webp"
+    }
+   ]
+  }
+ ],
+ "note_ko": "Stanley는 토요일 점심에 이 얌차 런치 메뉴(월~토)를 씁니다. Greca는 토요일엔 단품 메뉴만 있고(평일 수블라키 세트는 월~금), 식당도 계절에 따라 요리와 가격이 바뀐다고 안내합니다."
+}

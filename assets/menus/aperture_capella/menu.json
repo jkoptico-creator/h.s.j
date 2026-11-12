@@ -1,0 +1,27 @@
+{
+ "key": "aperture_capella",
+ "name": "Aperture (Capella Sydney)",
+ "fine_dining": false,
+ "menus": [
+  {
+   "id": "afternoon-tea",
+   "title_ko": "애프터눈 티",
+   "title_en": "Afternoon Tea (Spring)",
+   "source_page": "https://capellahotels.com/en/capella-sydney/dining/aperture",
+   "source_file": "https://capellahotels.com/assets/docs/sydney/Aperture_Spring_Afternoon_Tea_24.08.2026-No-CC_.pdf",
+   "updated": "2026-09-29 (PDF 수정일, 봄 시즌 메뉴 24.08.2026~)",
+   "sample": false,
+   "pages": [
+    {
+     "en": "assets/menus/aperture_capella/afternoon-tea-en-1.webp",
+     "ko": "assets/menus/aperture_capella/afternoon-tea-ko-1.webp"
+    },
+    {
+     "en": "assets/menus/aperture_capella/afternoon-tea-en-2.webp",
+     "ko": "assets/menus/aperture_capella/afternoon-tea-ko-2.webp"
+    }
+   ]
+  }
+ ],
+ "note_ko": "봄 시즌 애프터눈 티 메뉴입니다. 1인 $105에 차 또는 커피가 포함되고, 샴페인은 잔으로 따로 주문합니다."
+}
