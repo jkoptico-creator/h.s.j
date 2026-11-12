@@ -1,6 +1,6 @@
 # 플래너 사진 출처
 
-2026-11-13: 여행 플래너(itinerary.html)의 일정·숙소·"둘이서 골라 가기" 장소 90곳에 실제 사진 454장을 넣었습니다. 장소의 공식 사이트, 관광청, 언론 기사, 위키미디어 공용 사진을 출처 페이지와 대조해 고른 뒤 WebP(최대 1280px)로 저장했습니다. 플래너에서 사진을 누르면 설명과 출처 링크가 보입니다.
+여행 플래너(itinerary.html)의 일정·숙소·"둘이서 골라 가기" 장소 91곳에 실제 사진 461장을 넣었습니다(2026-11-13 갱신). 장소의 공식 사이트, 관광청, 언론 기사, 위키미디어 공용 사진을 출처 페이지와 대조해 고른 뒤 WebP(최대 1280px)로 저장했습니다. 플래너에서 사진을 누르면 설명과 출처 링크가 보입니다.
 
 - 사진 목록: `assets/planner-photos.js` (itinerary.html에서만 places.js 뒤에 불러옴, 제안 페이지에는 영향 없음)
 - 원본 기록: `assets/photos/planner/sources.json`
@@ -627,6 +627,15 @@
 - 에드워드 St 171번지 아르데코풍 에르메스 매장 · Kgbo, CC BY-SA 4.0 / Wikimedia Commons — [출처 페이지](https://commons.wikimedia.org/wiki/File:Herm%C3%A8s_store%2C_171_Edward_Street%2C_Brisbane%2C_2019.jpg) · `assets/photos/planner/p_bne_luxury-3.webp`
 - 저녁 불빛이 켜진 퀸 스트리트 몰 · Visit Brisbane — [출처 페이지](https://visit.brisbane.qld.au/inspiration/guide-to-queen-street-mall) · `assets/photos/planner/p_bne_luxury-4.webp`
 - 퀸 스트리트 몰의 헤리티지 브리즈번 아케이드 입구 · Visit Brisbane — [출처 페이지](https://visit.brisbane.qld.au/inspiration/guide-to-queen-street-mall) · `assets/photos/planner/p_bne_luxury-5.webp`
+
+## `whisky_thief` (7장)
+- Whisky Thief 라운지, 일본 문신화풍 벽화 앞 가죽 소파와 위스키 잔 · Prefecture 48 — [출처 페이지](https://www.p48.com.au/venues-whisky-thief/) · `assets/photos/planner/whisky_thief-1.webp`
+- 위스키 병이 빼곡한 바 카운터와 칵테일 · Prefecture 48 — [출처 페이지](https://www.p48.com.au/venues-whisky-thief/) · `assets/photos/planner/whisky_thief-2.webp`
+- 나무 선반 위 칵테일 세 잔 · Prefecture 48 — [출처 페이지](https://www.p48.com.au/venues-whisky-thief/) · `assets/photos/planner/whisky_thief-3.webp`
+- 바텐더가 스포이드로 마티니를 마무리하는 모습 · Prefecture 48 — [출처 페이지](https://www.p48.com.au/venues-whisky-thief/) · `assets/photos/planner/whisky_thief-4.webp`
+- 얼음을 넣은 위스키 한 잔 · Prefecture 48 — [출처 페이지](https://www.p48.com.au/venues-whisky-thief/) · `assets/photos/planner/whisky_thief-5.webp`
+- 바텐더가 Glenfiddich 15년을 따르는 모습 · Prefecture 48 — [출처 페이지](https://www.p48.com.au/venues-whisky-thief/) · `assets/photos/planner/whisky_thief-6.webp`
+- Prefecture 48 문화재 벽돌 건물 안뜰 입구 · Prefecture 48 — [출처 페이지](https://www.p48.com.au/) · `assets/photos/planner/whisky_thief-7.webp`
 
 ## `empress` (12장)
 - Empress · 후면 데크 다이닝 테이블과 오페라하우스 · Sydney Harbour Specialists — [출처 페이지](https://sydneyhs.com.au/) · `assets/yacht/empress-01.webp`

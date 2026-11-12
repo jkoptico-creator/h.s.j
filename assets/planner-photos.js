@@ -621,6 +621,15 @@ window.GALLERY = Object.assign(window.GALLERY || {}, {
 "assets/photos/planner/p_bne_luxury-4.webp",
 "assets/photos/planner/p_bne_luxury-5.webp"
 ],
+"whisky_thief": [
+"assets/photos/planner/whisky_thief-1.webp",
+"assets/photos/planner/whisky_thief-2.webp",
+"assets/photos/planner/whisky_thief-3.webp",
+"assets/photos/planner/whisky_thief-4.webp",
+"assets/photos/planner/whisky_thief-5.webp",
+"assets/photos/planner/whisky_thief-6.webp",
+"assets/photos/planner/whisky_thief-7.webp"
+],
 "empress": [
 "assets/yacht/empress-01.webp",
 "assets/yacht/empress-02.webp",
@@ -4613,6 +4622,69 @@ window.PHOTO_SOURCES = Object.assign(window.PHOTO_SOURCES || {}, {
 "credit": "Visit Brisbane",
 "width": 1280,
 "height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/whisky_thief-1.webp": {
+"image_url": "https://www.p48.com.au/wp-content/uploads/2025/01/image-11.jpg.webp",
+"source_page": "https://www.p48.com.au/venues-whisky-thief/",
+"alt_ko": "Whisky Thief 라운지, 일본 문신화풍 벽화 앞 가죽 소파와 위스키 잔",
+"credit": "Prefecture 48",
+"width": 650,
+"height": 400,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/whisky_thief-2.webp": {
+"image_url": "https://www.p48.com.au/wp-content/uploads/2026/08/14.png.webp",
+"source_page": "https://www.p48.com.au/venues-whisky-thief/",
+"alt_ko": "위스키 병이 빼곡한 바 카운터와 칵테일",
+"credit": "Prefecture 48",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/whisky_thief-3.webp": {
+"image_url": "https://www.p48.com.au/wp-content/uploads/2026/08/11.png.webp",
+"source_page": "https://www.p48.com.au/venues-whisky-thief/",
+"alt_ko": "나무 선반 위 칵테일 세 잔",
+"credit": "Prefecture 48",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/whisky_thief-4.webp": {
+"image_url": "https://www.p48.com.au/wp-content/uploads/2026/08/13.png.webp",
+"source_page": "https://www.p48.com.au/venues-whisky-thief/",
+"alt_ko": "바텐더가 스포이드로 마티니를 마무리하는 모습",
+"credit": "Prefecture 48",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/whisky_thief-5.webp": {
+"image_url": "https://www.p48.com.au/wp-content/uploads/2026/08/15.png.webp",
+"source_page": "https://www.p48.com.au/venues-whisky-thief/",
+"alt_ko": "얼음을 넣은 위스키 한 잔",
+"credit": "Prefecture 48",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/whisky_thief-6.webp": {
+"image_url": "https://www.p48.com.au/wp-content/uploads/2026/08/18.png.webp",
+"source_page": "https://www.p48.com.au/venues-whisky-thief/",
+"alt_ko": "바텐더가 Glenfiddich 15년을 따르는 모습",
+"credit": "Prefecture 48",
+"width": 1280,
+"height": 720,
+"checked_on": "2026-11-13"
+},
+"assets/photos/planner/whisky_thief-7.webp": {
+"image_url": "https://www.p48.com.au/wp-content/uploads/2024/09/Rectangle-13-4.jpg.webp",
+"source_page": "https://www.p48.com.au/",
+"alt_ko": "Prefecture 48 문화재 벽돌 건물 안뜰 입구",
+"credit": "Prefecture 48",
+"width": 1200,
+"height": 636,
 "checked_on": "2026-11-13"
 },
 "assets/yacht/empress-01.webp": {

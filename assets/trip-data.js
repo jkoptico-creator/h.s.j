@@ -65,11 +65,11 @@ window.TRIP = {
     {
       id: 'd17', cover: 'bondi_bronte', coverCap: '본다이 → 브론테 해안 산책', date: '2026-11-17', dow: '화', n: 2, city: '시드니', tz: 'Australia/Sydney', tzLabel: '시드니 시각 · 한국 +2시간',
       wx: [{ lo: 15, hi: 21, sky: '대체로 맑음', rain: '15%' }],
-      title: '본다이 브런치 · 해안 산책 · 세인트 마이클 골프 · Bennelong',
-      intro: '아침은 본다이의 bills에서 브런치로 시작합니다. 리코타 핫케이크로 유명한 빌 그레인저의 첫 가게입니다. 식사 뒤에는 본다이에서 브론테까지 해안 절벽길 2.5km를 40분쯤 걷습니다. 브론테에서 차로 20분 거리의 세인트 마이클 골프클럽으로 가서 11:51에 18홀을 돕니다. 바다를 낀 코스입니다. 호텔로 돌아와 쉬었다가 저녁은 오페라하우스 안 Bennelong에서 와인과 함께 천천히 먹습니다.',
+      title: '본다이 브런치 · 해안 산책 · 세인트 마이클 골프 · Bennelong · Whisky Thief',
+      intro: '아침은 본다이의 bills에서 브런치로 시작합니다. 리코타 핫케이크로 유명한 빌 그레인저의 첫 가게입니다. 식사 뒤에는 본다이에서 브론테까지 해안 절벽길 2.5km를 40분쯤 걷습니다. 브론테에서 차로 20분 거리의 세인트 마이클 골프클럽으로 가서 11:51에 18홀을 돕니다. 바다를 낀 코스입니다. 호텔에서 잠깐 씻고 18:00에 오페라하우스 안 Bennelong에서 저녁을 먹습니다. 식사 뒤에는 차로 8분 거리의 위스키 바 Whisky Thief에서 호스트 일행과 한잔합니다.',
       stay: { name: 'Capella Sydney', sub: '24 Loftus St, Sydney NSW 2000', tel: '+61 2 9071 5000', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney', nights: '2/2박' },
-      bring: ['아침 산책용 얇은 겉옷(출발 때 15°C 안팎 · 걸으면 금방 더워짐)', '걷기 편한 운동화 · 모자 · 선글라스 · 선크림', '골프 복장: 칼라 셔츠 · 긴바지나 테일러드 쇼츠 · 골프화 · 장갑(드레스코드 엄격 · 청바지 불가)', '라커룸에서 갈아입을 옷 · 바닷바람 대비 바람막이', 'Bennelong 저녁은 스마트 캐주얼 · 밤에는 겉옷'],
-      picks: [{ set: 'syd', when: '골프 뒤 17:30–19:15 · Bennelong 뒤 한 잔' }],
+      bring: ['아침 산책용 얇은 겉옷(출발 때 15°C 안팎 · 걸으면 금방 더워짐)', '걷기 편한 운동화 · 모자 · 선글라스 · 선크림', '골프 복장: 칼라 셔츠 · 긴바지나 테일러드 쇼츠 · 골프화 · 장갑(드레스코드 엄격 · 청바지 불가)', '라커룸에서 갈아입을 옷 · 바닷바람 대비 바람막이', 'Bennelong · Whisky Thief는 스마트 캐주얼 · 밤에는 겉옷'],
+      picks: [{ set: 'syd', when: '오늘은 골프 뒤 쉬는 시간이 짧아요 · 호텔 주변 산책은 내일 아침에도' }],
       items: [
         { t: '07:50', type: 'car', name: '호텔 출발 · 호스트 차량', sub: '골프 가방은 차에 그대로 · bills 앞에 내려 드리고 차는 브론테에서 기다립니다', q: 'Capella Sydney, 24 Loftus Street Sydney', note: '렌터카(호스트 운전): 07:50 호텔 → bills 본다이 하차 → 브론테 주차 → 10:40 출발 → 세인트 마이클 → 16:30 출발 → 17:15 호텔. 골프백 3개.' },
         { via: 'car', text: '본다이까지 차량 약 15–25분 (화요일 07:50 기준 지도 예상 12–26분)', mode: 'driving' },
@@ -80,16 +80,18 @@ window.TRIP = {
         { via: 'car', text: '브론테 → 리틀 베이 차량 약 20–30분 (화요일 10:40 기준 지도 예상 20–28분)', mode: 'driving' },
         { t: '11:10', type: 'golf', name: '세인트 마이클 골프클럽 도착 · 수속', sub: '티타임 40분 전 · 옷은 라커룸에서 · 드레스코드가 엄격합니다: 칼라 셔츠, 긴바지 또는 테일러드 쇼츠, 골프화', addr: 'Jennifer St, Little Bay NSW 2035', q: "St Michael's Golf Club, Little Bay", tel: '+61 2 9326 8000', key: 'st_michaels_golf', st: 'ok', note: '11/17 11:51 예약 확정(클럽 답변 11/10, 사전 결제 없이 당일 결제). 4인으로 변경 확정, 렌탈 클럽(남 Titleist GTS ×3 · 여 Callaway Ai Smoke ×1) 준비 완료(11/10). 그린피 해외 방문객 $285, 호스트 $170, 카트 A$50.' },
         { t: '11:51', type: 'golf', name: '세인트 마이클 · 18홀 · 티타임 11:51', sub: '약 4–4.5시간 · 바닷가를 따라 도는 파72 · 홀마다 바다 쪽 바람을 봐야 합니다 · 아침 뒤 첫 식사이니 9홀 뒤 클럽하우스에서 간단히 요기', q: "St Michael's Golf Club, Little Bay", key: 'st_michaels_golf', st: 'ok' },
-        { t: '16:15 전후', type: 'dining', opt: true, name: '라운드 후 클럽하우스에서 한 잔', sub: '바다 전망 · 30분 안팎', q: "St Michael's Golf Club, Little Bay", key: 'st_michaels_golf', menu: 'st_michaels_golf' },
-        { via: 'car', text: '리틀 베이 → 호텔 차량 약 35–45분 (오후 교통)', mode: 'driving' },
-        { t: '17:30', type: 'hotel', name: '호텔 · 자유 시간', sub: '샤워하고 쉬는 시간 · 호텔 바에 들러도 좋습니다', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney' },
-        { via: 'walk', text: '오페라하우스까지 도보 약 15–20분 (서큘러키 물가)', mode: 'walking' },
-        { t: '19:45', type: 'dining', name: 'Bennelong 저녁 · 오페라하우스 안', sub: '오페라하우스 돛 아래의 레스토랑 · 매일 저녁 운영 · 소믈리에에게 코스에 맞는 와인을 맡기기 좋은 곳 · 문의 02 9240 8000', addr: 'Sydney Opera House, Bennelong Point', q: 'Bennelong Restaurant Sydney Opera House', tel: '+61 2 9240 8000', key: 'bennelong', menu: 'bennelong', st: 'ok', note: '11/13 컨시어지에 18:00(안 되면 17:45) 변경 요청 메일 보냄 — 식사 뒤 Whisky Thief(화 23:00 마감)에 가려고. 답장 오면 시각 확정. 기존: 2명(두 분) 19:45 예약 완료(Capella 컨시어지, 10/31) · 창가 · 와인 페어링 또는 소믈리에 추천(풀바디 레드 선호) 미리 알리기. 호스트는 근처에서 대기.' },
-        { via: 'walk', text: '호텔까지 서큘러키 물가를 따라 도보 약 15분', mode: 'walking' },
-        { t: '22:15 전후', type: 'hotel', name: '호텔 복귀', sub: '내일 아침은 느긋하게 · 10:15 체크아웃', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney' },
+        { t: '16:15 전후', type: 'dining', opt: true, name: '라운드 후 클럽하우스에서 한 잔', sub: '바다 전망 · 저녁 일정이 있어 15분 정도만 · 16:30 출발', q: "St Michael's Golf Club, Little Bay", key: 'st_michaels_golf', menu: 'st_michaels_golf' },
+        { via: 'car', text: '16:30 출발 · 리틀 베이 → 호텔 차량 약 35–45분 (오후 교통)', mode: 'driving' },
+        { t: '17:15', type: 'hotel', name: '호텔 · 씻고 옷 갈아입기', sub: '저녁 전 25분 정도 · Bennelong은 스마트 캐주얼', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney' },
+        { via: 'walk', text: '17:40 호텔 출발 · 오페라하우스까지 도보 약 15–20분 (서큘러키 물가)', mode: 'walking' },
+        { t: '18:00', type: 'dining', name: 'Bennelong 저녁 · 오페라하우스 안', sub: '오페라하우스 돛 아래의 레스토랑 · 코스 요리 3가지 중 고르는 The Restaurant · 소믈리에에게 코스에 맞는 와인을 맡기기 좋은 곳 · 입구는 오페라하우스 정문 1층(바깥 계단 아래) · 문의 02 9240 8000', addr: 'Sydney Opera House, Bennelong Point', q: 'Bennelong Restaurant Sydney Opera House', tel: '+61 2 9240 8000', key: 'bennelong', menu: 'bennelong', st: 'ask', note: '11/13 컨시어지에 19:45→18:00(안 되면 17:45) 변경 요청 · 답장 대기, 확정되면 예약 완료로 바꾸기. 원래 예약은 Capella 컨시어지(10/31, 호텔 보증 · 48시간 안 취소 시 1인 $200대). 창가 · 와인 페어링(풀바디 레드 선호) 미리 알리기. 호스트는 근처에서 대기.' },
+        { via: 'car', text: 'Bennelong → Prefecture 48 차량 약 7–8분 (2.2km)', mode: 'driving' },
+        { t: '20:30', type: 'dining', name: 'Whisky Thief at Prefecture 48 · 위스키 바', sub: '호스트 지인이 운영하는 바 · 호스트 일행 2명이 합류해 모두 5명 · 위스키 증류소에서 영감을 얻은 아늑한 공간에서 희귀 위스키와 창작 칵테일 · 일본 미식 공간 Prefecture 48 안 · 화요일 23:00 마감', addr: '230 Sussex St, Sydney', q: 'Whisky Thief Prefecture 48 230 Sussex Street Sydney', tel: '+61 2 8552 2888', site: 'https://www.p48.com.au/venues-whisky-thief/', key: 'whisky_thief', note: '제임스형과 지인 1명 합류(호스트 포함 5명). 운영자가 호스트 지인이라 자리 미리 말해 두기. Bennelong 18:00 변경이 확정돼야 여유 있음(19:45 그대로면 22:30 도착, 30분뿐). 화–목 17:00–23:00.' },
+        { via: 'car', text: 'Prefecture 48 → 호텔 차량 약 7분', mode: 'driving' },
+        { t: '23:00 전후', type: 'hotel', name: '호텔 복귀', sub: '내일 아침은 느긋하게 · 10:15 체크아웃', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney' },
         { t: '대안', type: 'walk', alt: true, name: '더 짧게 · Icebergs 전망만 보기 · 20분', sub: '전날 요트로 피곤하면 브런치 뒤 Icebergs 수영장 위 전망대까지만 걷고 본다이에서 바로 차로 · 골프장까지 약 25분', q: 'Bondi Icebergs Lookout', key: 'bondi_bronte' }
       ],
-      notes: '11/12 변경: 본다이→쿠지 6km(2시간)를 본다이→브론테 2.5km(40–50분)로 줄이고, 쿠지 Coogee Pavilion 대신 bills 본다이 브런치로. 출발도 06:55→07:50. 세인트 마이클 11:51 확정(11/10). NSW Golf Club은 비회원 승인 문제로 제외. Auriga 스파는 17일 자리가 없어 16일로 옮김. Bennelong 19:45 예약 완료(Capella 컨시어지).'
+      notes: '11/12 변경: 본다이→쿠지 6km(2시간)를 본다이→브론테 2.5km(40–50분)로 줄이고, 쿠지 Coogee Pavilion 대신 bills 본다이 브런치로. 출발도 06:55→07:50. 세인트 마이클 11:51 확정(11/10). NSW Golf Club은 비회원 승인 문제로 제외. Auriga 스파는 17일 자리가 없어 16일로 옮김. Bennelong 19:45(Capella 컨시어지)를 18:00으로 변경 요청 중. 11/13: 식사 뒤 Whisky Thief(호스트 지인 바, 제임스형 · 지인 1명 합류) 추가.'
     },
     {
       id: 'd18', cover: 'one_tree_hill', coverCap: '원트리힐에서 보는 휘트선데이 일몰', date: '2026-11-18', dow: '수', n: 3, city: '해밀턴 아일랜드', short: '해밀턴', tz: 'Australia/Brisbane', tzLabel: '오전은 시드니 시각 · 도착 뒤 퀸즐랜드 시각(시드니 −1시간 · 한국 +1시간)',
