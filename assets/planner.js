@@ -208,7 +208,7 @@
       '<div class="now" hidden></div>' +
       (day.intro ? '<p class="dintro">' + h(day.intro) + '</p>' : '') +
       (route ? '<div class="ln top"><a href="' + route + '" target="_blank" rel="noopener">오늘 동선 지도</a></div>' : '') +
-      '</div>' + renderPack(day) + stay + '<ol class="tl">' + rows.join('') + '</ol>' + renderPicks(day) + bring + notes + '</section>';
+      '</div>' + stay + '<ol class="tl">' + rows.join('') + '</ol>' + renderPicks(day) + bring + notes + '</section>';
   }
   function renderInfo() {
     var fl = '<div class="card"><div class="lbl">항공</div><p class="small">예약번호와 승객 정보는 이 페이지에 싣지 않습니다. 항공사 앱에서 확인하세요.</p>' + T.flights.map(function (f) {
@@ -225,7 +225,8 @@
       d.items.forEach(function (it) { if (!it.via && it.st && it.st !== 'ok') bk.push('<li><span class="st ' + h(it.st) + '">' + STATUS[it.st] + '</span><b>' + (+d.date.slice(8)) + '일</b> ' + h(it.t || '') + ' ' + h(it.name) + (it.note ? '<div class="sb">' + h(it.note) + '</div>' : '') + '</li>'); });
     });
     var book = '<div class="card plan"><div class="lbl">예약 현황 · 남은 일</div><ul class="bk">' + bk.join('') + '</ul></div>';
-    return '<section class="dayv info" id="info"><div class="dhead"><div class="eyebrow">Essentials</div><h1>여행 정보 <small>항공 · 숙소 · 시차 · 연락처</small></h1></div>' + fl + ho + book + inf + '</section>';
+    var packDay = T.days.filter(function (d) { return d.pack; })[0];
+    return '<section class="dayv info" id="info"><div class="dhead"><div class="eyebrow">Essentials</div><h1>여행 정보 <small>짐 · 항공 · 숙소 · 시차 · 연락처</small></h1></div>' + (packDay ? renderPack(packDay) : '') + fl + ho + book + inf + '</section>';
   }
   var cache = {};
   function html(id) {
@@ -237,7 +238,7 @@
   function current() {
     var id = (location.hash || '').replace('#', '');
     if (id === 'info' || T.days.some(function (d) { return d.id === id; })) return id;
-    return todayId() || T.days[0].id;
+    return todayId() || 'info';
   }
   function markNow() {
     var sec = view.querySelector('.dayv'); if (!sec || sec.id === 'info') return;
@@ -263,15 +264,15 @@
       if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
     });
     document.title = (id === 'info' ? '여행 정보' : view.querySelector('h1').textContent.replace(/\s+/g, ' ')) + ' · 여행 플래너';
-    view.querySelectorAll('img').forEach(function (im) { im.addEventListener('error', function () { im.closest('.th').remove(); }, { once: true }); });
+    view.querySelectorAll('img').forEach(function (im) { im.addEventListener('error', function () { (im.closest('.th, .cover') || im).remove(); }, { once: true }); });
     markNow();
     if (scroll) window.scrollTo(0, 0);
   }
   // day tabs
   var today = todayId();
-  tabs.innerHTML = T.days.map(function (d) {
+  tabs.innerHTML = '<a href="#info" class="dtab" aria-label="여행 정보 · 짐 체크리스트"><b>i</b><span>정보</span><i>짐·항공</i></a>' + T.days.map(function (d) {
     return '<a href="#' + h(d.id) + '" class="dtab' + (d.id === today ? ' today' : '') + '" aria-label="' + h(d.date.slice(5).replace('-', '월 ')) + '일 ' + h(DOW[d.dow]) + ' · ' + h(d.city) + '"><b>' + (+d.date.slice(8)) + '</b><span>' + h(d.dow) + '</span><i>' + h(d.short || d.city) + '</i></a>';
-  }).join('') + '<a href="#info" class="dtab" aria-label="여행 정보"><b>i</b><span>정보</span><i>항공·숙소</i></a>';
+  }).join('');
   // planner mode — host only. Guests never see the 기획 button or notes.
   // Open itinerary.html?host=<HOST_KEY> once on the host's phone to unlock it there; ?host=off locks it again.
   var mode = document.getElementById('pmode'), KEY = 'planner-mode', HOST = 'planner-host', HOST_KEY = 'jk988dfa';
