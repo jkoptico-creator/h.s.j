@@ -33,7 +33,7 @@ window.TRIP = {
         { t: '호주 입국 주의', items: ['고기·과일·씨앗 같은 음식은 가져오지 않기(가져오면 반드시 신고)', '골프화·운동화 바닥의 흙은 깨끗이 털어 오기'] }
       ],
       items: [
-        { t: '17:00', type: 'plane', name: '인천공항 제2터미널 · 아시아나 카운터', sub: '출발 3시간 전 · 수하물 1인 2개까지 · 항공권은 대한항공 KE5001로 발권되었고 운항은 아시아나 OZ601입니다', addr: '인천국제공항 제2터미널', q: 'Incheon International Airport Terminal 2', st: 'ok', note: '터미널은 출발 전날 항공사 앱에서 한 번 더 확인(전자항공권 기준 제2터미널).' },
+        { t: '17:00', type: 'plane', name: '인천공항 제2터미널 · 아시아나 카운터', sub: '출발 3시간 전 · 제2터미널 3층 동쪽 아시아나 카운터(비즈니스는 J구역) · 수하물 1인 2개까지 · 항공권은 대한항공 KE5001로 발권되었고 운항은 아시아나 OZ601입니다', addr: '인천국제공항 제2터미널', q: 'Incheon International Airport Terminal 2', st: 'ok', note: '터미널은 출발 전날 항공사 앱에서 한 번 더 확인(전자항공권 기준 제2터미널).' },
         { t: '20:00', type: 'plane', name: 'OZ601 인천 → 시드니', sub: '10시간 20분 · 프레스티지(비즈니스) · 16일 08:20 시드니 도착(현지 시각)', key: 'biz_class_a380', st: 'ok', note: '발권 완료. 좌석 지정 여부 확인.' }
       ]
     },
@@ -72,12 +72,12 @@ window.TRIP = {
       picks: [{ set: 'syd', when: '골프 뒤 17:30–19:15 · Bennelong 뒤 한 잔' }],
       items: [
         { t: '07:50', type: 'car', name: '호텔 출발 · 호스트 차량', sub: '골프 가방은 차에 그대로 · bills 앞에 내려 드리고 차는 브론테에서 기다립니다', q: 'Capella Sydney, 24 Loftus Street Sydney', note: '렌터카(호스트 운전): 07:50 호텔 → bills 본다이 하차 → 브론테 주차 → 10:40 출발 → 세인트 마이클 → 16:30 출발 → 17:15 호텔. 골프백 3개.' },
-        { via: 'car', text: '본다이까지 차량 약 25–35분 (아침 교통)', mode: 'driving' },
-        { t: '08:20', type: 'dining', name: '본다이 브런치 · bills Bondi Beach', sub: '빌 그레인저가 시드니 브런치 문화를 연 첫 가게 · 리코타 핫케이크와 스크램블드 에그가 대표 메뉴 · 아침은 예약 없이 입장(평일 07:00부터) · 해변까지 걸어서 3분', addr: '79 Hall St, Bondi Beach', q: 'bills Bondi Beach 79 Hall Street', tel: '+61 2 8412 0700', site: 'https://www.bills.com.au/', st: 'chk', note: '아침은 워크인(예약은 저녁만이라는 안내가 많음, OpenTable은 예약 가능으로 표시). 평일 08:20이면 대기 짧은 편. 대안: Speedos Cafe(노스 본디 해변 위, 06:00부터, 스무디볼·바다 전망).' },
+        { via: 'car', text: '본다이까지 차량 약 15–25분 (화요일 07:50 기준 지도 예상 12–26분)', mode: 'driving' },
+        { t: '08:20', type: 'dining', name: '본다이 브런치 · bills Bondi Beach', sub: '빌 그레인저가 시드니 브런치 문화를 연 첫 가게 · 리코타 핫케이크와 스크램블드 에그가 대표 메뉴 · 아침은 예약 없이 입장(매일 07:00부터, 아침 메뉴는 12시까지) · 해변까지 걸어서 3분', addr: '79 Hall St, Bondi Beach', q: 'bills Bondi Beach 79 Hall Street', tel: '+61 2 8412 0700', site: 'https://www.bills.com.au/', note: '공식 사이트 확인(11/12): 매일 07:00 오픈, 예약은 17시 이후만 받고 워크인은 항상 가능. 평일 08:20이면 대기 짧은 편. 주차: 같은 건물 Wilson Parking(O’Brien St 진입) 1시간 $5. 대안: Speedos Cafe(노스 본디 해변 위, 06:00부터, 스무디볼·바다 전망).' },
         { via: 'walk', text: 'bills → 본다이 해변 남쪽 끝 Icebergs 도보 약 10분', mode: 'walking' },
         { t: '09:40', type: 'walk', name: '본다이 → 브론테 해안 산책 · 약 2.5km', sub: 'Icebergs 수영장 위에서 출발해 매켄지스 포인트, 타마라마를 지나 브론테 해변까지 · 사진 포함 40–50분 · 시작 부분에 계단이 조금 있고 나머지는 포장길 · 화장실은 본다이·타마라마·브론테에', q: 'Bondi to Bronte Coastal Walk', key: 'bondi_coogee' },
-        { t: '10:25', type: 'dining', opt: true, name: '브론테에서 커피 한 잔 · Locale Bronte', sub: '브론테 해변 앞 언덕길 카페 · 출발 전 15분 · 테이크아웃해서 차에서 마셔도 됩니다', addr: '473 Bronte Rd, Bronte', q: 'Locale Bronte 473 Bronte Road' },
-        { via: 'car', text: '브론테 → 리틀 베이 차량 약 20–25분', mode: 'driving' },
+        { t: '10:25', type: 'dining', opt: true, name: '브론테에서 커피 한 잔 · The Bogey Hole Cafe', sub: '브론테 해변 공원 바로 앞 오래된 동네 카페 · 매일 07:00–16:00 · 출발 전 15분 · 테이크아웃해서 차에서 마셔도 됩니다', addr: '473 Bronte Rd, Bronte', q: 'The Bogey Hole Cafe 473 Bronte Road Bronte' },
+        { via: 'car', text: '브론테 → 리틀 베이 차량 약 20–30분 (화요일 10:40 기준 지도 예상 20–28분)', mode: 'driving' },
         { t: '11:10', type: 'golf', name: '세인트 마이클 골프클럽 도착 · 수속', sub: '티타임 40분 전 · 옷은 라커룸에서 · 드레스코드가 엄격합니다: 칼라 셔츠, 긴바지 또는 테일러드 쇼츠, 골프화', addr: 'Jennifer St, Little Bay NSW 2035', q: "St Michael's Golf Club, Little Bay", tel: '+61 2 9326 8000', st: 'ok', note: '11/17 11:51 예약 확정(클럽 답변 11/10, 사전 결제 없이 당일 결제). 4인으로 변경 확정, 렌탈 클럽(남 Titleist GTS ×3 · 여 Callaway Ai Smoke ×1) 준비 완료(11/10). 그린피 해외 방문객 $285, 호스트 $170, 카트 A$50.' },
         { t: '11:51', type: 'golf', name: '세인트 마이클 · 18홀 · 티타임 11:51', sub: '약 4–4.5시간 · 바닷가를 따라 도는 파72 · 홀마다 바다 쪽 바람을 봐야 합니다 · 아침 뒤 첫 식사이니 9홀 뒤 클럽하우스에서 간단히 요기', q: "St Michael's Golf Club, Little Bay", st: 'ok' },
         { t: '16:15 전후', type: 'dining', opt: true, name: '라운드 후 클럽하우스에서 한 잔', sub: '바다 전망 · 30분 안팎', q: "St Michael's Golf Club, Little Bay" },
