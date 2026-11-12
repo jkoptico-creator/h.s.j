@@ -1,6 +1,6 @@
 # 플래너 사진 출처
 
-여행 플래너(itinerary.html)의 일정·숙소·"둘이서 골라 가기" 장소 91곳에 실제 사진 461장을 넣었습니다(2026-11-13 갱신). 장소의 공식 사이트, 관광청, 언론 기사, 위키미디어 공용 사진을 출처 페이지와 대조해 고른 뒤 WebP(최대 1280px)로 저장했습니다. 플래너에서 사진을 누르면 설명과 출처 링크가 보입니다.
+여행 플래너(itinerary.html)의 일정·숙소·"둘이서 골라 가기" 장소 92곳에 실제 사진 465장을 넣었습니다(2026-11-13 갱신). 장소의 공식 사이트, 관광청, 언론 기사, 위키미디어 공용 사진을 출처 페이지와 대조해 고른 뒤 WebP(최대 1280px)로 저장했습니다. 플래너에서 사진을 누르면 설명과 출처 링크가 보입니다.
 
 - 사진 목록: `assets/planner-photos.js` (itinerary.html에서만 places.js 뒤에 불러옴, 제안 페이지에는 영향 없음)
 - 원본 기록: `assets/photos/planner/sources.json`
@@ -627,6 +627,12 @@
 - 에드워드 St 171번지 아르데코풍 에르메스 매장 · Kgbo, CC BY-SA 4.0 / Wikimedia Commons — [출처 페이지](https://commons.wikimedia.org/wiki/File:Herm%C3%A8s_store%2C_171_Edward_Street%2C_Brisbane%2C_2019.jpg) · `assets/photos/planner/p_bne_luxury-3.webp`
 - 저녁 불빛이 켜진 퀸 스트리트 몰 · Visit Brisbane — [출처 페이지](https://visit.brisbane.qld.au/inspiration/guide-to-queen-street-mall) · `assets/photos/planner/p_bne_luxury-4.webp`
 - 퀸 스트리트 몰의 헤리티지 브리즈번 아케이드 입구 · Visit Brisbane — [출처 페이지](https://visit.brisbane.qld.au/inspiration/guide-to-queen-street-mall) · `assets/photos/planner/p_bne_luxury-5.webp`
+
+## `new_farm_picnic` (4장)
+- 강가 잔디밭에 펼친 돗자리와 피크닉 바구니, 뒤로 스토리브리지와 브리즈번 시내 · 호스트 제공 · `assets/photos/planner/new_farm_picnic-1.webp`
+- 뉴팜 파크 장미 정원 앞 잔디밭에서 돗자리를 펴는 두 사람, 뒤로 자카란다와 시내 스카이라인 · 호스트 제공 · `assets/photos/planner/new_farm_picnic-2.webp`
+- 브리즈번 뉴팜 파크 잔디밭에서 피크닉 바구니를 두고 이야기하는 두 사람 · 호스트 제공 · `assets/photos/planner/new_farm_picnic-3.webp`
+- 호스트가 준비하는 피크닉 세트: 라탄 바구니, 접이식 테이블, 접시와 잔, 커트러리 · 호스트 제공 · `assets/photos/planner/new_farm_picnic-4.webp`
 
 ## `whisky_thief` (7장)
 - Whisky Thief 라운지, 일본 문신화풍 벽화 앞 가죽 소파와 위스키 잔 · Prefecture 48 — [출처 페이지](https://www.p48.com.au/venues-whisky-thief/) · `assets/photos/planner/whisky_thief-1.webp`
