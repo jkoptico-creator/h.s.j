@@ -60,25 +60,26 @@ window.TRIP = {
         { via: 'walk', text: '승선 선착장까지 도보 또는 차량 (확정 후 안내)', mode: 'walking' },
         { t: '18:30', type: 'boat', name: 'Empress · 하버 나이트 크루즈 · 선상 프렌치 디너', sub: '77피트 모터요트 전세 · 4명(첫날 저녁 일행 1명 합류) · 18:30 시작(15분 전 선착장 도착) · 일몰 약 19:36 · 하버브리지 아래, 오페라하우스 앞, 도심 불빛 · 셰프 Pierre Gaudin(Noranise)의 맞춤 코스, 굴 3다스로 시작 · 코스마다 셰프가 고른 호주 와인 · 전자담배는 바깥 데크에서 가능 · 22:30 하선', q: 'Circular Quay Sydney', key: 'harbour_yacht', st: 'ok', note: '결제 완료(11/11, 인보이스 #9764 · 전세 18:30–22:30 + 셰프 메뉴 $1,600). 메뉴·와인 확정, 셰프 Pierre가 소믈리에 겸함(11/10). 음료는 크루즈 뒤 따로 정산, 보증금 최대 $2,000 카드 사전승인(종료 후 해제). 남은 것: ① 승선 선착장이 적힌 최종 확인 메일(SHS가 곧 보낸다고 함) ② 11/9 와인 추가 요청(Grand Vintage·Blanc de Blancs, Mount Edelstone 디캔팅, 풀바디 레드 1병 추가, 작은 잔, 남은 병 가져가기) 셰프 답변 대기. 디저트 전 30분은 두 분이 플라이브리지에서 따로 야경을 보도록 크루에게 부탁.' },
         { via: 'car', text: '하선 뒤 호텔까지 차량 약 5–10분', mode: 'driving' },
-        { t: '22:45 전후', type: 'hotel', name: '호텔 복귀', sub: '내일 06:55 출발 · 골프 가방과 골프복은 차에 실어 둡니다', q: 'Capella Sydney, 24 Loftus Street Sydney' },
+        { t: '22:45 전후', type: 'hotel', name: '호텔 복귀', sub: '내일 07:50 출발 · 골프 가방과 골프복은 차에 실어 둡니다', q: 'Capella Sydney, 24 Loftus Street Sydney' },
       ],
       notes: '흐름: 10:15 호텔 → 10:30 브런치 → 12:45 스파 → 14:30 애프터눈 티 → (선택) 15:45 투어 → 16:30 자유 시간 → 18:30 Empress → 22:45 호텔. 브리지클라임은 뺌(요트로 하버를 충분히 봄). 요트는 4명이지만 두 분만의 시간을 따로 만들어 드릴 것.'
     },
     {
       id: 'd17', date: '2026-11-17', dow: '화', n: 2, city: '시드니', tz: 'Australia/Sydney', tzLabel: '시드니 시각 · 한국 +2시간',
       wx: [{ lo: 15, hi: 21, sky: '대체로 맑음', rain: '15%' }],
-      title: '해안 산책 · 세인트 마이클 골프 · Bennelong',
-      intro: '아침에 본다이에서 쿠지까지 6km 해안 절벽길을 두 시간 정도 걷습니다. 브런치는 쿠지 해변 앞에서 먹습니다. 차로 15분 거리의 세인트 마이클 골프클럽에서 11:51에 18홀을 돕니다. 바다를 낀 코스입니다. 호텔로 돌아와 쉬었다가 저녁은 오페라하우스 안 Bennelong에서 와인과 함께 천천히 먹습니다.',
+      title: '본다이 브런치 · 해안 산책 · 세인트 마이클 골프 · Bennelong',
+      intro: '아침은 본다이의 bills에서 브런치로 시작합니다. 리코타 핫케이크로 유명한 빌 그레인저의 첫 가게입니다. 식사 뒤에는 본다이에서 브론테까지 해안 절벽길 2.5km를 40분쯤 걷습니다. 브론테에서 차로 20분 거리의 세인트 마이클 골프클럽으로 가서 11:51에 18홀을 돕니다. 바다를 낀 코스입니다. 호텔로 돌아와 쉬었다가 저녁은 오페라하우스 안 Bennelong에서 와인과 함께 천천히 먹습니다.',
       stay: { name: 'Capella Sydney', sub: '24 Loftus St, Sydney NSW 2000', tel: '+61 2 9071 5000', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney', nights: '2/2박' },
       bring: ['아침 산책용 얇은 겉옷(출발 시 15°C 안팎 · 걸으면 금방 더워짐)', '걷기 편한 운동화 · 모자 · 선글라스 · 선크림', '골프복 · 골프화 · 장갑(클럽에서 갈아입기 · 바닷바람 대비 바람막이)', 'Bennelong은 스마트 캐주얼 · 밤에는 겉옷'],
       picks: [{ set: 'syd', when: '골프 뒤 17:30–19:15 · Bennelong 뒤 한 잔' }],
       items: [
-        { t: '06:30', type: 'dining', name: '가벼운 조식 · 룸서비스 또는 커피', sub: '산책 전 간단히 · 브런치는 쿠지에서', q: 'Capella Sydney, 24 Loftus Street Sydney' },
-        { t: '06:55', type: 'car', name: '호텔 출발 · 호스트 차량', sub: '골프 가방은 차에 그대로 · 본다이에 내려 드리고 차는 쿠지에서 기다립니다', q: 'Capella Sydney, 24 Loftus Street Sydney', note: '렌터카(호스트 운전): 06:55 호텔 → 본다이 하차 → 쿠지 주차 → 10:40 출발 → 세인트 마이클 → 16:30 출발 → 17:15 호텔. 골프백 3개.' },
-        { via: 'car', text: '본다이까지 차량 약 25–35분', mode: 'driving' },
-        { t: '07:30', type: 'walk', name: '본다이 → 쿠지 해안 산책 · 약 6km', sub: '타마라마, 브론테, 클로벨리, 고든스 베이를 지나 쿠지까지 · 사진·휴식 포함 약 2시간 · 포장길과 가파른 계단이 섞여 있습니다 · 화장실과 식수대는 본다이·브론테·쿠지에', q: 'Bondi to Coogee Coastal Walk', key: 'bondi_coogee' },
-        { t: '09:45', type: 'dining', name: '쿠지 해변 브런치 · Coogee Pavilion', sub: '바다 앞 · 걷고 난 뒤 든든하게 · 평일 아침 운영 시간 확인', addr: '169 Dolphin St, Coogee', q: 'Coogee Pavilion, 169 Dolphin Street Coogee', key: 'coogee_pavilion', st: 'need', note: '3명 09:45 예약 또는 워크인. 평일 조식 시작 시각 확인.' },
-        { via: 'car', text: '쿠지 → 리틀 베이 차량 약 15분', mode: 'driving' },
+        { t: '07:50', type: 'car', name: '호텔 출발 · 호스트 차량', sub: '골프 가방은 차에 그대로 · bills 앞에 내려 드리고 차는 브론테에서 기다립니다', q: 'Capella Sydney, 24 Loftus Street Sydney', note: '렌터카(호스트 운전): 07:50 호텔 → bills 본다이 하차 → 브론테 주차 → 10:40 출발 → 세인트 마이클 → 16:30 출발 → 17:15 호텔. 골프백 3개.' },
+        { via: 'car', text: '본다이까지 차량 약 25–35분 (아침 교통)', mode: 'driving' },
+        { t: '08:20', type: 'dining', name: '본다이 브런치 · bills Bondi Beach', sub: '빌 그레인저가 시드니 브런치 문화를 연 첫 가게 · 리코타 핫케이크와 스크램블드 에그가 대표 메뉴 · 아침은 예약 없이 입장(평일 07:00부터) · 해변까지 걸어서 3분', addr: '79 Hall St, Bondi Beach', q: 'bills Bondi Beach 79 Hall Street', tel: '+61 2 8412 0700', site: 'https://www.bills.com.au/', st: 'chk', note: '아침은 워크인(예약은 저녁만이라는 안내가 많음, OpenTable은 예약 가능으로 표시). 평일 08:20이면 대기 짧은 편. 대안: Speedos Cafe(노스 본디 해변 위, 06:00부터, 스무디볼·바다 전망).' },
+        { via: 'walk', text: 'bills → 본다이 해변 남쪽 끝 Icebergs 도보 약 10분', mode: 'walking' },
+        { t: '09:40', type: 'walk', name: '본다이 → 브론테 해안 산책 · 약 2.5km', sub: 'Icebergs 수영장 위에서 출발해 매켄지스 포인트, 타마라마를 지나 브론테 해변까지 · 사진 포함 40–50분 · 시작 부분에 계단이 조금 있고 나머지는 포장길 · 화장실은 본다이·타마라마·브론테에', q: 'Bondi to Bronte Coastal Walk', key: 'bondi_coogee' },
+        { t: '10:25', type: 'dining', opt: true, name: '브론테에서 커피 한 잔 · Locale Bronte', sub: '브론테 해변 앞 언덕길 카페 · 출발 전 15분 · 테이크아웃해서 차에서 마셔도 됩니다', addr: '473 Bronte Rd, Bronte', q: 'Locale Bronte 473 Bronte Road' },
+        { via: 'car', text: '브론테 → 리틀 베이 차량 약 20–25분', mode: 'driving' },
         { t: '11:10', type: 'golf', name: '세인트 마이클 골프클럽 도착 · 수속', sub: '티타임 40분 전 · 옷은 라커룸에서 · 드레스코드가 엄격합니다: 칼라 셔츠, 긴바지 또는 테일러드 쇼츠, 골프화', addr: 'Jennifer St, Little Bay NSW 2035', q: "St Michael's Golf Club, Little Bay", tel: '+61 2 9326 8000', st: 'ok', note: '11/17 11:51 예약 확정(클럽 답변 11/10, 사전 결제 없이 당일 결제). 4인으로 변경 확정, 렌탈 클럽(남 Titleist GTS ×3 · 여 Callaway Ai Smoke ×1) 준비 완료(11/10). 그린피 해외 방문객 $285, 호스트 $170, 카트 A$50.' },
         { t: '11:51', type: 'golf', name: '세인트 마이클 · 18홀 · 티타임 11:51', sub: '약 4–4.5시간 · 바닷가를 따라 도는 파72 · 홀마다 바다 쪽 바람을 봐야 합니다', q: "St Michael's Golf Club, Little Bay", st: 'ok' },
         { t: '16:15 전후', type: 'dining', opt: true, name: '라운드 후 클럽하우스에서 한 잔', sub: '바다 전망 · 30분 안팎', q: "St Michael's Golf Club, Little Bay" },
@@ -88,9 +89,9 @@ window.TRIP = {
         { t: '19:45', type: 'dining', name: 'Bennelong 저녁 · 오페라하우스 안', sub: '오페라하우스 돛 아래의 레스토랑 · 매일 저녁 운영 · 소믈리에에게 코스에 맞는 와인을 맡기기 좋은 곳 · 문의 02 9240 8000', addr: 'Sydney Opera House, Bennelong Point', q: 'Bennelong Restaurant Sydney Opera House', tel: '+61 2 9240 8000', key: 'bennelong', st: 'ok', note: '2명(두 분) 19:45 예약 완료(Capella 컨시어지, 10/31) · 창가 · 와인 페어링 또는 소믈리에 추천(풀바디 레드 선호) 미리 알리기. 호스트는 근처에서 대기.' },
         { via: 'walk', text: '호텔까지 서큘러키 물가를 따라 도보 약 15분', mode: 'walking' },
         { t: '22:15 전후', type: 'hotel', name: '호텔 복귀', sub: '내일 아침은 느긋하게 · 10:30 체크아웃', q: 'Capella Sydney, 24 Loftus Street Sydney' },
-        { t: '대안', type: 'car', alt: true, name: '산책을 짧게 · 본다이 → 브론테 2.5km', sub: '전날 피곤하면 1시간만 걷고 브론테에서 차를 타고 쿠지로', q: 'Bondi to Bronte Coastal Walk', key: 'bondi_coogee' }
+        { t: '대안', type: 'walk', alt: true, name: '더 짧게 · Icebergs 전망만 보기 · 20분', sub: '전날 요트로 피곤하면 브런치 뒤 Icebergs 수영장 위 전망대까지만 걷고 본다이에서 바로 차로 · 골프장까지 약 25분', q: 'Bondi Icebergs Lookout', key: 'bondi_coogee' }
       ],
-      notes: '세인트 마이클 11:51 확정(11/10). NSW Golf Club은 비회원 승인 문제로 제외. Auriga 스파는 17일 자리가 없어 16일로 옮김. Bennelong 19:45 예약 완료(Capella 컨시어지).'
+      notes: '11/12 변경: 본다이→쿠지 6km(2시간)를 본다이→브론테 2.5km(40–50분)로 줄이고, 쿠지 Coogee Pavilion 대신 bills 본다이 브런치로. 출발도 06:55→07:50. 세인트 마이클 11:51 확정(11/10). NSW Golf Club은 비회원 승인 문제로 제외. Auriga 스파는 17일 자리가 없어 16일로 옮김. Bennelong 19:45 예약 완료(Capella 컨시어지).'
     },
     {
       id: 'd18', date: '2026-11-18', dow: '수', n: 3, city: '해밀턴 아일랜드', short: '해밀턴', tz: 'Australia/Brisbane', tzLabel: '오전은 시드니 시각 · 도착 뒤 퀸즐랜드 시각(시드니 −1시간 · 한국 +1시간)',
