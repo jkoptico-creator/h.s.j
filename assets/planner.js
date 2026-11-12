@@ -110,9 +110,24 @@
       '<div class="wfoot"><span class="wrain" aria-label="비 올 확률 ' + h(w.rain || '0%') + '"><span class="wdrops" aria-hidden="true">' + drops + '</span>비 ' + h(w.rain || '0%') + '</span><span class="wfeel">' + feel + '</span></div>' +
     '</div>';
   }
+  // two-city days: start on the arrival city, except on the day itself before noon
+  function defaultCity(day, count) {
+    if (count < 2) return 0;
+    var now = nowParts(day.tz);
+    return (now.date === day.date && now.min < 12 * 60) ? 0 : count - 1;
+  }
+  function seg(group, names, sel) {
+    return '<div class="seg" role="group" aria-label="도시 선택" data-seg="' + group + '">' + names.map(function (nm, i) {
+      return '<button type="button" data-i="' + i + '" aria-pressed="' + (i === sel) + '">' + h(nm) + '</button>';
+    }).join('') + '</div>';
+  }
   function renderWx(day) {
     if (!day.wx) return '';
-    return '<div class="wxs' + (day.wx.length > 1 ? ' two' : '') + '">' + day.wx.map(wxCard).join('') + '</div><p class="wxnote">' + h(T.wxNote || '') + '</p>';
+    var note = '<p class="wxnote">' + h(T.wxNote || '') + '</p>';
+    if (day.wx.length < 2) return '<div class="wxs">' + day.wx.map(wxCard).join('') + '</div>' + note;
+    var sel = defaultCity(day, day.wx.length);
+    return '<div class="wxhead"><span class="lbl">날씨</span>' + seg('wx', day.wx.map(function (w) { return w.city || ''; }), sel) + '</div>' +
+      '<div class="wxs">' + day.wx.map(function (w, i) { return '<div data-segp="wx" data-i="' + i + '"' + (i === sel ? '' : ' hidden') + '>' + wxCard(w) + '</div>'; }).join('') + '</div>' + note;
   }
   function renderCover(day) {
     var k = day.cover; if (!k || !G[k] || !G[k].length) return '';
@@ -137,6 +152,8 @@
   }
   function renderPicks(day) {
     if (!day.picks || !T.picks) return '';
+    var multi = day.picks.length > 1, psel = defaultCity(day, day.picks.length);
+    var pnames = day.picks.map(function (p) { var s = T.picks[p.set]; return s ? s.title.split(' · ')[0] : ''; });
     return day.picks.map(function (p, n) {
       var set = T.picks[p.set]; if (!set) return '';
       var cats = PORDER.filter(function (c) { return set.items.some(function (x) { return x.cat === c; }); });
@@ -155,8 +172,8 @@
           (x.tip ? '<div class="ptip">' + h(x.tip) + '</div>' : '') +
           links(x) + '</div></li>';
       }).join('');
-      return '<section class="picks" aria-label="' + h(set.title) + ' 골라 가기">' +
-        '<div class="lbl">둘이서 골라 가기</div>' +
+      return '<section class="picks" aria-label="' + h(set.title) + ' 골라 가기"' + (multi ? ' data-segp="pk" data-i="' + n + '"' + (n === psel ? '' : ' hidden') : '') + '>' +
+        '<div class="lbl">둘이서 골라 가기</div>' + (multi ? seg('pk', pnames, n) : '') +
         '<h2>' + h(set.title) + '</h2>' +
         '<p class="pwhen">' + (p.when ? '<b>언제</b>' + h(p.when) + ' · ' : '') + h(set.base) + ' · 함께 가도, 두 분만 다녀와도 좋은 곳</p>' +
         '<div class="pfs" role="group" aria-label="종류별 보기">' + chips + '</div>' +
@@ -284,6 +301,13 @@
     try { var st = JSON.parse(localStorage.getItem('hsj-pack') || '{}'); view.querySelectorAll('input[data-pk]').forEach(function (c) { c.checked = !!st[c.dataset.pk]; }); } catch (x) {}
   }
   view.addEventListener('click', function (e) {
+    var sb = e.target.closest('.seg button');
+    if (sb) {
+      var group = sb.parentNode.dataset.seg, i = sb.dataset.i, day = sb.closest('.dayv');
+      day.querySelectorAll('[data-segp="' + group + '"]').forEach(function (p) { p.hidden = p.dataset.i !== i; });
+      day.querySelectorAll('[data-seg="' + group + '"] button').forEach(function (x) { x.setAttribute('aria-pressed', String(x.dataset.i === i)); });
+      return;
+    }
     var b = e.target.closest('.pf'); if (!b) return;
     var sec = b.closest('.picks'), f = b.dataset.pf;
     sec.querySelectorAll('.pf').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
