@@ -132,3 +132,13 @@ dl dd{margin:0;min-width:0}
 .wx span{font-size:12.5px;background:#EAF1F7;color:var(--slate);border-radius:8px;padding:4px 9px}
 .wx b{font-weight:700}
 .wx small{flex-basis:100%;font-size:11px;color:var(--mute)}
+/* 짐 체크리스트 */
+.pack{margin:18px 0 6px;padding:16px 14px 8px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.pack h2{font-family:var(--font-display);font-weight:600;font-size:20px;margin:4px 0 6px;color:var(--ink)}
+.pg{padding:10px 0;border-top:1px solid var(--line)}
+.pg h3{font-size:13px;font-weight:700;color:var(--slate);margin:0 0 6px}
+.pg ul{list-style:none;margin:0;padding:0}
+.pg li{margin:0}
+.pg label{display:flex;gap:10px;align-items:flex-start;padding:5px 0;font-size:13.5px;line-height:1.5;cursor:pointer}
+.pg input{flex:none;width:18px;height:18px;margin-top:2px;accent-color:var(--slate)}
+.pg input:checked+span{color:var(--mute);text-decoration:line-through}

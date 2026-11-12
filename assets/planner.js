@@ -80,6 +80,17 @@
   }
   var PCAT = { cafe: ['카페·디저트', 'dining'], bar: ['바·라운지', 'dining'], food: ['맛집', 'dining'], sight: ['명소·산책', 'walk'], shop: ['쇼핑', 'shop'] };
   var PORDER = ['cafe', 'bar', 'food', 'sight', 'shop'];
+  function renderPack(day) {
+    if (!day.pack) return '';
+    var n = 0;
+    return '<section class="pack" aria-label="짐 쌀 때 챙길 것"><div class="lbl">짐 쌀 때 체크리스트</div><h2>챙길 물건</h2>' +
+      day.pack.map(function (g) {
+        return '<div class="pg"><h3>' + h(g.t) + '</h3><ul>' + g.items.map(function (x) {
+          var id = 'pk-' + (n++);
+          return '<li><label><input type="checkbox" data-pk="' + id + '"><span>' + h(x) + '</span></label></li>';
+        }).join('') + '</ul></div>';
+      }).join('') + '<p class="small pnote2">체크한 항목은 이 휴대폰에만 저장됩니다.</p></section>';
+  }
   function renderPicks(day) {
     if (!day.picks || !T.picks) return '';
     return day.picks.map(function (p, n) {
@@ -136,7 +147,7 @@
       '<div class="now" hidden></div>' +
       (day.intro ? '<p class="dintro">' + h(day.intro) + '</p>' : '') +
       (route ? '<div class="ln top"><a href="' + route + '" target="_blank" rel="noopener">오늘 동선 지도</a></div>' : '') +
-      '</div>' + stay + '<ol class="tl">' + rows.join('') + '</ol>' + renderPicks(day) + bring + notes + '</section>';
+      '</div>' + renderPack(day) + stay + '<ol class="tl">' + rows.join('') + '</ol>' + renderPicks(day) + bring + notes + '</section>';
   }
   function renderInfo() {
     var fl = '<div class="card"><div class="lbl">항공</div><p class="small">예약번호와 승객 정보는 이 페이지에 싣지 않습니다. 항공사 앱에서 확인하세요.</p>' + T.flights.map(function (f) {
@@ -185,7 +196,7 @@
   }
   function paint(scroll) {
     var id = current();
-    view.innerHTML = html(id);
+    view.innerHTML = html(id); if (typeof restorePack === "function") restorePack();
     tabs.querySelectorAll('a').forEach(function (a) {
       var on = a.getAttribute('href') === '#' + id;
       if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
@@ -210,6 +221,13 @@
   var saved = ''; try { saved = localStorage.getItem(KEY) || ''; } catch (_) {}
   setMode(saved === '1', false);
   mode.addEventListener('click', function () { setMode(!document.body.classList.contains('plan-on'), true); });
+  view.addEventListener('change', function (e) {
+    var c = e.target.closest('input[data-pk]'); if (!c) return;
+    try { var st = JSON.parse(localStorage.getItem('hsj-pack') || '{}'); st[c.dataset.pk] = c.checked; localStorage.setItem('hsj-pack', JSON.stringify(st)); } catch (x) {}
+  });
+  function restorePack() {
+    try { var st = JSON.parse(localStorage.getItem('hsj-pack') || '{}'); view.querySelectorAll('input[data-pk]').forEach(function (c) { c.checked = !!st[c.dataset.pk]; }); } catch (x) {}
+  }
   view.addEventListener('click', function (e) {
     var b = e.target.closest('.pf'); if (!b) return;
     var sec = b.closest('.picks'), f = b.dataset.pf;
