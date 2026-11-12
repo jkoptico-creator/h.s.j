@@ -211,9 +211,20 @@
   tabs.innerHTML = T.days.map(function (d) {
     return '<a href="#' + h(d.id) + '" class="dtab' + (d.id === today ? ' today' : '') + '" aria-label="' + h(d.date.slice(5).replace('-', '월 ')) + '일 ' + h(DOW[d.dow]) + ' · ' + h(d.city) + '"><b>' + (+d.date.slice(8)) + '</b><span>' + h(d.dow) + '</span><i>' + h(d.short || d.city) + '</i></a>';
   }).join('') + '<a href="#info" class="dtab" aria-label="여행 정보"><b>i</b><span>정보</span><i>항공·숙소</i></a>';
-  // planner mode
-  var mode = document.getElementById('pmode'), KEY = 'planner-mode';
+  // planner mode — host only. Guests never see the 기획 button or notes.
+  // Open itinerary.html?host=<HOST_KEY> once on the host's phone to unlock it there; ?host=off locks it again.
+  var mode = document.getElementById('pmode'), KEY = 'planner-mode', HOST = 'planner-host', HOST_KEY = 'jk988dfa';
+  var hostParam = new URLSearchParams(location.search).get('host');
+  try {
+    if (hostParam === HOST_KEY) localStorage.setItem(HOST, '1');
+    else if (hostParam === 'off') { localStorage.removeItem(HOST); localStorage.removeItem(KEY); }
+  } catch (_) {}
+  var isHost = hostParam === HOST_KEY;
+  if (!isHost && hostParam !== 'off') try { isHost = localStorage.getItem(HOST) === '1'; } catch (_) {}
+  if (hostParam !== null && history.replaceState) history.replaceState(null, '', location.pathname + location.hash);
+  mode.hidden = !isHost;
   function setMode(on, save) {
+    on = on && isHost;
     document.body.classList.toggle('plan-on', on);
     mode.setAttribute('aria-pressed', String(on));
     if (save) try { localStorage.setItem(KEY, on ? '1' : ''); } catch (_) {}
