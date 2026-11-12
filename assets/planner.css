@@ -143,6 +143,28 @@ dl dd{margin:0;min-width:0}
 .pnote2{margin:8px 0 2px;color:var(--mute)}
 .phr{display:inline-block;margin-top:5px;font-size:11.5px;font-weight:600;color:#2C5A2E;background:#E3F0E0;border-radius:6px;padding:2px 7px}
 .phr.off{color:#8A3B2B;background:var(--peach-2)}
+/* 일정 안 '둘이서 골라 가기' 바로가기 */
+.pickrow{list-style:none;padding:8px 0;border-bottom:1px solid var(--line)}
+.pickgo{appearance:none;width:100%;display:grid;grid-template-columns:28px minmax(0,1fr) auto;align-items:center;gap:10px;padding:9px 12px;border:1px dashed color-mix(in srgb,var(--peach) 70%,var(--line));border-radius:12px;background:color-mix(in srgb,var(--peach-2) 55%,var(--white));color:var(--ink);text-align:left;cursor:pointer;font:inherit;transition:background-color .2s cubic-bezier(.2,.8,.2,1)}
+.pickgo:hover{background:var(--peach-2)}
+.pickgo:focus-visible{outline:2px solid var(--slate);outline-offset:2px}
+.pgi{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--white);color:#C9694A}
+.pgi svg{width:15px;height:15px}
+.pgt{min-width:0;display:flex;flex-direction:column;line-height:1.3}
+.pgt b{font-size:13px;font-weight:700}
+.pgt span{font-size:12px;color:var(--slate)}
+.pgn{font-size:11.5px;font-weight:600;color:#7A4A2B;white-space:nowrap}
+.pgn::after{content:' ↓'}
+/* 일정 아래 접힌 대안 */
+.altbox{margin-top:8px;border:1px solid var(--line);border-radius:10px;background:repeating-linear-gradient(135deg,transparent 0 10px,rgba(0,0,0,.02) 10px 12px)}
+.altbox summary{display:flex;align-items:center;gap:6px;padding:7px 10px;cursor:pointer;list-style:none;font-size:12.5px;font-weight:600;color:var(--slate)}
+.altbox summary::-webkit-details-marker{display:none}
+.altbox summary .tag{margin-left:0}
+.altbox summary::after{content:'';margin-left:auto;flex:none;width:7px;height:7px;border-right:2px solid var(--mute);border-bottom:2px solid var(--mute);transform:rotate(45deg) translateY(-2px);transition:transform .2s cubic-bezier(.2,.8,.2,1)}
+.altbox[open] summary::after{transform:rotate(-135deg) translateY(-2px)}
+.altn{min-width:0}
+.altbody{padding:0 10px 9px}
+.altbody .sb{font-size:12.5px;color:var(--mute);line-height:1.55}
 /* 메뉴 버튼 + 메뉴 보기 화면 */
 .ln a.mbtn{background:var(--slate);border-color:var(--slate);color:#fff;font-weight:600}
 .ln a.mbtn:hover{background:var(--ink);border-color:var(--ink)}

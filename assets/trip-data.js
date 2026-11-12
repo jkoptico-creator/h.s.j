@@ -52,6 +52,7 @@ window.TRIP = {
         { t: '10:45', type: 'dining', name: '브런치 · Brasserie 1930 (Capella Sydney)', sub: '호텔 1층 · 비행 뒤 가볍게 · 스파 전이라 양은 적당히', addr: '24 Loftus St, Sydney', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'brasserie_1930', menu: 'brasserie_1930', st: 'ask', note: '11/12 Capella 다이닝팀에 3명 10:30 예약 요청 메일 보냄(호텔 확인 메일에 Brasserie 1930은 예약 권장). 패키지 조식이 도착일에도 적용되는지 같이 문의. 답장 대기. 입국·이동을 감안해 플래너는 10:45로 표시(요청은 10:30) — 답장 오면 시각 조정.' },
         { t: '12:45', type: 'spa', name: 'Auriga Spa · Connect to Country 90분 · 커플 룸', sub: '호텔 안 스파 · 여성 테라피스트 2명 · 15분 전 도착(일찍 가서 사우나·스팀 이용 가능) · 14:15 종료', addr: '24 Loftus St, Sydney', q: 'Capella Sydney, 24 Loftus Street Sydney', tel: '+61 2 9071 5010', key: 'auriga_spa', st: 'ok', note: '예약 완료(10/29). 패키지 포함 확인(스파 답변 10/30). 추가로 Expedia VIP 스파 크레딧 예약당 $50. 체크인 전에도 스파 시설(사우나·스팀) 사용 가능, 가운·슬리퍼 제공. 취소·변경은 24시간 전까지.' },
         { t: '14:30', type: 'dining', name: '애프터눈 티 · Aperture (Capella Sydney)', sub: '호텔 안 · 샴페인과 함께 · 스파에서 바로 이어집니다', addr: '24 Loftus St, Sydney', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'aperture_capella', menu: 'aperture_capella', st: 'ok', note: '11/16 14:30 2명 예약 완료(Capella Sojourn 패키지 포함). 식이 제한 없음 회신. SevenRooms 확정 요청(11/11)에 확정 완료(11/12).' },
+        { pick: 'syd', when: '16:00–17:15 · 애프터눈 티 뒤' },
         { t: '16:15', type: 'shop', opt: true, name: 'IM Lingerie · 유럽 명품 실크 잠옷 부티크', sub: 'La Perla(이탈리아) · Lise Charmel · Aubade(프랑스) 잠옷과 란제리 · 선물 상담 가능 · 월요일 17:30까지 · 한 매장 $300 이상이면 출국 때 면세 환급(TRS) · 영수증 필요', addr: 'Stockland Piccadilly, 210 Pitt St, Sydney', q: 'IM Lingerie Stockland Piccadilly Sydney', tel: '+61 2 9232 0088', key: 'im_lingerie', note: '학수형이 가보자고 함(11/9). 애프터눈 티 뒤 도보 약 12분. 명품 거리(Castlereagh St · George St · Westfield Sydney)와 묶을 수 있음. 애프터눈 티(약 90분)가 끝난 뒤로 옮김. 오페라하우스 투어는 티와 겹쳐 뺌(17일 Bennelong에서 건물 안을 봄).' },
         { via: 'walk', text: '호텔 → Pitt St 도보 약 12분', mode: 'walking' },
         { t: '17:15', type: 'hotel', name: '호텔 · 쉬는 시간', sub: '객실에서 쉬는 시간 · 요트 전에 샤워하고 옷을 갈아입으세요', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney' },
@@ -59,6 +60,7 @@ window.TRIP = {
         { t: '18:30', type: 'boat', name: 'Empress · 하버 나이트 크루즈 · 선상 프렌치 디너', sub: '77피트 모터요트 전세 · 4명(첫날 저녁 일행 1명 합류) · 18:30 시작(15분 전 선착장 도착) · 일몰 약 19:36 · 하버브리지 아래, 오페라하우스 앞, 도심 불빛 · 셰프 Pierre Gaudin(Noranise)의 맞춤 코스, 굴 3다스로 시작 · 코스마다 셰프가 고른 호주 와인 · 전자담배는 바깥 데크에서 가능 · 22:30 하선', q: 'Circular Quay Sydney', key: 'empress', menu: 'empress', st: 'ok', note: '결제 완료(11/11, 인보이스 #9764 · 전세 18:30–22:30 + 셰프 메뉴 $1,600). 메뉴·와인 확정, 셰프 Pierre가 소믈리에 겸함(11/10). 음료는 크루즈 뒤 따로 정산, 보증금 최대 $2,000 카드 사전승인(종료 후 해제). 남은 것: ① 승선 선착장이 적힌 최종 확인 메일(SHS가 곧 보낸다고 함) ② 11/9 와인 추가 요청(Grand Vintage·Blanc de Blancs, Mount Edelstone 디캔팅, 풀바디 레드 1병 추가, 작은 잔, 남은 병 가져가기) 셰프 답변 대기. 디저트 전 30분은 두 분이 플라이브리지에서 따로 야경을 보도록 크루에게 부탁.' },
         { via: 'car', text: '하선 뒤 호텔까지 차량 약 5–10분', mode: 'driving' },
         { t: '22:45 전후', type: 'hotel', name: '호텔 복귀', sub: '내일 07:50 출발 · 골프 가방과 골프복은 차에 실어 둡니다', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney' },
+        { pick: 'syd', when: '22:45 이후 · 요트에서 내린 뒤 한 잔' },
       ],
       notes: '흐름: 10:30 호텔 → 10:45 브런치 → 12:45 스파 → 14:30 애프터눈 티(~16:00) → (선택) 16:15 IM Lingerie → 17:15 휴식 → 18:30 Empress → 22:45 호텔. 브리지클라임은 뺌(요트로 하버를 충분히 봄). 요트는 4명이지만 두 분만의 시간을 따로 만들어 드릴 것.'
     },
@@ -89,7 +91,7 @@ window.TRIP = {
         { t: '20:30', type: 'dining', name: 'Whisky Thief at Prefecture 48 · 위스키 바', sub: '호스트 지인이 운영하는 바 · 호스트 일행 2명이 합류해 모두 5명 · 위스키 증류소에서 영감을 얻은 아늑한 공간에서 희귀 위스키와 창작 칵테일 · 일본 미식 공간 Prefecture 48 안 · 화요일 23:00 마감', addr: '230 Sussex St, Sydney', q: 'Whisky Thief Prefecture 48 230 Sussex Street Sydney', tel: '+61 2 8552 2888', site: 'https://www.p48.com.au/venues-whisky-thief/', key: 'whisky_thief', note: '제임스형과 지인 1명 합류(호스트 포함 5명). 운영자가 호스트 지인이라 자리 미리 말해 두기. Bennelong 18:00 변경이 확정돼야 여유 있음(19:45 그대로면 22:30 도착, 30분뿐). 화–목 17:00–23:00.' },
         { via: 'car', text: 'Prefecture 48 → 호텔 차량 약 7분', mode: 'driving' },
         { t: '23:00 전후', type: 'hotel', name: '호텔 복귀', sub: '내일 아침은 느긋하게 · 10:15 체크아웃', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney' },
-        { t: '대안', type: 'walk', alt: true, name: '더 짧게 · Icebergs 전망만 보기 · 20분', sub: '전날 요트로 피곤하면 브런치 뒤 Icebergs 수영장 위 전망대까지만 걷고 본다이에서 바로 차로 · 골프장까지 약 25분', q: 'Bondi Icebergs Lookout', key: 'bondi_bronte' }
+        { t: '대안', type: 'walk', alt: true, under: '09:40', name: '더 짧게 · Icebergs 전망만 보기 · 20분', sub: '전날 요트로 피곤하면 브런치 뒤 Icebergs 수영장 위 전망대까지만 걷고 본다이에서 바로 차로 · 골프장까지 약 25분', q: 'Bondi Icebergs Lookout', key: 'bondi_bronte' }
       ],
       notes: '11/12 변경: 본다이→쿠지 6km(2시간)를 본다이→브론테 2.5km(40–50분)로 줄이고, 쿠지 Coogee Pavilion 대신 bills 본다이 브런치로. 출발도 06:55→07:50. 세인트 마이클 11:51 확정(11/10). NSW Golf Club은 비회원 승인 문제로 제외. Auriga 스파는 17일 자리가 없어 16일로 옮김. Bennelong 19:45(Capella 컨시어지)를 18:00으로 변경 요청 중. 11/13: 식사 뒤 Whisky Thief(호스트 지인 바, 제임스형 · 지인 1명 합류) 추가.'
     },
@@ -103,6 +105,7 @@ window.TRIP = {
       picks: [{ set: 'syd', when: '아침 08:00–10:15 · 커피와 산책' }, { set: 'ham', when: '체크인 뒤 15:15–17:15' }],
       items: [
         { t: '08:00', type: 'dining', name: '조식 · 느긋한 아침', sub: '짐 정리', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'brasserie_1930', menu: 'brasserie_1930', tz: 'Australia/Sydney' },
+        { pick: 'syd', when: '08:00–10:15 · 아침 커피와 산책' },
         { t: '09:00', type: 'walk', opt: true, name: '왕립 식물원 · 미세스 매쿼리 체어 산책', sub: '호텔에서 걸어서 5분 · 오페라하우스와 하버브리지가 한 장에 담기는 전망 · 한 시간 안팎', q: 'Mrs Macquaries Chair Sydney', key: 'mrs_macquaries', tz: 'Australia/Sydney' },
         { t: '10:15', type: 'hotel', name: '체크아웃', sub: '미니바·세탁 정산', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney', tz: 'Australia/Sydney' },
         { t: '10:30', type: 'car', name: '호텔 출발', sub: '국내선 제2터미널(버진 오스트레일리아)로 · 손님과 짐을 먼저 내려 드린 뒤 호스트가 렌터카 반납', q: 'Capella Sydney, 24 Loftus Street Sydney', tz: 'Australia/Sydney', note: '호스트 렌터카로 이동(골프백). T2 출발층에서 손님·짐 하차 → 렌터카 반납(공항 반납 구역) → 체크인 합류. 반납 시간 감안해 출발을 10:45→10:30으로 당김.' },
@@ -113,6 +116,7 @@ window.TRIP = {
         { via: 'car', text: '공항 → Reef View Hotel 전용 차량 약 5–10분', mode: 'driving' },
         { t: '14:30', type: 'hotel', name: 'Reef View Hotel 체크인 · Superior Presidential Suite', sub: '체크인 14:00 · 스위트 컨시어지 데스크 · 2층 구조: 아래층 거실·다이닝·테라스 플런지 풀, 위층 침실 2·욕실 2 · 캣츠아이 비치 전망 · 4인승 버기 포함(키 수령)', addr: '12 Resort Drive, Hamilton Island', q: 'Reef View Hotel, Hamilton Island', tel: '+61 7 4946 9999', key: 'reef_view_suite', st: 'ok', note: '2박 · 세이버 요금(조식 포함). 포함: VIP 공항 왕복, 4인승 버기, 무알코올 미니바(매일 보충), 카타마란·카약·SUP·스노클 장비, 아일랜드 셔틀, 피트니스·사우나·테니스. 대여 버기는 따로 있으니 스위트 버기는 두 분 전용.' },
         { t: '15:15', type: 'pin', name: '자유 시간 · 플런지 풀 · 캣츠아이 비치', sub: '쉬거나 해변을 걷는 시간 · 카타마란·카약은 비치 스포츠 데스크에서 무료', q: 'Catseye Beach Hamilton Island', key: 'catseye_beach' },
+        { pick: 'ham', when: '15:15–17:15 · 체크인 뒤' },
         { via: 'buggy', text: '원트리힐까지 버기 약 5분 (언덕길)', mode: 'driving' },
         { t: '17:30', type: 'pin', name: '원트리힐 선셋 · 칵테일', sub: '섬에서 가장 유명한 일몰 전망대 · 바는 14:00–일몰, 마르가리타 밴 15:00–19:00 · 일몰 약 18:20', q: 'One Tree Hill Lookout Hamilton Island', key: 'one_tree_hill' },
         { via: 'buggy', text: '원트리힐 → 마리나 요트클럽 버기 약 10분 · 칵테일을 마셨다면 호스트가 운전', mode: 'driving' },
@@ -139,10 +143,12 @@ window.TRIP = {
         { t: '13:00 전후', type: 'dining', name: '클럽하우스 점심 · 덴트 패시지 전망', sub: '라운드 후', q: 'Hamilton Island Golf Club, Dent Island', key: 'hamilton_island_golf', menu: 'hamilton_island_golf' },
         { t: '14:30 예시', type: 'ferry', name: '페리로 해밀턴 복귀', sub: '덴트섬 출발 매시 30분 · 마리나에서 버기', q: 'Hamilton Island Marina Village', key: 'hamilton_island_golf' },
         { t: '15:00', type: 'hotel', name: '자유 시간 · 플런지 풀 · 해변', sub: '쉬는 시간 · 스위트 테라스 플런지 풀, 캣츠아이 비치 · 원하면 아래 "둘이서 골라 가기"에서 · 해 지는 모습은 테라스에서(일몰 약 18:20)', q: 'Reef View Hotel, Hamilton Island', key: 'reef_view_suite' },
+        { pick: 'ham', when: '15:00–18:45 · 골프 뒤' },
         { via: 'walk', text: 'Catseye Pool Club까지 도보 약 5–10분 (리조트 드라이브 · 비치 쪽)', mode: 'walking' },
         { t: '19:00', type: 'dining', name: 'Catseye Pool Club 저녁 · The Sundays', sub: '조시·줄리 닐런드(시드니 Saint Peter) 메뉴 · 셰어 스타일 · 캣츠아이 베이 물가 · 저녁 17:00–21:00 · 셰프 햇', addr: 'The Sundays, Catseye Beach', q: 'Catseye Pool Club The Sundays Hamilton Island', key: 'catseye_pool_club', menu: 'catseye_pool_club', st: 'chk', note: '예약 완료(SevenRooms, 11/10)로 기록돼 있으나 11/12 메일함 3곳(jk.optico·john.kim·admin)에서 확인 메일을 못 찾음 → 예약에 쓴 이메일·이름 확인 필요. 2명 19:00 · 물가 테이블·와인 추천 요청함. 대안: coca chu 또는 Romano\'s(마리나).' },
         { t: '21:00 전후', type: 'hotel', name: '호텔 복귀 · 도보', sub: '내일 10:00 체크아웃', q: 'Reef View Hotel, Hamilton Island', key: 'reef_view_suite' },
-        { t: '대안', type: 'boat', alt: true, name: '오후에 선셋 크루즈', sub: '바다에서 해 지는 것을 보고 싶을 때 · 프라이빗 차터(Palm Beach 55피트) 또는 On the Edge 공용 선셋 세일(약 90분) · 17:00 마리나 출항', q: 'Hamilton Island Marina Village', key: 'sunset_sail', st: 'ask', note: '해밀턴 아일랜드 투어 데스크 1300 659 133. 16일에 요트를 탔으니 기본안은 휴식.' }
+        { pick: 'ham', when: '21:00 이후 · 저녁 뒤' },
+        { t: '대안', type: 'boat', alt: true, under: '15:00', name: '오후에 선셋 크루즈', sub: '바다에서 해 지는 것을 보고 싶을 때 · 프라이빗 차터(Palm Beach 55피트) 또는 On the Edge 공용 선셋 세일(약 90분) · 17:00 마리나 출항', q: 'Hamilton Island Marina Village', key: 'sunset_sail', st: 'ask', note: '해밀턴 아일랜드 투어 데스크 1300 659 133. 16일에 요트를 탔으니 기본안은 휴식.' }
       ],
       notes: '저녁은 호텔에서 걸어가는 Catseye Pool Club으로 두어 버기 야간 운전을 피함.'
     },
@@ -157,6 +163,7 @@ window.TRIP = {
       items: [
         { t: '07:30', type: 'dining', name: '조식 · Sails · 비치프런트', sub: '캣츠아이 비치 앞 · 조식 07:00–10:30(포함)', q: 'Sails Restaurant Hamilton Island', key: 'sails_hi', menu: 'sails_hi' },
         { t: '08:30', type: 'walk', name: '캣츠아이 비치 산책 · 카약 또는 SUP(선택)', sub: '짐 정리 전 가볍게 · 비치 스포츠 장비 무료', q: 'Catseye Beach Hamilton Island', key: 'catseye_beach' },
+        { pick: 'ham', when: '08:30–10:00 · 아침' },
         { t: '10:00', type: 'hotel', name: '체크아웃 · 짐 보관 · 스위트 버기 반납', sub: '체크아웃 10:00 · 공항 VIP 차량 시각은 스위트 컨시어지와 확정', q: 'Reef View Hotel, Hamilton Island', key: 'reef_view_suite', st: 'chk', note: '호텔 예약에 VA1496 12:40 출발 등록됨 → 공항 이동 11:15 전후. 대여 버기는 11:00까지 반납(예약상 12:45).' },
         { t: '10:15', type: 'shop', opt: true, name: '리조트 센터 · 커피와 가게들', sub: '호텔 옆 · 출발 전 한 시간', q: 'Resort Centre Hamilton Island', key: 'resort_centre_hi' },
         { via: 'car', text: '호텔 → 공항 VIP 전용 차량 약 5–10분', mode: 'driving' },
@@ -165,12 +172,14 @@ window.TRIP = {
         { t: '14:15', type: 'plane', name: '브리즈번 공항 국내선 도착', sub: '수하물 수령 후 차량', q: 'Brisbane Airport Domestic Terminal', key: 'bne_airport' },
         { via: 'car', text: '공항 → Queen\'s Wharf 차량 약 20–30분 (호스트 차량 · 수하물·차량 수령 시간 별도)', mode: 'driving' },
         { t: '15:30', type: 'hotel', name: 'The Star Grand 체크인 · River Suite', sub: '카지노 로비와 분리된 호텔 전용 리셉션 · 고층 · 사우스뱅크와 강 쪽 전망 요청 · 원하면 수영장에서 잠깐 쉬어도 좋습니다', addr: 'Queen\'s Wharf, 33 William St, Brisbane City', q: 'The Star Grand Brisbane, Queens Wharf', key: 'star_grand_brisbane', st: 'ok', note: '2박 예약 완료(Hotels.com, 호스트 이름). 두 분 이름 추가·최고층·공사 뷰 제외 요청 메일. 호스트 River King Room 별도. 주차: 셀프 약 $45 · 대리주차 약 $65/박.' },
+        { pick: 'bne', when: '16:00–17:30 · 체크인 뒤' },
         { via: 'walk', text: '호텔 → Exhibition 도보 약 10–12분 (Edward St)', mode: 'walking' },
         { t: '18:00', type: 'dining', name: 'Exhibition 저녁 · 테이스팅 코스', sub: '테이스팅 메뉴 약 2–2.5시간 · 지하 2층(Basement 2) · 18:00 예약 완료', addr: 'Basement 2, 109 Edward St, Brisbane', q: 'Exhibition Restaurant, 109 Edward Street Brisbane', key: 'exhibition_restaurant', menu: 'exhibition_restaurant', st: 'ok', note: '18:00 예약 완료(18시 회차만 가능, 확인 메일 10/21 · Exhibition Experience 3명, 보증금만 걸림). 3명. 와인 페어링(풀바디 레드 선호) 미리 알리기.' },
         { via: 'walk', text: 'Edward St → 이글 스트리트 피어 → 스토리브리지 아래 리버워크 → Howard Smith Wharves 도보 약 25–30분', mode: 'walking' },
         { t: '20:45', type: 'walk', opt: true, name: '브리즈번강 야경 산책 · 리버워크와 스토리브리지', sub: '식사 뒤 강을 따라 불 켜진 스토리브리지 아래를 걸어 Howard Smith Wharves까지 · 브루어리 Felons Barrel Hall이나 강가 바에서 마무리 · 피곤하면 차량으로 바로 호텔', addr: 'Howard Smith Wharves, 5 Boundary St', q: 'Howard Smith Wharves Brisbane', key: 'howard_smith_wharves', note: '브리즈번강 요트는 20일 예약이 모두 차서 뺐습니다(문의 완료).' },
         { via: 'car', text: 'Howard Smith Wharves → 호텔 차량 약 5–10분', mode: 'driving' },
-        { t: '22:00 전후', type: 'hotel', name: '호텔 복귀', sub: '방에서 강과 스토리브리지 야경 · 내일은 느긋한 아침', q: 'The Star Grand Brisbane, Queens Wharf', key: 'star_grand_brisbane' }
+        { t: '22:00 전후', type: 'hotel', name: '호텔 복귀', sub: '방에서 강과 스토리브리지 야경 · 내일은 느긋한 아침', q: 'The Star Grand Brisbane, Queens Wharf', key: 'star_grand_brisbane' },
+        { pick: 'bne', when: '22:00 이후 · 저녁 뒤' },
       ],
       notes: '11/9 하루 연장 확정 → 브리즈번 2박(The Star Grand), 22일 귀국. The Calile은 예약하지 않았음.'
     },
@@ -193,6 +202,7 @@ window.TRIP = {
         { t: '12:30', type: 'dining', name: '점심 · Howard Smith Wharves', sub: '스토리브리지 바로 아래 옛 부두 · 광둥 요리 Stanley(강가 테라스), 그리스 요리 Greca, 일식 Yoko Dining 중 선택 · 식사 뒤 Felons 양조장도 가능', addr: '5 Boundary St, Brisbane City', q: 'Howard Smith Wharves Brisbane', site: 'https://howardsmithwharves.com/', key: 'hsw_stanley_greca', menu: 'hsw_stanley_greca', st: 'need', note: '3명 12:30 예약(Stanley 또는 Greca). 호스트는 여기서 합류.' },
         { t: '14:00', type: 'car', name: 'Howard Smith Wharves에서 승차 · 호텔로', sub: 'Boundary St 쪽 승차 · 호텔까지 차로 약 5–10분', q: 'Howard Smith Wharves Brisbane' },
         { t: '14:30', type: 'hotel', name: '호텔 휴식 · 자유 시간', sub: '수영장 · 낮잠 · 원하면 둘이서 다리 건너 사우스뱅크 꽃 아치길과 GOMA', q: 'The Star Grand Brisbane, Queens Wharf', key: 'star_grand_brisbane' },
+        { pick: 'bne', when: '14:30–17:00 · 오후' },
         { via: 'walk', text: '호텔 → SUUM 도보 약 10분 (Charlotte St)', mode: 'walking' },
         { t: '17:30', type: 'dining', name: 'SUUM · 한식 오마카세', sub: 'The Fat Duck·Disfrutar 출신 셰프 앤디 최 · 콘크리트 카운터를 둘러싼 16석 · 약 14코스 · 막걸리·약주·청주 또는 프랑스·호주 와인 페어링(3잔·5잔) · 간판 없는 검은 문 안쪽 · 약 3시간', addr: '119 Charlotte St, Brisbane City', q: 'SUUM Restaurant 119 Charlotte Street Brisbane', tel: '+61 7 3865 8468', site: 'https://www.suumrestaurant.com/', ig: 'https://www.instagram.com/suum_brisbane/', key: 'suum', menu: 'suum', st: 'need', note: '17:30 회차 3명 빈자리 확인(11/12, SevenRooms). 와인 페어링 요청(풀바디 레드).' },
         { via: 'walk', text: 'SUUM → 호텔 도보 약 10분', mode: 'walking' },

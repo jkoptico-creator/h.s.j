@@ -60,7 +60,21 @@
     if (it.st && STATUS[it.st]) out += '<span class="st ' + h(it.st) + ' plan">' + STATUS[it.st] + '</span>';
     return out;
   }
-  function renderItem(it, i, prev) {
+  function renderPickRow(it, day) {
+    var set = T.picks && T.picks[it.pick]; if (!set) return '';
+    var n = set.items.filter(function (x) { return !(x.hours && /휴무/.test(x.hours[day.dow] || '')); }).length;
+    var city = set.title.split(' · ')[0];
+    return '<li class="pickrow"><button type="button" class="pickgo" data-pickset="' + h(it.pick) + '">' +
+      '<span class="pgi" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>' +
+      '<span class="pgt"><b>둘이서 골라 가기</b><span>' + h(it.when) + '</span></span>' +
+      '<span class="pgn">' + h(city) + ' ' + n + '곳</span></button></li>';
+  }
+  function renderAlt(a) {
+    return '<details class="altbox"><summary><span class="tag alt">대안</span><span class="altn">' + h(a.name) + '</span></summary><div class="altbody">' +
+      (a.sub ? '<div class="sb">' + h(a.sub) + '</div>' : '') + (a.addr ? '<div class="ad">' + h(a.addr) + '</div>' : '') + links(a) +
+      (a.note ? '<div class="pn plan"><b>메모</b>' + h(a.note) + '</div>' : '') + '</div></details>';
+  }
+  function renderItem(it, i, prev, alts) {
     if (it.via) {
       var dir = (prev && prev.q && it.next && it.next.q && it.via !== 'plane') ? '<a href="' + dirUrl(prev.q, it.next.q, it.mode || VIA_MODE[it.via]) + '" target="_blank" rel="noopener">길찾기</a>' : '';
       return '<li class="via"><span class="vi" aria-hidden="true">' + (SVG[VIA_ICON[it.via] || 'car']) + '</span><span class="vt">' + h(it.text) + dir + '</span></li>';
@@ -77,6 +91,7 @@
       (it.addr ? '<div class="ad">' + h(it.addr) + '</div>' : '') +
       links(it) +
       (it.note ? '<div class="pn plan"><b>메모</b>' + h(it.note) + '</div>' : '') +
+      (alts && alts.length ? alts.map(renderAlt).join('') : '') +
       '</div><div class="rt">' + right + '</div></li>';
   }
   // ── weather card ─────────────────────────────────────────────
@@ -173,7 +188,7 @@
           (x.tip ? '<div class="ptip">' + h(x.tip) + '</div>' : '') +
           links(x) + '</div></li>';
       }).join('');
-      return '<section class="picks" aria-label="' + h(set.title) + ' 골라 가기"' + (multi ? ' data-segp="pk" data-i="' + n + '"' + (n === psel ? '' : ' hidden') : '') + '>' +
+      return '<section class="picks" data-set="' + h(p.set) + '" aria-label="' + h(set.title) + ' 골라 가기"' + (multi ? ' data-segp="pk" data-i="' + n + '"' + (n === psel ? '' : ' hidden') : '') + '>' +
         '<div class="lbl">둘이서 골라 가기</div>' + (multi ? seg('pk', pnames, n) : '') +
         '<h2>' + h(set.title) + '</h2>' +
         '<p class="pwhen">' + (p.when ? '<b>언제</b>' + h(p.when) + ' · ' : '') + h(set.base) + ' · 함께 가도, 두 분만 다녀와도 좋은 곳</p>' +
@@ -192,9 +207,16 @@
   function renderDay(day) {
     var items = day.items.slice();
     // give each via row a pointer to the next stop for directions
-    for (var i = 0; i < items.length; i++) if (items[i].via) { for (var j = i + 1; j < items.length; j++) if (!items[j].via) { items[i].next = items[j]; break; } }
+    function stop(x) { return !x.via && !x.pick && !(x.alt && x.under); }
+    for (var i = 0; i < items.length; i++) if (items[i].via) { for (var j = i + 1; j < items.length; j++) if (stop(items[j])) { items[i].next = items[j]; break; } }
+    var nested = items.filter(function (x) { return x.alt && x.under; });
     var prev = null, rows = [];
-    items.forEach(function (it, i) { rows.push(renderItem(it, i, prev)); if (!it.via) prev = it; });
+    items.forEach(function (it, i) {
+      if (it.alt && it.under) return;  // shown folded under the item it replaces
+      if (it.pick) { rows.push(renderPickRow(it, day)); return; }
+      rows.push(renderItem(it, i, prev, it.via ? null : nested.filter(function (a) { return a.under === it.t; })));
+      if (!it.via) prev = it;
+    });
     var stay = day.stay ? '<div class="stay">' + (day.stay.key ? thumb(day.stay.key, day.stay.name) : '<span class="ic hotel" aria-hidden="true">' + SVG.hotel + '</span>') +
       '<div class="bd"><div class="lbl">숙박' + (day.stay.nights ? ' · ' + h(day.stay.nights) : '') + '</div><div class="nm">' + h(day.stay.name) + '</div>' + (day.stay.sub ? '<div class="sb">' + h(day.stay.sub) + '</div>' : '') + links(day.stay) + '</div></div>' : '';
     var route = dayRoute(day);
@@ -303,6 +325,15 @@
     try { var st = JSON.parse(localStorage.getItem('hsj-pack') || '{}'); view.querySelectorAll('input[data-pk]').forEach(function (c) { c.checked = !!st[c.dataset.pk]; }); } catch (x) {}
   }
   view.addEventListener('click', function (e) {
+    var pg = e.target.closest('.pickgo');
+    if (pg) {
+      var dayEl = pg.closest('.dayv'), sec = dayEl.querySelector('section.picks[data-set="' + pg.dataset.pickset + '"]');
+      if (!sec) return;
+      if (sec.hidden && sec.dataset.i != null) { var b2 = dayEl.querySelector('[data-seg="pk"] button[data-i="' + sec.dataset.i + '"]'); if (b2) b2.click(); }
+      var top = sec.getBoundingClientRect().top + window.scrollY - (document.querySelector('.pbar').offsetHeight + document.querySelector('.dtabs').offsetHeight + 8);
+      window.scrollTo({ top: top, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      return;
+    }
     var sb = e.target.closest('.seg button');
     if (sb) {
       var group = sb.parentNode.dataset.seg, i = sb.dataset.i, day = sb.closest('.dayv');
