@@ -84,7 +84,7 @@ window.TRIP = {
         { via: 'car', text: '리틀 베이 → 호텔 차량 약 35–45분 (오후 교통)', mode: 'driving' },
         { t: '17:30', type: 'hotel', name: '호텔 · 자유 시간', sub: '샤워하고 쉬는 시간 · 호텔 바에 들러도 좋습니다', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney' },
         { via: 'walk', text: '오페라하우스까지 도보 약 15–20분 (서큘러키 물가)', mode: 'walking' },
-        { t: '19:45', type: 'dining', name: 'Bennelong 저녁 · 오페라하우스 안', sub: '오페라하우스 돛 아래의 레스토랑 · 매일 저녁 운영 · 소믈리에에게 코스에 맞는 와인을 맡기기 좋은 곳 · 문의 02 9240 8000', addr: 'Sydney Opera House, Bennelong Point', q: 'Bennelong Restaurant Sydney Opera House', tel: '+61 2 9240 8000', key: 'bennelong', menu: 'bennelong', st: 'ok', note: '2명(두 분) 19:45 예약 완료(Capella 컨시어지, 10/31) · 창가 · 와인 페어링 또는 소믈리에 추천(풀바디 레드 선호) 미리 알리기. 호스트는 근처에서 대기.' },
+        { t: '19:45', type: 'dining', name: 'Bennelong 저녁 · 오페라하우스 안', sub: '오페라하우스 돛 아래의 레스토랑 · 매일 저녁 운영 · 소믈리에에게 코스에 맞는 와인을 맡기기 좋은 곳 · 문의 02 9240 8000', addr: 'Sydney Opera House, Bennelong Point', q: 'Bennelong Restaurant Sydney Opera House', tel: '+61 2 9240 8000', key: 'bennelong', menu: 'bennelong', st: 'ok', note: '11/13 컨시어지에 18:00(안 되면 17:45) 변경 요청 메일 보냄 — 식사 뒤 Whisky Thief(화 23:00 마감)에 가려고. 답장 오면 시각 확정. 기존: 2명(두 분) 19:45 예약 완료(Capella 컨시어지, 10/31) · 창가 · 와인 페어링 또는 소믈리에 추천(풀바디 레드 선호) 미리 알리기. 호스트는 근처에서 대기.' },
         { via: 'walk', text: '호텔까지 서큘러키 물가를 따라 도보 약 15분', mode: 'walking' },
         { t: '22:15 전후', type: 'hotel', name: '호텔 복귀', sub: '내일 아침은 느긋하게 · 10:15 체크아웃', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney' },
         { t: '대안', type: 'walk', alt: true, name: '더 짧게 · Icebergs 전망만 보기 · 20분', sub: '전날 요트로 피곤하면 브런치 뒤 Icebergs 수영장 위 전망대까지만 걷고 본다이에서 바로 차로 · 골프장까지 약 25분', q: 'Bondi Icebergs Lookout', key: 'bondi_bronte' }
