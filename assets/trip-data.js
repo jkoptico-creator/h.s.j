@@ -11,7 +11,7 @@
 window.TRIP = {
   title: '시드니 → 해밀턴 아일랜드 → 브리즈번',
   dates: '2026년 11월 15일(일) – 22일(일)',
-  updated: '2026년 11월 12일',
+  updated: '2026년 11월 13일',
   wxNote: '날씨는 11월 12일 기준 예보입니다. 출발 전에 다시 확인하세요.',
   lookbook: 'plan-2-sydney-hamilton-brisbane.html',
   host: { label: '지웅이 연락처', sub: '여행 중 궁금한 것, 급한 일 모두 편하게 연락 주세요', tel: '+61406644391', telText: '+61 406 644 391', kakao: 'https://qr.kakao.com/talk/AlJgujoECPFiSEPz4Ia5Nt0N60M-' },
@@ -74,7 +74,7 @@ window.TRIP = {
       bring: ['아침 산책용 얇은 겉옷(출발 때 15°C 안팎 · 걸으면 금방 더워짐)', '걷기 편한 운동화 · 모자 · 선글라스 · 선크림', '골프 복장: 칼라 셔츠 · 긴바지나 테일러드 쇼츠 · 골프화 · 장갑(드레스코드 엄격 · 청바지 불가)', '라커룸에서 갈아입을 옷 · 바닷바람 대비 바람막이', 'Bennelong · Whisky Thief는 스마트 캐주얼 · 밤에는 겉옷'],
       picks: [{ set: 'syd', when: '오늘은 골프 뒤 쉬는 시간이 짧아요 · 호텔 주변 산책은 내일 아침에도' }],
       items: [
-        { t: '07:50', type: 'car', name: '호텔 출발 · 호스트 차량', sub: '골프 가방은 차에 그대로 · bills 앞에 내려 드리고 차는 브론테에서 기다립니다', q: 'Capella Sydney, 24 Loftus Street Sydney', note: '렌터카(호스트 운전): 07:50 호텔 → bills 본다이 하차 → 브론테 주차 → 10:40 출발 → 세인트 마이클 → 라운드 끝나면 바로 출발(16:20 전후) → 17:00 호텔 → 17:45 로비 → Bennelong 18:00 → 20:15 Prefecture 48 → 23:00 호텔. 골프백 3개.' },
+        { t: '07:50', type: 'car', name: '호텔 출발 · 호스트 차량', sub: '골프 가방은 차에 그대로 · bills 앞에 내려 드리고 차는 브론테에서 기다립니다', q: 'Capella Sydney, 24 Loftus Street Sydney', st: 'ok', note: '렌터카 SIXT 예약 완료(11/13): 럭셔리 SUV(볼보 XC90 · 벤츠 GLE · BMW X5급, 자동), 15일 11:30 시드니 공항 픽업 → 18일 11:30 시드니 공항 반납, 완전 보험(자기부담 0) · 주행 600km 포함. 동선(호스트 운전): 07:50 호텔 → bills 본다이 하차 → 브론테 주차 → 10:40 출발 → 세인트 마이클 → 라운드 끝나면 바로 출발(16:20 전후) → 17:00 호텔 → 17:45 로비 → Bennelong 18:00 → 20:15 Prefecture 48 → 23:00 호텔. 골프백 3개.' },
         { via: 'car', text: '본다이까지 차량 약 15–25분 (화요일 07:50 기준 지도 예상 12–26분)', mode: 'driving' },
         { t: '08:20', type: 'dining', name: '본다이 브런치 · bills Bondi Beach', sub: '빌 그레인저가 시드니 브런치 문화를 연 첫 가게 · 리코타 핫케이크와 스크램블드 에그가 대표 메뉴 · 아침은 예약 없이 입장(매일 07:00부터, 아침 메뉴는 12시까지) · 해변까지 걸어서 3분', addr: '79 Hall St, Bondi Beach', q: 'bills Bondi Beach 79 Hall Street', tel: '+61 2 8412 0700', site: 'https://www.bills.com.au/', key: 'bills_bondi', menu: 'bills_bondi', note: '공식 사이트 확인(11/12): 매일 07:00 오픈, 예약은 17시 이후만 받고 워크인은 항상 가능. 평일 08:20이면 대기 짧은 편. 주차: 같은 건물 Wilson Parking(O’Brien St 진입) 1시간 $5. 대안: Speedos Cafe(노스 본디 해변 위, 06:00부터, 스무디볼·바다 전망).' },
         { via: 'walk', text: 'bills → 본다이 해변 남쪽 끝 Icebergs 도보 약 10분', mode: 'walking' },
@@ -108,7 +108,7 @@ window.TRIP = {
         { pick: 'syd', when: '08:00–10:15 · 아침 커피와 산책' },
         { t: '09:00', type: 'walk', opt: true, name: '왕립 식물원 · 미세스 매쿼리 체어 산책', sub: '호텔에서 걸어서 5분 · 오페라하우스와 하버브리지가 한 장에 담기는 전망 · 한 시간 안팎', q: 'Mrs Macquaries Chair Sydney', key: 'mrs_macquaries', tz: 'Australia/Sydney' },
         { t: '10:15', type: 'hotel', name: '체크아웃', sub: '미니바·세탁 정산', q: 'Capella Sydney, 24 Loftus Street Sydney', key: 'capella_sydney', tz: 'Australia/Sydney' },
-        { t: '10:30', type: 'car', name: '호텔 출발', sub: '국내선 제2터미널(버진 오스트레일리아)로 · 손님과 짐을 먼저 내려 드린 뒤 호스트가 렌터카 반납', q: 'Capella Sydney, 24 Loftus Street Sydney', tz: 'Australia/Sydney', note: '호스트 렌터카로 이동(골프백). T2 출발층에서 손님·짐 하차 → 렌터카 반납(공항 반납 구역) → 체크인 합류. 반납 시간 감안해 출발을 10:45→10:30으로 당김.' },
+        { t: '10:30', type: 'car', name: '호텔 출발', sub: '국내선 제2터미널(버진 오스트레일리아)로 · 손님과 짐을 먼저 내려 드린 뒤 호스트가 렌터카 반납', q: 'Capella Sydney, 24 Loftus Street Sydney', tz: 'Australia/Sydney', st: 'ok', note: '호스트 렌터카로 이동(골프백). SIXT 반납 18일 11:30 시드니 공항(예약 완료 11/13). T2 출발층에서 손님·짐 하차 → 렌터카 반납(공항 반납 구역) → 체크인 합류. 반납 시간 감안해 출발을 10:45→10:30으로 당김.' },
         { via: 'car', text: '시드니 국내선 T2까지 차량 약 30–45분', mode: 'driving' },
         { t: '11:25', type: 'plane', name: '시드니 공항 제2터미널 · 버진 체크인', sub: '출발 75분 전 · 비즈니스 라운지', q: 'Sydney Airport Terminal 2 Domestic', key: 'syd_airport_t2', tz: 'Australia/Sydney' },
         { t: '12:40', type: 'plane', name: 'VA1283 시드니 → 해밀턴 아일랜드', sub: '2시간 30분 · 14:10 도착(퀸즐랜드 시각) · 보잉 737-800 비즈니스 · 좌석 1D·1F 나란히 · 기내식 점심', key: 'virgin_business', tz: 'Australia/Sydney', st: 'ok', note: '예약 완료(버진 비즈니스). 좌석 지정 완료: 두 분 1D·1F(나란히), 호스트 2D. 골프백 위탁 신고. 같은 날 다른 예약(VA925+VA1495 경유편)은 10/21 취소해 트래블뱅크 크레딧으로 전환한 뒤 이 편으로 재예약함.' },
